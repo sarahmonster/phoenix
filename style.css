@@ -564,6 +564,10 @@ em {
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
+#project-gallery img.borderless {
+	box-shadow: none;
+	border: none;
+}
 
 /* text */
 #project-details {
