@@ -24,10 +24,10 @@ get_header(); ?>
 	if ( have_posts() )
 		the_post();
 ?>
-	<div class="twelvecol last">
+	<header class="twelvecol last page-title">
 		<span class="page-subtitle">It&rsquo;s hard to choose, but here are some of my favourite projects</span>
 		<h1 class="pagetitle">Selected Portfolio</h1>
-	</div>
+	</header>
 
 	</div><!-- row -->
 	<div class="row">

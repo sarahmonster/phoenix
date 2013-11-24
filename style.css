@@ -31,7 +31,7 @@ h1, h2, h5 {
 	font-weight: normal;
 	font-size: 2.6em;
 	letter-spacing: -1px;
-	text-align: left;
+	text-align: center;
 	margin: 20px 0 10px 0;
 	font-weight: normal;
 	line-height: .9em;
@@ -48,7 +48,6 @@ h2 {
 	font-size: 1.5em;
 	letter-spacing: -0.5px;
 	margin: 60px 0 20px;
-	text-align: left;
 } 
 h2 + p {
   margin-top: 0.5em; 
@@ -60,15 +59,13 @@ h3, .page-subtitle {
 	margin: 10px 0;
     letter-spacing: 0.1em;
     line-height: 1.2em;
-	text-align: left;
+	text-align: center;
 	color: #fc0;
-	clear: left; float: left;
+	clear: left;
+	display: block;
 	text-transform: uppercase;
 	font-family: Gotham, Arial, sans-serif; 
 } 
-h3 {
-  float: none; 
-}
 h4 {
 	color: #850000;
 	font-size: 1.2em;
@@ -81,9 +78,9 @@ h4 {
 }
 .date {
 	font-weight: normal; 
-	float: left;
+	display: inline-block;
 	font-size: 0.75em;
-	margin: 5px 0;
+	margin: 5px auto;
 	padding: 2px 5px;
 	text-align: left;
 	color: #9a9a9a;
@@ -97,7 +94,7 @@ h4 {
   color: #2f2727;
 } 
 .page-subtitle + h1 {
-  margin: 10px 0 10px 0;
+  margin: 0px 0 20px 0;
   clear: left;
 } 
 h5 {
@@ -641,11 +638,9 @@ em {
 .nav-left span, .nav-right span {
 	display: none;
 }
-.piece-title {
-	float: left;
-}
-.piece-header {
 
+.page-title {
+	text-align: center;
 }
 
 /* minor adjustments for even-smaller screens */

@@ -17,10 +17,11 @@ get_header(); ?>
 		<?php echo do_action( 'c2c_next_or_loop_post_link', $format='%link', $link='<div class="nav-left"><h3>Previous piece</h3><span>%title</span></div>' ); ?>
 		<?php echo do_action( 'c2c_previous_or_loop_post_link', $format='%link', $link='<div class="nav-right"><h3>Next piece</h3><span>%title</span></div>' ); ?>
 		</div>
-			<div class="piece-title">
-			<span class="page-subtitle"><?php echo get_post_meta($post->ID, 'Subtitle', $single); ?></span>
-			<h1><?php the_title(); ?></h1>
-			</div>
+			
+			<header class="page-title">
+				<span class="page-subtitle"><?php echo get_post_meta($post->ID, 'Subtitle', $single); ?></span>
+				<h1><?php the_title(); ?></h1>
+			</header>
 
 
 
@@ -45,6 +46,18 @@ get_header(); ?>
 	<div id="project-gallery" class="new-design">
 	<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 	</div>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	<?php else: // show old template! ?>
 

@@ -11,11 +11,11 @@ get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-		<div class="twelvecol last">
+		<header class="twelvecol last page-title">
 			<?php echo format_date(get_the_time('l '), get_the_time('F'), get_the_time('jS'), get_the_time('Y') ); ?>
 			<span class="page-subtitle"><?php echo get_post_meta($post->ID, 'Subtitle', $single); ?></span>
 			<h1><?php the_title(); ?></h1>
-		</div>
+		</header>
 		</div><!-- row -->	
 			
 						

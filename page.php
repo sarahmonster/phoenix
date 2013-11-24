@@ -15,22 +15,24 @@
 get_header(); ?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-	<div class="twelvecol last">
+	
+			
+		<?php if (!is_front_page()): ?>
+		
+			<header class="twelvecol last page-title">
 				<span class="page-subtitle"><?php echo get_post_meta($post->ID, 'Subtitle', $single); ?></span>
-					<?php if ( is_front_page() ) { ?>
+				<h1><?php the_title(); ?></h1>
+			</header>
+		
+		<?php endif; ?>	
 
-					<?php } else { ?>	
-						<h1><?php the_title(); ?></h1>
-					<?php } ?>	
-	</div>			
+			
 
 	</div><!-- row -->
 	
 	<div class="row page-content">
 	
-	<!--START WORDPRESS CONTENT-->
-					<?php the_content(); ?>
-	<!-- AND IT'S OVER NOW -->
+		<?php the_content(); ?>
 
 	</div><!-- row -->
 <?php endwhile; ?>

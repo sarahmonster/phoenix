@@ -16,10 +16,10 @@
 
 get_header(); ?>
 
-	<div class="twelvecol last">
+	<header class="twelvecol last page-title">
 		<span class="page-subtitle">A semi-regularly updated collection of thoughts, meanderings, and liberal use of em-dashes</span>
 		<h1 class="pagetitle">The Blog Archive</h1>
-	</div>
+	</header>
 	</div><!-- row -->
 	
 		

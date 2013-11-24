@@ -9,9 +9,10 @@
 
 get_header(); ?>
 
-	<div class="twelvecol last">
+	<header class="twelvecol last page-title">
 		<span class="page-subtitle">Sorry kitten. Whatever you seek, it is no longer here. </span>
 		<h1>404 Error</h1>
+	</header>
 				
 
 	<script type="text/javascript">
@@ -19,7 +20,6 @@ get_header(); ?>
 		document.getElementById('s') && document.getElementById('s').focus();
 	</script>
 	
-				</div>
 					
 					<div class="eightcol">
 					<p class="cap">Quoth the server, &ldquo;four oh four.&rdquo;</p>
