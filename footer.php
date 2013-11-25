@@ -73,6 +73,7 @@
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/scripts.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js"></script>
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.pageslide.min.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/js/masonry.pkgd.min.js"></script>
 	
 	    
     <script>
