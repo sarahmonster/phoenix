@@ -685,6 +685,7 @@ em {
 	.nav-left {
 		left: -265px;
 		background: #fff url('images/prev.png') no-repeat 272px -60px;
+		text-align: left;
 	}
 	.nav-left:hover, .nav-left:focus {
 		left: -1px;
@@ -700,6 +701,9 @@ em {
 		right: -1px;
 		opacity: 1;
 		background-position: 7px -60px;
+	}
+	.nav-left h3 {
+		text-align: left;
 	}
 	.nav-right h3 {
 		text-align: right;
