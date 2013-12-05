@@ -614,7 +614,7 @@ em {
 } 
 
 
-/* navigation for smaller screens */
+/* navigation for tablets */
 .nav-left, .nav-right {
 	float: left;
 	width: 55px;
@@ -643,7 +643,9 @@ em {
 .nav-left span, .nav-right span {
 	display: none;
 }
-
+.piece-header .nav-left, .piece-header .nav-right {
+	margin-bottom: -100px;
+}
 .page-title {
 	text-align: center;
 }
@@ -658,6 +660,9 @@ em {
 	.piece-nav {
 		width: 120px;
 		margin: 0 auto;
+	}
+	.piece-header .nav-left, .piece-header .nav-right {
+		margin-bottom: 20px;
 	}
 	.nav-right {
 		float: left;
