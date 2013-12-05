@@ -576,10 +576,8 @@ em {
 	font-size: .9em;
 }
 .project-writeup {
-	margin-top: -60px;
+	margin-top: -90px;
 	margin-bottom: 0;
-	font-size: .9em;
-	line-height: 1.8em;
 } 
 #project-details > p:first-child:first-letter, .project-writeup > p:first-child:first-letter {
 	float: left; 
