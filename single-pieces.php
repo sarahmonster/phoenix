@@ -14,8 +14,8 @@ get_header(); ?>
 
 		<div class="twelvecol last piece-header">
 		<div class="piece-nav">
-		<?php echo do_action( 'c2c_previous_or_loop_post_link', $format='%link', $link='<div class="nav-left"><h3>Previous piece</h3><span>%title</span></div>' ); ?>
-		<?php echo do_action( 'c2c_next_or_loop_post_link', $format='%link', $link='<div class="nav-right"><h3>Next piece</h3><span>%title</span></div>' ); ?>
+		<?php echo do_action('c2c_previous_or_loop_post_link', $format='%link', $link='<div class="nav-left"><h3>Previous piece</h3><span>%title</span></div>', $excluded_categories = '86'); ?>
+		<?php echo do_action('c2c_next_or_loop_post_link', $format='%link', $link='<div class="nav-right"><h3>Next piece</h3><span>%title</span></div>', $excluded_categories = '86'); ?>
 		</div>
 			
 			<header class="page-title">
@@ -126,13 +126,9 @@ get_header(); ?>
     
     
 		<div class="piece-nav">
-		<?php echo do_action( 'c2c_previous_or_loop_post_link', $format='%link', $link='<div class="nav-left"><h3>Previous piece</h3><span>%title</span></div>' ); ?>
-		<?php echo do_action( 'c2c_next_or_loop_post_link', $format='%link', $link='<div class="nav-right"><h3>Next piece</h3><span>%title</span></div>' ); ?>
+		<?php echo do_action('c2c_previous_or_loop_post_link', $format='%link', $link='<div class="nav-left"><h3>Previous piece</h3><span>%title</span></div>', $excluded_categories = '86'); ?>
+		<?php echo do_action('c2c_next_or_loop_post_link', $format='%link', $link='<div class="nav-right"><h3>Next Piece</h3><span>%title</span></div>', $excluded_categories = '86'); ?>
 		</div>
-
-
-
-
 
 
 

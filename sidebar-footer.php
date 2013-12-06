@@ -56,7 +56,7 @@
 					<div class="fivecol last">
 					<h3>Check out my work</h3>
 					<?php
-					$args = array( 'posts_per_page' => 1, 'post_type' => 'pieces', 'orderby' => 'rand' );
+					$args = array( 'posts_per_page' => 1, 'post_type' => 'pieces', 'orderby' => 'rand', 'cat' => -86 );
 					query_posts($args);
 					while ( have_posts() ) : the_post();
 					?>

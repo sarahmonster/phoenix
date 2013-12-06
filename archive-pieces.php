@@ -21,9 +21,22 @@ get_header(); ?>
 	 * We reset this later so we can run the loop
 	 * properly with a call to rewind_posts().
 	 */
-	if ( have_posts() )
+	
+	if (is_main_query()) {
+		query_posts($query_string . '&cat=-86');
+	}
+	
+	 while (have_posts()):
 		the_post();
+		
+	endwhile;
 ?>
+
+
+
+
+
+
 	<header class="twelvecol last page-title">
 		<span class="page-subtitle">It&rsquo;s hard to choose, but here are some of my favourite projects</span>
 		<h1 class="pagetitle">Selected Portfolio</h1>
@@ -47,5 +60,5 @@ get_header(); ?>
 ?>
 	</div>
 </div><!-- row -->	
-<?php //get_sidebar(); ?>
+
 <?php get_footer(); ?>
