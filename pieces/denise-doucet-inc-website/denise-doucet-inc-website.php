@@ -15,7 +15,7 @@
 	
 		<span class="date url-link">&middot; <a href="http://denisedoucetinc.com">denisedoucetinc.com</a> &middot; </span>
 	
-		<p>We started by building her a custom WordPress site, careful to keep the structure as flexible as possible, in anticipation of future expansion. I suggested we opt for a responsive design, especially since many of her clients would be browsing their site on their phones. The end result is a site that's simple, clean, and professional, while still letting Denise's personality shine through.</p>
+		<p>We started by building her a custom WordPress site, careful to keep the structure as flexible as possible, in anticipation of future expansion. I suggested we opt for a responsive design, especially since many of her clients would be browsing the site on their phones. The end result is a site that's simple, clean, and professional, while still letting Denise's personality shine through.</p>
 	
 		<a href="<?php echo $path; ?>/logo.png"><img src="<?php echo $path; ?>/logo.png" alt="Denise Doucet INC logo" /></a>
 	
