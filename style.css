@@ -576,7 +576,7 @@ em {
 	font-size: .9em;
 }
 .project-writeup {
-	margin-top: -50px;
+	margin-top: -30px;
 	margin-bottom: 0;
 } 
 #project-details > p:first-child:first-letter, .project-writeup > p:first-child:first-letter {
