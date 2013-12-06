@@ -1,5 +1,5 @@
 <div class="twelvecol">
-	<img class="borderless" src="<?php echo $path; ?>/responsive.png" alt="Paul Leone: Responsive Author Site" />
+	<a href="<?php echo $path; ?>/responsive.png"><img class="borderless" src="<?php echo $path; ?>/responsive.png" alt="Paul Leone: Responsive Author Site" /></a>
 </div>
 
 
@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="sixcol">
-		<img src="<?php echo $path; ?>/blog-post.jpg" alt="Blog post" />
+		<a href="<?php echo $path; ?>/blog-post.jpg"><img src="<?php echo $path; ?>/blog-post.jpg" alt="Blog post" /></a>
 	</div>
 
 </div>
@@ -29,11 +29,11 @@
 <div class="row">
 
 	<div class="fourcol">
-		<img src="<?php echo $path; ?>/mobile-menu.png" alt="Menu on mobiles" />
+		<a href="<?php echo $path; ?>/mobile-menu.png"><img src="<?php echo $path; ?>/mobile-menu.png" alt="Menu on mobile devices" /></a>
 	</div>
 
 	<div class="eightcol">
-		<img src="<?php echo $path; ?>/welcome-screen.jpg" alt="Homepage on desktop" />
+		<a href="<?php echo $path; ?>/welcome-screen.jpg"><img src="<?php echo $path; ?>/welcome-screen.jpg" alt="Homepage on desktop" /></a>
 	</div>
 
 </div>
@@ -44,7 +44,7 @@
 <div class="row">
 	
 	<div class="sixcol">
-		<img src="<?php echo $path; ?>/contact-page.jpg" alt="Contact page" />	
+		<a href="<?php echo $path; ?>/contact-page.jpg"><img src="<?php echo $path; ?>/contact-page.jpg" alt="Contact page" /></a>
 	</div>
 	
 	<div class="sixcol quote">
@@ -52,7 +52,7 @@
 		<p>Sarah was a pleasure to work with. She was friendly and explained each stage of the web-​​design process as it unfolded (no easy task for an oft-​​befuddled history major), and the end result was everything I could have hoped for. Thoroughly professional work and someone I wouldn’t hesitate to recommend for those looking for a quality website.</p>
 		</blockquote>
 		
-		<img src="<?php echo $path; ?>/books-detail.jpg" alt="Detail from the books page." />
+		<a href="<?php echo $path; ?>/books-detail.jpg"><img src="<?php echo $path; ?>/books-detail.jpg" alt="Detail from the books page." /></a>
 	</div>
 
 </div>
