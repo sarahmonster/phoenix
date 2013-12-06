@@ -44,7 +44,10 @@ get_header(); ?>
 	
 	<!-- PORTFOLIO IMAGES -->
 	<div id="project-gallery" class="new-design">
-	<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
+		<?php 
+			$template = parse_url(get_bloginfo('template_directory')); 
+			include(".".$template['path']."/pieces/".$post->post_name.".php"); 
+		?>
 	</div>	
 	
 	
