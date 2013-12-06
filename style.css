@@ -576,7 +576,7 @@ em {
 	font-size: .9em;
 }
 .project-writeup {
-	margin-top: -90px;
+	margin-top: -50px;
 	margin-bottom: 0;
 } 
 #project-details > p:first-child:first-letter, .project-writeup > p:first-child:first-letter {
@@ -598,6 +598,8 @@ em {
 	font-size: .9em;
 	text-align: center;
 	float: none;
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
 .new-design blockquote {
 	margin-top: -20px;
