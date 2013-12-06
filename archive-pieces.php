@@ -22,7 +22,7 @@ get_header(); ?>
 	 * properly with a call to rewind_posts().
 	 */
 	
-	if (is_main_query()) {
+	if (is_main_query() && $_GET['showhidden'] != "yes") {
 		query_posts($query_string . '&cat=-86');
 	}
 	
