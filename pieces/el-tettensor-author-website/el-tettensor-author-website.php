@@ -47,7 +47,7 @@
 		<a href="<?php echo $path; ?>/ipad.jpg"><img src="<?php echo $path; ?>/ipad.jpg" alt="iPad" /></a>
 	</div>
 
-	<div class="threecol" style="margin-top: 70px;">
+	<div class="threecol" style="margin-top: 50px;">
 		<a href="<?php echo $path; ?>/iphone.jpg"><img src="<?php echo $path; ?>/iphone.jpg" alt="iPhone" /></a>
 	</div>
 
