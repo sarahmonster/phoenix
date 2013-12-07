@@ -14,7 +14,7 @@
 	</div>
 	
 	<div class="fivecol project-writeup">
-		<p class="cap">When E.L. Tettensor asked me to build her a website to promote her debut novel, she said she wanted an immersive experience&mdash;like stepping inside the pages of the book. It needed to be old-fashioned, dark, and ornate. She mentioned that she liked the parallax scrolling effect, but that it might be a bit out of reach. Naturally, I took this as a challenge. This site was my first experience with parallax effects—but I went a step further and made sure the site was responsive. The result is a site that&rsquo; as immersive on a phone as on a computer.</p>
+		<p class="cap">When E.L. Tettensor asked me to build her a website to promote her debut novel, she said she wanted an immersive experience&mdash;like stepping inside the pages of the book. It needed to be old-fashioned, dark, and ornate. She mentioned that she liked the parallax scrolling effect, but that it might be a bit out of reach. Naturally, I took this as a challenge. This site was my first experience with parallax effects—but I went a step further and made sure the site was responsive. The result is a site that&rsquo;s as immersive on a phone as on a computer.</p>
 				
 		<a href="<?php echo $path; ?>/logo.png"><img class="borderless" src="<?php echo $path; ?>/logo.png" alt="" /></a>
 	
