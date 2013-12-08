@@ -38,7 +38,7 @@
 	<div class="fourcol project-writeup">
 		<p class="cap">Making the site work well across a variety of screens, with different sizes, proportions, and technical restrictions, was a major challenge. A lot of work went into fine-tuning all the rules such that the site would work well everywhere.</p>
 		
-		<p>The blog posts are separate pages, and have their own style that ties in with the rest of the site. </p>
+		<p>Part of the challenge of a one-page site like this lies in deciding what to do with content that won't fit into easy panels. As a result, I decided to structure the blog posts and archive as separate pages. These pages are styled to tie in with the rest of the site, and the header links back to the appropriate sections of the main page.</p>
 		
 	</div>
 
@@ -66,7 +66,7 @@
 	
 	<div class="sevencol">
 		<blockquote>
-			<p> </p>
+			<p>I had a few good proposals for my website, but Sarah was absolutely the right choice. Not only did she completely understand what I was going for, she was able to execute to perfection, pairing an artist&rsquo;s eye with an engineer&rsquo;s attention to detail. After helping me find just the right artist to do the background illustration, she meticulously sourced the fonts and images, culminating in an organic, immersive experience that perfectly captures the mood of the books. Small wonder the website has received so many compliments! I fully expect to work with Sarah again in the future.</p>
 		</blockquote>
 	</div>
 	
