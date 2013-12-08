@@ -35,7 +35,7 @@
 
 <div class="row">
 
-	<div class="fivecol project-writeup">
+	<div class="fourcol project-writeup">
 		<p class="cap">Making the site work well across a variety of screens, with different sizes, proportions, and technical restrictions, was a major challenge. A lot of work went into fine-tuning all the rules such that the site would work well everywhere.</p>
 		
 		<p>The blog posts are separate pages, and have their own style that ties in with the rest of the site. </p>
@@ -43,11 +43,11 @@
 	</div>
 
 	
-	<div class="fourcol">
+	<div class="fivecol">
 		<a href="<?php echo $path; ?>/ipad.jpg"><img src="<?php echo $path; ?>/ipad.jpg" alt="iPad" /></a>
 	</div>
 
-	<div class="threecol" style="margin-top: 50px;">
+	<div class="threecol iphone">
 		<a href="<?php echo $path; ?>/iphone.jpg"><img src="<?php echo $path; ?>/iphone.jpg" alt="iPhone" /></a>
 	</div>
 

@@ -610,9 +610,13 @@ em {
 .single-pieces blockquote p {
 	margin-bottom: 0;
 }
-#project_details cite{
+#project_details cite {
 	display: none;
 } 
+.iphone {
+	margin-top: 10%;
+}
+
 
 
 /* navigation for tablets */
