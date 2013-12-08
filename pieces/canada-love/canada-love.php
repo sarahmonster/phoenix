@@ -25,3 +25,19 @@
 </div>
 
 
+
+<div class="row">
+	
+	<div class="eightcol">
+		<a href="<?php echo $path; ?>/ipad.jpg"><img src="<?php echo $path; ?>/ipad.jpg" alt="iPad" /></a>
+	</div>
+
+	<div class="fourcol iphone">
+		<a href="<?php echo $path; ?>/iphone.jpg"><img src="<?php echo $path; ?>/iphone.jpg" alt="iPhone" /></a>
+	</div>
+
+</div>
+
+<div class="row">
+	<a href="<?php echo $path; ?>/desktop.jpg"><img src="<?php echo $path; ?>/desktop.jpg" alt="Frontpage" /></a>
+</div>
