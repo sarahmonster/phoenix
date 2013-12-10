@@ -475,7 +475,7 @@ em {
 /* PORTFOLIO LISTING PAGES */
 
 .portfolio-excerpt {
-	margin-bottom: 20px;
+	margin-bottom: -80px;
 	margin-top: 20px;
 	text-align: center;
 	position: relative;
@@ -514,7 +514,7 @@ em {
 	height: 75px;
 	width: 250px;
 	overflow: hidden;
-	bottom: 125px;
+	bottom: 140px;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
