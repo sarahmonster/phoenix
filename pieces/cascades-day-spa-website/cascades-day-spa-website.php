@@ -12,8 +12,6 @@
 	
 	<div class="sixcol project-writeup">
 		<p class="cap">Cascades Day Spa is one of Halifax&rsquo;s longest-running and most well-known day spas. They have a loyal clientele and an excellent reputation, but their old website just wasn't pulling its weight anymore. Built on a Contribute platform, it was difficult to update, hard to navigate, and had a design that was severely out-of-date. They approached me knowing the site needed an overhaul in order to have a website that was in line with their business, and that would allow for continued growth.</p>
-		
-	<p>Kim requested that the site be simple, clean, and easy to navigate. At the same time, she knew that she needed something that would be accessible on phones and tablets. Of primary importance were the gift certificates and the book online functionality, both of which needed to be as easy to use as possible from both a client and a company perspective. 
 				
 	<span class="date url-link">&middot; <a href="http://cascadesspa.com">cascadesspa.com</a> &middot; </span>
 	
@@ -26,6 +24,27 @@
 	
 	<div class="sixcol">
 		<a href="<?php echo $path; ?>/full-page.jpg"><img src="<?php echo $path; ?>/full-page.jpg" alt="" /></a>
+	</div>
+
+</div>
+
+
+
+
+
+
+<div class="row">
+
+	<div class="threecol iphone">
+		<a href="<?php echo $path; ?>/iphone.jpg"><img src="<?php echo $path; ?>/iphone.jpg" alt="iPhone" /></a>
+	</div>
+	
+	<div class="fivecol">
+		<a href="<?php echo $path; ?>/ipad.jpg"><img src="<?php echo $path; ?>/ipad.jpg" alt="iPad" /></a>
+	</div>
+	
+	<div class="fourcol project-writeup">
+		<p class="cap">Kim requested that the site be simple, clean, and easy to navigate. At the same time, she knew that she needed something that would be accessible on phones and tablets. Of primary importance were the gift certificates and the book online functionality, both of which needed to be as easy to use as possible from both a client and a company perspective.</p>
 	</div>
 
 </div>
