@@ -7,7 +7,7 @@
 
 
 
-<div class="sixcol portfolio-excerpt">
+<div class="fourcol portfolio-excerpt">
 	<div class="portfolio-inner">
 		<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">	
 			<?php 
