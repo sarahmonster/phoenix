@@ -8,7 +8,6 @@
 
 
 <div class="fourcol portfolio-excerpt">
-	<div class="portfolio-inner">
 		<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">	
 			<?php 
 			$template = parse_url(get_bloginfo('template_directory'));
@@ -24,6 +23,5 @@
 		</div>
 		
 		</a>
-	</div>
 </div>
 

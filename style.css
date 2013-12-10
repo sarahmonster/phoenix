@@ -478,16 +478,10 @@ em {
 	margin-bottom: 20px;
 	margin-top: 20px;
 	text-align: center;
+	position: relative;
 }
 .portfolio-excerpt:nth-of-type(3n) {
   	margin-right: 0;
-}
-.portfolio-inner {
-	position: relative;
-	overflow: hidden;
-	box-shadow: 1px 1px 3px #bdbdbd;
-	border: 1px solid #d0cdcd;
-	text-align: center;
 }
 .portfolio-excerpt img {
  	display: block;
@@ -497,6 +491,8 @@ em {
 	-webkit-transition: opacity 2s;
 	-ms-transition: opacity 2s;
 	-o-transition: opacity 2s;
+	box-shadow: 1px 1px 3px #bdbdbd;
+	border: 1px solid #d0cdcd;
 } 
 .portfolio-excerpt img.hover {
 	opacity: 0;
