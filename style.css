@@ -477,6 +477,7 @@ em {
 .portfolio-excerpt {
 	margin-bottom: 20px;
 	margin-top: 20px;
+	text-align: center;
 }
 .portfolio-excerpt:nth-of-type(3n) {
   	margin-right: 0;
@@ -486,6 +487,7 @@ em {
 	overflow: hidden;
 	box-shadow: 1px 1px 3px #bdbdbd;
 	border: 1px solid #d0cdcd;
+	text-align: center;
 }
 .portfolio-excerpt img {
  	display: block;
@@ -511,65 +513,45 @@ em {
 
 
 
-
-.portfolio-excerpt:hover .overlay, .portfolio-excerpt:focus .overlay {
-	bottom: 0;
-}
-
-.overlay {
-	z-index: 30; 
+.overlay { 
 	position: absolute;
-	bottom: -35px;
+	height: 75px;
+	width: 250px;
+	overflow: hidden;
+	bottom: 25px;
 	left: 0;
+	right: 0;
+	margin: 0 auto;
 	background: rgba(255, 255, 255, 0.65);
 	font-size: 0.9em;
 	color: #110B0B;
-	height: 50px;
 	line-height: 1.4em;
-	width: 100%;
 	padding: 10px 15px;
-	transition: all .3s ease-out 0s;
-	border-top: 1px solid #D0CDCD;
 	box-shadow: 0 0 1px #000;
+	transition: opacity 4s;
 }
 .overlay h2 {
 	font-style: normal;
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #D0CDCD;
 	text-shadow: 0 0 1px #fefefb;
 	color: #850000;
-	font-size: 1em;
+	font-size: .85em;
 	letter-spacing: 1px;
+	line-height: 1em;
 	text-transform: uppercase;
 	font-family: Gotham;
-} 
-.overlay:hover, .overlay:focus, .portfolio-excerpt:hover .overlay, .portfolio-excerpt:focus .overlay {
-	background: rgba(255, 255, 255, 0.9);
 }
-.overlay:hover h2, .overlay:focus h2, .portfolio-excerpt:hover h2, .portfolio-excerpt:focus h2 {
-	color: #B20000;
-}
-.overlay .subtitle {
-	opacity: 0;
-	transition: all 125ms ease-out;
+.overlay p.subtitle {
 	text-align: center;
 }
-.portfolio-excerpt:hover .overlay .subtitle, .portfolio-excerpt:focus .overlay .subtitle {
-	opacity: 1;
+
+.portfolio-excerpt .overlay {
+	opacity: 100;
 }
-/* scale fonts down for smaller screens */
-@media all and (max-width: 801px) {
-	.overlay {
-		font-size: .75em;
-	}
-	.portfolio-excerpt:hover .overlay, .portfolio-excerpt:focus .overlay {
-		bottom: -15px;
-	}
-}
-/* and then even more! */
-@media all and (max-width: 480px) {
-	.overlay {
-		display: none;
-	}
+.portfolio-excerpt a:hover .overlay {
+	opacity: 0;
 }
 
 
