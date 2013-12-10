@@ -11,10 +11,11 @@
 	<div class="portfolio-inner">
 		<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">	
 			<?php 
-			if (has_post_thumbnail()) {
-				the_post_thumbnail('portfolio');
-			} 
+			$template = parse_url(get_bloginfo('template_directory'));
+			$slug = $post->post_name; 
+			$thumbnail_path = $template['path']."/pieces/".$slug."/thumbnail.jpg";
 			?>
+		<img src="<?php echo $thumbnail_path; ?>" />
 		</a>
 		<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">
 		<div class="overlay">
