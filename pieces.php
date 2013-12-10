@@ -13,10 +13,15 @@
 			<?php 
 			$template = parse_url(get_bloginfo('template_directory'));
 			$slug = $post->post_name; 
-			$thumbnail_path = $template['path']."/pieces/".$slug."/thumbnail.jpg";
+			$thumbnail_path = $template['path']."/pieces/".$slug."/";
 			?>
-		<img src="<?php echo $thumbnail_path; ?>" />
+		<img src="<?php echo $thumbnail_path; ?>thumbnail.jpg" />
+		<img class="hover" src="<?php echo $thumbnail_path; ?>thumbnail-alt.jpg" />
 		</a>
+		
+		
+		
+		
 		<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">
 		<div class="overlay">
 			<h2><?php echo the_title();  ?></h2>

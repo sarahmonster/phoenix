@@ -478,23 +478,44 @@ em {
 	margin-bottom: 20px;
 	margin-top: 20px;
 }
+.portfolio-excerpt:nth-of-type(3n) {
+  	margin-right: 0;
+}
 .portfolio-inner {
 	position: relative;
 	overflow: hidden;
 	box-shadow: 1px 1px 3px #bdbdbd;
 	border: 1px solid #d0cdcd;
 }
-.portfolio-excerpt:nth-of-type(3n) {
-  	margin-right: 0;
-}
-.portfolio-excerpt:hover .overlay, .portfolio-excerpt:focus .overlay {
-	bottom: 0;
-}
 .portfolio-excerpt img {
  	display: block;
 	max-width: 100%;
-	height: 350px;
+	transition: opacity 2s;
+	-moz-transition: opacity 2s;
+	-webkit-transition: opacity 2s;
+	-ms-transition: opacity 2s;
+	-o-transition: opacity 2s;
 } 
+.portfolio-excerpt img.hover {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.portfolio-excerpt a:hover img {
+	opacity: 0;
+}
+.portfolio-excerpt a:hover img.hover {
+	opacity: 100;
+}
+
+
+
+
+.portfolio-excerpt:hover .overlay, .portfolio-excerpt:focus .overlay {
+	bottom: 0;
+}
+
 .overlay {
 	z-index: 30; 
 	position: absolute;
