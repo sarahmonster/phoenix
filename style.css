@@ -566,13 +566,24 @@ em {
 	opacity: 0;
 }
 
+
 /* show less information on smaller screens */
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 1130px)  {
+	.portfolio-excerpt {
+		font-size: .9em;
+	}
+	.portfolio-excerpt .overlay .subtitle {
+		margin: 10px 10px 0;
+	}
+}
+
+@media screen and (max-width: 980px)  {
 	.portfolio-excerpt {
 		margin-bottom: -50px;
 	}
 	.portfolio-excerpt .overlay {
 		height: auto;
+		bottom: 70px;
 	}
 	.portfolio-excerpt .overlay h2 {
 		border-bottom: 0;
