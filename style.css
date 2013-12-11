@@ -483,6 +483,9 @@ em {
 .portfolio-excerpt:nth-of-type(3n) {
   	margin-right: 0;
 }
+.portfolio-excerpt:nth-of-type(3n+1) {
+  	clear: left;
+}
 .portfolio-excerpt img {
  	display: block;
 	max-width: 100%;
@@ -565,6 +568,9 @@ em {
 
 /* show less information on smaller screens */
 @media screen and (max-width: 768px)  {
+	.portfolio-excerpt {
+		margin-bottom: -50px;
+	}
 	.portfolio-excerpt .overlay {
 		height: auto;
 	}
