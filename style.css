@@ -507,7 +507,7 @@ em {
 	opacity: 0;
 }
 .portfolio-excerpt a:hover img.hover {
-	opacity: 100;
+	opacity: 1;
 }
 
 
@@ -530,7 +530,7 @@ em {
 	transition: opacity 4s;
 	position: relative;
 }
-.overlay:after {
+.overlay:before {
 	content: '';
 	display: block;
 	border: 1px solid #D0CDCD;
@@ -553,18 +553,16 @@ em {
 	line-height: 1em;
 	text-transform: uppercase;
 	font-family: Gotham;
+	z-index: 10000000;
 }
 .overlay p.subtitle {
 	text-align: center;
 	margin: 10px 20px 0;
 }
-
-.portfolio-excerpt .overlay {
-	opacity: 100;
-}
 .portfolio-excerpt a:hover .overlay {
-	opacity: 0;
+	background: rgba(255, 255, 255, .8);
 }
+
 
 
 /* show less information on smaller screens */
