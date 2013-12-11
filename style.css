@@ -514,7 +514,6 @@ em {
 
 .overlay { 
 	position: absolute;
-	height: 95px;
 	width: 80%;
 	overflow: hidden;
 	bottom: 10%;
@@ -570,11 +569,10 @@ em {
 
 @media screen and (max-width: 980px)  {
 	.portfolio-excerpt {
-		margin-bottom: -50px;
+		margin-bottom: 7px;
 	}
 	.portfolio-excerpt .overlay {
-		height: auto;
-		bottom: 70px;
+		bottom: 20px;
 	}
 	.portfolio-excerpt .overlay h2 {
 		border-bottom: 0;
