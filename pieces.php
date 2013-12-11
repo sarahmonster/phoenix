@@ -28,9 +28,10 @@
 			$title = get_the_title();
 		}
 		?>
-		
-			<h2><?php echo $title; ?></h2>
-			<p class="subtitle"><?php echo get_post_meta(get_the_ID(), 'Subtitle', true); ?></p>
+			<div>
+				<h2><?php echo $title; ?></h2>
+				<p class="subtitle"><?php echo get_post_meta(get_the_ID(), 'Subtitle', true); ?></p>
+			</div>
 		</div>
 		
 		</a>

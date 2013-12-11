@@ -475,7 +475,7 @@ em {
 /* PORTFOLIO LISTING PAGES */
 
 .portfolio-excerpt {
-	margin-bottom: -80px;
+	margin-bottom: 20px;
 	margin-top: 20px;
 	text-align: center;
 	position: relative;
@@ -514,32 +514,25 @@ em {
 
 .overlay { 
 	position: absolute;
-	height: 75px;
-	width: 70%;
+	height: 95px;
+	width: 80%;
 	overflow: hidden;
-	bottom: 140px;
+	bottom: 10%;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	background: rgba(255, 255, 255, 0.65);
+	background: rgba(255, 255, 255, 0.4);
 	font-size: 0.9em;
 	color: #110B0B;
 	line-height: 1.4em;
-	padding: 15px 15px;
+	padding: 5px;
 	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
 	transition: opacity 4s;
-	position: relative;
 }
-.overlay:before {
-	content: '';
-	display: block;
+.overlay div {
+	background: rgba(255, 255, 255, 0.6);
 	border: 1px solid #D0CDCD;
-	position: absolute;
-	z-index: 100;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
+	padding: 10px 15px;
 }
 .overlay h2 {
 	font-style: normal;
