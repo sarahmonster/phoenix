@@ -512,7 +512,7 @@ em {
 .overlay { 
 	position: absolute;
 	height: 75px;
-	width: 250px;
+	width: 70%;
 	overflow: hidden;
 	bottom: 140px;
 	left: 0;
@@ -563,7 +563,20 @@ em {
 	opacity: 0;
 }
 
-
+/* show less information on smaller screens */
+@media screen and (max-width: 768px)  {
+	.portfolio-excerpt .overlay {
+		height: auto;
+	}
+	.portfolio-excerpt .overlay h2 {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.portfolio-excerpt .overlay .subtitle {
+		display: none;
+	}
+}
 
 
 
