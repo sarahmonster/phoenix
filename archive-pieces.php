@@ -21,10 +21,16 @@ get_header(); ?>
 	 * We reset this later so we can run the loop
 	 * properly with a call to rewind_posts().
 	 */
-	
+	 
+	 
+	/* show hidden posts if I ask nicely */
 	if (is_main_query() && $_GET['showhidden'] != "yes") {
 		query_posts($query_string . '&cat=-86');
 	}
+	
+	/* show 12 items one the first page */
+		query_posts($query_string.'&posts_per_page=12');
+
 	
 	 while (have_posts()):
 		the_post();
