@@ -397,7 +397,6 @@ add_theme_support( 'infinite-scroll', array(
 ) );
 
 
-
 // cut a string to a certain number of words
 function custom_excerpt($excerpt_length) {
     $content = get_the_content();

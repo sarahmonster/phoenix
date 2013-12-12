@@ -23,13 +23,13 @@ get_header(); ?>
 	 */
 	 
 	 
-	/* show hidden posts if I ask nicely */
-	if (is_main_query() && $_GET['showhidden'] != "yes") {
+	/* show hidden posts only if I ask nicely */
+	if ($_GET['showhidden'] != "yes") {
 		query_posts($query_string . '&cat=-86');
 	}
 	
 	/* show 12 items one the first page */
-		query_posts($query_string.'&posts_per_page=12');
+		//query_posts($query_string.'&posts_per_page=12');
 
 	
 	 while (have_posts()):
