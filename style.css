@@ -496,6 +496,7 @@ em {
 	-o-transition: opacity 2s;
 	box-shadow: 1px 1px 3px #bdbdbd;
 	border: 1px solid #d0cdcd;
+	min-height: 200px;
 } 
 .portfolio-excerpt img.hover {
 	opacity: 0;
@@ -503,6 +504,7 @@ em {
 	top: 0;
 	left: 0;
 }
+
 .portfolio-excerpt a:hover img {
 	opacity: 0;
 }
