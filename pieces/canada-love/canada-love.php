@@ -19,7 +19,7 @@
 	<div class="sevencol">
 		<a href="<?php echo $path; ?>/frontpage.jpg"><img src="<?php echo $path; ?>/frontpage.jpg" alt="Frontpage" /></a>
 		
-		<p>The site demanded animation in order to feel less static, and more like it was telling a story. However, it also needed to work on mobile devices—and be responsive—making it a bit of a challenge. All the animation on the site is done with pure CSS3 transitions, which presented a bit of a learning curve for me. The end result, however, feels like a polished product, without resorting to Flash for its animated elements.</p>
+		<p>The site demanded animation in order to feel less static, and more like it was telling a story. However, it also needed to work on mobile devices&mdash;and to be responsive&mdash;making it a bit of a challenge. All the animation on the site is done with pure CSS3 transitions, which presented a bit of a learning curve for me. The end result, however, feels like a polished product, without resorting to Flash for its animated elements.</p>
 	</div>
 
 </div>

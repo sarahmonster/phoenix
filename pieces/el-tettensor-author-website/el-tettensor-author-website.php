@@ -14,7 +14,7 @@
 	</div>
 	
 	<div class="fivecol project-writeup">
-		<p class="cap">When E.L. Tettensor asked me to build her a website to promote her debut novel, she said she wanted an immersive experience&mdash;like stepping inside the pages of the book. It needed to be old-fashioned, dark, and ornate. She mentioned that she liked the parallax scrolling effect, but that it might be a bit out of reach. Naturally, I took this as a challenge. This site was my first experience with parallax effects—but I went a step further and made sure the site was responsive. The result is a site that&rsquo;s as immersive on a phone as on a computer.</p>
+		<p class="cap">When E.L. Tettensor asked me to build her a website to promote her debut novel, she said she wanted an immersive experience&mdash;like stepping inside the pages of the book. It needed to be old-fashioned, dark, and ornate. She mentioned that she liked parallax scrolling effects, but that they might be a bit out of reach. Naturally, I took this as a challenge. This site was my first experience with parallax effects&mdash;and I went a step further, making the site was responsive as well. The result is a site that&rsquo;s as immersive on a phone as on a computer.</p>
 				
 		<a href="<?php echo $path; ?>/logo.png"><img class="borderless" src="<?php echo $path; ?>/logo.png" alt="" /></a>
 	
@@ -38,7 +38,7 @@
 	<div class="fourcol project-writeup">
 		<p class="cap">Making the site work well across a variety of screens, with different sizes, proportions, and technical restrictions, was a major challenge. A lot of work went into fine-tuning all the rules such that the site would work well everywhere.</p>
 		
-		<p>Part of the challenge of a one-page site like this lies in deciding what to do with content that won't fit into easy panels. As a result, I decided to structure the blog posts and archive as separate pages. These pages are styled to tie in with the rest of the site, and the header links back to the appropriate sections of the main page.</p>
+		<p>Part of the challenge of a one-page site like this lies in deciding what to do with content that won&rsquo;t fit into easy panels. As a result, I decided to structure the blog posts and archive as separate pages. These pages are styled to tie in with the rest of the site, and the header links back to the appropriate sections of the main page.</p>
 		
 	</div>
 
