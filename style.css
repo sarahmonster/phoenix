@@ -262,15 +262,12 @@ em {
     list-style: none;
     padding: 10px 0;
     line-height: 24px;
-	font-size: 0.8em;
+	font-size: 0.9em;
     position: relative;
-    text-align: left;
 	overflow: hidden;
 }
 
 #access ul li {
-    border: 1px solid #000;
-	background: rgba(255,255,255,.7);
     display: inline-block;
     position: relative;
     z-index: 0;
@@ -306,37 +303,10 @@ em {
 
 /* selected tab */
 #access ul li.current-menu-item, .single #access ul li.current_page_parent, .single-pieces #access ul li.portfolio-link {
-    background: #fefcf2;
-    background-color: #fefcf2;
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    filter: none;
-    color: #333;
-    z-index: 2;
-    border-bottom-color: #fefcf2;
-    border-bottom-width: 3px;
+	background: rgba(255,255,255,.9);
 }
-#access ul li.current-menu-item:after, #access ul li.current_page_parent:after, .single-pieces #access ul li.portfolio-link:after, 
-#access ul li.current-menu-item:before, #access ul li.current_page_parent:before, .single-pieces #access ul li.portfolio-link:before {
-    border: 1px solid rgba(18,11,11,0.5);
-    position: absolute;
-    bottom: -1px;
-    width: 5px;
-    height: 3px;
-    content: " ";
-}
-#access ul li.current-menu-item:before, #access ul li.current_page_parent:before, .single-pieces #access ul li.portfolio-link:before {
-    left: -6px;
-    border-bottom-right-radius: 6px;
-    border-width: 0 1px 1px 0;
-    box-shadow: 2px 2px 0 #D1D1D1;
-    box-shadow: 2px 2px 0 #fefcf2;
-}
-#access ul li.current-menu-item:after, #access ul li.current_page_parent:after, .single-pieces #access ul li.portfolio-link:after {
-    right: -6px;
-    border-bottom-left-radius: 6px;
-    border-width: 0 0 1px 1px;
-    box-shadow: -2px 2px 0 #D1D1D1;
-    box-shadow: -2px 2px 0 #fefcf2;
+#access ul li.current-menu-item a, .single #access ul li.current_page_parent a, .single-pieces #access ul li.portfolio-link a {
+	color: #999;
 }
 
 
