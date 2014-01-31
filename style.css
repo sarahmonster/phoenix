@@ -17,7 +17,7 @@ Tags: starkers, naked, clean
 
 
 body {
-	background: #fff url("images/background_top.png") 0 -40px repeat-x;
+	/* background: #fff url("images/background_top.png") 0 -40px repeat-x; */
 	font-size: 110%;
 	line-height: 1.8em;
 	color: #110B0B;
@@ -251,12 +251,17 @@ em {
 /* navigation */
 #access {
 	width: 100%;
-	background: rgba(255,255,255,.75);
 	position: fixed;
 	top: 0;
 	left: 0;
-	box-shadow: 1px 1px 3px #bdbdbd;
-	border-bottom: 1px solid #d0cdcd;	
+	background: url("images/background_nav.png") bottom left repeat-x;
+}
+#logo-icon {
+	float: left;
+}
+#logo-icon img {
+	width: 70px;
+	margin: 10px 20px -40px 20px;
 }
 #access ul {
     list-style: none;
@@ -265,6 +270,7 @@ em {
 	font-size: 0.9em;
     position: relative;
 	overflow: hidden;
+	text-align: right;
 }
 
 #access ul li {
@@ -303,7 +309,7 @@ em {
 
 /* selected tab */
 #access ul li.current-menu-item, .single #access ul li.current_page_parent, .single-pieces #access ul li.portfolio-link {
-	background: rgba(255,255,255,.9);
+	border: 1px solid #fff;
 }
 #access ul li.current-menu-item a, .single #access ul li.current_page_parent a, .single-pieces #access ul li.portfolio-link a {
 	color: #999;
