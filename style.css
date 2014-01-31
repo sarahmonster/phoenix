@@ -255,22 +255,24 @@ em {
 	top: 0;
 	left: 0;
 	background: url("images/background_nav.png") bottom left repeat-x;
+	text-align: center;
+	z-index: 10000;
 }
 #logo-icon {
-	float: left;
+	position: absolute;
+	top: 5px;
+	left: 45%;
 }
 #logo-icon img {
-	width: 70px;
-	margin: 10px 20px -40px 20px;
+	width: 90px;
 }
 #access ul {
     list-style: none;
     padding: 10px 0;
+    margin: 0 auto;
+    width: 1140px;
     line-height: 24px;
 	font-size: 0.8em;
-    position: relative;
-	overflow: hidden;
-	text-align: right;
 }
 
 #access ul li {
@@ -278,9 +280,12 @@ em {
     position: relative;
     z-index: 0;
     text-shadow: 0 1px #FFF;
-    margin: 0 5px;
+    margin: 0 20px;
     padding: 0;
 } 
+#access ul li.contact-link, #access ul li.blog-link, #access ul li.portfolio-link {
+	float: right;
+}
 #access li a {
 	display: block;
 	padding: 5px 20px 5px 35px;
