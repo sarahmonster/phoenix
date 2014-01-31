@@ -75,7 +75,7 @@
 						<!-- NAVIGATION -->
 					
 						<div id="access" role="navigation">
-							<a id="logo-icon" href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/triggers-and-sparks.png" alt="triggers &amp; sparks" /></a>
+							<a id="logo-icon" href="<?php echo get_bloginfo('url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/triggers-and-sparks-icon.png" alt="triggers &amp; sparks" /></a>
 							<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 						</div><!-- #access -->
 						
