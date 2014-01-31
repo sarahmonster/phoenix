@@ -260,11 +260,21 @@ em {
 }
 #logo-icon {
 	position: absolute;
-	top: 5px;
+	top: 10px;
 	left: 45%;
 }
 #logo-icon img {
 	width: 90px;
+}
+#logo-icon:hover:after {
+	display: block;
+	content: url('images/stars.png');
+	position: absolute;
+	top: -6px;
+	left: -27px;
+	width: 40px;
+	height: 29px;
+	z-index: 10000;
 }
 #access ul {
     list-style: none;
