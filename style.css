@@ -247,21 +247,22 @@ em {
 	z-index: 10000;
 }
 
+
 /* navigation */
 #access {
 	width: 100%;
-	background: rgba(255,255,255,.7);
-	position: absolute;
-	top: 46px;
+	background: rgba(255,255,255,.75);
+	position: fixed;
+	top: 0;
 	left: 0;
+	box-shadow: 1px 1px 3px #bdbdbd;
+	border-bottom: 1px solid #d0cdcd;	
 }
 #access ul {
     list-style: none;
-    padding: 0;
+    padding: 10px 0;
     line-height: 24px;
 	font-size: 0.8em;
-	text-shadow: 0px 0px 1px #ddd;
-	font-family: GothamBook, Arial, sans-serif; 
     position: relative;
     text-align: left;
 	overflow: hidden;
@@ -280,8 +281,10 @@ em {
 #access li a {
 	display: block;
 	padding: 5px 20px 5px 35px;
-	background: url(images/tab-icons.png) no-repeat;
+	background: url('images/tab-icons.png') no-repeat;
 	color: #110B0B;
+	text-shadow: 0px 0px 1px #ddd;
+	font-family: GothamBook, Arial, sans-serif; 
 	transition: none;
 }
 #access li:hover a, #access li:focus a {
