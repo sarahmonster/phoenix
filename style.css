@@ -265,8 +265,6 @@ em {
 	width: 95px;
 	margin-left: -47.5px;
 }
-#logo-icon img {
-}
 #logo-icon:hover:after {
 	display: block;
 	content: url('images/stars.png');
@@ -281,7 +279,7 @@ em {
     list-style: none;
     padding: 10px 0;
     margin: 0 auto;
-    width: 1140px;
+    max-width: 1140px;
     line-height: 24px;
 	font-size: 0.8em;
 }
@@ -339,22 +337,24 @@ em {
 	display: none;
 }
 
-
-@media all and (max-width: 900px) and (min-width: 750px) {
+/* tighten spacing of tabs on smaller screens */
+@media all and (max-width: 1025px) and (min-width: 920px) {
 	#access ul li {
-		font-size: .85em;
-		margin-left: 0;
-		margin-right: 6px;
+		margin: 0 10px;
+	}
+}
+@media all and (max-width: 920px) and (min-width: 767px) {
+	#access ul li {
+		margin: 0;
+		font-size: .9em;
 	}
 	#access ul li a {
-		padding-right: 9px;
-		padding-left: 33px;
+		padding-right: 10px;
 	}
-
 }
 
 /* beyond a certain dimension, hide the tabs and show the mobile menu button instead */
-@media screen and (max-width: 750px)  {
+@media screen and (max-width: 767px)  {
 	#access {
 		display: none;
 	}
@@ -1250,7 +1250,7 @@ figure br {
 
 
 /* REWORK HEADER AREA ON MOBILE */
-@media screen and (max-width: 640px)  {
+@media screen and (max-width: 767px)  {
 	body {
 		background: url("images/background_top.png") repeat-x scroll 0 -65px #FFFFFF;
 	}
@@ -1258,6 +1258,7 @@ figure br {
 		text-align: center;
 	}
 	#logo {
+		display: inline-block;
 		float: none;
 		width: 90px;
 		margin: 10px auto;
