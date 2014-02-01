@@ -289,7 +289,7 @@ em {
     position: relative;
     z-index: 0;
     text-shadow: 0 1px #FFF;
-    margin: 0 20px;
+    margin: 0 20px 5px;
     padding: 0;
 } 
 #access ul li.contact-link, #access ul li.blog-link, #access ul li.portfolio-link {
@@ -297,12 +297,12 @@ em {
 }
 #access li a {
 	display: block;
-	padding: 5px 20px 5px 35px;
+	padding: 5px 15px 3px 38px;
 	background: url('images/tab-icons.png') no-repeat;
 	color: #766d6d;
     text-shadow: 1px 1px 0px #fff;
 	font-family: Gotham, Arial, sans-serif; 
-	transition: none;
+	transition: color .3s linear;
 	text-transform: uppercase;
 	letter-spacing: .25px;
 }
@@ -325,7 +325,7 @@ em {
 
 /* selected tab */
 #access ul li.current-menu-item, .single #access ul li.current_page_parent, .single-pieces #access ul li.portfolio-link {
-	border: 1px solid #fff;
+
 }
 #access ul li.current-menu-item a, .single #access ul li.current_page_parent a, .single-pieces #access ul li.portfolio-link a {
 	color: #999;
@@ -340,12 +340,12 @@ em {
 /* tighten spacing of tabs on smaller screens */
 @media all and (max-width: 1025px) and (min-width: 920px) {
 	#access ul li {
-		margin: 0 10px;
+		margin: 0 10px 5px;
 	}
 }
 @media all and (max-width: 920px) and (min-width: 767px) {
 	#access ul li {
-		margin: 0;
+		margin: 0 0 5px;
 		font-size: .9em;
 	}
 	#access ul li a {
