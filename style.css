@@ -233,27 +233,8 @@ em {
 
 /* logo */
 #logo {
-	width: 152px;
-	margin: 13px auto;
-	z-index: 400;
 	display: none;
 } 
-#logo img {
-	float: right;
-	width: 120px;
-	margin-top: 7px;
-	margin-left: -25px;
-	z-index: 10;
-}
-#logo:hover:after {
-	display: block;
-	content: url(images/stars.png);
-	float: left;
-	width: 53px;
-	height: 39px;
-	z-index: 10000;
-}
-
 
 /* navigation */
 #access {
@@ -713,8 +694,7 @@ em {
 		margin: 0 auto;
 	}
 	.piece-header .nav-left, .piece-header .nav-right {
-		margin-bottom: 20px;
-		margin-top: 10px;
+		display: none;
 	}
 	.nav-right {
 		float: left;
@@ -1276,18 +1256,9 @@ figure br {
 	}
 	#logo {
 		display: inline-block;
-		float: none;
 		width: 90px;
-		margin: 10px auto;
+		margin: 10px 0 0 -42px;
 	} 
-	#logo img {
-		width: 90px;
-		float: none;
-		margin: 10px 0 0 0;
-	}
-	#logo:hover:after {
-		display: none;
-	}
 	.page-subtitle {
 		display: none;
 	}
