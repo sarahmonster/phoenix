@@ -220,8 +220,16 @@ em {
 /* HEADER AND NAV */
 
 #header {
-	height: 120px;
+	height: 160px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	background: url("images/background_nav.png") bottom left repeat-x;
+	z-index: 1000;
 }
+
 
 /* logo */
 #logo {
@@ -249,11 +257,6 @@ em {
 
 /* navigation */
 #access {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: url("images/background_nav.png") bottom left repeat-x;
 	text-align: center;
 	z-index: 10000;
 }
@@ -667,7 +670,6 @@ em {
 	width: 55px;
 	height: 55px;
 	overflow: hidden;
-	margin-top: 20px;
 }
 .nav-left {
 	background: url('images/prev.png') no-repeat 0 -64px;
@@ -692,9 +694,11 @@ em {
 }
 .piece-header .nav-left, .piece-header .nav-right {
 	margin-bottom: -100px;
+	margin-top: 130px;
 }
 .page-title {
 	text-align: center;
+	margin-top: 130px;
 }
 
 /* minor adjustments for even-smaller screens */
@@ -710,6 +714,7 @@ em {
 	}
 	.piece-header .nav-left, .piece-header .nav-right {
 		margin-bottom: 20px;
+		margin-top: 10px;
 	}
 	.nav-right {
 		float: left;
@@ -720,6 +725,9 @@ em {
 
 /* on larger screens only, show expanded navigation */
 @media screen and (min-width: 1280px)  {
+	.piece-header .nav-left, .piece-header .nav-right {
+		display: none;
+	}
 	.nav-left, .nav-right {
 		position: fixed;
 		top: 50%;
