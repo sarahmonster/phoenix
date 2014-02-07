@@ -32,7 +32,20 @@ get_header(); ?>
 	
 	<div class="row page-content">
 	
-		<?php the_content(); ?>
+	
+		 
+	<?php // show custom template for new portfolio items 
+	
+	$page_type = get_post_meta($post->ID, 'Type', $single);
+	if ($page_type === "custom"):
+			$template = parse_url(get_bloginfo('template_directory'));
+			$slug = $post->post_name; 
+			$path = $template['path']."/pages/";
+			include(".".$path."/".$slug.".php"); 
+	else: 
+		the_content(); 
+	endif;	
+	?>
 
 	</div><!-- row -->
 <?php endwhile; ?>
