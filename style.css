@@ -1018,7 +1018,7 @@ figure br {
 .page-content img.circular {
 	border-radius: 50%;
 	border: 10px solid #fff;
-	box-shadow: 4px 4px 15px #bdbdbd;
+	box-shadow: 0 0 4px #bdbdbd;
 }
 .page-content img.borderless {
 	box-shadow: none;
@@ -1029,6 +1029,10 @@ figure br {
 /* homepage */
 .home .page-content {
 	margin-top: 120px;
+}
+
+#design-love {
+	margin-top: 2em;	
 }
 
 #hello {

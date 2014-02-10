@@ -2,7 +2,7 @@
 			<img alt="Hello! My name is Sarah." src="<?php echo $path; ?>sarah-semark.jpg" class="circular" />
 	</div>
 	<div class="sevencol">
-			<img alt="I love design." src="wp-content/themes/new-triggers-sparks/images/i-love-design.png" class="borderless" />
+			<img alt="I love design." src="wp-content/themes/new-triggers-sparks/images/i-love-design.png" class="borderless" id="design-love" />
 	</div>
 
 </div><!-- END ROW -->
