@@ -1038,11 +1038,15 @@ figure br {
 #hello {
     background: url('images/fleuron.png') no-repeat scroll center bottom transparent;
     font-size: 1.15em;
-    line-height: 1.4em;
+    line-height: 1.6em;
     padding: 10px 0 60px 0;
 }
 #hello p {
-	margin: 10px 0;
+	margin: 1em 0;
+}
+#hello p:first-child {
+	font-size: 1.7em;
+	line-height: 1.2em;
 }
 #hello a {
 	text-transform: uppercase;

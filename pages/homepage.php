@@ -9,6 +9,8 @@
 <div class="row">
 
 	<div class="sevencol onepush" id="hello">
+	
+			<p>I’m a freelance graphic designer and web developer. I’m great at understanding my clients’ needs and building sites that work.</p>
 			
 			<p>I make beautiful websites and gorgeous graphics, and I travel around the world as I do it.</p>
 			
