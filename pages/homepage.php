@@ -8,7 +8,7 @@
 </div><!-- END ROW -->
 <div class="row">
 
-	<div class="sevencol onepush" id="hello">
+	<div class="sevencol onepush intro" id="hello">
 	
 			<p>I’m a freelance graphic designer and web developer. I’m great at understanding my clients’ needs and building sites that work.</p>
 			
