@@ -105,19 +105,3 @@
 	
 	</div>
 
-
-
-</div>
-
-<div class="row">
-
-
-
-	<div class="fivecol onepush">
-
-		<p class="cap">How does it all work? Well, my design process is all about <em>you</em>. We start by figuring out precisely what you need. Some clients know exactly what they want and just need their vision made into reality. Others need design help from the ground up.</p>
-	
-		<p>Either way, we'll begin with talking about you and your business. Who's your target market? What are their values, how do they live their lives, and what do they think is important? Who are your competitors and how do you stand out from them? What sort of image are you trying to project? What sort of image do you currently maintain? There are a lot of questions!</p>
-	
-		<p>When all the talking (or emailing, as the case may be) is done, the work starts. First off: rough mockup designs based on everything we talked about. From there, it's a back-and-forth process of revisions, combining and refining elements until it all comes together into a design you're sure to love.</p>
-	</div>
