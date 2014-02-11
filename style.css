@@ -1119,9 +1119,14 @@ figure br {
 	width: 75%;
 	float: left;
 	line-height: 1.4em;
+	margin-bottom: 10px;
 }
 .service-text h3 {
 	clear: none;
+	color: #850000;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+	border-bottom: 1px solid #595959;
 }
 
 

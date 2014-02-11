@@ -68,7 +68,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Logos &amp; branding</h3> 
-			<p>A great logo should tell the world, with a simple line or shape, what you're all about. Once you've got a logo, you need a business card, letterhead, and maybe a whole range of other materials. I can make sure your look is consistent throughout, so everything just fits right.</p>
+			<p>A great logo speaks volumes with a few simple shapes. Once you've got a logo, you need a business card, letterhead, and other marketing materials. I can help you build a great brand from the ground up, giving you a cohesive and professional look.</p>
 		</div>
 	
 		<div class="service-icon">
@@ -84,7 +84,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Resumes</h3>
-			<p>A beautifully designed and well-written resume will get your foot in the door.</p>
+			<p>A beautifully designed and well-written resume will get your foot in the door. I make people gorgeous resumes that stand out. (My own resume, on the other hand, hasn't been updated since 2009.)</p>
 		</div>
 		
 		<div class="service-icon">
