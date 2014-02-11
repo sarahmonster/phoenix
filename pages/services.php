@@ -1,5 +1,5 @@
 	<div class="fourcol">
-		Image
+		<img src="<?php echo $path; ?>services/skills.png" class="borderless">
 	</div>
 	
 	<div class="eightcol last intro">
