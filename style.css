@@ -1109,18 +1109,20 @@ figure br {
 
 
 /* services */
-.page-id-26 .fourcol p:first-child {
-	margin: 0;
-} 
-.page-id-26 h2 {
-	margin-top: 0;
-	font-size: 1.3em;
+.service-icon {
+	width: 20%;
+	float: left;
+	margin: 40px 5% 0 0;
+	clear: both;
 }
-.service-desc {
-	margin-top: 0;
-	font-style: italic;
+.service-text {
+	width: 75%;
+	float: left;
+	line-height: 1.4em;
 }
-
+.service-text h3 {
+	clear: none;
+}
 
 
 /* contact */
