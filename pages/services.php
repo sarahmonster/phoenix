@@ -55,7 +55,7 @@
 			<img src="<?php echo $path; ?>services/newsletters.png">
 		</div>
 		<div class="service-text">
-			<h3>Email newsletters &amp; Social Media Integration</h3> 
+			<h3>Email newsletters &amp; Social Media</h3> 
 			<p>Want to mass-mail three thousand of your closest friends? I'm well-versed in MailChimp templates, and can create a newsletter template that will degrade well across a variety of email clients. I can also make sure your website interacts well (and matches with) your various social media accounts. </p>
 		</div>
 	
@@ -72,7 +72,7 @@
 		</div>
 	
 		<div class="service-icon">
-			<img src="<?php echo $path; ?>services/branding.png">
+			<img src="<?php echo $path; ?>services/promotions.png">
 		</div>
 		<div class="service-text">
 			<h3>Printed promotions</h3> 
@@ -80,26 +80,26 @@
 		</div>
 		
 		<div class="service-icon">
-			<img src="<?php echo $path; ?>services/branding.png">
+			<img src="<?php echo $path; ?>services/resumes.png">
 		</div>
 		<div class="service-text">
 			<h3>Resumes</h3>
-			<p>A beautifully designed and well-written resume will get your foot in the door. I make people gorgeous resumes that stand out. (My own resume, on the other hand, hasn't been updated since 2009.)</p>
+			<p>A beautifully designed and well-written resume will get your foot in the door. I make people gorgeous resumes that scream "hire me!" (My own resume, on the other hand, hasn't been updated since 2009.)</p>
 		</div>
 		
 		<div class="service-icon">
-			<img src="<?php echo $path; ?>services/branding.png">
+			<img src="<?php echo $path; ?>services/book-covers.png">
 		</div>
 		<div class="service-text">
 			<h3>Book Covers</h3>
-			<p>People <em>do</em> judge a book by its cover. Let's make sure they like it.</p>
+			<p>People <em>do</em> judge a book by its cover. Let's make sure they like it. Whether you need a print cover or an ebook designed, I can help you create something beautiful and eye-catching.</p>
 		</div>
 		
 		<div class="service-icon">
-			<img src="<?php echo $path; ?>services/branding.png">
+			<img src="<?php echo $path; ?>services/signage.png">
 		</div>
 		<div class="service-text">
-			<h3>Information design</h3> 
+			<h3>Signage &amp; Information design</h3> 
 			<p>Your menus, signs, posters, annual reports, and wedding invitations will have so much more panache if they're professionally designed.</p>
 		</div>
 	
