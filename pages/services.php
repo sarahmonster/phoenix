@@ -7,7 +7,7 @@
 	<div class="eightcol last intro">
 		<p>I've been in business a long time, and that means that there are a <strong>lot</strong> of things I do. I specialize in custom WordPress sites, but there's a whole lot more that I can do. I'm either a very technical designer, or a very aesthetically-inclined developer&mdash;depending on who you ask&mdash;so you can count on me to deliver something as functional as it is beautiful.</p>
 		
-		<p>It might be shorter to give you a list of the things I don't do. Here are a few things I <em>don't</em> do: Flash, SEO, back-end development, waste anyone's time. I've developed strategic partnerships with a whole host of brilliant people. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
+		<p>It might be shorter to give you a list of the things I <em>don't</em> do: Flash, SEO, back-end development, or waste anyone's time. I've developed strategic partnerships with a whole host of brilliant people. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
 		
 		<p>Sound good? <a href="/contact">Let's chat!</a></p>
 	</div>
@@ -34,7 +34,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Responsive design</h3>
-			<p>You know how people are always wandering around playing with their phones? Your site needs to be optimized for them. I craft well thought-out responsive designs that adapt to the size of the device they're being shown on.</p>
+			<p>You know how people are always wandering around playing with their phones? Your site needs to be optimized for them. I craft thoughtful, responsive designs that adapt to the size of the device they're displayed on.</p>
 		</div>
 		
 		<div class="service-icon">
@@ -42,7 +42,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Domains and hosting</h3> 
-			<p>Your website needs a safe place to live. With my managed hosting service, optimized for WordPress, your site will be stable, secure, and lightning-fast. Personalized support, regular updates, and bulletproof backups are just bonus.</p>
+			<p>Your website needs a safe place to live. With my <a href="/blog/managed-wordpress-hosting-with-love/">managed hosting service</a>, optimized for WordPress, your site will be stable, secure, and lightning-fast. Personalized support, regular updates, and bulletproof backups come standard.</p>
 		</div>
 		
 		<div class="service-icon">
@@ -58,7 +58,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Email newsletters &amp; Social Media</h3> 
-			<p>Want to mass-mail three thousand of your closest friends? I create newsletter templates that degrade well across a variety of email clients. While we're at it, I'll integrate your social media accounts with your website and other promotions.</p>
+			<p>Want to mass-mail three thousand of your closest friends? I create newsletter templates that look beautiful across a variety of email clients. While we're at it, I can integrate your social media accounts with your website and other promotions.</p>
 		</div>
 	
 	</div>
@@ -70,7 +70,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Logos &amp; branding</h3> 
-			<p>A great logo speaks volumes with a few simple shapes. Once you've got a logo, you need a business card, letterhead, and other marketing materials. I can help you build a great brand from the ground up, giving you a cohesive and professional look.</p>
+			<p>A great logo speaks volumes with a few simple shapes. Once you've got a logo, you need a business cards, letterhead, and other marketing materials. I can help you build a great brand from the ground up, giving you a cohesive and professional look.</p>
 		</div>
 	
 		<div class="service-icon">
