@@ -1028,6 +1028,10 @@ figure br {
 	font-size: 1.15em;
     line-height: 1.6em;
 }
+.fine-print {
+	font-size: .75em;
+	line-height: 1em;
+}
 
 
 /* homepage */
@@ -1119,7 +1123,7 @@ figure br {
 	width: 75%;
 	float: left;
 	line-height: 1.4em;
-	margin-bottom: 10px;
+	margin-top: 10px;
 }
 .service-text h3 {
 	clear: none;
