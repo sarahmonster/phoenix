@@ -10,10 +10,10 @@
 
 	<div class="sevencol onepush intro" id="hello">
 	
-			<p>I’m a freelance graphic designer and web developer. I’m great at understanding my clients’ needs and building sites that work.</p>
+			<p>I’m a graphic designer and web developer. I’m great at understanding my clients’ needs and building sites that work.</p>
 			
 			<p>I make beautiful websites and gorgeous graphics, and I travel around the world as I do it.</p>
-			
+						
 			<p>Want to get to know me better? Check out my <a href="/portfolio">portfolio</a> to see a sampling of some of the work I've done.</p>
 			
 			<p>I also write a <a href="/blog">blog</a>. Sometimes I talk about design, but mostly I just tell stories about my travels.</p>
