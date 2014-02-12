@@ -1150,6 +1150,17 @@ figure br {
 	margin-bottom: 0px;
 	border-bottom: 1px solid #595959;
 }
+@media screen and (max-width: 768px) and (orientation: portrait)  {
+	.service-icon {
+		width: 30%;
+		float: none;
+		margin: 20px auto 0;
+	}
+	.service-text {
+		width: 100%;
+		float: none;
+	}
+}
 
 
 /* contact */
