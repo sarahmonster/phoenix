@@ -42,7 +42,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Domains and hosting</h3> 
-			<p>Your website needs a safe place to live. With my <a href="/blog/managed-wordpress-hosting-with-love/">managed hosting service</a>, optimized for WordPress, your site will be stable, secure, and lightning-fast. Personalized support, regular updates, and bulletproof backups are just bonus.</p>
+			<p>Your website needs a safe place to live. With my <a href="/blog/managed-wordpress-hosting-with-love/">managed hosting service</a>, optimized for WordPress, your site will be stable, secure, and lightning-fast. Personalized support, regular updates, and bulletproof backups come standard.</p>
 		</div>
 		
 		<div class="service-icon">
