@@ -38,8 +38,9 @@
 					<div class="fourcol">
 						<h3>Client lovenotes</h3>
 						<blockquote>
-						<?php $quote = quotescollection_quote('show_author=0&show_source=0&random=1&tags=footer&ajax_refresh=1&echo=0'); ?>
+						<?php $quote = quotescollection_quote('show_author=0&show_source=0&random=1&tags=footer&ajax_refresh=0&echo=0'); ?>
 						<?php echo $quote; ?>
+						<a class="quotescollection_refresh" href="/clients">&middot; More <span>love</span>notes &middot;</a>
 						</blockquote>
 					</div>
 
