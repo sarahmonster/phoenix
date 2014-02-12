@@ -70,7 +70,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Logos &amp; branding</h3> 
-			<p>A great logo speaks volumes with a few simple shapes. Once you've got a logo, you need a business card, letterhead, and other marketing materials. I can help you build a great brand from the ground up, giving you a cohesive and professional look.</p>
+			<p>A great logo speaks volumes with a few simple shapes. Once you've got a logo, you need a business cards, letterhead, and other marketing materials. I can help you build a great brand from the ground up, giving you a cohesive and professional look.</p>
 		</div>
 	
 		<div class="service-icon">
