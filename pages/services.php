@@ -58,7 +58,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Email newsletters &amp; Social Media</h3> 
-			<p>Want to mass-mail three thousand of your closest friends? I create newsletter templates that degrade well across a variety of email clients. While we're at it, I'll integrate your social media accounts with your website and other promotions.</p>
+			<p>Want to mass-mail three thousand of your closest friends? I create newsletter templates that look beautiful across a variety of email clients. While we're at it, I can integrate your social media accounts with your website and other promotions.</p>
 		</div>
 	
 	</div>
