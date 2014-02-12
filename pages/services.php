@@ -3,11 +3,11 @@
 	</div>
 	
 	<div class="eightcol last intro">
-		<p>From logos to websites, and everything in between: when it comes to design, whatever your needs, I've got you covered!</p>
-	
-		<p>Additionally, if there's something I <em>don't</em> do, I've developed strategic partnerships with a whole host of brilliant people. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Or five.)</p>
-	
-		<p>Oh, and if you already <em>know</em> a guy, I play well with others.</p>
+		<p>I've been in business a long time, and that means that there are a <strong>lot</strong> of things I do. Here are some of the things I've made for clients in the past: WordPress blogs, e-commerce sites, custom websites, static websites, Facebook apps, CD covers, posters, menus, labels, logos, stationary, wedding invitations, web apps, thank-you cards, business cards, flyers, postcards, stickers, newspaper &amp; magazine advertisements, museum panel displays, window signage, resumes, social media profile graphics, book covers, iPhone apps, packaging.</p>
+		
+		<p>It might be shorter to give you a list of the things I don't do. Here are a few things I <em>don't</em> do: Flash, SEO, back-end development, waste anyone's time. I've developed strategic partnerships with a whole host of brilliant people. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
+		
+		<p>Sound good? <a href="/contact">Let's chat!</a></p>
 	</div>
 
 
@@ -32,7 +32,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Responsive design</h3>
-			<p>With more and more people now accessing the internet on a mobile device, it is rapidly becoming more vital to offer a site that’s optimized for these devices. A well thought-out responsive design will give you a website that adapts to the size of the device it's being shown on. </p>
+			<p>You know how people are always wandering around playing with their phones? Your site needs to be optimized for them. I craft well thought-out responsive designs that adapt to the size of the device they're being shown on.</p>
 		</div>
 		
 		<div class="service-icon">
@@ -40,7 +40,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Domains and hosting</h3> 
-			<p>Don't know what this means? Don't you worry about a thing. I've got it covered. I run my own lightning-fast servers, optimized for WordPress, and keep everything secure and up-to-date for you.</p>
+			<p>Your website needs a safe place to live. With my managed hosting service, optimized for WordPress, your site will be stable, secure, and lightning-fast. Personalized support, regular updates, and bulletproof backups are just bonus.</p>
 		</div>
 		
 		<div class="service-icon">
@@ -56,7 +56,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Email newsletters &amp; Social Media</h3> 
-			<p>Want to mass-mail three thousand of your closest friends? I'm well-versed in MailChimp templates, and can create a newsletter template that will degrade well across a variety of email clients. I can also make sure your website interacts well (and matches with) your various social media accounts. </p>
+			<p>Want to mass-mail three thousand of your closest friends? I create newsletter templates that degrade well across a variety of email clients. While we're at it, I'll integrate your social media accounts with your website and other promotions.</p>
 		</div>
 	
 	</div>
