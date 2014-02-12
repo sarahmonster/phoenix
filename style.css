@@ -1070,6 +1070,20 @@ figure br {
 	}
 }
 
+#services-list {
+	margin: 0;
+	padding: 0;
+}
+#services-list li {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+	border-top: 1px solid #bdbdbd;
+}
+#services-list li:last-child {
+	border-bottom: 2px solid #bdbdbd;
+}
+
 
 /* clients */
 .clients {

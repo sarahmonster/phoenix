@@ -20,13 +20,16 @@
 	
 	<div class="threecol">
 		<h3>What I do</h3>
-		<ul>
-			<li>WordPress websites</li>
-			<li>logo & graphic design</li> 
-			<li>website development</li>
-			<li>UX design</li> 
-			<li>responsive design</li> 
-			<li>identity development</li>
-			<li>make things beautiful</li>
+		<ul id="services-list">
+			<li>WordPress Websites</li>
+			<li>Responsive Design</li>
+			<li>Domains &amp; Hosting</li>
+			<li>Interface Design (UI/UX)</li>
+			<li>Email Newsletters</li>
+			<li>Logos &amp; Branding</li>
+			<li>Printed Promotions</li>
+			<li>Resumes</li>
+			<li>Book Covers</li>
+			<li>Signage &amp; Information Design</li>
 		</ul>
 	</div>
