@@ -34,7 +34,7 @@
 		</div>
 		<div class="service-text">
 			<h3>Responsive design</h3>
-			<p>You know how people are always wandering around playing with their phones? Your site needs to be optimized for them. I craft well thought-out responsive designs that adapt to the size of the device they're being shown on.</p>
+			<p>You know how people are always wandering around playing with their phones? Your site needs to be optimized for them. I craft thoughtful, responsive designs that adapt to the size of the device they're displayed on.</p>
 		</div>
 		
 		<div class="service-icon">
