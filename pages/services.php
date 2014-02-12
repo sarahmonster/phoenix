@@ -3,13 +3,13 @@
 		
 		<p>It might be shorter to give you a list of the things I <em>don't</em> do: Flash, SEO, back-end development, or waste anyone's time. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
 		
-		<p>Sound good? <a href="/contact">Let's chat!</a></p>
+		Sound good? <a href="/contact">Let&rsquo;s chat!</a>
 	</div>
 	
 	<div class="fivecol last">
-		<img src="<?php echo $path; ?>services/skills.png" class="borderless">
+		<img src="<?php echo $path; ?>services/skills.png" class="borderless" id="skills-graph">
 		
-		<p class="fine-print">Just a few of the things I've made for clients in the past: WordPress blogs, MailChimp templates, e-commerce sites, custom websites, Facebook apps, CD covers, posters, menus, labels, logos, stationary, wedding invitations, web apps, thank-you cards, business cards, flyers, postcards, stickers, newspaper &amp; magazine advertisements, museum panel displays, window signage, resumes, social media profile graphics, book covers, iPhone apps, packaging.</p>
+		<p class="fine-print">Just a few of the things I've made for clients in the past: WordPress blogs, MailChimp templates, e-commerce sites, custom websites, Facebook apps, CD covers, posters, menus, labels, logos, stationary, wedding invitations, web apps, thank-you cards, business cards, flyers, postcards, stickers, newspaper &amp; magazine advertisements, museum panel displays, window signage, resumes, social media profile graphics, book covers, iPhone apps, packaging. <em>Whew!</em></p>
 	</div>
 
 

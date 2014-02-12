@@ -1030,7 +1030,8 @@ figure br {
 }
 .fine-print {
 	font-size: .75em;
-	line-height: 1em;
+	line-height: 1.2em;
+	margin: .25em 0;
 }
 
 
@@ -1113,6 +1114,9 @@ figure br {
 
 
 /* services */
+#skills-graph {
+	margin-top: 95px;
+}
 .service-icon {
 	width: 20%;
 	float: left;
@@ -1374,7 +1378,8 @@ input[type=submit], #infinite-handle:after {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	transition: all .3s ease-out 0s;	
-} input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
+} 
+input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:active {
 	background-color: #b20000;
 	background: -moz-linear-gradient(bottom, #b20000 0%, #850000 100%);
 	background: -o-linear-gradient(bottom, #b20000 0%, #850000 100%);
