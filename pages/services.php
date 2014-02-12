@@ -1,15 +1,15 @@
-	<div class="fourcol">
+	<div class="sevencol intro">
+		<p class="cap">I&rsquo;ve been in business a long time, and that means that there are a <em>lot</em> of things I do. Depending on who you ask, I'm either a very technical designer, or a very aesthetically-inclined developer, so you can count on me to deliver something as functional as it is beautiful.</p>
+		
+		<p>It might be shorter to give you a list of the things I <em>don't</em> do: Flash, SEO, back-end development, or waste anyone's time. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
+		
+		<p>Sound good? <a href="/contact">Let's chat!</a></p>
+	</div>
+	
+	<div class="fivecol last">
 		<img src="<?php echo $path; ?>services/skills.png" class="borderless">
 		
 		<p class="fine-print">Just a few of the things I've made for clients in the past: WordPress blogs, MailChimp templates, e-commerce sites, custom websites, Facebook apps, CD covers, posters, menus, labels, logos, stationary, wedding invitations, web apps, thank-you cards, business cards, flyers, postcards, stickers, newspaper &amp; magazine advertisements, museum panel displays, window signage, resumes, social media profile graphics, book covers, iPhone apps, packaging.</p>
-	</div>
-	
-	<div class="eightcol last intro">
-		<p>I've been in business a long time, and that means that there are a <strong>lot</strong> of things I do. I specialize in custom WordPress sites, but there's a whole lot more that I can do. I'm either a very technical designer, or a very aesthetically-inclined developer&mdash;depending on who you ask&mdash;so you can count on me to deliver something as functional as it is beautiful.</p>
-		
-		<p>It might be shorter to give you a list of the things I <em>don't</em> do: Flash, SEO, back-end development, or waste anyone's time. I've developed strategic partnerships with a whole host of brilliant people. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
-		
-		<p>Sound good? <a href="/contact">Let's chat!</a></p>
 	</div>
 
 
