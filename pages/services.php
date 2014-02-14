@@ -9,7 +9,7 @@
 	<div class="fivecol last">
 		<img src="<?php echo $path; ?>services/skills.png" class="borderless" id="skills-graph">
 		
-		<p class="fine-print">Just a few of the things I've made for clients in the past: WordPress blogs, MailChimp templates, e-commerce sites, custom websites, Facebook apps, CD covers, posters, menus, labels, logos, stationary, wedding invitations, web apps, thank-you cards, business cards, flyers, postcards, stickers, newspaper &amp; magazine advertisements, museum panel displays, window signage, resumes, social media profile graphics, book covers, iPhone apps, packaging. <em>Whew!</em></p>
+		<p class="fine-print">Just a few of the things I've made for clients in the past: WordPress blogs, MailChimp templates, e-commerce sites, custom websites, pixel art, icon design, video game design, Facebook apps, CD covers, posters, menus, labels, logos, stationary, wedding invitations, web apps, thank-you cards, business cards, flyers, illustrations, animations, postcards, stickers, newspaper &amp; magazine advertisements, museum panel displays, window signage, resumes, social media profile graphics, book covers, iPhone apps, packaging. <em>Whew!</em></p>
 	</div>
 
 
