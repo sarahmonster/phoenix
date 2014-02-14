@@ -1061,15 +1061,6 @@ figure br {
 	font-size: .9em;
 	font-family: "MercuryDisplaySC";
 }
-@media screen and (max-width: 640px)  {
-	#hello {
-		font-size: 1em;
-	}
-	#hello a {
-		letter-spacing: 1px;
-	}
-}
-
 #services-list {
 	margin: 60px 0 0;
 	padding: 0;
@@ -1086,6 +1077,32 @@ figure br {
 }
 #services-list li:last-child {
 	border-bottom: 2px solid #bdbdbd;
+}
+@media screen and (max-width: 640px)  {
+	.home .circular {
+		display: none;
+	}
+	#hello {
+		font-size: 1em;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	#hello p:first-child {
+		font-size: 1.5em;
+		text-align: center;
+		padding: 0 10px;
+	}
+	#hello a {
+		letter-spacing: 1px;
+	}
+	#services-list {
+		display: none;
+	}
+}
+@media screen and (max-width: 950px)  {
+	#services-list span {
+		display: none;
+	}
 }
 
 

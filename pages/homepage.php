@@ -23,12 +23,12 @@
 			<li>WordPress Websites</li>
 			<li>Responsive Design</li>
 			<li>Domains &amp; Hosting</li>
-			<li>Interface Design (UI/UX)</li>
+			<li>Interface Design <span>(UI/UX)</span></li>
 			<li>Email Newsletters</li>
 			<li>Logos &amp; Branding</li>
 			<li>Printed Promotions</li>
 			<li>Resumes</li>
 			<li>Book Covers</li>
-			<li>Signage &amp; Information Design</li>
+			<li>Signage <span>&amp; Information Design</span></li>
 		</ul>
 	</div>
