@@ -1046,7 +1046,7 @@ figure br {
 
 #hello {
     background: url('images/fleuron.png') no-repeat scroll center bottom transparent;
-    padding: 10px 0 60px 0;
+    padding: 10px 0 63px 0;
 }
 #hello p {
 	margin: 1em 0;
@@ -1071,13 +1071,17 @@ figure br {
 }
 
 #services-list {
-	margin: 0;
+	margin: 60px 0 0;
 	padding: 0;
+	color: #464141;
+	font-size: .75em;
+	font-family: "GothamBook", Arial, sans-serif;
 }
 #services-list li {
 	list-style-type: none;
 	margin: 0;
-	padding: 5px;
+	line-height: 2.5em;
+	padding: 1px;
 	border-top: 1px solid #bdbdbd;
 }
 #services-list li:last-child {

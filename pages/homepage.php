@@ -19,7 +19,6 @@
 	</div>
 	
 	<div class="threecol">
-		<h3>What I do</h3>
 		<ul id="services-list">
 			<li>WordPress Websites</li>
 			<li>Responsive Design</li>
