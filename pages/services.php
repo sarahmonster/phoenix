@@ -1,5 +1,5 @@
 	<div class="sevencol intro">
-		<p class="cap">I&rsquo;ve been in business a long time, and that means that there are a <em>lot</em> of things I do. Depending on who you ask, I'm either a very technical designer, or a very aesthetically-inclined developer, so you can count on me to deliver something as functional as it is beautiful.</p>
+		<p class="cap">I&rsquo;ve been in business a long time, and that means that there are a <em>lot</em> of things I do. Depending on who you ask, I&rsquo;m either a very technical designer, or a very aesthetically-inclined developer. So you can count on me to deliver something <strong>as functional as it is beautiful.</strong></p>
 		
 		<p>It might be shorter to give you a list of the things I <em>don't</em> do: Flash, SEO, back-end development, or waste anyone's time. Need an illustration? Copywriting? Search engine optimization? Photography? Custom programming? I know a guy. (Oh, and if you already <em>know</em> a guy, I play well with others.)</p>
 		

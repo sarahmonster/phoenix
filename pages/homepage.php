@@ -10,7 +10,7 @@
 
 	<div class="sevencol onepush intro" id="hello">
 	
-			<p>I&rsquo;m a graphic designer and web developer. I&rsquo;m great at understanding my clients&rsquo; needs and building sites that work.</p>
+			<p>I&rsquo;m a graphic designer and web developer. I&rsquo;m great at understanding my clients&rsquo; needs and <strong>building sites that work.</strong></p>
 			
 			<p>Want to get to know me better? Check out my <a href="/portfolio">portfolio</a> to see a sampling of some of the work I&rsquo;ve done. I also write a <a href="/blog">blog</a>. Sometimes I talk about design, but mostly I just tell stories about my travels.</p>
 			

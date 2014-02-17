@@ -200,7 +200,11 @@ ul {
 	margin: 15px 0;
 }
 strong {
-	font-weight: bold;
+	font-weight: normal;
+	background: #fdefc6; 
+	color: #110B0B;
+	padding-right: .1em;
+	padding-left: .1em;
 }
 em {
 	font-style: italic;
