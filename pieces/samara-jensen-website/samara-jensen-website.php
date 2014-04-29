@@ -54,8 +54,6 @@
 	<div class="sixcol last">
 		<a href="<?php echo $path; ?>/contact.png"><img src="<?php echo $path; ?>/contact.png" alt="Contact page" /></a>
 
-		<span class="date url-link">&middot; <a href="http://samarajensen.com">samarajensen.com</a> &middot; </span>
-
 		<p>A matching Facebook header graphic and a background for Twitter rounded out the package, along with some buttons and badges of various sizes for Samara to use around the internet.</p>
 
 		<a href="<?php echo $path; ?>/facebook2.png"><img src="<?php echo $path; ?>/facebook2.png" alt="Facebook" /></a>
