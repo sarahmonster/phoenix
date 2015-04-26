@@ -1,6 +1,9 @@
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
+.wp-caption,
+figure {
+  background: lighten($color__text-main, 70%);
+  padding: 10px;
+  margin: 0px -20px;
+  max-width: calc(100% + 40px);
 
 	img[class*="wp-image-"] {
 		@include center-block;
@@ -9,8 +12,19 @@
 	.wp-caption-text {
 		margin: 0.8075em 0;
 	}
+
+  @include desktop {
+    margin-left: -50px;
+    margin-right: -50px;
+    max-width: calc(100% + 100px);
+  }
 }
 
-.wp-caption-text {
+.wp-caption-text,
+figcaption {
+  color: lighten($color__text-main, 25%);
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.4;
 	text-align: center;
 }

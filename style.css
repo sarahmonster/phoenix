@@ -763,7 +763,7 @@ a:hover, a:active {
   font-size: 3.6rem;
   font-weight: 600;
   margin: 0 0 .5em;
-  padding: 0.25em 0;
+  padding: 0;
 }
 
 .subtitle {
@@ -845,20 +845,38 @@ object {
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%;
+.wp-caption,
+figure {
+  background: #f3f3f3;
+  padding: 10px;
+  margin: 0px -20px;
+  max-width: calc(100% + 40px);
 }
-.wp-caption img[class*="wp-image-"] {
+.wp-caption img[class*="wp-image-"],
+figure img[class*="wp-image-"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.wp-caption .wp-caption-text {
+.wp-caption .wp-caption-text,
+figure .wp-caption-text {
   margin: 0.8075em 0;
 }
+@media (min-width: 1024px) {
+  .wp-caption,
+  figure {
+    margin-left: -50px;
+    margin-right: -50px;
+    max-width: calc(100% + 100px);
+  }
+}
 
-.wp-caption-text {
+.wp-caption-text,
+figcaption {
+  color: gray;
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.4;
   text-align: center;
 }
 
