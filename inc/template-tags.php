@@ -83,17 +83,41 @@ function flare_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'flare' ),
+		_x( '%s', 'post date', 'flare' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
+
+	$posted_on = flare_format_date(get_the_time('l '), get_the_time('F'), get_the_time('jS'), get_the_time('Y') );
 
 	$byline = sprintf(
 		_x( 'by %s', 'post author', 'flare' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span>';
 
+}
+endif;
+
+/* output fully-formatted post date */
+function flare_format_date($dayofweek, $month, $day, $year) {
+	$date = $dayofweek . '<span class="highlight">';
+	// generate date with a special hidey-class
+	$month_short = substr($month, 0, 3);
+	$month_remainder = substr($month, 3, 500);
+	$month = $month_short . '<span class="extra-date">' . $month_remainder . '</span>';
+	$date .= $month . " " . $day;
+	$date .= '</span>&nbsp;'.$year;
+	return $date;
+}
+
+if ( ! function_exists( 'flare_entry_footer' ) ) :
+/**
+ * Prints a subtitle for the post, if one exists.
+ */
+function flare_subtitle() {
+	$subtitle = get_post_meta( get_the_ID(), 'Subtitle', true );
+	echo '<span class="subtitle">' . $subtitle . '</span>';
 }
 endif;
 

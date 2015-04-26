@@ -26,3 +26,35 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+
+/* Entry headers */
+.entry-header {
+  margin-top: 3em;
+}
+
+.posted-on {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 600;
+  color: #bbb;
+}
+
+.entry-title {
+  margin: 0 0 .5em;
+  padding: 0.25em 0;
+  @include font-size(3);
+  font-weight: 600;
+}
+
+.subtitle {
+  display: block;
+  margin-top: .5em;
+  border-top: 1px solid lighten($color__text-main, 50%);
+  color: #bbb;
+  padding-top: 1em;
+  font-style: italic;
+  @include font-size(1.6);
+}
