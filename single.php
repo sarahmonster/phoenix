@@ -17,10 +17,11 @@ get_header(); ?>
 			<?php the_post_navigation(); ?>
 
 			<?php
-				// If comments are open or we have at least one comment, load up the comment template
+				/* Comments are the devil. Get your own website!
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;
+				*/
 			?>
 
 		<?php endwhile; // end of the loop. ?>

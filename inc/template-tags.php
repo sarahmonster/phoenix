@@ -95,6 +95,7 @@ function flare_posted_on() {
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span>';
+	//echo edit_post_link( __( 'Edit', 'flare' ), '<span class="edit-link">', '</span>' );
 
 }
 endif;
@@ -111,7 +112,7 @@ function flare_format_date($dayofweek, $month, $day, $year) {
 	return $date;
 }
 
-if ( ! function_exists( 'flare_entry_footer' ) ) :
+if ( ! function_exists( 'flare_subtitle' ) ) :
 /**
  * Prints a subtitle for the post, if one exists.
  */
@@ -140,14 +141,6 @@ function flare_entry_footer() {
 			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'flare' ) . '</span>', $tags_list );
 		}
 	}
-
-	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'flare' ), __( '1 Comment', 'flare' ), __( '% Comments', 'flare' ) );
-		echo '</span>';
-	}
-
-	edit_post_link( __( 'Edit', 'flare' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
