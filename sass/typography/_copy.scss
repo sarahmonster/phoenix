@@ -3,7 +3,7 @@ p {
 }
 
 .cap,
-.entry-content p:first-of-type {
+.single .entry-content p:first-of-type {
 	color: lighten($color__text-main, 25%);
 	font-size: 1.2em;
 	margin-top: 3em;
@@ -12,7 +12,8 @@ p {
 	&:first-letter {
 		float: left;
 		font-size: 121px;
-		margin: -10px 10px 0px -20px;
+		line-height: 1;
+		margin: -10px 10px -10px -20px;
 	}
 }
 

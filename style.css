@@ -280,6 +280,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   line-height: 1.2;
 }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+h1 {
+  line-height: 1;
+}
+h1 a {
+  color: gray;
+}
 
 h2 {
   color: silver;
@@ -294,17 +304,18 @@ p {
 }
 
 .cap,
-.entry-content p:first-of-type {
+.single .entry-content p:first-of-type {
   color: gray;
   font-size: 1.2em;
   margin-top: 3em;
   padding-bottom: 1.5em;
 }
 .cap:first-letter,
-.entry-content p:first-of-type:first-letter {
+.single .entry-content p:first-of-type:first-letter {
   float: left;
   font-size: 121px;
-  margin: -10px 10px 0px -20px;
+  line-height: 1;
+  margin: -10px 10px -10px -20px;
 }
 
 .cap {
@@ -502,10 +513,10 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #B20000;
 }
 a:visited {
-  color: purple;
+  color: #B20000;
 }
 a:hover, a:focus, a:active {
   color: midnightblue;
@@ -700,7 +711,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 #page {
   margin: 0 auto;
-  max-width: 768px;
+  max-width: 1140px;
   padding: 20px;
 }
 
@@ -746,10 +757,6 @@ a:hover, a:active {
 }
 
 /* Entry headers */
-.entry-header {
-  margin-top: 3em;
-}
-
 .posted-on {
   color: #bbb;
   font-size: 0.8rem;
@@ -760,8 +767,6 @@ a:hover, a:active {
 }
 
 .entry-title {
-  font-size: 57.6px;
-  font-size: 3.6rem;
   font-weight: 600;
   margin: 0 0 .5em;
   padding: 0;
@@ -788,6 +793,43 @@ a:hover, a:active {
   margin-top: .5em;
   padding: 1em 0;
   text-align: center;
+}
+
+/* Single post pages */
+.single article {
+  max-width: 768px;
+  margin: 3em auto;
+}
+.single .entry-title {
+  font-size: 57.6px;
+  font-size: 3.6rem;
+}
+
+/* Archive pages */
+.blog article,
+.archive article {
+  font-size: 0.85em;
+}
+.blog article img,
+.archive article img {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.blog article .entry-content,
+.archive article .entry-content {
+  border-top: 1px solid silver;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .blog article,
+  .archive article {
+    float: left;
+    width: 48%;
+  }
+  .blog article:nth-of-type(odd),
+  .archive article:nth-of-type(odd) {
+    clear: left;
+    margin-right: 4%;
+  }
 }
 
 /*--------------------------------------------------------------

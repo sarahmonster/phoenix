@@ -11,7 +11,7 @@
 			<?php flare_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php flare_subtitle(); ?>
+		<span class="subtitle"><?php echo flare_subtitle(); ?></span>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

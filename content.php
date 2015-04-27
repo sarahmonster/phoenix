@@ -5,34 +5,38 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php
+		// show the featured image, if there's one set
+		printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
+						esc_url( get_permalink() ),
+						esc_html( flare_subtitle() )
+					);
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'blog' );
+		} else {
+			echo '<img src="/wp-content/themes/flare/images/placeholder.png" alt="View post" />';
+		}
+		echo '</a>';
+		?>
 	<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
-
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php flare_posted_on(); ?>
-		</div><!-- .entry-meta -->
+			<div class="entry-meta">
+				<?php flare_posted_on(); ?>
+			</div><!-- .entry-meta -->
 		<?php endif; ?>
+
+		<?php
+		printf( '<h1 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h1>',
+						 esc_url( get_permalink() ),
+						 esc_html( get_the_title() )
+					);
+		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
 			/* translators: %s: Name of current post */
-			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'flare' ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'flare' ),
-				'after'  => '</div>',
-			) );
+			the_excerpt();
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php flare_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

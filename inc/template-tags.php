@@ -118,7 +118,7 @@ if ( ! function_exists( 'flare_subtitle' ) ) :
  */
 function flare_subtitle() {
 	$subtitle = get_post_meta( get_the_ID(), 'Subtitle', true );
-	echo '<span class="subtitle">' . $subtitle . '</span>';
+	return $subtitle;
 }
 endif;
 
