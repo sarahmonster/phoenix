@@ -18,5 +18,28 @@ function flare_jetpack_setup() {
     'posts_per_page' => 10,
     'type'           => 'click',
 	) );
+
+  /**
+   * Add theme support for Jetpack responsive videos
+   * See: http://jetpack.me/support/responsive-videos/
+   */
+  add_theme_support( 'jetpack-responsive-videos' );
+
+  /**
+   * Add theme support for Jetpack featured content
+   * See: http://jetpack.me/support/featured-content/
+   */
+  add_theme_support( 'featured-content', array(
+    'filter'    => 'flare_get_featured_posts',
+    'max_posts' => 2,
+  ) );
+
+  /**
+   * Add theme support for Jetpack site logo
+   * See: http://jetpack.me/support/site-logo/
+   */
+  add_image_size( 'flare-logo', 700 ); // Restrict logo to 700 pixels in width (double-sized for hi-res devices)
+  add_theme_support( 'site-logo', array( 'size' => 'flare-logo' ) );
+
 }
 add_action( 'after_setup_theme', 'flare_jetpack_setup' );
