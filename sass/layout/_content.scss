@@ -5,7 +5,23 @@
 }
 
 #masthead {
-  
+
+  .site-branding {
+    background: $red;
+    display: inline-block;
+    width: 75px;
+    margin: -20px 45px;
+
+    .site-logo {
+      margin: 10px -15px;
+      max-width: calc(100% + 30px);
+    }
+
+    .site-title,
+    .site-description {
+      display: none;
+    }
+  }
 }
 
 .content-area {
