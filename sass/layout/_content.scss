@@ -6,23 +6,30 @@
 
 #masthead {
 
-  .site-logo-link {
-    background: none;
-    display: inline-block;
-    left: calc(50% - 37.5px);
-    top: -10px;
-    position: absolute;
-    width: 75px;
+  @include mobile {
+    .site-logo-link {
+      float: left;
+      width: 60px;
+    }
   }
 
-  .site-logo {
-    margin: 10px -15px;
-    max-width: calc(100% + 30px);
+  @include tablet {
+    .site-logo-link {
+      display: inline-block;
+      left: calc(50% - 37.5px);
+      top: -10px;
+      position: absolute;
+      width: 75px;
+    }
+
+    .site-logo {
+      margin: 10px -15px;
+      max-width: calc(100% + 30px);
+    }
   }
 
   .site-branding {
-    background: $red;
-    display: inline-block;
+    display: none;
     width: 75px;
     margin: -20px 45px;
 

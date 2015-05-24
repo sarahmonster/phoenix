@@ -532,16 +532,36 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
+  content: "";
+  display: table;
+  border-bottom: 1px solid silver;
   width: 100%;
 }
 .main-navigation ul {
-  display: none;
   list-style: none;
   margin: 0;
   padding-left: 0;
+  /* Sub-menus (currently unused & thus relatively unstyled) */
+}
+.main-navigation ul li {
+  font-size: 13.6px;
+  font-size: 0.85rem;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.main-navigation ul li a {
+  padding: 4px 6px;
+}
+.main-navigation ul li::after {
+  content: '\00b7';
+}
+.main-navigation ul li:first-child {
+  margin-left: 0;
+}
+.main-navigation ul li:last-child::after {
+  display: none;
 }
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -570,24 +590,23 @@ a:hover, a:active {
   text-decoration: none;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
+/* Small menu */
+@media (max-width: 767px) {
+  .main-navigation {
+    width: calc(100% + 40px);
+    margin: -10px -20px;
+    padding: 0 10px;
+  }
+  .main-navigation ul {
+    float: right;
+    margin-top: -10px;
+  }
 }
-
 /* Large menu */
 @media (min-width: 768px) {
-  .menu-toggle {
-    display: none;
-  }
-
   .main-navigation {
-    clear: none;
-    border-bottom: 1px solid #000;
     display: inline-block;
     float: none;
-    margin-top: -50px;
     position: relative;
     vertical-align: top;
   }
@@ -597,28 +616,16 @@ a:hover, a:active {
   .main-navigation div:last-of-type {
     float: right;
   }
-  .main-navigation ul {
-    display: block;
-  }
-  .main-navigation li {
+  .main-navigation ul li {
     font-size: 14.4px;
     font-size: 0.9rem;
-    display: inline-block;
-    font-weight: 300;
     letter-spacing: 2px;
-    text-transform: uppercase;
   }
-  .main-navigation li a {
+  .main-navigation ul li a {
     padding: 5px 10px;
   }
-  .main-navigation li::after {
-    content: '\00b7';
-  }
-  .main-navigation li:first-child {
+  .main-navigation ul li:first-child {
     margin-left: -5px;
-  }
-  .main-navigation li:last-child::after {
-    display: none;
   }
 }
 /* Other navigation */
@@ -748,21 +755,27 @@ a:hover, a:active {
   padding: 20px;
 }
 
-#masthead .site-logo-link {
-  background: none;
-  display: inline-block;
-  left: calc(50% - 37.5px);
-  top: -10px;
-  position: absolute;
-  width: 75px;
+@media (max-width: 767px) {
+  #masthead .site-logo-link {
+    float: left;
+    width: 60px;
+  }
 }
-#masthead .site-logo {
-  margin: 10px -15px;
-  max-width: calc(100% + 30px);
+@media (min-width: 768px) {
+  #masthead .site-logo-link {
+    display: inline-block;
+    left: calc(50% - 37.5px);
+    top: -10px;
+    position: absolute;
+    width: 75px;
+  }
+  #masthead .site-logo {
+    margin: 10px -15px;
+    max-width: calc(100% + 30px);
+  }
 }
 #masthead .site-branding {
-  background: #B20000;
-  display: inline-block;
+  display: none;
   width: 75px;
   margin: -20px 45px;
 }
