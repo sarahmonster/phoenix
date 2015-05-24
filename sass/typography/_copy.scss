@@ -8,12 +8,18 @@ p {
 	font-size: 1.2em;
 	margin-top: 3em;
 	padding-bottom: 1.5em;
+	position: relative;
 
 	&:first-letter {
 		float: left;
 		font-size: 121px;
 		line-height: 1;
 		margin: -10px 10px -10px -20px;
+	}
+
+	&:first-line {
+		font-variant: small-caps;
+		letter-spacing: 2px;
 	}
 }
 
