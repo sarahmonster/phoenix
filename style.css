@@ -764,8 +764,19 @@ a:hover, a:active {
 }
 
 .site-footer {
+  border-top: 1px solid silver;
   clear: both;
+  color: gray;
+  font-size: 16px;
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  text-align: center;
   width: 100%;
+}
+.site-footer a {
+  color: #404040;
 }
 
 /*--------------------------------------------------------------
