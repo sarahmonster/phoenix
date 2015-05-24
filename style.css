@@ -858,12 +858,14 @@ a:hover, a:active {
   text-align: center;
 }
 
-/* Single post pages */
-.single article {
-  max-width: 768px;
+/* Single posts and pages */
+.single article,
+.page article {
   margin: 3em auto;
+  max-width: 768px;
 }
-.single .entry-title {
+.single .entry-title,
+.page .entry-title {
   font-size: 57.6px;
   font-size: 3.6rem;
 }

@@ -66,11 +66,12 @@
   text-align: center;
 }
 
-/* Single post pages */
-.single {
+/* Single posts and pages */
+.single,
+.page {
   article {
-    max-width: 768px;
     margin: 3em auto;
+    max-width: 768px;
   }
 
   .entry-title {
