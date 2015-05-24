@@ -6,23 +6,32 @@
 
 #masthead {
 
+  .site-logo-link {
+    background: none;
+    display: inline-block;
+    left: calc(50% - 37.5px);
+    top: -10px;
+    position: absolute;
+    width: 75px;
+  }
+
+  .site-logo {
+    margin: 10px -15px;
+    max-width: calc(100% + 30px);
+  }
+
   .site-branding {
     background: $red;
     display: inline-block;
     width: 75px;
     margin: -20px 45px;
 
-    .site-logo {
-      margin: 10px -15px;
-      max-width: calc(100% + 30px);
-    }
-
     .site-title,
     .site-description {
       display: none;
     }
-  }
-}
+  } // .site-branding
+} // #masthead
 
 .content-area {
 

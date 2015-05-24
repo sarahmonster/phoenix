@@ -587,9 +587,9 @@ a:hover, a:active {
     border-bottom: 1px solid #000;
     display: inline-block;
     float: none;
-    margin-top: -20px;
+    margin-top: -50px;
+    position: relative;
     vertical-align: top;
-    width: 768px;
   }
   .main-navigation div:first-of-type {
     float: left;
@@ -748,15 +748,23 @@ a:hover, a:active {
   padding: 20px;
 }
 
+#masthead .site-logo-link {
+  background: none;
+  display: inline-block;
+  left: calc(50% - 37.5px);
+  top: -10px;
+  position: absolute;
+  width: 75px;
+}
+#masthead .site-logo {
+  margin: 10px -15px;
+  max-width: calc(100% + 30px);
+}
 #masthead .site-branding {
   background: #B20000;
   display: inline-block;
   width: 75px;
   margin: -20px 45px;
-}
-#masthead .site-branding .site-logo {
-  margin: 10px -15px;
-  max-width: calc(100% + 30px);
 }
 #masthead .site-branding .site-title,
 #masthead .site-branding .site-description {
