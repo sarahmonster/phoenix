@@ -20,6 +20,7 @@ p {
 	&:first-line {
 		font-variant: small-caps;
 		letter-spacing: 2px;
+		text-transform: lowercase;
 	}
 }
 

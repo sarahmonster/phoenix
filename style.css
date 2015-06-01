@@ -322,6 +322,7 @@ p {
 .single .entry-content p:first-of-type:first-line {
   font-variant: small-caps;
   letter-spacing: 2px;
+  text-transform: lowercase;
 }
 
 .cap {
