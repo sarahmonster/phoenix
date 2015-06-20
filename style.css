@@ -642,6 +642,26 @@ a:hover, a:active {
   margin: 0 0 1.5em;
   overflow: hidden;
 }
+.comment-navigation a,
+.posts-navigation a,
+.post-navigation a {
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  display: block;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.comment-navigation span,
+.posts-navigation span,
+.post-navigation span {
+  color: silver;
+  display: block;
+  font-size: 13.6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -656,6 +676,31 @@ a:hover, a:active {
   width: 50%;
 }
 
+/* Stretch out navigation for larger screens */
+@media (min-width: 1024px) {
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
+    position: fixed;
+    top: 40%;
+    height: auto;
+    width: 300px;
+    padding: 10px 10px 5px 20px;
+    opacity: .45;
+    transition: all 200ms ease-in;
+    box-shadow: 1px 1px 3px #bdbdbd;
+    border: 1px solid #d0cdcd;
+  }
+  .post-navigation .nav-previous:hover,
+  .post-navigation .nav-next:hover {
+    opacity: 1;
+  }
+  .post-navigation .nav-previous {
+    left: 0;
+  }
+  .post-navigation .nav-next {
+    right: 0;
+  }
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -842,6 +887,7 @@ a:hover, a:active {
 /* Entry headers */
 .posted-on {
   color: #bbb;
+  font-size: 12.8px;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 2px;
@@ -893,7 +939,8 @@ a:hover, a:active {
 /* Archive pages */
 .blog article,
 .archive article {
-  font-size: 0.85em;
+  font-size: 13.6px;
+  font-size: 0.85rem;
 }
 .blog article img,
 .archive article img {

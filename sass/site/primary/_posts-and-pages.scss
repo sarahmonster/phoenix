@@ -7,7 +7,7 @@
 }
 
 .byline,
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -31,7 +31,7 @@
 /* Entry headers */
 .posted-on {
   color: #bbb;
-  font-size: 0.8rem;
+  @include font-size(0.8);
   font-weight: 600;
   letter-spacing: 2px;
   margin: 0;
@@ -84,7 +84,7 @@
 .archive {
 
   article {
-    font-size: 0.85em;
+    @include font-size(0.85);
 
     img {
       box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
