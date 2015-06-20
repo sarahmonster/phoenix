@@ -651,6 +651,21 @@ a:hover, a:active {
   line-height: 1.4;
   text-decoration: none;
 }
+.comment-navigation a::before,
+.posts-navigation a::before,
+.post-navigation a::before {
+  display: block;
+  font-family: 'triggers-sparks';
+  font-size: 24px;
+  background: #737373;
+  padding: 6px;
+  border-radius: 50%;
+  line-height: 1;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0px 2px #737373;
+  margin: 14px 10px;
+}
 .comment-navigation span,
 .posts-navigation span,
 .post-navigation span {
@@ -668,6 +683,13 @@ a:hover, a:active {
   float: left;
   width: 50%;
 }
+.comment-navigation .nav-previous a::before,
+.posts-navigation .nav-previous a::before,
+.post-navigation .nav-previous a::before {
+  content: 'l';
+  float: left;
+  margin-left: 2px;
+}
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -675,8 +697,16 @@ a:hover, a:active {
   text-align: right;
   width: 50%;
 }
+.comment-navigation .nav-next a::before,
+.posts-navigation .nav-next a::before,
+.post-navigation .nav-next a::before {
+  content: 'r';
+  float: right;
+  margin-right: 2px;
+}
 
-/* Stretch out navigation for larger screens */
+/* Post navigation */
+/* Stretch out post navigation for larger screens */
 @media (min-width: 1024px) {
   .post-navigation .nav-previous,
   .post-navigation .nav-next {

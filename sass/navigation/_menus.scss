@@ -138,7 +138,6 @@
 }
 
 /* Other navigation */
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -153,6 +152,20 @@
   	display: block;
   	line-height: 1.4;
   	text-decoration: none;
+
+  	&::before {
+			display: block;
+			font-family: 'triggers-sparks';
+			font-size: 24px;
+			background: lighten($black, 20%);
+			padding: 6px;
+			border-radius: 50%;
+			line-height: 1;
+			color: $white;
+			border: 2px solid $white;
+			box-shadow: 0 0 0px 2px lighten($black, 20%);
+			margin: 14px 10px;
+		}
 	}
 
 	span {
@@ -167,21 +180,34 @@
 	& .nav-previous {
 		float: left;
 		width: 50%;
+
+		a::before {
+			content: 'l';
+			float: left;
+			margin-left: 2px;
+		}
 	}
 
 	& .nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+
+		a::before {
+			content: 'r';
+			float: right;
+			margin-right: 2px;
+		}
 	}
 }
 
+/* Post navigation */
+.post-navigation {
 
+}
 
-
-
-/* Stretch out navigation for larger screens */
-@media (min-width: 1024px) {
+/* Stretch out post navigation for larger screens */
+@include desktop {
 	.post-navigation {
 		.nav-previous,
 	  .nav-next {
