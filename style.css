@@ -645,10 +645,10 @@ a:hover, a:active {
 .comment-navigation a,
 .posts-navigation a,
 .post-navigation a {
-  font-size: 19.2px;
-  font-size: 1.2rem;
+  font-size: 17.6px;
+  font-size: 1.1rem;
   display: block;
-  line-height: 1.4;
+  line-height: 1.2;
   text-decoration: none;
 }
 .comment-navigation a::before,
@@ -664,7 +664,7 @@ a:hover, a:active {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0 0 0px 2px #737373;
-  margin: 14px 10px;
+  margin: 10px 12px;
 }
 .comment-navigation span,
 .posts-navigation span,
@@ -677,12 +677,6 @@ a:hover, a:active {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
 .comment-navigation .nav-previous a::before,
 .posts-navigation .nav-previous a::before,
 .post-navigation .nav-previous a::before {
@@ -693,9 +687,7 @@ a:hover, a:active {
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
-  float: right;
   text-align: right;
-  width: 50%;
 }
 .comment-navigation .nav-next a::before,
 .posts-navigation .nav-next a::before,
@@ -705,7 +697,25 @@ a:hover, a:active {
   margin-right: 2px;
 }
 
-/* Post navigation */
+/* Make sure there's some space between when they're stacked on top of one another */
+@media (max-width: 767px) {
+  .nav-previous + .nav-next {
+    border-top: 1px solid silver;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+}
+/* Split into two columns on tablets */
+@media (min-width: 768px) {
+  .post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+  }
+  .post-navigation .nav-next {
+    float: right;
+    width: 50%;
+  }
+}
 /* Stretch out post navigation for larger screens */
 @media (min-width: 1024px) {
   .post-navigation .nav-previous,

@@ -148,9 +148,9 @@
 	}
 
 	a {
-  	@include font-size(1.2);
+  	@include font-size(1.1);
   	display: block;
-  	line-height: 1.4;
+  	line-height: 1.2;
   	text-decoration: none;
 
   	&::before {
@@ -164,12 +164,12 @@
 			color: $white;
 			border: 2px solid $white;
 			box-shadow: 0 0 0px 2px lighten($black, 20%);
-			margin: 14px 10px;
+			margin: 10px 12px;
 		}
 	}
 
 	span {
-	  color: silver;
+	  color: $silver;
 	  display: block;
 	  @include font-size(0.85);
 	  font-weight: 500;
@@ -177,34 +177,47 @@
 	  text-transform: uppercase;
 	}
 
-	& .nav-previous {
-		float: left;
-		width: 50%;
+		& .nav-previous {
+			a::before {
+				content: 'l';
+				float: left;
+				margin-left: 2px;
+			}
+		}
 
-		a::before {
-			content: 'l';
+		& .nav-next {
+			text-align: right;
+			a::before {
+				content: 'r';
+				float: right;
+				margin-right: 2px;
+			}
+		}
+}
+
+/* Make sure there's some space between when they're stacked on top of one another */
+@include mobile {
+	.nav-previous + .nav-next {
+		border-top: 1px solid $silver;
+		margin-top: 30px;
+		padding-top: 20px;
+	}
+}
+
+/* Split into two columns on tablets */
+@include tablet {
+	.post-navigation {
+		& .nav-previous {
 			float: left;
-			margin-left: 2px;
+			width: 50%;
 		}
-	}
 
-	& .nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-
-		a::before {
-			content: 'r';
+		& .nav-next {
 			float: right;
-			margin-right: 2px;
+			width: 50%;
 		}
-	}
-}
-
-/* Post navigation */
-.post-navigation {
-
-}
+	} // .post-navigation
+} // tablet
 
 /* Stretch out post navigation for larger screens */
 @include desktop {
