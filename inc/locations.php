@@ -56,4 +56,21 @@ function flare_get_current_location() {
   return $locations[0]->post_title;
 }
 
+/**
+ * Register a shortcode for current location.
+ * This just makes it stupid easy to drop into a page.
+ */
+function flare_location_shortcode( $atts, $content = null  ){
+  $a = shortcode_atts( array(
+      'show' => 'current',
+  ), $atts );
 
+  if ( 'current' === $a['show'] ):
+    return flare_get_current_location();
+  endif;
+
+  if ( 'countrynumber' === $a['show'] ):
+    return '42';
+  endif;
+}
+add_shortcode( 'place', 'flare_location_shortcode' );
