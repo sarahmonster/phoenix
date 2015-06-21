@@ -144,6 +144,22 @@ function flare_entry_footer() {
 }
 endif;
 
+if ( ! function_exists( 'flare_archive_title' ) ) :
+/**
+ * Filters the_archive_title to add spans for styling the prefixes, and removes the colon.
+ * So instead of "Category: Travel" we'll have "<span class="archive-type">Category</span> Travel"
+ *
+ */
+function flare_archive_title( $title ) {
+  $split_title = explode( ':', $title );
+  if ( $split_title[1] ) {
+  	$title = '<span class="archive-type">'. $split_title[0] . '</span>' . $split_title[1];
+  }
+  return $title;
+}
+add_filter( 'get_the_archive_title', 'flare_archive_title' );
+endif;
+
 if ( ! function_exists( 'the_archive_title' ) ) :
 /**
  * Shim for `the_archive_title()`.

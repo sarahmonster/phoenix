@@ -952,7 +952,8 @@ a:hover, a:active {
 }
 
 /* Entry headers */
-.posted-on {
+.posted-on, .blog .page-header .archive-type,
+.archive .page-header .archive-type {
   color: #bbb;
   font-size: 12.8px;
   font-size: 0.8rem;
@@ -962,13 +963,15 @@ a:hover, a:active {
   text-transform: uppercase;
 }
 
-.entry-title {
-  font-weight: 500;
+.entry-title,
+.page-title {
+  font-weight: 400;
   margin: 0 0 .5em;
   padding: 0;
 }
 
-.subtitle {
+.subtitle,
+.taxonomy-description {
   font-size: 25.6px;
   font-size: 1.6rem;
   border-top: 1px solid silver;
@@ -1004,6 +1007,19 @@ a:hover, a:active {
 }
 
 /* Archive pages */
+.blog .page-header,
+.archive .page-header {
+  margin-top: 3em;
+}
+.blog .page-header .archive-type,
+.archive .page-header .archive-type {
+  display: block;
+}
+.blog .page-title,
+.archive .page-title {
+  font-size: 57.6px;
+  font-size: 3.6rem;
+}
 .blog article,
 .archive article {
   font-size: 13.6px;
