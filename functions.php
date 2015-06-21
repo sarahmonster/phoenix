@@ -70,7 +70,7 @@ function flare_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside', 'image', 'video', 'quote', 'link', 'status',
 	) );
 
 	// Set up the WordPress core custom background feature.
@@ -138,3 +138,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Custom location functionality.
+ */
+require get_template_directory() . '/inc/locations.php';
