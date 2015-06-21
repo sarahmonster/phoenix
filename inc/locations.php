@@ -3,7 +3,10 @@
  * Functions relating to the location Custom Post Type.
  * This post type will be used to generate a "where I am right now"
  * status, as well as to show a map and/or timeline of places and
- * countries. Is very under development as of yet.
+ * countries.
+ *
+ * This is very much under development as of yet.
+ * Ideally, this should really be abstracted out into a plugin.
  *
  * @package Flare
  */
@@ -59,6 +62,11 @@ function flare_get_current_location() {
 /**
  * Register a shortcode for current location.
  * This just makes it stupid easy to drop into a page.
+ *
+ * Usage: [place], by default will show current location.
+ * Pass the "show" parameter to show different information.
+ * For now, [place show=current] will show current (or most recent) location,
+ * [place show=countries] will show total number of countries.
  */
 function flare_location_shortcode( $atts, $content = null  ){
   $a = shortcode_atts( array(
@@ -69,8 +77,8 @@ function flare_location_shortcode( $atts, $content = null  ){
     return flare_get_current_location();
   endif;
 
-  if ( 'countrynumber' === $a['show'] ):
-    return '42';
+  if ( 'countries' === $a['show'] ):
+    return '45';
   endif;
 }
 add_shortcode( 'place', 'flare_location_shortcode' );
