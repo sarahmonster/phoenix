@@ -665,6 +665,12 @@ a:hover, a:active {
   border: 2px solid #fff;
   box-shadow: 0 0 0px 2px #737373;
   margin: 10px 12px;
+  transition: all 200ms linear;
+}
+.comment-navigation a:hover::before,
+.posts-navigation a:hover::before,
+.post-navigation a:hover::before {
+  background: #5a5a5a;
 }
 .comment-navigation span,
 .posts-navigation span,
@@ -724,21 +730,42 @@ a:hover, a:active {
     top: 40%;
     height: auto;
     width: 300px;
-    padding: 10px 10px 5px 20px;
+    padding: 10px;
     opacity: .45;
-    transition: all 200ms ease-in;
-    box-shadow: 1px 1px 3px #bdbdbd;
-    border: 1px solid #d0cdcd;
+    transition: all 200ms linear;
+    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0);
+    border: 1px solid #fff;
   }
   .post-navigation .nav-previous:hover,
   .post-navigation .nav-next:hover {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 1px 3px #bdbdbd;
+    border: 1px solid #d0cdcd;
     opacity: 1;
   }
   .post-navigation .nav-previous {
+    left: -225px;
+  }
+  .post-navigation .nav-previous a::before {
+    float: right;
+  }
+  .post-navigation .nav-previous:hover {
     left: 0;
   }
+  .post-navigation .nav-previous:hover a::before {
+    float: left;
+  }
   .post-navigation .nav-next {
+    right: -225px;
+  }
+  .post-navigation .nav-next a::before {
+    float: left;
+  }
+  .post-navigation .nav-next:hover {
     right: 0;
+  }
+  .post-navigation .nav-next:hover a::before {
+    float: right;
   }
 }
 /*--------------------------------------------------------------
