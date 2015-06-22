@@ -727,7 +727,7 @@ a:hover, a:active {
   .post-navigation .nav-previous,
   .post-navigation .nav-next {
     position: fixed;
-    top: 40%;
+    top: 50%;
     height: auto;
     width: 300px;
     padding: 10px;
