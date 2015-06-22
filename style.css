@@ -293,8 +293,8 @@ h1 a {
 
 h2 {
   color: silver;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 100;
   line-height: 1.2;
   margin-top: 3em;
 }
@@ -554,7 +554,7 @@ a:hover, a:active {
   font-size: 13.6px;
   font-size: 0.85rem;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -624,8 +624,8 @@ a:hover, a:active {
     float: right;
   }
   .main-navigation ul li {
-    font-size: 14.4px;
-    font-size: 0.9rem;
+    font-size: 15.2px;
+    font-size: 0.95rem;
     letter-spacing: 2px;
   }
   .main-navigation ul li a {
@@ -677,9 +677,9 @@ a:hover, a:active {
 .post-navigation span {
   color: silver;
   display: block;
-  font-size: 13.6px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -954,13 +954,17 @@ a:hover, a:active {
 /* Entry headers */
 .posted-on, .blog .page-header .archive-type,
 .archive .page-header .archive-type {
-  color: #bbb;
-  font-size: 12.8px;
-  font-size: 0.8rem;
+  color: silver;
+  font-size: 14.4px;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 2px;
   margin: 0;
   text-transform: uppercase;
+}
+.posted-on .highlight, .blog .page-header .archive-type .highlight,
+.archive .page-header .archive-type .highlight {
+  color: #9a9a9a;
 }
 
 .entry-title,
@@ -1000,6 +1004,14 @@ a:hover, a:active {
   margin: 3em auto;
   max-width: 768px;
 }
+.single .entry-header,
+.page .entry-header {
+  padding-top: 2em;
+}
+.single .entry-meta,
+.page .entry-meta {
+  line-height: 1.5;
+}
 .single .entry-title,
 .page .entry-title {
   font-size: 57.6px;
@@ -1009,7 +1021,7 @@ a:hover, a:active {
 /* Archive pages */
 .blog .page-header,
 .archive .page-header {
-  margin-top: 3em;
+  padding-top: 2em;
 }
 .blog .page-header .archive-type,
 .archive .page-header .archive-type {
