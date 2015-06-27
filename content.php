@@ -26,7 +26,7 @@
 		<?php endif; ?>
 
 		<?php
-		printf( '<h1 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h1>',
+		printf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>',
 						 esc_url( get_permalink() ),
 						 esc_html( get_the_title() )
 					);

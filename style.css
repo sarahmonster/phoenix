@@ -952,6 +952,10 @@ a:hover, a:active {
 }
 
 /* Entry headers */
+.entry-meta {
+  line-height: 1.5;
+}
+
 .posted-on, .blog .page-header .archive-type,
 .archive .page-header .archive-type {
   color: silver;
@@ -1008,10 +1012,6 @@ a:hover, a:active {
 .page .entry-header {
   padding-top: 2em;
 }
-.single .entry-meta,
-.page .entry-meta {
-  line-height: 1.5;
-}
 .single .entry-title,
 .page .entry-title {
   font-size: 57.6px;
@@ -1032,18 +1032,25 @@ a:hover, a:active {
   font-size: 57.6px;
   font-size: 3.6rem;
 }
-.blog article,
-.archive article {
-  font-size: 13.6px;
-  font-size: 0.85rem;
-}
 .blog article img,
 .archive article img {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
+.blog article .entry-meta,
+.archive article .entry-meta {
+  font-size: 12.8px;
+  font-size: 0.8rem;
+}
+.blog article .entry-title,
+.archive article .entry-title {
+  font-size: 33.6px;
+  font-size: 2.1rem;
+}
 .blog article .entry-content,
 .archive article .entry-content {
   border-top: 1px solid silver;
+  font-size: 18.4px;
+  font-size: 1.15rem;
   margin-top: 0;
 }
 @media (min-width: 768px) {
