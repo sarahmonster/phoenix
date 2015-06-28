@@ -1,0 +1,7 @@
+.flare-frontpage-widget {
+
+  @include tablet {
+    display: inline-block;
+    width: 50%;
+  }
+}
