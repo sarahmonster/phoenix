@@ -60,7 +60,21 @@ function flare_get_current_location() {
 }
 
 /**
- * Register a shortcode for current location.
+ * Show a list of upcoming locations.
+ */
+function flare_upcoming_locations() {
+  $locations = get_posts( array(
+    'posts_per_page'   => 5,
+    'post_type'        => 'flare_location',
+    'orderby'          => 'date',
+    'order'            => 'ASC',
+    'post_status'      => 'future',
+  ) );
+  return $locations;
+}
+
+/**
+ * Register a shortcode for location tasks.
  * This just makes it stupid easy to drop into a page.
  *
  * Usage: [place], by default will show current location.

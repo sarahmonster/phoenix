@@ -18,7 +18,7 @@ get_header(); ?>
 
 				<div class="entry-content">
 					I'm Sarah, and this is my website.
-					I am currently in <?php echo flare_get_current_location(); ?>, if you'd like to say hi.
+					I am currently in , if you'd like to say hi.
 
 					<div class="flare-frontpage-widget">
 						<h3><?php esc_html_e( 'Newest stories', 'flare' ); ?></h3>
@@ -58,10 +58,22 @@ get_header(); ?>
 
 								wp_reset_postdata();
 							endforeach;
-
-
 						?>
+					</div><!-- .flare-frontpage-widget -->
 
+					<div class="flare-frontpage-widget">
+						<h3><?php esc_html_e( 'Upcoming Adventures', 'flare' ); ?></h3>
+						<ul>
+							<li>Currently exploring: <?php echo flare_get_current_location(); ?></li>
+						<?php
+						 foreach( flare_upcoming_locations() as $post ):
+						 	echo "<li>";
+						 	echo mysql2date( 'M j', $post->post_date ) . ": " . $post->post_title;
+						 	echo "</li>";
+						 endforeach;
+						?>
+						</ul>
+					</div>
 
 				</div><!-- .entry-content -->
 

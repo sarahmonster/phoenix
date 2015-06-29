@@ -1068,7 +1068,7 @@ a:hover, a:active {
 
 @media (min-width: 768px) {
   .flare-frontpage-widget {
-    display: inline-block;
+    float: left;
     width: 50%;
   }
 }
