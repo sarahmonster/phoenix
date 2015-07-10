@@ -1,5 +1,20 @@
 .flare-frontpage-widget {
 
+  .libretto-short-post {
+    img {
+      border-radius: 50%;
+      float: left;
+      height: 100px;
+      margin: 0 10px 10px 0;
+      width: 100px;
+    }
+
+    .entry-title {
+      @include font-size(1.8);
+      clear: none;
+    }
+  }
+
   @include tablet {
     float: left;
     width: 50%;

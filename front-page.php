@@ -41,7 +41,7 @@ get_header(); ?>
 												esc_html( flare_subtitle() )
 											);
 								if ( has_post_thumbnail() ) {
-									the_post_thumbnail( 'frontpage' );
+									the_post_thumbnail( 'flare-square' );
 								} else {
 									echo '<img src="/wp-content/themes/flare/images/placeholder.png" alt="View post" />';
 								}

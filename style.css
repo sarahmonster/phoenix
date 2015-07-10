@@ -1066,6 +1066,18 @@ a:hover, a:active {
   }
 }
 
+.flare-frontpage-widget .libretto-short-post img {
+  border-radius: 50%;
+  float: left;
+  height: 100px;
+  margin: 0 10px 10px 0;
+  width: 100px;
+}
+.flare-frontpage-widget .libretto-short-post .entry-title {
+  font-size: 28.8px;
+  font-size: 1.8rem;
+  clear: none;
+}
 @media (min-width: 768px) {
   .flare-frontpage-widget {
     float: left;
