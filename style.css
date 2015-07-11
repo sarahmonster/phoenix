@@ -1070,21 +1070,37 @@ a:hover, a:active {
   border-radius: 50%;
   float: left;
   height: 100px;
-  margin: 0 10px 10px 0;
+  margin: 10px 10px 10px 0;
   width: 100px;
 }
 .flare-frontpage-widget .libretto-short-post .entry-title {
-  font-size: 28.8px;
-  font-size: 1.8rem;
+  font-size: 25.6px;
+  font-size: 1.6rem;
   clear: none;
 }
-@media (min-width: 768px) {
-  .flare-frontpage-widget {
-    float: left;
-    width: 50%;
-  }
+.flare-frontpage-widget .libretto-short-post .entry-content {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-top: 0;
 }
 
+@media (min-width: 1024px) {
+  .home .page {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 20px;
+    width: calc(100% - 400px);
+  }
+
+  .flare-frontpage-widget {
+    float: left;
+    margin-top: 3em;
+    padding-left: 20px;
+    width: 400px;
+  }
+}
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/

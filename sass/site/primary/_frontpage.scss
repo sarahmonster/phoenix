@@ -5,18 +5,38 @@
       border-radius: 50%;
       float: left;
       height: 100px;
-      margin: 0 10px 10px 0;
+      margin: 10px 10px 10px 0;
       width: 100px;
     }
 
     .entry-title {
-      @include font-size(1.8);
+      @include font-size(1.6);
       clear: none;
     }
+
+    .entry-content {
+      @include font-size(1);
+      line-height: 1.2;
+      margin-top: 0;
+    }
+  } // .libretto-short-post
+}
+
+
+// Use two columns on a desktop, since we've got loads of space
+@include desktop {
+  .home .page {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: $gutter;
+    width: calc(100% - 400px);
   }
 
-  @include tablet {
+  .flare-frontpage-widget {
     float: left;
-    width: 50%;
-  }
+    margin-top: 3em;
+    padding-left: $gutter;
+    width: 400px;
+}
 }
