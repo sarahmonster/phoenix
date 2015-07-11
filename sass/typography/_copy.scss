@@ -12,15 +12,14 @@ p {
 
 	&:first-letter {
 		float: left;
-		font-size: 121px;
-		line-height: 1;
-		margin: -10px 10px -10px -20px;
+		font-size: 8rem;
+		line-height: 0.8;
+		margin: -9px 10px 0 -10px;
 	}
 
 	&:first-line {
 		font-variant: small-caps;
 		letter-spacing: 2px;
-		text-transform: lowercase;
 	}
 }
 

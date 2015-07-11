@@ -314,15 +314,14 @@ p {
 .cap:first-letter,
 .single .entry-content p:first-of-type:first-letter {
   float: left;
-  font-size: 121px;
-  line-height: 1;
-  margin: -10px 10px -10px -20px;
+  font-size: 8rem;
+  line-height: 0.8;
+  margin: -9px 10px 0 -10px;
 }
 .cap:first-line,
 .single .entry-content p:first-of-type:first-line {
   font-variant: small-caps;
   letter-spacing: 2px;
-  text-transform: lowercase;
 }
 
 .cap {
