@@ -12,7 +12,7 @@
 						esc_html( flare_subtitle() )
 					);
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'blog' );
+			the_post_thumbnail();
 		} else {
 			echo '<img src="/wp-content/themes/flare/images/placeholder.png" alt="View post" />';
 		}
