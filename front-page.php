@@ -10,15 +10,20 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<?php while ( have_posts() ) : the_post(); // Loopety-loop ?>
+
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					<h1 class="page-title">Well, hello there!</h1>
-					<span class="subtitle">I&rsquo;m Sarah. Let&rsquo;s be friends.</span>
+					<h1 class="page-title"><?php the_title(); ?></h1>
+					<span class="subtitle"><?php echo flare_subtitle(); ?></span>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
-					I'm Sarah, and this is my website.
-					I am currently in , if you'd like to say hi.
+					<?php the_content(); ?>
+				</div><!-- .entry-content -->
+
+		<?php endwhile; ?>
+
 
 					<div class="flare-frontpage-widget">
 						<h3><?php esc_html_e( 'Newest stories', 'flare' ); ?></h3>
@@ -74,8 +79,6 @@ get_header(); ?>
 						?>
 						</ul>
 					</div>
-
-				</div><!-- .entry-content -->
 
 			</article><!-- #post-## -->
 
