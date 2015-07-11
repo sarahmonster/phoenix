@@ -1134,6 +1134,56 @@ a:hover, a:active {
   display: block;
 }
 
+/* Click-to-scroll button */
+#infinite-handle {
+  clear: both;
+  margin-bottom: 1em;
+  text-align: center;
+}
+#infinite-handle span {
+  background: none;
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+}
+#infinite-handle span::before, #infinite-handle span::after {
+  color: #d9d9d9;
+  display: inline;
+  font-size: 1.8em;
+  padding: 5px;
+  vertical-align: -3px;
+}
+#infinite-handle span::before {
+  content: '{';
+}
+#infinite-handle span::after {
+  content: '}';
+}
+#infinite-handle span button {
+  background: none;
+  box-shadow: none;
+  color: #a6a6a6;
+  font-style: italic;
+  padding: 0 10px;
+  transition: all 200ms linear;
+}
+#infinite-handle span:hover button {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #d9d9d9;
+}
+
+/* Loading icon */
+.infinite-loader {
+  clear: both;
+  text-align: center;
+}
+
+.infinite-loader .spinner {
+  left: 50% !important;
+  /* ..because the Jetpack CSS is inline */
+}
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
