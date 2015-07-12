@@ -43,17 +43,17 @@ get_header(); ?>
 
 				<?php
 				// Grab the three most recent posts
-					$libretto_recent_posts = wp_get_recent_posts( array(
+					$flare_recent_posts = wp_get_recent_posts( array(
 						'numberposts' => 3,
 						'post_status' => 'publish',
 			 		), OBJECT );
 
-			 		get_posts( $libretto_recent_posts );
+			 		get_posts( $flare_recent_posts );
 
-			 		foreach ( $libretto_recent_posts as $post):
+			 		foreach ( $flare_recent_posts as $post):
 			 			setup_postdata( $post);
 
-			 			echo '<article class="libretto-short-post">';
+			 			echo '<article class="flare-short-post">';
 						printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
 										esc_url( get_permalink() ),
 										esc_html( flare_subtitle() )

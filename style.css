@@ -1075,19 +1075,19 @@ a:hover, a:active {
   }
 }
 
-.flare-frontpage-widget .libretto-short-post img {
+.flare-frontpage-widget .flare-short-post img {
   border-radius: 50%;
   float: left;
   height: 100px;
   margin: 10px 10px 10px 0;
   width: 100px;
 }
-.flare-frontpage-widget .libretto-short-post .entry-title {
+.flare-frontpage-widget .flare-short-post .entry-title {
   font-size: 25.6px;
   font-size: 1.6rem;
   clear: none;
 }
-.flare-frontpage-widget .libretto-short-post .entry-content {
+.flare-frontpage-widget .flare-short-post .entry-content {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.2;
