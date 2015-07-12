@@ -23,3 +23,12 @@ h2 {
   line-height: 1.2;
   margin-top: 3em;
 }
+
+h3 {
+  color: $silver;
+  @include font-size(0.9);
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
+}

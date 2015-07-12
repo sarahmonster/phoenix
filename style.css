@@ -275,12 +275,14 @@ textarea {
   line-height: 1.8;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, .posted-on, .blog .page-header .archive-type,
+.archive .page-header .archive-type, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2;
 }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a, h2 a, h3 a, .posted-on a, .blog .page-header .archive-type a,
+.archive .page-header .archive-type a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
@@ -297,6 +299,17 @@ h2 {
   font-weight: 100;
   line-height: 1.2;
   margin-top: 3em;
+}
+
+h3, .posted-on, .blog .page-header .archive-type,
+.archive .page-header .archive-type {
+  color: silver;
+  font-size: 14.4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+  text-transform: uppercase;
 }
 
 p {
@@ -955,18 +968,7 @@ a:hover, a:active {
   line-height: 1.5;
 }
 
-.posted-on, .blog .page-header .archive-type,
-.archive .page-header .archive-type {
-  color: silver;
-  font-size: 14.4px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
-}
-.posted-on .highlight, .blog .page-header .archive-type .highlight,
-.archive .page-header .archive-type .highlight {
+.posted-on .highlight {
   color: #9a9a9a;
 }
 
@@ -1075,6 +1077,14 @@ a:hover, a:active {
   }
 }
 
+.flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
+.flare-frontpage-widget .archive .page-header .archive-type,
+.archive .page-header .flare-frontpage-widget .archive-type {
+  text-align: center;
+}
+.flare-frontpage-widget .flare-short-post {
+  margin: 1em 0;
+}
 .flare-frontpage-widget .flare-short-post img {
   border-radius: 50%;
   float: left;
@@ -1105,7 +1115,7 @@ a:hover, a:active {
 
   .flare-frontpage-widget {
     float: left;
-    margin-top: 3em;
+    margin-top: 6em;
     padding-left: 20px;
     width: 400px;
   }

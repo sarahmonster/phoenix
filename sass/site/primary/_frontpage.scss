@@ -1,6 +1,12 @@
 .flare-frontpage-widget {
 
+  h3 {
+    text-align: center;
+  }
+
   .flare-short-post {
+    margin: 1em 0;
+
     img {
       border-radius: 50%;
       float: left;
@@ -35,7 +41,7 @@
 
   .flare-frontpage-widget {
     float: left;
-    margin-top: 3em;
+    margin-top: 6em;
     padding-left: $gutter;
     width: 400px;
 }

@@ -34,12 +34,7 @@
 }
 
 .posted-on {
-  color: $silver;
-  @include font-size(0.9);
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
+  @extend h3;
 
   .highlight {
     color: darken($silver, 15%);
@@ -111,7 +106,7 @@
     text-align: center;
 
     .archive-type {
-      @extend .posted-on;
+      @extend h3;
       display: block;
     }
   }
