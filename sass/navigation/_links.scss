@@ -1,9 +1,11 @@
 a {
 	color: $color__link;
+	transition: all 500ms ease-in;
 
 	&:visited {
 		color: $color__link-visited;
 	}
+
 	&:hover,
 	&:focus,
 	&:active {

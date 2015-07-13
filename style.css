@@ -532,13 +532,14 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #B20000;
+  color: #a32020;
+  transition: all 500ms ease-in;
 }
 a:visited {
-  color: #B20000;
+  color: #a32020;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: #72a9d0;
 }
 a:focus {
   outline: thin dotted;
