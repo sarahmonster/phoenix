@@ -276,13 +276,13 @@ textarea {
 }
 
 h1, h2, h3, .posted-on, .blog .page-header .archive-type,
-.archive .page-header .archive-type, h4, h5, h6 {
+.archive .page-header .archive-type, .flare-location-widget dl dt, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2;
 }
 h1 a, h2 a, h3 a, .posted-on a, .blog .page-header .archive-type a,
-.archive .page-header .archive-type a, h4 a, h5 a, h6 a {
+.archive .page-header .archive-type a, .flare-location-widget dl dt a, h4 a, h5 a, h6 a {
   text-decoration: none;
 }
 
@@ -302,7 +302,7 @@ h2 {
 }
 
 h3, .posted-on, .blog .page-header .archive-type,
-.archive .page-header .archive-type {
+.archive .page-header .archive-type, .flare-location-widget dl dt {
   color: silver;
   font-size: 14.4px;
   font-size: 0.9rem;
@@ -1080,7 +1080,7 @@ a:hover, a:active {
 
 .flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
 .flare-frontpage-widget .archive .page-header .archive-type,
-.archive .page-header .flare-frontpage-widget .archive-type {
+.archive .page-header .flare-frontpage-widget .archive-type, .flare-frontpage-widget .flare-location-widget dl dt, .flare-location-widget dl .flare-frontpage-widget dt {
   text-align: center;
 }
 .flare-frontpage-widget .flare-short-post {
@@ -1103,6 +1103,16 @@ a:hover, a:active {
   font-size: 1rem;
   line-height: 1.2;
   margin-top: 0;
+}
+
+.flare-location-widget dl {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+.flare-location-widget dl dd {
+  margin: 0 0 10px;
 }
 
 @media (min-width: 1024px) {

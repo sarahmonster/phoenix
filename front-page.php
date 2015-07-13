@@ -23,16 +23,16 @@ get_header(); ?>
 
 					<div class="flare-location-widget">
 						<h3><?php esc_html_e( 'Upcoming Adventures', 'flare' ); ?></h3>
-						<ul>
-							<li>Currently exploring: <?php echo flare_get_current_location(); ?></li>
+						<dl>
+							<dt>Today</dt>
+							<dd><?php echo flare_get_current_location(); ?></dd>
 						<?php
 						 foreach( flare_upcoming_locations() as $post ):
-						 	echo "<li>";
-						 	echo mysql2date( 'M j', $post->post_date ) . ": " . $post->post_title;
-						 	echo "</li>";
+						 	echo "<dt>" . mysql2date( 'F jS', $post->post_date ) . "</dt>";
+						 	echo "<dd>" . $post->post_title . "</dd>";
 						 endforeach;
 						?>
-						</ul>
+						</dl>
 					</div><!-- .flare-location-widget -->
 
 				</article><!-- #post-## -->
