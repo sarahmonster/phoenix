@@ -16,21 +16,21 @@
   @include tablet {
     .site-logo-link {
       display: inline-block;
-      left: calc(50% - 37.5px);
+      left: calc(50% - 50px);
       top: -10px;
       position: absolute;
-      width: 75px;
+      width: 100px;
     }
 
     .site-logo {
-      margin: 10px -15px;
-      max-width: calc(100% + 30px);
+      margin: 10px auto;
+      max-width: 100%;
     }
   }
 
   .site-branding {
     display: none;
-    width: 75px;
+    width: 100px;
     margin: -20px 45px;
 
     .site-title,

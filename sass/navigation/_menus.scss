@@ -11,7 +11,7 @@
 		li {
 			@include font-size(0.85);
 			display: inline-block;
-			font-weight: 600;
+			font-weight: 500;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 
@@ -111,6 +111,8 @@
 	.main-navigation {
 		display: inline-block;
 		float: none;
+		margin-top: -10px;
+		padding-bottom: 10px;
 		position: relative;
 		vertical-align: top;
 
@@ -123,8 +125,7 @@
 		}
 
 		ul li {
-			@include font-size(0.95);
-			letter-spacing: 2px;
+			letter-spacing: 3px;
 
 			a {
 				padding: 5px 10px;

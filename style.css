@@ -566,7 +566,7 @@ a:hover, a:active {
   font-size: 13.6px;
   font-size: 0.85rem;
   display: inline-block;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -626,6 +626,8 @@ a:hover, a:active {
   .main-navigation {
     display: inline-block;
     float: none;
+    margin-top: -10px;
+    padding-bottom: 10px;
     position: relative;
     vertical-align: top;
   }
@@ -636,9 +638,7 @@ a:hover, a:active {
     float: right;
   }
   .main-navigation ul li {
-    font-size: 15.2px;
-    font-size: 0.95rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
   }
   .main-navigation ul li a {
     padding: 5px 10px;
@@ -895,19 +895,19 @@ a:hover, a:active {
 @media (min-width: 768px) {
   #masthead .site-logo-link {
     display: inline-block;
-    left: calc(50% - 37.5px);
+    left: calc(50% - 50px);
     top: -10px;
     position: absolute;
-    width: 75px;
+    width: 100px;
   }
   #masthead .site-logo {
-    margin: 10px -15px;
-    max-width: calc(100% + 30px);
+    margin: 10px auto;
+    max-width: 100%;
   }
 }
 #masthead .site-branding {
   display: none;
-  width: 75px;
+  width: 100px;
   margin: -20px 45px;
 }
 #masthead .site-branding .site-title,
