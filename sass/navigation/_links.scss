@@ -1,6 +1,8 @@
 a {
+	border-bottom: 2px solid transparentize($color__link, 0.95);
 	color: $color__link;
-	transition: all 500ms ease-in;
+	text-decoration: none;
+	transition: all 500ms linear;
 
 	&:visited {
 		color: $color__link-visited;
@@ -10,6 +12,7 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+		border-bottom: 2px solid $color__link-hover;
 	}
 	&:focus {
 		outline: thin dotted;

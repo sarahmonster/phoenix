@@ -13,6 +13,11 @@ figure {
 		margin: 0.8075em 0;
 	}
 
+  a,
+  a:hover {
+    border-bottom: none;
+  }
+
   @include desktop {
     margin-left: -50px;
     margin-right: -50px;

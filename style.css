@@ -283,7 +283,7 @@ h1, h2, h3, .posted-on, .blog .page-header .archive-type,
 }
 h1 a, h2 a, h3 a, .posted-on a, .blog .page-header .archive-type a,
 .archive .page-header .archive-type a, .flare-location-widget dl dt a, h4 a, h5 a, h6 a {
-  text-decoration: none;
+  border-bottom: none;
 }
 
 h1 {
@@ -532,14 +532,17 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
+  border-bottom: 2px solid rgba(163, 32, 32, 0.05);
   color: #a32020;
-  transition: all 500ms ease-in;
+  text-decoration: none;
+  transition: all 500ms linear;
 }
 a:visited {
   color: #a32020;
 }
 a:hover, a:focus, a:active {
   color: #72a9d0;
+  border-bottom: 2px solid #72a9d0;
 }
 a:focus {
   outline: thin dotted;
@@ -606,8 +609,8 @@ a:hover, a:active {
   left: auto;
 }
 .main-navigation a {
+  border-bottom: none;
   display: inline-block;
-  text-decoration: none;
 }
 
 /* Small menu */
@@ -658,11 +661,11 @@ a:hover, a:active {
 .comment-navigation a,
 .posts-navigation a,
 .post-navigation a {
+  border-bottom: none;
   font-size: 17.6px;
   font-size: 1.1rem;
   display: block;
   line-height: 1.2;
-  text-decoration: none;
 }
 .comment-navigation a::before,
 .posts-navigation a::before,
@@ -794,6 +797,7 @@ a:hover, a:active {
 }
 .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
   background-color: #f1f1f1;
+  border-bottom: none;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
@@ -930,6 +934,10 @@ a:hover, a:active {
 }
 .site-footer a {
   color: #404040;
+  border-color: transparent;
+}
+.site-footer a:hover {
+  border-color: rgba(64, 64, 64, 0.5);
 }
 
 /*--------------------------------------------------------------
@@ -1043,6 +1051,10 @@ a:hover, a:active {
 .archive .page-title {
   font-size: 57.6px;
   font-size: 3.6rem;
+}
+.blog article a,
+.archive article a {
+  border-bottom: none;
 }
 .blog article img,
 .archive article img {
@@ -1253,6 +1265,12 @@ figure img[class*="wp-image-"] {
 .wp-caption .wp-caption-text,
 figure .wp-caption-text {
   margin: 0.8075em 0;
+}
+.wp-caption a,
+.wp-caption a:hover,
+figure a,
+figure a:hover {
+  border-bottom: none;
 }
 @media (min-width: 1024px) {
   .wp-caption,

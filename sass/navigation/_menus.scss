@@ -79,8 +79,8 @@
 	}
 
 	a {
+		border-bottom: none;
 		display: inline-block;
-		text-decoration: none;
 	}
 
 	.current_page_item > a,
@@ -149,10 +149,10 @@
 	}
 
 	a {
+		border-bottom: none;
   	@include font-size(1.1);
   	display: block;
   	line-height: 1.2;
-  	text-decoration: none;
 
   	&::before {
 			display: block;
