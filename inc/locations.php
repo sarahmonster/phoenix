@@ -12,6 +12,46 @@
  */
 
 /**
+ * Register countries as a taxonomy, so we can count 'em.
+ */
+function flare_register_country_taxonomy() {
+
+  $labels = array(
+    'name'                       => _x( 'Countries', 'Taxonomy General Name', 'flare' ),
+    'singular_name'              => _x( 'Country', 'Taxonomy Singular Name', 'flare' ),
+    'menu_name'                  => __( 'Countries', 'flare' ),
+    'all_items'                  => __( 'All Countries', 'flare' ),
+    'parent_item'                => __( 'Parent Country', 'flare' ),
+    'parent_item_colon'          => __( 'Parent Country:', 'flare' ),
+    'new_item_name'              => __( 'New Country Name', 'flare' ),
+    'add_new_item'               => __( 'Add New Country', 'flare' ),
+    'edit_item'                  => __( 'Edit Country', 'flare' ),
+    'update_item'                => __( 'Update Country', 'flare' ),
+    'view_item'                  => __( 'View Country', 'flare' ),
+    'separate_items_with_commas' => __( 'Separate countries with commas', 'flare' ),
+    'add_or_remove_items'        => __( 'Add or remove countries', 'flare' ),
+    'choose_from_most_used'      => __( 'Choose from the most used', 'flare' ),
+    'popular_items'              => __( 'Popular Countries', 'flare' ),
+    'search_items'               => __( 'Search Countries', 'flare' ),
+    'not_found'                  => __( 'Not Found', 'flare' ),
+  );
+  $args = array(
+    'labels'                     => $labels,
+    'hierarchical'               => true,
+    'public'                     => true,
+    'show_ui'                    => true,
+    'show_admin_column'          => true,
+    'show_in_nav_menus'          => true,
+    'show_tagcloud'              => true,
+  );
+  register_taxonomy( 'country', array( 'post', ' place' ), $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'flare_register_country_taxonomy', 0 );
+
+/**
  * Register the 'location' Custom Post Type.
  */
 function flare_register_location_cpt() {
@@ -27,7 +67,7 @@ function flare_register_location_cpt() {
     'menu_icon'           => 'dashicons-location',
     'labels'              => $labels,
     'supports'            => array( ),
-    'taxonomies'          => array( 'category', 'post_tag' ),
+    'taxonomies'          => array( 'post_tag', 'country' ),
     'hierarchical'        => false,
     'public'              => true,
     'show_ui'             => true,
