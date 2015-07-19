@@ -12,10 +12,6 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); // Loopety-loop ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<h1 class="page-title"><?php the_title(); ?></h1>
-						<span class="subtitle"><?php echo flare_subtitle(); ?></span>
-					</header><!-- .entry-header -->
 
 					<div class="entry-content">
 						<?php the_content(); ?>
