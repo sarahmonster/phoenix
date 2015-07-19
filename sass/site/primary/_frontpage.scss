@@ -28,7 +28,22 @@
   } // .libretto-short-post
 } // .flare-frontpage-widget
 
+#map {
+  display: block;
+  height: 300px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
 .flare-location-widget {
+  background: rgba(255, 255, 255, 0.75);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+
   dl {
     @include font-size(1);
     line-height: 1.2;
@@ -43,7 +58,6 @@
     }
   }
 } // .flare-location-widget
-
 
 // Use two columns on a desktop, since we've got loads of space
 @include desktop {

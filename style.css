@@ -1126,6 +1126,22 @@ a:hover, a:active {
   margin-top: 0;
 }
 
+#map {
+  display: block;
+  height: 300px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.flare-location-widget {
+  background: rgba(255, 255, 255, 0.75);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+}
 .flare-location-widget dl {
   font-size: 16px;
   font-size: 1rem;

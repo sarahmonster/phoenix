@@ -21,20 +21,21 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
-					<div class="flare-location-widget">
-						<h3><?php esc_html_e( 'Upcoming Adventures', 'flare' ); ?></h3>
-						<dl>
-							<dt>Today</dt>
-							<dd><?php echo flare_get_current_location(); ?></dd>
-						<?php
-						 foreach( flare_upcoming_locations() as $post ):
-						 	echo "<dt>" . mysql2date( 'F jS', $post->post_date ) . "</dt>";
-						 	echo "<dd>" . $post->post_title . "</dd>";
-						 endforeach;
-						?>
-						</dl>
-					</div><!-- .flare-location-widget -->
-
+					<div id="map">
+						<div class="flare-location-widget">
+							<h3><?php esc_html_e( 'Upcoming Adventures', 'flare' ); ?></h3>
+							<dl>
+								<dt>Today</dt>
+								<dd><?php echo flare_get_current_location(); ?></dd>
+							<?php
+							 foreach( flare_upcoming_locations() as $post ):
+							 	echo "<dt>" . mysql2date( 'F jS', $post->post_date ) . "</dt>";
+							 	echo "<dd>" . $post->post_title . "</dd>";
+							 endforeach;
+							?>
+							</dl>
+						</div><!-- .flare-location-widget -->
+					</div><!-- .map -->
 				</article><!-- #post-## -->
 			<?php endwhile; ?>
 
