@@ -131,6 +131,11 @@ function flare_scripts() {
 add_action( 'wp_enqueue_scripts', 'flare_scripts' );
 
 /**
+ * Nuke Jetpack styles
+ */
+add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
