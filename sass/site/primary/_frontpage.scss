@@ -1,3 +1,60 @@
+// Intro text
+.entry-title.hello {
+  color: $silver;
+  font-style: italic;
+
+  p {
+    display: none; // Sometimes WordPress will add empty p tags for us, cos it's a jerk
+  }
+
+  .loves {
+    color: $color__text-main;
+    display: inline-block;
+    visibility: none;
+
+    ul {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+      }
+    }
+  } // .loves
+}
+
+// Map
+#map {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.flare-location-widget {
+  background: rgba(255, 255, 255, 0.75);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+
+  dl {
+    @include font-size(1);
+    line-height: 1.2;
+    margin: 10px 0;
+
+    dt {
+      @extend h3;
+    }
+
+    dd {
+      margin: 0 0 10px;
+    }
+  }
+} // .flare-location-widget
+
+// Recent posts
 .flare-frontpage-widget {
 
   h3 {
@@ -28,37 +85,6 @@
   } // .libretto-short-post
 } // .flare-frontpage-widget
 
-#map {
-  display: block;
-  height: 300px;
-  position: relative;
-  width: 100%;
-  z-index: -1;
-}
-
-.flare-location-widget {
-  background: rgba(255, 255, 255, 0.75);
-  bottom: 20px;
-  left: 20px;
-  padding: 10px;
-  position: absolute;
-  z-index: 100;
-
-  dl {
-    @include font-size(1);
-    line-height: 1.2;
-    margin: 10px 0;
-
-    dt {
-      @extend h3;
-    }
-
-    dd {
-      margin: 0 0 10px;
-    }
-  }
-} // .flare-location-widget
-
 // Use two columns on a desktop, since we've got loads of space
 @include desktop {
   .home .page {
@@ -71,7 +97,7 @@
 
   .flare-frontpage-widget {
     float: left;
-    margin-top: 6em;
+    margin-top: 8.25em;
     padding-left: $gutter;
     width: 400px;
   }

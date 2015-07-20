@@ -111,10 +111,18 @@ function flare_scripts() {
 	wp_enqueue_script( 'flare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'flare-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	// Mapping stuff
+	// Mapbox libraries and initialisation code
 	wp_enqueue_script( 'flare-mapbox', 'https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js', array(), '20150719', true );
-	wp_enqueue_script( 'flare-map', get_template_directory_uri() . '/js/map.js', array( 'flare-mapbox', 'jquery' ), '20150719', true );
 	wp_enqueue_style( 'flare-mapbox-css', 'https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css', array(), '20150719', all );
+	wp_enqueue_script( 'flare-map', get_template_directory_uri() . '/js/map.js', array( 'jquery', 'flare-mapbox' ), '20150719', true );
+
+	// Text animation/manipulation libraries
+	wp_enqueue_style( 'flare-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', screen );
+	wp_enqueue_script( 'flare-animate', get_template_directory_uri() . '/js/animate.js', array(), '20150719', true );
+	wp_enqueue_script( 'flare-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array( 'jquery' ), '20150719', true );
+	wp_enqueue_script( 'flare-lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array( 'jquery' ), '20150719', true );
+	wp_enqueue_script( 'flare-textillate', get_template_directory_uri() . '/js/jquery.textillate.js', array( 'jquery', 'flare-lettering' ), '20150719', true );
+	wp_enqueue_script( 'flare-texteffects', get_template_directory_uri() . '/js/texteffects.js', array( 'jquery', 'flare-lettering', 'flare-textillate' ), '20150719', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

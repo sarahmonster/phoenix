@@ -1099,6 +1099,51 @@ a:hover, a:active {
   }
 }
 
+.entry-title.hello {
+  color: silver;
+  font-style: italic;
+}
+.entry-title.hello p {
+  display: none;
+}
+.entry-title.hello .loves {
+  color: #404040;
+  display: inline-block;
+  visibility: none;
+}
+.entry-title.hello .loves ul {
+  display: inline-block;
+}
+.entry-title.hello .loves ul li {
+  display: inline-block;
+}
+
+#map {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.flare-location-widget {
+  background: rgba(255, 255, 255, 0.75);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+}
+.flare-location-widget dl {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+.flare-location-widget dl dd {
+  margin: 0 0 10px;
+}
+
 .flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
 .flare-frontpage-widget .archive .page-header .archive-type,
 .archive .page-header .flare-frontpage-widget .archive-type, .flare-frontpage-widget .flare-location-widget dl dt, .flare-location-widget dl .flare-frontpage-widget dt {
@@ -1126,45 +1171,19 @@ a:hover, a:active {
   margin-top: 0;
 }
 
-#map {
-  display: block;
-  height: 300px;
-  position: relative;
-  width: 100%;
-  z-index: -1;
-}
-
-.flare-location-widget {
-  background: rgba(255, 255, 255, 0.75);
-  bottom: 20px;
-  left: 20px;
-  padding: 10px;
-  position: absolute;
-  z-index: 100;
-}
-.flare-location-widget dl {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.2;
-  margin: 10px 0;
-}
-.flare-location-widget dl dd {
-  margin: 0 0 10px;
-}
-
 @media (min-width: 1024px) {
   .home .page {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    padding-right: 20px;
+    padding-right: 40px;
     width: calc(100% - 400px);
   }
 
   .flare-frontpage-widget {
     float: left;
-    margin-top: 6em;
-    padding-left: 20px;
+    margin-top: 8.25em;
+    padding-left: 40px;
     width: 400px;
   }
 }

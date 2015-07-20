@@ -41,7 +41,7 @@ get_header(); ?>
 				<?php
 				// Grab the three most recent posts
 					$flare_recent_posts = wp_get_recent_posts( array(
-						'numberposts' => 3,
+						'numberposts' => 2,
 						'post_status' => 'publish',
 			 		), OBJECT );
 
