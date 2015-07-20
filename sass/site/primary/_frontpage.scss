@@ -1,0 +1,122 @@
+// Intro text
+.entry-title.hello {
+  color: $silver;
+  font-style: italic;
+  margin-bottom: 0.125em;
+  text-align: center;
+
+  p {
+    display: inline; // Sometimes WordPress will add empty p tags for us, cos it's a jerk
+    margin: 0;
+  }
+
+  span:not(.amp) {
+    color: $color__text-main;
+  }
+
+  span.icon-heart {
+    color: $red;
+    font-size: 0.6em;
+  }
+
+  .loves {
+    color: $color__text-main;
+    display: inline-block;
+    visibility: hidden;
+
+    ul {
+      display: inline-block;
+
+      li {
+        display: inline-block;
+      }
+    }
+  } // .loves
+}
+
+// Map
+#map {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.flare-location-widget {
+  background: rgba(255, 255, 255, 0.75);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  z-index: 100;
+
+  dl {
+    @include font-size(1);
+    line-height: 1.2;
+    margin: 10px 0;
+
+    dt {
+      clear: left;
+      color: $silver;
+      float: left;
+      font-style: italic;
+      text-align: right;
+      width: 50%;
+    }
+
+    dd {
+      float: left;
+      margin: 0 0 0 .5em;
+    }
+  }
+} // .flare-location-widget
+
+// Recent posts
+.flare-frontpage-widget {
+
+  h3 {
+    text-align: center;
+  }
+
+  .flare-short-post {
+    margin: 1em 0;
+
+    img {
+      border-radius: 50%;
+      float: left;
+      height: 100px;
+      margin: 10px 10px 10px 0;
+      width: 100px;
+    }
+
+    .entry-title {
+      @include font-size(1.6);
+      clear: none;
+    }
+
+    .entry-content {
+      @include font-size(1);
+      line-height: 1.2;
+      margin-top: 0;
+    }
+  } // .libretto-short-post
+} // .flare-frontpage-widget
+
+// Use two columns on a desktop, since we've got loads of space
+@include desktop {
+  .home .page {
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: $gutter;
+    width: calc(100% - 400px);
+  }
+
+  .flare-frontpage-widget {
+    float: left;
+    margin-top: 7em;
+    padding-left: $gutter;
+    width: 400px;
+  }
+}

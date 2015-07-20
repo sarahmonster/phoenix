@@ -1,30 +1,42 @@
 <?php
 /**
- * The loop that displays posts.
- *
- * The loop displays the posts and the post content.  See
- * http://codex.wordpress.org/The_Loop to understand it and
- * http://codex.wordpress.org/Template_Tags to understand
- * the tags used in it.
- *
- * This can be overridden in child themes with loop.php or
- * loop-template.php, where 'template' is the loop context
- * requested by a template. For example, loop-index.php would
- * be used if it exists and we ask for the loop with:
- * <code>get_template_part( 'loop', 'index' );</code>
- *
- * @package WordPress
- * @subpackage Starkers
- * @since Starkers 3.0
+ * @package Flare
  */
 ?>
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<?php
+		// show the featured image, if there's one set
+		printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
+						esc_url( get_permalink() ),
+						esc_html( flare_subtitle() )
+					);
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail();
+		} else {
+			echo '<img src="/wp-content/themes/flare/images/placeholder.png" alt="View post" />';
+		}
+		echo '</a>';
+		?>
+	<header class="entry-header">
+		<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="entry-meta">
+				<?php flare_posted_on(); ?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
 
+		<?php
+		printf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>',
+						 esc_url( get_permalink() ),
+						 esc_html( get_the_title() )
+					);
+		?>
+	</header><!-- .entry-header -->
 
-
-
-<?php if (get_post_type() === 'pieces'): ?>
-	<?php include('pieces.php') ?>
-<?php else: ?>
-	<?php include('posts.php') ?>
-<?php endif ?>
+	<div class="entry-content">
+		<?php
+			/* translators: %s: Name of current post */
+			the_excerpt();
+		?>
+	</div><!-- .entry-content -->
+</article><!-- #post-## -->

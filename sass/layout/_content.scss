@@ -1,0 +1,70 @@
+#page {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding: 20px;
+}
+
+#masthead {
+
+  @include mobile {
+    .site-logo-link {
+      float: left;
+      width: 60px;
+    }
+  }
+
+  @include tablet {
+    .site-logo-link {
+      display: inline-block;
+      left: calc(50% - 50px);
+      top: -10px;
+      position: absolute;
+      width: 100px;
+    }
+
+    .site-logo {
+      margin: 10px auto;
+      max-width: 100%;
+    }
+  }
+
+  .site-branding {
+    display: none;
+    width: 100px;
+    margin: -20px 45px;
+
+    .site-title,
+    .site-description {
+      display: none;
+    }
+  } // .site-branding
+} // #masthead
+
+.content-area {
+
+}
+
+.site-main {
+
+}
+
+.site-footer {
+  border-top: 1px solid lighten($color__text-main, 50%);
+	clear: both;
+  color: lighten($color__text-main, 25%);
+  @include font-size(1);
+  font-style: italic;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  text-align: center;
+	width: $size__site-main;
+
+  a {
+    color: $color__text-main;
+    border-color: transparent;
+
+    &:hover {
+      border-color: transparentize($color__text-main, 0.5);
+    }
+  }
+}

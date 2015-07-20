@@ -1,0 +1,152 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* Entry headers */
+.entry-meta {
+  line-height: 1.5;
+}
+
+.posted-on {
+  @extend h3;
+
+  .highlight {
+    color: darken($silver, 15%);
+  }
+}
+
+.entry-title,
+.page-title {
+  font-weight: 400;
+  margin: 0 0 .5em;
+  padding: 0;
+}
+
+.subtitle,
+.taxonomy-description {
+  @include font-size(1.6);
+  border-top: 1px solid lighten($color__text-main, 50%);
+  color: #bbb;
+  display: block;
+  font-style: italic;
+  margin: 0.25em auto;
+  max-width: $max-content-width;
+  padding-top: 0.5em;
+  text-align: left;
+}
+
+.taxonomy-description {
+  margin-bottom: 2em;
+
+  p {
+    margin: 0.5em 0;
+  }
+}
+
+.entry-footer {
+  @include font-size(1.6);
+  border-bottom: 2px solid lighten($color__text-main, 50%);
+  border-top: 1px solid lighten($color__text-main, 50%);
+  color: #bbb;
+  font-style: italic;
+  margin-top: .5em;
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* Single posts and pages */
+.single,
+.page {
+  article {
+    margin: 3em auto;
+    max-width: $max-content-width;
+  }
+
+  .entry-header {
+    padding-top: 2em;
+  }
+
+  .entry-title {
+    @include font-size(3.6);
+  }
+}
+
+/* Archive pages */
+.blog,
+.archive {
+
+  .page-header {
+    padding-top: 4em;
+    text-align: center;
+
+    .archive-type {
+      @extend h3;
+      display: block;
+    }
+  }
+
+  .page-title {
+    @include font-size(3.6);
+  }
+
+  article {
+
+    a {
+      border-bottom: none;
+    }
+
+    img {
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .entry-meta {
+      @include font-size(0.8);
+    }
+
+    .entry-title {
+      @include font-size(2.1);
+    }
+
+    .entry-content {
+      border-top: 1px solid lighten($color__text-main, 50%);
+      @include font-size(1.15);
+      margin-top: 0;
+    }
+
+    @include tablet {
+      float: left;
+      width: 48%;
+
+      &:nth-of-type(odd) {
+        clear: left;
+        margin-right: 4%;
+      }
+    }
+  }
+}
