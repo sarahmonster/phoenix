@@ -53,3 +53,6 @@
 .icon-mail:before {
   content: "m";
 }
+.icon-heart:before {
+  content: "h";
+}

@@ -2,15 +2,27 @@
 .entry-title.hello {
   color: $silver;
   font-style: italic;
+  margin-bottom: 0.125em;
+  text-align: center;
 
   p {
-    display: none; // Sometimes WordPress will add empty p tags for us, cos it's a jerk
+    display: inline; // Sometimes WordPress will add empty p tags for us, cos it's a jerk
+    margin: 0;
+  }
+
+  span:not(.amp) {
+    color: $color__text-main;
+  }
+
+  span.icon-heart {
+    color: $red;
+    font-size: 0.6em;
   }
 
   .loves {
     color: $color__text-main;
     display: inline-block;
-    visibility: none;
+    visibility: hidden;
 
     ul {
       display: inline-block;
@@ -45,11 +57,17 @@
     margin: 10px 0;
 
     dt {
-      @extend h3;
+      clear: left;
+      color: $silver;
+      float: left;
+      font-style: italic;
+      text-align: right;
+      width: 50%;
     }
 
     dd {
-      margin: 0 0 10px;
+      float: left;
+      margin: 0 0 0 .5em;
     }
   }
 } // .flare-location-widget
@@ -97,7 +115,7 @@
 
   .flare-frontpage-widget {
     float: left;
-    margin-top: 8.25em;
+    margin-top: 7em;
     padding-left: $gutter;
     width: 400px;
   }

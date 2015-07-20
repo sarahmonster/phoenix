@@ -1,5 +1,5 @@
 ( function($) {
-  $(".hello").fitText(1.2);
+  $(".hello").fitText(1.3);
   $('.loves').textillate({
     selector: '.texts',
     loop: true,
