@@ -1206,6 +1206,18 @@ a:hover, a:active {
     width: 400px;
   }
 }
+.flare-country-count {
+  color: #a32020;
+  font-weight: bolder;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+.flare-current-location {
+  color: #a32020;
+  font-style: italic;
+}
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/

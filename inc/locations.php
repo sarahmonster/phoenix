@@ -114,6 +114,18 @@ function flare_upcoming_locations() {
 }
 
 /**
+ * Count total countries visited.
+ */
+function flare_all_countries() {
+$countries = get_terms( 'country', array(
+    'hide_empty'        => false,
+    'childless'         => true,
+    'pad_counts'        => true,
+) );
+  return $countries;
+}
+
+/**
  * Register a shortcode for location tasks.
  * This just makes it stupid easy to drop into a page.
  *
@@ -128,11 +140,11 @@ function flare_location_shortcode( $atts, $content = null  ){
   ), $atts );
 
   if ( 'current' === $a['show'] ):
-    return flare_get_current_location();
+    return '<span class="flare-current-location">' . flare_get_current_location() . '</span>';
   endif;
 
   if ( 'countries' === $a['show'] ):
-    return '45';
+    return '<span class="flare-country-count">' . count( flare_all_countries() ) . '</span>';
   endif;
 }
 add_shortcode( 'place', 'flare_location_shortcode' );
