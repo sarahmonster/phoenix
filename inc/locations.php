@@ -103,24 +103,44 @@ function flare_get_current_location() {
  * Show a list of upcoming locations.
  */
 function flare_upcoming_locations() {
-  $locations = get_posts( array(
-    'posts_per_page'   => 5,
-    'post_type'        => 'flare_location',
-    'orderby'          => 'date',
-    'order'            => 'ASC',
-    'post_status'      => 'future',
-  ) );
+
+  $args = array(
+    'post_type'      => 'flare_location',
+    'post_status'    => 'future',
+    'posts_per_page' => 5,
+    'orderby'        => 'date',
+    'order'          => 'ASC',
+    'tax_query'      => array(
+      array(
+        'taxonomy' => 'country',
+        'field'    => 'slug',
+        'terms'    => 'home',
+        'operator' => 'NOT IN',
+      ),
+    ),
+  );
+
+  $location_query = new WP_Query( $args );
+
+  while ( $location_query->have_posts() ):
+    $location_query->the_post();
+    $locations .= "<dt>" . esc_html( get_the_date( 'F jS' ) ) . "</dt>";
+    $locations .= "<dd>" . esc_html( get_the_title() ) . "</dd>";
+  wp_reset_postdata();
+  endwhile;
+
   return $locations;
 }
+
 
 /**
  * Count total countries visited.
  */
 function flare_all_countries() {
 $countries = get_terms( 'country', array(
-    'hide_empty'        => false,
-    'childless'         => true,
-    'pad_counts'        => true,
+    'hide_empty'        => false, // At least for now.
+    'childless'         => true, // Only count countries that don't have sub-countries
+    'exclude'           => 102, // Exclude "home"
 ) );
   return $countries;
 }

@@ -1103,7 +1103,6 @@ a:hover, a:active {
   color: silver;
   font-style: italic;
   margin-bottom: 0.125em;
-  text-align: center;
 }
 .entry-title.hello p {
   display: inline;
@@ -1144,11 +1143,17 @@ a:hover, a:active {
   position: absolute;
   z-index: 100;
 }
+.flare-location-widget h3, .flare-location-widget .posted-on, .flare-location-widget .blog .page-header .archive-type, .blog .page-header .flare-location-widget .archive-type,
+.flare-location-widget .archive .page-header .archive-type,
+.archive .page-header .flare-location-widget .archive-type {
+  text-align: center;
+}
 .flare-location-widget dl {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.2;
   margin: 10px 0;
+  width: 220px;
 }
 .flare-location-widget dl dt {
   clear: left;
@@ -1156,11 +1161,12 @@ a:hover, a:active {
   float: left;
   font-style: italic;
   text-align: right;
-  width: 50%;
+  width: 100px;
 }
 .flare-location-widget dl dd {
   float: left;
-  margin: 0 0 0 .5em;
+  margin: 0 0 0 4px;
+  width: 116px;
 }
 
 .flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,

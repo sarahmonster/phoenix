@@ -3,7 +3,6 @@
   color: $silver;
   font-style: italic;
   margin-bottom: 0.125em;
-  text-align: center;
 
   p {
     display: inline; // Sometimes WordPress will add empty p tags for us, cos it's a jerk
@@ -51,10 +50,15 @@
   position: absolute;
   z-index: 100;
 
+  h3 {
+    text-align: center;
+  }
+
   dl {
     @include font-size(1);
     line-height: 1.2;
     margin: 10px 0;
+    width: 220px;
 
     dt {
       clear: left;
@@ -62,12 +66,13 @@
       float: left;
       font-style: italic;
       text-align: right;
-      width: 50%;
+      width: 100px;
     }
 
     dd {
       float: left;
-      margin: 0 0 0 .5em;
+      margin: 0 0 0 4px;
+      width: 116px;
     }
   }
 } // .flare-location-widget
