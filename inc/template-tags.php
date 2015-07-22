@@ -127,20 +127,12 @@ if ( ! function_exists( 'flare_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function flare_entry_footer() {
-	// Hide category and tag text for pages.
-	if ( 'post' == get_post_type() ) {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'flare' ) );
-		if ( $categories_list && flare_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'flare' ) . '</span>', $categories_list );
-		}
-
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'flare' ) );
-		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'flare' ) . '</span>', $tags_list );
-		}
-	}
+	esc_html_e( 'Like this post? Hate this post? Let&rsquo;s talk about it.', 'flare');
+	echo sprintf( '<a class="twitter-share" href="http://twitter.com/home?status=%1s %2s">%3s</a> ',
+		urlencode( esc_html__( 'Hey @sarahsemark, loved your blog post!', 'flare' ) ),
+		esc_url( get_the_permalink() ),
+		esc_html__( 'Tweet tweet', 'flare' )
+	);
 }
 endif;
 
