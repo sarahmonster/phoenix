@@ -948,6 +948,10 @@ a:hover, a:active {
 .site-footer a:hover {
   border-color: rgba(64, 64, 64, 0.5);
 }
+.site-footer span.icon-heart {
+  color: #a32020;
+  font-size: 0.6em;
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages

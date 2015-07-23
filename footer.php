@@ -12,9 +12,9 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<?php printf( 'Made with &hearts; and', 'flare' ); ?>
+			<?php printf( 'Made with <span class="icon-heart"></span> and', 'flare' ); ?>
       <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'flare' ) ); ?>"><?php printf( __( '%s', 'flare' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
+			<span class="sep"> &middot; </span>
 			<?php printf( __( 'Theme on %1$s', 'flare' ), '<a href="http://github.com/sarahsemark/flare/" rel="designer">Github</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
