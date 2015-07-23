@@ -1103,6 +1103,56 @@ a:hover, a:active {
   }
 }
 
+/* Contact page */
+.contact-card {
+  background: #a32020;
+  padding: 20px;
+  margin: 40px auto;
+  box-shadow: 1px 1px 3px #bdbdbd;
+  border: 1px solid #d0cdcd;
+}
+@media (min-width: 768px) {
+  .contact-card {
+    background: #a32020 url("images/contact-card.png") no-repeat bottom left;
+    background-size: cover;
+    height: 179px;
+    padding: 50px 20px 20px 26%;
+    width: 400px;
+  }
+}
+.contact-card li {
+  list-style-type: none;
+}
+.contact-card a {
+  border-bottom: none;
+  color: #fff;
+}
+.contact-card a::before {
+  display: inline-block;
+  font-family: 'triggers-sparks';
+  font-size: 16px;
+  padding-right: 5px;
+}
+.contact-card .card-email:hover a {
+  color: silver;
+}
+.contact-card .card-email a::before {
+  content: 'm';
+}
+.contact-card .card-twitter:hover a {
+  color: #89c9e7;
+}
+.contact-card .card-twitter a::before {
+  content: 't';
+  padding-right: 2px;
+}
+.contact-card .card-subscribe:hover a {
+  color: #f4aa59;
+}
+.contact-card .card-subscribe a::before {
+  content: 'f';
+}
+
 .entry-title.hello {
   color: silver;
   font-style: italic;

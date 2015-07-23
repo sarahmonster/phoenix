@@ -150,3 +150,68 @@
     }
   }
 }
+
+/* Contact page */
+.contact-card {
+  background: $red;
+  padding: 20px;
+  margin: $gutter auto;
+  box-shadow: 1px 1px 3px #bdbdbd;
+  border: 1px solid #d0cdcd;
+
+  @include tablet {
+    background: $red url('images/contact-card.png') no-repeat bottom left;
+    background-size: cover;
+    height: 179px;
+    padding: 50px 20px 20px 26%;
+    width: 400px;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    border-bottom: none;
+    color: $white;
+
+    &::before {
+      display: inline-block;
+      font-family: 'triggers-sparks';
+      font-size: 16px;
+      padding-right: 5px;
+    }
+
+  }
+
+  .card-email {
+    &:hover a {
+      color: $silver;
+    }
+
+    a::before {
+      content: 'm';
+    }
+  }
+
+  .card-twitter {
+    &:hover a {
+      color: #89c9e7;
+    }
+
+    a::before {
+      content: 't';
+      padding-right: 2px;
+    }
+  }
+
+  .card-subscribe {
+    &:hover a {
+      color: #f4aa59;
+    }
+
+    a::before {
+      content: 'f';
+    }
+  }
+} // .contact-card
