@@ -181,7 +181,6 @@
       font-size: 16px;
       padding-right: 5px;
     }
-
   }
 
   .card-email {
@@ -215,3 +214,13 @@
     }
   }
 } // .contact-card
+
+.current-location {
+  &::before {
+    content: 'w';
+    display: inline-block;
+    font-family: 'triggers-sparks';
+    font-size: 16px;
+    padding-right: 5px;
+  }
+}
