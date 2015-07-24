@@ -1050,6 +1050,11 @@ a:hover, a:active {
   font-size: 3.6rem;
 }
 
+/* Adjust spacing for pages */
+body:not(.home) .page .entry-content {
+  margin-top: -6em;
+}
+
 /* Archive pages */
 .blog .page-header,
 .archive .page-header {
