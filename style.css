@@ -1029,9 +1029,22 @@ a:hover, a:active {
   border-top: 1px solid silver;
   color: #bbb;
   font-style: italic;
+  line-height: 1.4;
   margin-top: .5em;
   padding: 1em 0;
   text-align: center;
+}
+.entry-footer .twitter-share {
+  border-bottom: 0;
+  display: block;
+}
+.entry-footer .twitter-share::before {
+  content: "t";
+  display: inline;
+  font-family: 'triggers-sparks';
+  font-size: 24px;
+  margin: 0 10px 0 0;
+  vertical-align: bottom;
 }
 
 /* Single posts and pages */
