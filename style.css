@@ -1124,6 +1124,9 @@ body:not(.home) .page .entry-content {
 /* Contact page */
 .contact-card {
   background: #a32020;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-style: italic;
   padding: 20px;
   margin: 40px auto;
   box-shadow: 1px 1px 3px #bdbdbd;
@@ -1148,8 +1151,10 @@ body:not(.home) .page .entry-content {
 .contact-card a::before {
   display: inline-block;
   font-family: 'triggers-sparks';
+  font-style: normal;
   font-size: 16px;
   padding-right: 5px;
+  vertical-align: -2px;
 }
 .contact-card .card-email:hover a {
   color: silver;
