@@ -10,6 +10,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   line-height: 1;
+  @include font-size(2.8);
+    @include tablet {
+      @include font-size(3.6);
+    }
 
   a {
     color: lighten($color__text-main, 25%);
@@ -18,17 +22,24 @@ h1 {
 
 h2 {
   color: lighten($color__text-main, 50%);
-  font-size: 2.4rem;
+  @include font-size(1.8);
   font-weight: 100;
   line-height: 1.2;
   margin-top: 3em;
+  @include tablet {
+    @include font-size(2.4);
+  }
 }
 
 h3 {
   color: $silver;
-  @include font-size(0.9);
+  @include font-size(0.8);
   font-weight: 600;
   letter-spacing: 2px;
   margin: 0;
   text-transform: uppercase;
+
+  @include tablet {
+    @include font-size(0.9);
+  }
 }

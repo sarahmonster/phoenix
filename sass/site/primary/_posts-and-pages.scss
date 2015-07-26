@@ -50,15 +50,20 @@
 
 .subtitle,
 .taxonomy-description {
-  @include font-size(1.6);
   border-top: 1px solid lighten($color__text-main, 50%);
   color: #bbb;
   display: block;
+  @include font-size(1.4);
   font-style: italic;
   margin: 0.25em auto;
   max-width: $max-content-width;
   padding-top: 0.5em;
   text-align: left;
+
+  @include tablet {
+    @include font-size(1.6);
+  }
+
 }
 
 .taxonomy-description {
@@ -106,10 +111,6 @@
   .entry-header {
     padding-top: 2em;
   }
-
-  .entry-title {
-    @include font-size(3.6);
-  }
 }
 
 /* Adjust spacing for pages */
@@ -129,10 +130,6 @@ body:not(.home) .page .entry-content {
       @extend h3;
       display: block;
     }
-  }
-
-  .page-title {
-    @include font-size(3.6);
   }
 
   article {
