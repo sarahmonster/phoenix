@@ -270,9 +270,19 @@ select,
 textarea {
   color: #404040;
   font-family: serif;
-  font-size: 22.4px;
-  font-size: 1.4rem;
+  font-size: 19.2px;
+  font-size: 1.2rem;
   line-height: 1.8;
+}
+@media (min-width: 768px) {
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 22.4px;
+    font-size: 1.4rem;
+  }
 }
 
 h1, h2, h3, .posted-on, .blog .page-header .archive-type,
@@ -327,9 +337,18 @@ p {
 .cap:first-letter,
 .single .entry-content p:first-of-type:first-letter {
   float: left;
-  font-size: 8rem;
+  font-size: 96px;
+  font-size: 6rem;
   line-height: 0.8;
-  margin: -9px 10px 0 -10px;
+  margin: 1px 10px 0 -10px;
+}
+@media (min-width: 768px) {
+  .cap:first-letter,
+  .single .entry-content p:first-of-type:first-letter {
+    font-size: 128px;
+    font-size: 8rem;
+    margin-top: -9px;
+  }
 }
 .cap:first-line,
 .single .entry-content p:first-of-type:first-line {

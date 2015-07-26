@@ -12,9 +12,14 @@ p {
 
 	&:first-letter {
 		float: left;
-		font-size: 8rem;
+		@include font-size(6);
 		line-height: 0.8;
-		margin: -9px 10px 0 -10px;
+		margin: 1px 10px 0 -10px;
+
+		@include tablet {
+			@include font-size(8);
+			margin-top: -9px;
+		}
 	}
 
 	&:first-line {
