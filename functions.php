@@ -131,6 +131,14 @@ function flare_scripts() {
 add_action( 'wp_enqueue_scripts', 'flare_scripts' );
 
 /**
+ * Add editor styles
+ */
+function flare_editor_styles() {
+  add_editor_style( array( 'editor-style.css' ) );
+}
+add_action( 'after_setup_theme', 'flare_editor_styles' );
+
+/**
  * Nuke Jetpack styles
  */
 add_filter( 'jetpack_implode_frontend_css', '__return_false' );
