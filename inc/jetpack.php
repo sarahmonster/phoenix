@@ -17,7 +17,14 @@ function flare_jetpack_setup() {
     'wrapper'        => true,
     'posts_per_page' => 10,
     'type'           => 'click',
+    'render'         => 'flare_infinite_scroll_render'
 	) );
+
+  function flare_infinite_scroll_render() {
+    while ( have_posts() ) : the_post();
+      get_template_part( 'content', get_post_type() );
+    endwhile;
+  }
 
   /**
    * Add theme support for Jetpack responsive videos
