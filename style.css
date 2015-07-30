@@ -386,8 +386,25 @@ dfn, cite, em, i {
   font-style: italic;
 }
 
-blockquote {
+blockquote, .subtitle,
+.taxonomy-description {
   margin: 0 1.5em;
+  border-top: 1px solid silver;
+  color: silver;
+  display: block;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0.25em auto;
+  padding-top: 0.5em;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  blockquote, .subtitle,
+  .taxonomy-description {
+    font-size: 22.4px;
+    font-size: 1.4rem;
+  }
 }
 
 address {
@@ -445,10 +462,13 @@ body {
   /* Fallback for when there is no custom background color defined. */
 }
 
-blockquote, q {
+blockquote, .subtitle,
+.taxonomy-description, q {
   quotes: "" "";
 }
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before, .subtitle:before,
+.taxonomy-description:before, blockquote:after, .subtitle:after,
+.taxonomy-description:after, q:before, q:after {
   content: "";
 }
 
@@ -1044,16 +1064,8 @@ a:hover, a:active {
 
 .subtitle,
 .taxonomy-description {
-  border-top: 1px solid silver;
-  color: #bbb;
-  display: block;
   font-size: 22.4px;
   font-size: 1.4rem;
-  font-style: italic;
-  margin: 0.25em auto;
-  max-width: 768px;
-  padding-top: 0.5em;
-  text-align: left;
 }
 @media (min-width: 768px) {
   .subtitle,
@@ -1680,15 +1692,6 @@ img {
   float: none;
   margin-top: 20px;
   margin-bottom: 40px;
-}
-.single-pieces .new-design blockquote {
-  margin-top: 15px;
-  margin-bottom: 25px;
-  padding-top: 5px;
-  line-height: 2em;
-}
-.single-pieces .single-pieces blockquote p {
-  margin-bottom: 0;
 }
 .single-pieces #project_details cite {
   display: none;

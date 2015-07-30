@@ -38,6 +38,18 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+	border-top: 1px solid lighten($color__text-main, 50%);
+  color: $silver;
+  display: block;
+  @include font-size(1.2);
+  font-style: italic;
+  margin: 0.25em auto;
+  padding-top: 0.5em;
+  text-align: left;
+
+  @include tablet {
+    @include font-size(1.4);
+  }
 }
 
 address {

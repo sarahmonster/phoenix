@@ -50,20 +50,12 @@
 
 .subtitle,
 .taxonomy-description {
-  border-top: 1px solid lighten($color__text-main, 50%);
-  color: #bbb;
-  display: block;
+  @extend blockquote;
   @include font-size(1.4);
-  font-style: italic;
-  margin: 0.25em auto;
-  max-width: $max-content-width;
-  padding-top: 0.5em;
-  text-align: left;
 
   @include tablet {
     @include font-size(1.6);
   }
-
 }
 
 .taxonomy-description {
