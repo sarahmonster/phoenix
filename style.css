@@ -1520,6 +1520,25 @@ img {
   margin-left: 95.15%;
 }
 
+/* Rearrange header a smidge for all portfolio pages */
+.post-type-archive-pieces .entry-header,
+.post-type-archive-pieces .page-header,
+.single-pieces .entry-header,
+.single-pieces .page-header {
+  padding-top: 4em;
+  text-align: center;
+}
+.post-type-archive-pieces .entry-header .subtitle,
+.post-type-archive-pieces .entry-header .taxonomy-description,
+.post-type-archive-pieces .page-header .subtitle,
+.post-type-archive-pieces .page-header .taxonomy-description,
+.single-pieces .entry-header .subtitle,
+.single-pieces .entry-header .taxonomy-description,
+.single-pieces .page-header .subtitle,
+.single-pieces .page-header .taxonomy-description {
+  text-align: center;
+}
+
 /* PORTFOLIO LISTING PAGES */
 .portfolio-excerpt {
   width: 30%;
@@ -1658,13 +1677,6 @@ img {
   /* navigation for tablets */
   /* minor adjustments for even-smaller screens */
   /* on larger screens only, show expanded navigation */
-}
-.single-pieces .entry-header {
-  padding-top: 4em;
-  text-align: center;
-}
-.single-pieces .entry-header .subtitle {
-  text-align: center;
 }
 .single-pieces #project-gallery {
   font-size: 16px;

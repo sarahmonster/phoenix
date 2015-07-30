@@ -169,9 +169,23 @@ img {
   margin-left: 95.15%;
 }
 
+/* Rearrange header a smidge for all portfolio pages */
+.post-type-archive-pieces,
+.single-pieces {
+
+  .entry-header,
+  .page-header {
+    padding-top: 4em;
+    text-align: center;
+
+    .subtitle,
+    .taxonomy-description {
+      text-align: center;
+    }
+  } // .entry-header
+}
 
 /* PORTFOLIO LISTING PAGES */
-
 .portfolio-excerpt {
   width: 30%;
   margin-bottom: 20px;
@@ -301,15 +315,6 @@ img {
 /* PORTFOLIO PROJECT PAGE */
 .single-pieces {
 
-  .entry-header {
-    padding-top: 4em;
-    text-align: center;
-
-    .subtitle {
-      text-align: center;
-    }
-  }
-
   /* images */
   #project-gallery {
     @include font-size(1);
@@ -343,7 +348,8 @@ img {
 
   #project_details cite {
     display: none;
-  } 
+  }
+
   .iphone {
     margin-top: 6em;
   }
