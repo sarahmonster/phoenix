@@ -269,7 +269,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: serif;
+  font-family: "freight-text-pro", Georgia, serif;
   font-size: 19.2px;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -298,6 +298,7 @@ h1 a, h2 a, h3 a, .posted-on a, .blog .page-header .archive-type a,
 
 h1 {
   line-height: 1;
+  font-family: "freight-display-pro", "freight-text-pro", Georgia, serif;
   font-size: 44.8px;
   font-size: 2.8rem;
 }
@@ -313,6 +314,7 @@ h1 a {
 
 h2 {
   color: silver;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
   font-size: 28.8px;
   font-size: 1.8rem;
   font-weight: 100;
@@ -329,6 +331,7 @@ h2 {
 h3, .posted-on, .blog .page-header .archive-type,
 .archive .page-header .archive-type {
   color: silver;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
   font-size: 12.8px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -359,6 +362,7 @@ p {
 .cap:first-letter,
 .single .entry-content p:first-of-type:first-letter {
   float: left;
+  font-family: "paganini-open", "freight-text-pro", Georgia, serif;
   font-size: 96px;
   font-size: 6rem;
   line-height: 0.8;
@@ -616,6 +620,7 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
   content: "";
   display: table;
   border-bottom: 1px solid silver;
@@ -763,6 +768,7 @@ a:hover, a:active {
 .post-navigation span {
   color: silver;
   display: block;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1057,6 +1063,7 @@ a:hover, a:active {
 
 .entry-title,
 .page-title {
+  font-family: "freight-display-pro", "freight-text-pro", Georgia, serif;
   font-weight: 400;
   margin: 0 0 .5em;
   padding: 0;
@@ -1284,6 +1291,7 @@ body:not(.home) .page .entry-content {
   text-align: center;
 }
 .flare-location-widget dl {
+  font-family: "freight-text-pro", Georgia, serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.2;

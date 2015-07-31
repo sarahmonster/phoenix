@@ -55,6 +55,7 @@
   }
 
   dl {
+    font-family: $font__main;
     @include font-size(1);
     line-height: 1.2;
     margin: 10px 0;
