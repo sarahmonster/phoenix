@@ -693,7 +693,7 @@ a:hover, a:active {
   }
   .main-navigation ul {
     float: right;
-    margin-top: -10px;
+    margin-top: -2px;
   }
 }
 /* Large menu */
