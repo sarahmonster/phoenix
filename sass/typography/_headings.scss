@@ -23,7 +23,7 @@ h1 {
 
 h2 {
   color: lighten($color__text-main, 50%);
-  font-family: $font__accent;
+  font-style: italic;
   @include font-size(1.8);
   font-weight: 100;
   line-height: 1.2;
