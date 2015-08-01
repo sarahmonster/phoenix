@@ -43,7 +43,6 @@
 
 .entry-title,
 .page-title {
-  font-family: $font__display;
   font-weight: 400;
   margin: 0 0 .5em;
   padding: 0;
@@ -140,6 +139,7 @@ body:not(.home) .page .entry-content {
     }
 
     .entry-title {
+      font-style: normal;
       @include font-size(2.1);
     }
 

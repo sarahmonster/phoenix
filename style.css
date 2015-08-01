@@ -447,6 +447,12 @@ big {
   font-size: 125%;
 }
 
+strong {
+  background: #f3f3f3;
+  color: #404040;
+  padding: 0 5px;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -1063,7 +1069,6 @@ a:hover, a:active {
 
 .entry-title,
 .page-title {
-  font-family: "freight-display-pro", "freight-text-pro", Georgia, serif;
   font-weight: 400;
   margin: 0 0 .5em;
   padding: 0;
@@ -1155,6 +1160,7 @@ body:not(.home) .page .entry-content {
 }
 .blog article .entry-title,
 .archive article .entry-title {
+  font-style: normal;
   font-size: 33.6px;
   font-size: 2.1rem;
 }

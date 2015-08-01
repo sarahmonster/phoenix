@@ -86,3 +86,9 @@ mark, ins {
 big {
 	font-size: 125%;
 }
+
+strong {
+	background: lighten( $silver, 20% );
+	color: $color__text-main;
+	padding: 0 5px;
+}
