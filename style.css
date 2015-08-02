@@ -1941,6 +1941,10 @@ img {
   padding: 0;
 }
 
+#wpstats {
+  display: none;
+}
+
 /* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
