@@ -1710,10 +1710,12 @@ img {
   box-shadow: none;
   border: none;
 }
+.single-pieces a:not(.url-link) {
+  border-bottom: none;
+}
 .single-pieces .url-link {
   display: block;
   width: 100%;
-  font-size: .9em;
   text-align: center;
   float: none;
   margin-top: 20px;
