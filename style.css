@@ -769,9 +769,9 @@ a:hover, a:active {
 .post-navigation a:hover::before {
   background: #5a5a5a;
 }
-.comment-navigation span,
-.posts-navigation span,
-.post-navigation span {
+.comment-navigation span:not(.caps),
+.posts-navigation span:not(.caps),
+.post-navigation span:not(.caps) {
   color: silver;
   display: block;
   font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;

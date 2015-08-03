@@ -180,7 +180,7 @@
 		}
 	}
 
-	span {
+	span:not(.caps) {
 	  color: $silver;
 	  display: block;
 	  font-family: $font__accent;
