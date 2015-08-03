@@ -102,17 +102,17 @@ get_header(); ?>
 		       <?php echo get_the_term_list( $post->ID, 'services', '', ', ', '' ); ?>-->
 
 				<?php $url = get_post_meta($post->ID, 'Url', true);   if($url) : ?>
-				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo format_url($url); ?></a> &middot; </span>
+				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo esc_url($url); ?></a> &middot; </span>
 				<?php endif; ?>
 
 		        <?php $url = get_post_meta($post->ID, 'Url2', true);   if($url) : ?>
-				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo format_url($url); ?></a> &middot; </span>
+				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo esc_url($url); ?></a> &middot; </span>
 				<?php endif; ?>
 		        <?php $url = get_post_meta($post->ID, 'Url3', true);   if($url) : ?>
-				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo format_url($url); ?></a> &middot; </span>
+				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo esc_url($url); ?></a> &middot; </span>
 				<?php endif; ?>
 		        <?php $url = get_post_meta($post->ID, 'Url4', true);   if($url) : ?>
-				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo format_url($url); ?></a> &middot; </span>
+				<span class="date url-link"> &middot; <a href="<?php echo $url; ?>"><?php echo esc_url($url); ?></a> &middot; </span>
 				<?php endif; ?>
 
 
