@@ -92,3 +92,9 @@ strong {
 	color: $color__text-main;
 	padding: 0 5px;
 }
+
+.caps {
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	text-transform: lowercase;
+}

@@ -453,6 +453,12 @@ strong {
   padding: 0 5px;
 }
 
+.caps {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
