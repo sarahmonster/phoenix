@@ -1385,12 +1385,9 @@ body:not(.home) .page .entry-content {
 .row {
   clear: left;
   width: 100%;
-  max-width: 1140px;
-  /* min-width: 755px; */
   margin: 0 auto;
   overflow: hidden;
 }
-
 .row::after {
   clear: both;
   content: "";
@@ -1485,6 +1482,7 @@ img {
     margin-right: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    overflow: visible;
   }
 
   .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
@@ -1492,8 +1490,6 @@ img {
     float: none;
     margin-left: 0px;
     margin-right: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 .onepush {

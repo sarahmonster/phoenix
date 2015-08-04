@@ -5,14 +5,14 @@
 .row {
   clear: left;
   width: 100%;
-  max-width: 1140px;
-  /* min-width: 755px; */
   margin: 0 auto;
   overflow: hidden;
-} .row::after {
-  clear: both;
-  content: "";
-  display: block;
+
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
 }
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
@@ -88,11 +88,10 @@ img {
 @media only screen and (max-width: 1023px) {
 
   body {
-  font-size: 0.8em;
-  line-height: 1.5em;
+    font-size: 0.8em;
+    line-height: 1.5em;
   }
-  
-  }
+}
 
 
 /* Mobile */
@@ -100,26 +99,25 @@ img {
 @media handheld, only screen and (max-width: 767px) {
 
   body {
-  font-size: 16px;
-  -webkit-text-size-adjust: none;
+    font-size: 16px;
+    -webkit-text-size-adjust: none;
   }
-  
+
   .row, body, .container {
-  width: 100%;
-  min-width: 0;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+    width: 100%;
+    min-width: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: visible;
   }
-  
+
   .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
-  width: auto;
-  float: none;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
+    width: auto;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
 }
