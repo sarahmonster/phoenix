@@ -4,7 +4,7 @@
  */
 ?>
 
-<div class="fourcol portfolio-excerpt">
+<div class="portfolio-excerpt">
 		<a href="<?php echo the_permalink(); ?>" title="<?php echo the_title_attribute(); ?>">
 			<?php
 			$template = parse_url(get_bloginfo('template_directory'));
