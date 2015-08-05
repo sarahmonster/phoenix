@@ -203,7 +203,7 @@ function the_archive_title( $before = '', $after = '' ) {
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
 		$title = sprintf( __( '%1$s: %2$s', 'flare' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', 'flare' );
+		$title = __( 'Blog', 'flare' );
 	}
 
 	/**
