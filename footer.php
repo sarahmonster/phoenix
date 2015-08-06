@@ -11,6 +11,8 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+  	<a data-lang="en-gb" data-blog="http://triggersandsparks.com" href="http://triggersandsparks.com" class="wordpress-follow-button">Follow Triggers &amp; Sparks on WordPress.com</a>
+		<script type="text/javascript">(function(d){var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');p.type = 'text/javascript';p.async = true;p.src = '//widgets.wp.com/platform.js';f.parentNode.insertBefore(p,f);}(document));</script>
 		<div class="site-info">
 			<?php printf( 'Made with <span class="icon-heart"></span> and', 'flare' ); ?>
       <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'flare' ) ); ?>"><?php printf( __( '%s', 'flare' ), 'WordPress' ); ?></a>

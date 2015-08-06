@@ -72,4 +72,29 @@
     color: $red;
     font-size: 0.6em;
   }
+
+  iframe {
+    max-width: 155px;
+  }
+
+  .site-info {
+    margin-top: 2px;
+  }
+
+  @include tablet {
+    iframe {
+      float: left;
+    }
+
+    .site-info {
+      margin-top: 2px;
+      text-align: right;
+    }
+  } // @include tablet
+
+  @include desktop {
+    .site-info {
+      margin-top: -5px;
+    }
+  }
 }

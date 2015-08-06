@@ -1031,6 +1031,26 @@ a:hover, a:active {
   color: #a32020;
   font-size: 0.6em;
 }
+.site-footer iframe {
+  max-width: 155px;
+}
+.site-footer .site-info {
+  margin-top: 2px;
+}
+@media (min-width: 768px) {
+  .site-footer iframe {
+    float: left;
+  }
+  .site-footer .site-info {
+    margin-top: 2px;
+    text-align: right;
+  }
+}
+@media (min-width: 1024px) {
+  .site-footer .site-info {
+    margin-top: -5px;
+  }
+}
 
 /*--------------------------------------------------------------
 ## Posts and pages
