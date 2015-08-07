@@ -1799,7 +1799,7 @@ img {
 /* Click-to-scroll button */
 #infinite-handle {
   clear: both;
-  margin-bottom: 1em;
+  padding: 1em 0;
   text-align: center;
 }
 #infinite-handle span {
@@ -1813,7 +1813,7 @@ img {
   display: inline;
   font-size: 1.8em;
   padding: 5px;
-  vertical-align: -3px;
+  vertical-align: -5px;
 }
 #infinite-handle span::before {
   content: '{';
