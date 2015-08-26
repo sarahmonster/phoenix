@@ -23,6 +23,20 @@ function flare_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'flare_body_classes' );
 
+/**
+ * Check for existence of Wanderlist plugin.
+ *
+ * This plugin is used in various places by the theme.
+ */
+function flare_has_wanderlist() {
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	if ( is_plugin_active( 'wanderlist/wanderlist.php' ) ) :
+		return true;
+	else :
+		return false;
+	endif;
+}
+
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.

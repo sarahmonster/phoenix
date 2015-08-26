@@ -17,15 +17,17 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
-					<div id="map">
-						<div class="flare-location-widget">
-							<h3><?php esc_html_e( 'Adventure Ahoy!', 'flare' ); ?></h3>
-							<dl>
-								<dt>Today</dt>
-								<dd><?php echo flare_get_current_location(); ?></dd>
-								<?php echo flare_upcoming_locations(); ?>
-							</dl>
-						</div><!-- .flare-location-widget -->
+					<?php if ( flare_has_wanderlist() ): ?>
+						<div id="map">
+							<div class="flare-location-widget">
+								<h3><?php esc_html_e( 'Adventure Ahoy!', 'flare' ); ?></h3>
+								<dl>
+									<dt>Today</dt>
+									<dd><?php echo wanderlist_get_current_location(); ?></dd>
+									<?php echo wanderlist_upcoming_locations(); ?>
+								</dl>
+							</div><!-- .flare-location-widget -->
+					<?php endif; ?>
 					</div><!-- .map -->
 				</article><!-- #post-## -->
 			<?php endwhile; ?>
@@ -34,7 +36,7 @@ get_header(); ?>
 				<h3><?php esc_html_e( 'Newest stories', 'flare' ); ?></h3>
 
 				<?php
-				// Grab the three most recent posts
+				// Grab the most recent posts
 					$flare_recent_posts = wp_get_recent_posts( array(
 						'numberposts' => 2,
 						'post_status' => 'publish',

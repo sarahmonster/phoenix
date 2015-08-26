@@ -169,11 +169,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Custom location functionality.
- */
-require get_template_directory() . '/inc/locations.php';
-
-/**
  * Custom portfolio functionality.
  */
 require get_template_directory() . '/inc/portfolio.php';
