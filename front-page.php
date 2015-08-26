@@ -18,17 +18,9 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 
 					<?php if ( flare_has_wanderlist() ): ?>
-						<div id="map">
-							<div class="flare-location-widget">
-								<h3><?php esc_html_e( 'Adventure Ahoy!', 'flare' ); ?></h3>
-								<dl>
-									<dt>Today</dt>
-									<dd><?php echo wanderlist_get_current_location(); ?></dd>
-									<?php echo wanderlist_upcoming_locations(); ?>
-								</dl>
-							</div><!-- .flare-location-widget -->
+						<?php echo do_shortcode( "[wanderlist-map]" ); ?>
 					<?php endif; ?>
-					</div><!-- .map -->
+
 				</article><!-- #post-## -->
 			<?php endwhile; ?>
 
