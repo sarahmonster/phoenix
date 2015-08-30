@@ -1301,49 +1301,6 @@ body:not(.home) .page .entry-content {
   display: inline-block;
 }
 
-#map {
-  display: block;
-  height: 400px;
-  position: relative;
-  width: 100%;
-  z-index: -1;
-}
-
-.flare-location-widget {
-  background: rgba(255, 255, 255, 0.75);
-  bottom: 20px;
-  left: 20px;
-  padding: 10px;
-  position: absolute;
-  z-index: 100;
-}
-.flare-location-widget h3, .flare-location-widget .posted-on, .flare-location-widget .blog .page-header .archive-type, .blog .page-header .flare-location-widget .archive-type,
-.flare-location-widget .archive .page-header .archive-type,
-.archive .page-header .flare-location-widget .archive-type {
-  text-align: center;
-}
-.flare-location-widget dl {
-  font-family: "freight-text-pro", Georgia, serif;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.2;
-  margin: 10px 0;
-  width: 220px;
-}
-.flare-location-widget dl dt {
-  clear: left;
-  color: silver;
-  float: left;
-  font-style: italic;
-  text-align: right;
-  width: 100px;
-}
-.flare-location-widget dl dd {
-  float: left;
-  margin: 0 0 0 4px;
-  width: 116px;
-}
-
 .flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
 .flare-frontpage-widget .archive .page-header .archive-type,
 .archive .page-header .flare-frontpage-widget .archive-type {
@@ -1387,14 +1344,78 @@ body:not(.home) .page .entry-content {
     width: 400px;
   }
 }
-.flare-country-count {
+/* Main dashboard */
+.wanderlist-overview {
+  margin-top: 4em;
+}
+
+/* Maps */
+#map {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+#map .wanderlist-location-widget {
+  background: rgba(255, 255, 255, 0.75);
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  position: absolute;
+  z-index: 100;
+}
+#map .wanderlist-location-widget h3, #map .wanderlist-location-widget .posted-on, #map .wanderlist-location-widget .blog .page-header .archive-type, .blog .page-header #map .wanderlist-location-widget .archive-type,
+#map .wanderlist-location-widget .archive .page-header .archive-type,
+.archive .page-header #map .wanderlist-location-widget .archive-type {
+  text-align: center;
+}
+
+/* Widgets */
+.wanderlist-widget {
+  margin-top: 1em;
+}
+.wanderlist-widget .widget-title {
+  border-bottom: 2px solid;
+  padding-bottom: 0.5em;
+  text-align: left;
+}
+
+/* Location listings */
+.wanderlist-location-widget dl {
+  font-family: "freight-text-pro", Georgia, serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 10px 0;
+  content: "";
+  display: table;
+}
+.wanderlist-location-widget dl dt {
+  clear: left;
+  color: silver;
+  float: left;
+  font-style: italic;
+  text-align: right;
+  width: 100px;
+}
+.wanderlist-location-widget dl dd {
+  float: left;
+  margin: 0 0 0 4px;
+  white-space: nowrap;
+  width: 116px;
+  width: calc( 100% - 105px );
+}
+
+/* Text snippets */
+.wanderlist-country-count {
   color: #a32020;
   font-weight: bolder;
   font-size: 1.5em;
   line-height: 1;
 }
 
-.flare-current-location {
+.wanderlist-current-location {
   color: #a32020;
   font-style: italic;
 }

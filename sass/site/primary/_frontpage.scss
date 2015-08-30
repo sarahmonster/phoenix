@@ -33,51 +33,6 @@
   } // .loves
 }
 
-// Map
-#map {
-  display: block;
-  height: 400px;
-  position: relative;
-  width: 100%;
-  z-index: -1;
-}
-
-.flare-location-widget {
-  background: rgba(255, 255, 255, 0.75);
-  bottom: 20px;
-  left: 20px;
-  padding: 10px;
-  position: absolute;
-  z-index: 100;
-
-  h3 {
-    text-align: center;
-  }
-
-  dl {
-    font-family: $font__main;
-    @include font-size(1);
-    line-height: 1.2;
-    margin: 10px 0;
-    width: 220px;
-
-    dt {
-      clear: left;
-      color: $silver;
-      float: left;
-      font-style: italic;
-      text-align: right;
-      width: 100px;
-    }
-
-    dd {
-      float: left;
-      margin: 0 0 0 4px;
-      width: 116px;
-    }
-  }
-} // .flare-location-widget
-
 // Recent posts
 .flare-frontpage-widget {
 

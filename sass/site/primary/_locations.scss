@@ -1,11 +1,78 @@
-.flare-country-count {
+/* Main dashboard */
+.wanderlist-overview {
+  margin-top: 4em;
+}
+
+/* Maps */
+#map {
+  display: block;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+
+  .wanderlist-location-widget {
+    background: rgba(255, 255, 255, 0.75);
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    position: absolute;
+    z-index: 100;
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
+
+/* Widgets */
+.wanderlist-widget {
+  margin-top: 1em;
+
+  .widget-title {
+    border-bottom: 2px solid;
+    padding-bottom: 0.5em;
+    text-align: left;
+  }
+}
+
+/* Location listings */
+.wanderlist-location-widget {
+  dl {
+    font-family: $font__main;
+    @include font-size(1);
+    line-height: 1.2;
+    margin: 10px 0;
+    @include clearfix;
+
+    dt {
+      clear: left;
+      color: $silver;
+      float: left;
+      font-style: italic;
+      text-align: right;
+      width: 100px;
+    }
+
+    dd {
+      float: left;
+      margin: 0 0 0 4px;
+      white-space: nowrap;
+      width: 116px;
+      width: calc( 100% - 105px );
+    }
+  }
+} // .wanderlist-location-widget
+
+/* Text snippets */
+.wanderlist-country-count {
   color: $red;
   font-weight: bolder;
   font-size: 1.5em;
   line-height: 1;
 }
 
-.flare-current-location {
+.wanderlist-current-location {
   color: $red;
   font-style: italic;
 }
