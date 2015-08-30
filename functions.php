@@ -112,9 +112,9 @@ function flare_scripts() {
 	wp_enqueue_script( 'flare-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	// Mapbox libraries and initialisation code
-	wp_enqueue_script( 'flare-mapbox', 'https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js', array(), '20150719', true );
-	wp_enqueue_style( 'flare-mapbox-css', 'https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css', array(), '20150719', all );
-	wp_enqueue_script( 'flare-map', get_template_directory_uri() . '/js/map.js', array( 'jquery', 'flare-mapbox' ), '20150719', true );
+	//wp_enqueue_script( 'flare-mapbox', 'https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.js', array(), '20150719', true );
+	//wp_enqueue_style( 'flare-mapbox-css', 'https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.css', array(), '20150719', all );
+	//wp_enqueue_script( 'flare-map', get_template_directory_uri() . '/js/map.js', array( 'jquery', 'flare-mapbox' ), '20150719', true );
 
 	// Text animation/manipulation libraries
 	wp_enqueue_style( 'flare-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', screen );
