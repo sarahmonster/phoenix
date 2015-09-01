@@ -1,15 +1,45 @@
 /* Main dashboard */
+.page.post-2599 {
+  max-width: 100%;
+
+  .entry-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .wanderlist-overview {
   margin-top: 4em;
+
+  // Use two columns on a desktop, since we've got loads of space
+  @include desktop {
+    .wanderlist-map-widget {
+      float: left;
+      padding-right: $gutter;
+      width: calc(100% - 400px);
+    }
+
+    .wanderlist-location-widget,
+    .wanderlist-trip-widget {
+      float: left;
+      padding-left: $gutter;
+      width: 400px;
+    }
+  }
 }
 
 /* Maps */
 #map {
+  border: 1px solid $silver;
   display: block;
-  height: 400px;
+  height: 200px;
   position: relative;
-  width: 100%;
   z-index: -1;
+  width: 100%;
+
+  @include tablet {
+    height: 400px;
+  }
 
   .wanderlist-location-widget {
     background: rgba(255, 255, 255, 0.75);
@@ -36,13 +66,15 @@
   }
 }
 
-/* Location listings */
-.wanderlist-location-widget {
-  dl {
+/* Widget styles */
+.wanderlist-widget {
+  dl,
+  ul {
     font-family: $font__main;
     @include font-size(1);
-    line-height: 1.2;
+    line-height: 1.4;
     margin: 10px 0;
+    padding-left: 0;
     @include clearfix;
 
     dt {

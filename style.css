@@ -1345,17 +1345,44 @@ body:not(.home) .page .entry-content {
   }
 }
 /* Main dashboard */
+.page.post-2599 {
+  max-width: 100%;
+}
+.page.post-2599 .entry-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .wanderlist-overview {
   margin-top: 4em;
+}
+@media (min-width: 1024px) {
+  .wanderlist-overview .wanderlist-map-widget {
+    float: left;
+    padding-right: 40px;
+    width: calc(100% - 400px);
+  }
+  .wanderlist-overview .wanderlist-location-widget,
+  .wanderlist-overview .wanderlist-trip-widget {
+    float: left;
+    padding-left: 40px;
+    width: 400px;
+  }
 }
 
 /* Maps */
 #map {
+  border: 1px solid silver;
   display: block;
-  height: 400px;
+  height: 200px;
   position: relative;
-  width: 100%;
   z-index: -1;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #map {
+    height: 400px;
+  }
 }
 #map .wanderlist-location-widget {
   background: rgba(255, 255, 255, 0.75);
@@ -1381,17 +1408,20 @@ body:not(.home) .page .entry-content {
   text-align: left;
 }
 
-/* Location listings */
-.wanderlist-location-widget dl {
+/* Widget styles */
+.wanderlist-widget dl,
+.wanderlist-widget ul {
   font-family: "freight-text-pro", Georgia, serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 10px 0;
+  padding-left: 0;
   content: "";
   display: table;
 }
-.wanderlist-location-widget dl dt {
+.wanderlist-widget dl dt,
+.wanderlist-widget ul dt {
   clear: left;
   color: silver;
   float: left;
@@ -1399,7 +1429,8 @@ body:not(.home) .page .entry-content {
   text-align: right;
   width: 100px;
 }
-.wanderlist-location-widget dl dd {
+.wanderlist-widget dl dd,
+.wanderlist-widget ul dd {
   float: left;
   margin: 0 0 0 4px;
   white-space: nowrap;
