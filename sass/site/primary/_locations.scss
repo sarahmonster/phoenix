@@ -8,8 +8,14 @@
   }
 }
 
+/* Probably theme-specific */
 .wanderlist-overview {
   margin-top: 4em;
+}
+
+/* Main page and sub-pages for trips/years */
+.wanderlist-overview,
+.tax-wanderlist-trip  {
 
   // Use two columns on a desktop, since we've got loads of space
   @include desktop {
@@ -20,7 +26,8 @@
     }
 
     .wanderlist-location-widget,
-    .wanderlist-trip-widget {
+    .wanderlist-trip-widget,
+    .wanderlist-trip-overview-widget {
       float: left;
       padding-left: $gutter;
       width: 400px;

@@ -1353,17 +1353,25 @@ body:not(.home) .page .entry-content {
   margin-right: 0;
 }
 
+/* Probably theme-specific */
 .wanderlist-overview {
   margin-top: 4em;
 }
+
+/* Main page and sub-pages for trips/years */
 @media (min-width: 1024px) {
-  .wanderlist-overview .wanderlist-map-widget {
+  .wanderlist-overview .wanderlist-map-widget,
+  .tax-wanderlist-trip .wanderlist-map-widget {
     float: left;
     padding-right: 40px;
     width: calc(100% - 400px);
   }
   .wanderlist-overview .wanderlist-location-widget,
-  .wanderlist-overview .wanderlist-trip-widget {
+  .wanderlist-overview .wanderlist-trip-widget,
+  .wanderlist-overview .wanderlist-trip-overview-widget,
+  .tax-wanderlist-trip .wanderlist-location-widget,
+  .tax-wanderlist-trip .wanderlist-trip-widget,
+  .tax-wanderlist-trip .wanderlist-trip-overview-widget {
     float: left;
     padding-left: 40px;
     width: 400px;
