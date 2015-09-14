@@ -1345,10 +1345,10 @@ body:not(.home) .page .entry-content {
   }
 }
 /* Main dashboard */
-.page.post-2599 {
+.page.post-2698 {
   max-width: 100%;
 }
-.page.post-2599 .entry-content {
+.page.post-2698 .entry-content {
   margin-left: 0;
   margin-right: 0;
 }
@@ -1384,7 +1384,7 @@ body:not(.home) .page .entry-content {
   display: block;
   height: 200px;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
 }
 @media (min-width: 768px) {
