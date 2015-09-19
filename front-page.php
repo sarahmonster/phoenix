@@ -17,10 +17,6 @@ get_header(); ?>
 						<?php the_content(); ?>
 					</div><!-- .entry-content -->
 
-					<?php if ( flare_has_wanderlist() ): ?>
-						<?php echo do_shortcode( "[wanderlist-map]" ); ?>
-					<?php endif; ?>
-
 				</article><!-- #post-## -->
 			<?php endwhile; ?>
 
