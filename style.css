@@ -612,14 +612,14 @@ a {
   border-bottom: 2px solid rgba(163, 32, 32, 0.05);
   color: #a32020;
   text-decoration: none;
-  transition: all 500ms linear;
+  transition: all 0.2s ease-out;
 }
 a:visited {
   color: #a32020;
 }
 a:hover, a:focus, a:active {
-  color: #72a9d0;
-  border-bottom: 2px solid #72a9d0;
+  color: #f3ad33;
+  border-bottom: 2px solid #f3ad33;
 }
 a:focus {
   outline: thin dotted;
@@ -997,6 +997,9 @@ a:hover, a:active {
     top: 5px;
     position: absolute;
     width: 70px;
+  }
+  #masthead .site-logo-link:hover {
+    transform: scale(1.05);
   }
   #masthead .site-logo {
     max-width: 100%;

@@ -2,7 +2,7 @@ a {
 	border-bottom: 2px solid transparentize($color__link, 0.95);
 	color: $color__link;
 	text-decoration: none;
-	transition: all 500ms linear;
+	transition: all 0.2s ease-out;
 
 	&:visited {
 		color: $color__link-visited;

@@ -26,6 +26,10 @@
       top: 5px;
       position: absolute;
       width: 70px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     .site-logo {
