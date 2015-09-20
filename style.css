@@ -272,7 +272,7 @@ textarea {
   font-family: "freight-text-pro", Georgia, serif;
   font-size: 19.2px;
   font-size: 1.2rem;
-  line-height: 1.8;
+  line-height: 1.6;
 }
 @media (min-width: 768px) {
   body,
