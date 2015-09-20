@@ -632,10 +632,10 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
   content: "";
   display: table;
-  border-bottom: 1px solid silver;
+  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  max-width: 1140px;
   width: 100%;
 }
 .main-navigation ul {
@@ -648,12 +648,16 @@ a:hover, a:active {
   font-size: 13.6px;
   font-size: 0.85rem;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .main-navigation ul li a {
   padding: 4px 6px;
+  color: #404040;
+}
+.main-navigation ul li a:hover {
+  color: #f3ad33;
 }
 .main-navigation ul li::after {
   content: '\00b7';
@@ -699,9 +703,7 @@ a:hover, a:active {
 /* Small menu */
 @media (max-width: 767px) {
   .main-navigation {
-    width: calc(100% + 40px);
-    margin: -10px -20px;
-    padding: 0 10px;
+    padding: 10px 10px 0;
   }
   .main-navigation ul {
     float: right;
@@ -712,11 +714,6 @@ a:hover, a:active {
 @media (min-width: 768px) {
   .main-navigation {
     display: inline-block;
-    float: none;
-    height: 41px;
-    margin-top: -17px;
-    padding-bottom: 0;
-    position: relative;
     vertical-align: top;
   }
   .main-navigation div:first-of-type {
@@ -734,8 +731,8 @@ a:hover, a:active {
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a {
-    color: #a6a6a6;
-    border-bottom: 2px solid #a6a6a6;
+    color: #f3ad33;
+    border-bottom: 2px solid #fff;
   }
 }
 /* Other navigation */
@@ -979,6 +976,14 @@ a:hover, a:active {
   padding: 20px;
 }
 
+#masthead {
+  border-bottom: 2px solid #f3ad33;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
 @media (max-width: 767px) {
   #masthead .site-logo-link {
     float: left;
@@ -988,13 +993,12 @@ a:hover, a:active {
 @media (min-width: 768px) {
   #masthead .site-logo-link {
     display: inline-block;
-    left: calc(50% - 50px);
-    top: -10px;
+    left: calc(50% - 35px);
+    top: 5px;
     position: absolute;
-    width: 100px;
+    width: 70px;
   }
   #masthead .site-logo {
-    margin: 10px auto;
     max-width: 100%;
   }
 }

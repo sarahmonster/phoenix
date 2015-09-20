@@ -1,10 +1,16 @@
 #page {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: $size__max-width;
   padding: 20px;
 }
 
 #masthead {
+	border-bottom: 2px solid $yellow;
+	position: absolute;
+		top: 0;
+		left: 0;
+	text-align: center;
+	width: 100%;
 
   @include mobile {
     .site-logo-link {
@@ -16,14 +22,13 @@
   @include tablet {
     .site-logo-link {
       display: inline-block;
-      left: calc(50% - 50px);
-      top: -10px;
+      left: calc(50% - 35px);
+      top: 5px;
       position: absolute;
-      width: 100px;
+      width: 70px;
     }
 
     .site-logo {
-      margin: 10px auto;
       max-width: 100%;
     }
   }
