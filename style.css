@@ -1355,9 +1355,18 @@ body:not(.home) .page .entry-content {
   margin-right: 0;
 }
 
-/* Probably theme-specific */
+/* Ensure overview page has a reasonable distance from top */
 .wanderlist-overview {
   margin-top: 4em;
+}
+
+/* Override link colour set by Mapbox */
+.leaflet-container a {
+  border: none;
+  color: #a32020;
+}
+.leaflet-container a:hover {
+  color: #747474;
 }
 
 /* Main page and sub-pages for trips/years */

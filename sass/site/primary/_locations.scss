@@ -8,9 +8,19 @@
   }
 }
 
-/* Probably theme-specific */
+/* Ensure overview page has a reasonable distance from top */
 .wanderlist-overview {
   margin-top: 4em;
+}
+
+/* Override link colour set by Mapbox */
+.leaflet-container a {
+  border: none;
+  color: $red;
+
+  &:hover {
+    color: darken($silver, 30%);
+  }
 }
 
 /* Main page and sub-pages for trips/years */
