@@ -10,11 +10,9 @@
 		padding-left: 0;
 
 		li {
-			@include font-size(0.85);
+			@include font-size(1);
 			display: inline-block;
 			font-weight: 400;
-			letter-spacing: 1px;
-			text-transform: uppercase;
 
 			a {
 				padding: 4px 6px;
@@ -126,8 +124,6 @@
 		}
 
 		ul li {
-			letter-spacing: 3px;
-
 			a {
 				padding: 5px 10px;
 			}

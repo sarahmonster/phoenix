@@ -331,7 +331,7 @@ h2 {
 h3, .posted-on, .blog .page-header .archive-type,
 .archive .page-header .archive-type {
   color: silver;
-  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
   font-size: 12.8px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -634,7 +634,7 @@ a:hover, a:active {
 .main-navigation {
   content: "";
   display: table;
-  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
   max-width: 1140px;
   width: 100%;
 }
@@ -645,12 +645,10 @@ a:hover, a:active {
   /* Sub-menus (currently unused & thus relatively unstyled) */
 }
 .main-navigation ul li {
-  font-size: 13.6px;
-  font-size: 0.85rem;
+  font-size: 16px;
+  font-size: 1rem;
   display: inline-block;
   font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 .main-navigation ul li a {
   padding: 4px 6px;
@@ -722,9 +720,6 @@ a:hover, a:active {
   .main-navigation div:last-of-type {
     float: right;
   }
-  .main-navigation ul li {
-    letter-spacing: 3px;
-  }
   .main-navigation ul li a {
     padding: 5px 10px;
   }
@@ -777,7 +772,7 @@ a:hover, a:active {
 .post-navigation span:not(.caps) {
   color: silver;
   display: block;
-  font-family: "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
   font-weight: 600;
