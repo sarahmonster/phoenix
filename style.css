@@ -1143,7 +1143,8 @@ a:hover, a:active {
   display: inline;
   font-family: 'triggers-sparks';
   font-size: 24px;
-  margin: 0 10px 0 0;
+  font-style: normal;
+  margin: 0 5px 0 0;
   vertical-align: bottom;
 }
 
