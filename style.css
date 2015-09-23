@@ -1391,7 +1391,7 @@ body:not(.home) .page .entry-content {
 }
 
 /* Maps */
-#map {
+#wanderlist-map {
   border: 1px solid silver;
   display: block;
   height: 200px;
@@ -1400,11 +1400,11 @@ body:not(.home) .page .entry-content {
   width: 100%;
 }
 @media (min-width: 768px) {
-  #map {
+  #wanderlist-map {
     height: 400px;
   }
 }
-#map .wanderlist-location-widget {
+#wanderlist-map .wanderlist-location-widget {
   background: rgba(255, 255, 255, 0.75);
   bottom: 20px;
   left: 20px;
@@ -1412,9 +1412,9 @@ body:not(.home) .page .entry-content {
   position: absolute;
   z-index: 100;
 }
-#map .wanderlist-location-widget h3, #map .wanderlist-location-widget .posted-on, #map .wanderlist-location-widget .blog .page-header .archive-type, .blog .page-header #map .wanderlist-location-widget .archive-type,
-#map .wanderlist-location-widget .archive .page-header .archive-type,
-.archive .page-header #map .wanderlist-location-widget .archive-type {
+#wanderlist-map .wanderlist-location-widget h3, #wanderlist-map .wanderlist-location-widget .posted-on, #wanderlist-map .wanderlist-location-widget .blog .page-header .archive-type, .blog .page-header #wanderlist-map .wanderlist-location-widget .archive-type,
+#wanderlist-map .wanderlist-location-widget .archive .page-header .archive-type,
+.archive .page-header #wanderlist-map .wanderlist-location-widget .archive-type {
   text-align: center;
 }
 
