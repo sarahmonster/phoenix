@@ -15,11 +15,11 @@ p {
 		font-family: $font__decorative;
 		@include font-size(6);
 		line-height: 0.8;
-		margin: 1px 10px 0 -10px;
+		margin: -4px 10px 0 -10px;
 
 		@include tablet {
 			@include font-size(8);
-			margin-top: -9px;
+			margin-top: -16px;
 		}
 	}
 
