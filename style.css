@@ -1371,22 +1371,66 @@ body:not(.home) .page .entry-content {
 }
 
 /* Main page and sub-pages for trips/years */
+.wanderlist-overview article,
+.tax-wanderlist-trip article,
+.tax-wanderlist-country article {
+  width: 100%;
+}
+.wanderlist-overview article .entry-content,
+.tax-wanderlist-trip article .entry-content,
+.tax-wanderlist-country article .entry-content {
+  border-top: 0;
+}
 @media (min-width: 1024px) {
   .wanderlist-overview .wanderlist-map-widget,
-  .tax-wanderlist-trip .wanderlist-map-widget {
+  .tax-wanderlist-trip .wanderlist-map-widget,
+  .tax-wanderlist-country .wanderlist-map-widget {
     float: left;
     padding-right: 40px;
     width: calc(100% - 400px);
   }
   .wanderlist-overview .wanderlist-location-widget,
-  .wanderlist-overview .wanderlist-trip-widget,
   .wanderlist-overview .wanderlist-trip-overview-widget,
+  .wanderlist-overview .wanderlist-country-overview-widget,
   .tax-wanderlist-trip .wanderlist-location-widget,
-  .tax-wanderlist-trip .wanderlist-trip-widget,
-  .tax-wanderlist-trip .wanderlist-trip-overview-widget {
+  .tax-wanderlist-trip .wanderlist-trip-overview-widget,
+  .tax-wanderlist-trip .wanderlist-country-overview-widget,
+  .tax-wanderlist-country .wanderlist-location-widget,
+  .tax-wanderlist-country .wanderlist-trip-overview-widget,
+  .tax-wanderlist-country .wanderlist-country-overview-widget {
     float: left;
     padding-left: 40px;
     width: 400px;
+  }
+  .wanderlist-overview .wanderlist-trip-widget,
+  .wanderlist-overview .wanderlist-number-widget,
+  .wanderlist-overview .wanderlist-cloud-widget,
+  .tax-wanderlist-trip .wanderlist-trip-widget,
+  .tax-wanderlist-trip .wanderlist-number-widget,
+  .tax-wanderlist-trip .wanderlist-cloud-widget,
+  .tax-wanderlist-country .wanderlist-trip-widget,
+  .tax-wanderlist-country .wanderlist-number-widget,
+  .tax-wanderlist-country .wanderlist-cloud-widget {
+    float: left;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 33%;
+  }
+  .wanderlist-overview .wanderlist-trip-widget,
+  .tax-wanderlist-trip .wanderlist-trip-widget,
+  .tax-wanderlist-country .wanderlist-trip-widget {
+    clear: left;
+    padding-left: 0;
+  }
+  .wanderlist-overview .wanderlist-cloud-widget,
+  .tax-wanderlist-trip .wanderlist-cloud-widget,
+  .tax-wanderlist-country .wanderlist-cloud-widget {
+    padding-left: 0;
+  }
+  .wanderlist-overview .wanderlist-number-widget,
+  .tax-wanderlist-trip .wanderlist-number-widget,
+  .tax-wanderlist-country .wanderlist-number-widget {
+    padding-right: 0;
   }
 }
 
@@ -1405,7 +1449,7 @@ body:not(.home) .page .entry-content {
   }
 }
 #wanderlist-map .wanderlist-location-widget {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.85);
   bottom: 20px;
   left: 20px;
   padding: 10px 20px;
@@ -1443,10 +1487,10 @@ body:not(.home) .page .entry-content {
 .wanderlist-widget dl dt,
 .wanderlist-widget ul dt {
   clear: left;
-  color: silver;
+  color: #a7a7a7;
   float: left;
   font-style: italic;
-  text-align: right;
+  font-weight: normal;
   width: 100px;
 }
 .wanderlist-widget dl dd,

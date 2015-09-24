@@ -25,7 +25,16 @@
 
 /* Main page and sub-pages for trips/years */
 .wanderlist-overview,
-.tax-wanderlist-trip  {
+.tax-wanderlist-trip,
+.tax-wanderlist-country  {
+
+  article {
+    width: 100%;
+
+    .entry-content {
+      border-top: 0;
+    }
+  }
 
   // Use two columns on a desktop, since we've got loads of space
   @include desktop {
@@ -36,13 +45,36 @@
     }
 
     .wanderlist-location-widget,
-    .wanderlist-trip-widget,
-    .wanderlist-trip-overview-widget {
+    .wanderlist-trip-overview-widget,
+    .wanderlist-country-overview-widget {
       float: left;
       padding-left: $gutter;
       width: 400px;
     }
-  }
+
+    .wanderlist-trip-widget,
+    .wanderlist-number-widget,
+    .wanderlist-cloud-widget {
+      float: left;
+      padding-left: $gutter;
+      padding-right: $gutter;
+      width: 33%;
+    }
+
+    .wanderlist-trip-widget {
+      clear: left;
+      padding-left: 0;
+    }
+
+    .wanderlist-cloud-widget {
+      padding-left: 0;
+    }
+
+    .wanderlist-number-widget {
+      padding-right: 0;
+    }
+
+  } // desktop
 }
 
 /* Maps */
@@ -59,7 +91,7 @@
   }
 
   .wanderlist-location-widget {
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.85);
     bottom: 20px;
     left: 20px;
     padding: 10px 20px;
@@ -96,10 +128,10 @@
 
     dt {
       clear: left;
-      color: $silver;
+      color: darken($silver, 10%);
       float: left;
       font-style: italic;
-      text-align: right;
+      font-weight: normal;
       width: 100px;
     }
 
