@@ -286,13 +286,13 @@ textarea {
 }
 
 h1, h2, h3, .posted-on, .blog .page-header .archive-type,
-.archive .page-header .archive-type, h4, h5, h6 {
+.archive .page-header .archive-type, .wanderlist-cloud-widget a, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2;
 }
 h1 a, h2 a, h3 a, .posted-on a, .blog .page-header .archive-type a,
-.archive .page-header .archive-type a, h4 a, h5 a, h6 a {
+.archive .page-header .archive-type a, .wanderlist-cloud-widget a a, h4 a, h5 a, h6 a {
   border-bottom: none;
 }
 
@@ -329,7 +329,7 @@ h2 {
 }
 
 h3, .posted-on, .blog .page-header .archive-type,
-.archive .page-header .archive-type {
+.archive .page-header .archive-type, .wanderlist-cloud-widget a {
   color: silver;
   font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
   font-size: 12.8px;
@@ -341,7 +341,7 @@ h3, .posted-on, .blog .page-header .archive-type,
 }
 @media (min-width: 768px) {
   h3, .posted-on, .blog .page-header .archive-type,
-  .archive .page-header .archive-type {
+  .archive .page-header .archive-type, .wanderlist-cloud-widget a {
     font-size: 14.4px;
     font-size: 0.9rem;
   }
@@ -1306,7 +1306,7 @@ body:not(.home) .page .entry-content {
 
 .flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
 .flare-frontpage-widget .archive .page-header .archive-type,
-.archive .page-header .flare-frontpage-widget .archive-type {
+.archive .page-header .flare-frontpage-widget .archive-type, .flare-frontpage-widget .wanderlist-cloud-widget a, .wanderlist-cloud-widget .flare-frontpage-widget a {
   text-align: center;
 }
 .flare-frontpage-widget .flare-short-post {
@@ -1458,7 +1458,7 @@ body:not(.home) .page .entry-content {
 }
 #wanderlist-map .wanderlist-location-widget h3, #wanderlist-map .wanderlist-location-widget .posted-on, #wanderlist-map .wanderlist-location-widget .blog .page-header .archive-type, .blog .page-header #wanderlist-map .wanderlist-location-widget .archive-type,
 #wanderlist-map .wanderlist-location-widget .archive .page-header .archive-type,
-.archive .page-header #wanderlist-map .wanderlist-location-widget .archive-type {
+.archive .page-header #wanderlist-map .wanderlist-location-widget .archive-type, #wanderlist-map .wanderlist-location-widget .wanderlist-cloud-widget a, .wanderlist-cloud-widget #wanderlist-map .wanderlist-location-widget a {
   text-align: center;
 }
 
@@ -1471,8 +1471,6 @@ body:not(.home) .page .entry-content {
   padding-bottom: 0.5em;
   text-align: left;
 }
-
-/* Widget styles */
 .wanderlist-widget dl,
 .wanderlist-widget ul {
   font-family: "freight-text-pro", Georgia, serif;
@@ -1500,6 +1498,21 @@ body:not(.home) .page .entry-content {
   white-space: nowrap;
   width: 116px;
   width: calc( 100% - 105px );
+}
+
+.wanderlist-cloud-widget .widget-title {
+  display: none;
+}
+.wanderlist-cloud-widget a {
+  border: 1px solid #a32020;
+  color: #a32020;
+  font-size: 0.75rem !important;
+  padding: 0.2rem 0.4rem;
+  white-space: nowrap;
+}
+.wanderlist-cloud-widget a:hover {
+  background: #a32020;
+  color: #fff;
 }
 
 /* Text snippets */

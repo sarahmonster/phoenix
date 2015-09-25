@@ -113,10 +113,7 @@
     padding-bottom: 0.5em;
     text-align: left;
   }
-}
 
-/* Widget styles */
-.wanderlist-widget {
   dl,
   ul {
     font-family: $font__main;
@@ -142,8 +139,29 @@
       width: 116px;
       width: calc( 100% - 105px );
     }
+  } // dl, ul
+} // .wanderlist-widget
+
+.wanderlist-cloud-widget {
+
+  .widget-title {
+    display: none;
   }
-} // .wanderlist-location-widget
+
+  a {
+    @extend h3;
+    border: 1px solid $red;
+    color: $red;
+    font-size: 0.75rem !important;
+    padding: 0.2rem 0.4rem;
+    white-space: nowrap;
+
+    &:hover {
+      background: $red;
+      color: $white;
+    }
+  }
+}
 
 /* Text snippets */
 .wanderlist-country-count {
