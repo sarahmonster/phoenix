@@ -54,7 +54,7 @@
 
     .wanderlist-trip-widget,
     .wanderlist-number-widget,
-    .wanderlist-cloud-widget {
+    .wanderlist-country-widget {
       float: left;
       padding-left: $gutter;
       padding-right: $gutter;
@@ -66,7 +66,7 @@
       padding-left: 0;
     }
 
-    .wanderlist-cloud-widget {
+    .wanderlist-country-widget {
       padding-left: 0;
     }
 
@@ -142,26 +142,40 @@
   } // dl, ul
 } // .wanderlist-widget
 
-.wanderlist-cloud-widget {
+
+/* Country list widget */
+.wanderlist-country-widget {
 
   .widget-title {
     display: none;
   }
 
-  a {
+  ul {
+    margin: 0;
+  }
+
+  li {
     @extend h3;
     border: 1px solid $red;
     color: $red;
-    font-size: 0.75rem !important;
+    display: inline-block;
+    font-size: 0.65rem;
+    list-style-type: none;
     padding: 0.2rem 0.4rem;
+    margin: 0.1rem;
     white-space: nowrap;
 
     &:hover {
       background: $red;
       color: $white;
     }
+
+    a:hover,
+    &:hover a {
+      color: $white;
+    }
   }
-}
+} // .wanderlist-country-widget
 
 /* Text snippets */
 .wanderlist-country-count {
