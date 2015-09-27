@@ -33,12 +33,25 @@
   line-height: 1.5;
 }
 
-.posted-on {
-  @extend h3;
+.posted-on,
+.cats-links,
+.tags-links {
+	@extend h3;
 
   .highlight {
     color: darken($silver, 15%);
   }
+}
+
+.cats-links,
+.tags-links {
+	&::before {
+		content: '\00b7';
+	}
+
+	a {
+		color: darken($silver, 15%);
+	}
 }
 
 .entry-title,

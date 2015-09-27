@@ -285,13 +285,17 @@ textarea {
   }
 }
 
-h1, h2, h3, .posted-on, .blog .page-header .archive-type,
+h1, h2, h3, .posted-on,
+.cats-links,
+.tags-links, .blog .page-header .archive-type,
 .archive .page-header .archive-type, .wanderlist-country-widget li, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2;
 }
-h1 a, h2 a, h3 a, .posted-on a, .blog .page-header .archive-type a,
+h1 a, h2 a, h3 a, .posted-on a,
+.cats-links a,
+.tags-links a, .blog .page-header .archive-type a,
 .archive .page-header .archive-type a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
   border-bottom: none;
 }
@@ -328,7 +332,9 @@ h2 {
   }
 }
 
-h3, .posted-on, .blog .page-header .archive-type,
+h3, .posted-on,
+.cats-links,
+.tags-links, .blog .page-header .archive-type,
 .archive .page-header .archive-type, .wanderlist-country-widget li {
   color: silver;
   font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
@@ -340,7 +346,9 @@ h3, .posted-on, .blog .page-header .archive-type,
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  h3, .posted-on, .blog .page-header .archive-type,
+  h3, .posted-on,
+  .cats-links,
+  .tags-links, .blog .page-header .archive-type,
   .archive .page-header .archive-type, .wanderlist-country-widget li {
     font-size: 14.4px;
     font-size: 0.9rem;
@@ -1091,7 +1099,18 @@ a:hover, a:active {
   line-height: 1.5;
 }
 
-.posted-on .highlight {
+.posted-on .highlight,
+.cats-links .highlight,
+.tags-links .highlight {
+  color: #9a9a9a;
+}
+
+.cats-links::before,
+.tags-links::before {
+  content: '\00b7';
+}
+.cats-links a,
+.tags-links a {
   color: #9a9a9a;
 }
 
@@ -1304,7 +1323,9 @@ body:not(.home) .page .entry-content {
   display: inline-block;
 }
 
-.flare-frontpage-widget h3, .flare-frontpage-widget .posted-on, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
+.flare-frontpage-widget h3, .flare-frontpage-widget .posted-on,
+.flare-frontpage-widget .cats-links,
+.flare-frontpage-widget .tags-links, .flare-frontpage-widget .blog .page-header .archive-type, .blog .page-header .flare-frontpage-widget .archive-type,
 .flare-frontpage-widget .archive .page-header .archive-type,
 .archive .page-header .flare-frontpage-widget .archive-type, .flare-frontpage-widget .wanderlist-country-widget li, .wanderlist-country-widget .flare-frontpage-widget li {
   text-align: center;
@@ -1457,7 +1478,9 @@ body:not(.home) .page .entry-content {
   position: absolute;
   z-index: 100;
 }
-#wanderlist-map .wanderlist-location-widget h3, #wanderlist-map .wanderlist-location-widget .posted-on, #wanderlist-map .wanderlist-location-widget .blog .page-header .archive-type, .blog .page-header #wanderlist-map .wanderlist-location-widget .archive-type,
+#wanderlist-map .wanderlist-location-widget h3, #wanderlist-map .wanderlist-location-widget .posted-on,
+#wanderlist-map .wanderlist-location-widget .cats-links,
+#wanderlist-map .wanderlist-location-widget .tags-links, #wanderlist-map .wanderlist-location-widget .blog .page-header .archive-type, .blog .page-header #wanderlist-map .wanderlist-location-widget .archive-type,
 #wanderlist-map .wanderlist-location-widget .archive .page-header .archive-type,
 .archive .page-header #wanderlist-map .wanderlist-location-widget .archive-type, #wanderlist-map .wanderlist-location-widget .wanderlist-country-widget li, .wanderlist-country-widget #wanderlist-map .wanderlist-location-widget li {
   text-align: center;
