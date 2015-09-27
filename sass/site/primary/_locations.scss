@@ -71,6 +71,7 @@
     }
 
     .wanderlist-number-widget {
+      padding-left: 0;
       padding-right: 0;
     }
 
@@ -177,12 +178,69 @@
   }
 } // .wanderlist-country-widget
 
+/* Number widget */
+.wanderlist-number-widget {
+  .widget-title {
+    display: none;
+  }
+
+  div {
+    border: 2px solid $silver;
+    border-radius: 50%;
+    color: $silver;
+    float: left;
+    font-family: $font__sans-serif;
+    font-weight: normal;
+    height: 100px;
+    line-height: 0.7;
+    padding-top: 28px;
+    text-align: center;
+    width: 100px;
+
+
+    .wanderlist-number {
+      display: block;
+      @include font-size(2);
+      font-weight: 100;
+    }
+
+    .wanderlist-item {
+      @include font-size(0.8);
+      text-transform: lowercase;
+    }
+  } // div
+
+  .wanderlist-connector {
+    color: $silver;
+    float: left;
+    font-style: italic;
+    margin: 30px 6px;
+  }
+
+  @mixin count-color($color) {
+    border-color: $color;
+    color: $color;
+  }
+
+  .wanderlist-place-count {
+    @include count-color($blue);
+  }
+
+  .wanderlist-country-count {
+    @include count-color($green);
+  }
+
+  .wanderlist-continent-count {
+    @include count-color($yellow);
+  }
+} // .wanderlist-number-widget
+
 /* Text snippets */
 .wanderlist-country-count {
   color: $red;
   font-weight: bolder;
-  font-size: 1.5em;
-  line-height: 1;
+  //font-size: 1.5em;
+  //line-height: 1;
 }
 
 .wanderlist-current-location {

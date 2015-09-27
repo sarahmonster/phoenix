@@ -1430,6 +1430,7 @@ body:not(.home) .page .entry-content {
   .wanderlist-overview .wanderlist-number-widget,
   .tax-wanderlist-trip .wanderlist-number-widget,
   .tax-wanderlist-country .wanderlist-number-widget {
+    padding-left: 0;
     padding-right: 0;
   }
 }
@@ -1525,12 +1526,57 @@ body:not(.home) .page .entry-content {
   color: #fff;
 }
 
+/* Number widget */
+.wanderlist-number-widget .widget-title {
+  display: none;
+}
+.wanderlist-number-widget div {
+  border: 2px solid silver;
+  border-radius: 50%;
+  color: silver;
+  float: left;
+  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  height: 100px;
+  line-height: 0.7;
+  padding-top: 28px;
+  text-align: center;
+  width: 100px;
+}
+.wanderlist-number-widget div .wanderlist-number {
+  display: block;
+  font-size: 32px;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.wanderlist-number-widget div .wanderlist-item {
+  font-size: 12.8px;
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+.wanderlist-number-widget .wanderlist-connector {
+  color: silver;
+  float: left;
+  font-style: italic;
+  margin: 30px 6px;
+}
+.wanderlist-number-widget .wanderlist-place-count {
+  border-color: #72a9d0;
+  color: #72a9d0;
+}
+.wanderlist-number-widget .wanderlist-country-count {
+  border-color: #7DB38A;
+  color: #7DB38A;
+}
+.wanderlist-number-widget .wanderlist-continent-count {
+  border-color: #f3ad33;
+  color: #f3ad33;
+}
+
 /* Text snippets */
 .wanderlist-country-count {
   color: #a32020;
   font-weight: bolder;
-  font-size: 1.5em;
-  line-height: 1;
 }
 
 .wanderlist-current-location {
