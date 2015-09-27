@@ -360,7 +360,7 @@ p {
 }
 
 .cap,
-.single .entry-content p:first-of-type {
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type {
   color: gray;
   font-size: 1.2em;
   margin-top: 3em;
@@ -368,7 +368,7 @@ p {
   position: relative;
 }
 .cap:first-letter,
-.single .entry-content p:first-of-type:first-letter {
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
   float: left;
   font-family: "paganini-open", "freight-text-pro", Georgia, serif;
   font-size: 96px;
@@ -378,14 +378,14 @@ p {
 }
 @media (min-width: 768px) {
   .cap:first-letter,
-  .single .entry-content p:first-of-type:first-letter {
+  .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
     font-size: 128px;
     font-size: 8rem;
     margin-top: -16px;
   }
 }
 .cap:first-line,
-.single .entry-content p:first-of-type:first-line {
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-line {
   font-variant: small-caps;
   letter-spacing: 2px;
 }
@@ -739,6 +739,11 @@ a:hover, a:active {
   }
 }
 /* Other navigation */
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  clear: both;
+}
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -1605,6 +1610,37 @@ body:not(.home) .page .entry-content {
 .wanderlist-current-location {
   color: #a32020;
   font-style: italic;
+}
+
+/* Individual location pages */
+.wanderlist-location .attachment-flare-postcard {
+  border: 10px solid #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 1024px) {
+  .wanderlist-location .attachment-flare-postcard {
+    float: left;
+    margin: 0 -50px 20px -100px;
+    width: 534px;
+  }
+}
+.wanderlist-location .attachment-flare-postcard + .entry-content {
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  color: #a7a7a7;
+  font-style: italic;
+  padding: 40px;
+}
+.wanderlist-location .attachment-flare-postcard + .entry-content p {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1024px) {
+  .wanderlist-location .attachment-flare-postcard + .entry-content {
+    margin: 60px -100px 20px -50px;
+    width: 534px;
+    float: left;
+  }
 }
 
 /* ==================================================================================================================== */

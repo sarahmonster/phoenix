@@ -143,6 +143,8 @@
 .posts-navigation,
 .post-navigation {
 
+	clear: both;
+
 	.site-main & {
 		margin: 0 0 1.5em;
 		overflow: hidden;

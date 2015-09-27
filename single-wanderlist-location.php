@@ -36,6 +36,12 @@ get_header(); ?>
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
+				<?php
+				if ( has_post_thumbnail() ):
+					the_post_thumbnail( 'flare-postcard' );
+				endif;
+				?>
+
 				<div class="entry-content">
 					<?php the_content(); ?>
 					<?php
