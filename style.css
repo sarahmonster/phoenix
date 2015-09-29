@@ -1475,7 +1475,8 @@ body:not(.home) .page .entry-content {
     height: 400px;
   }
 }
-#wanderlist-map .leaflet-marker-icon {
+#wanderlist-map .leaflet-marker-icon,
+#wanderlist-map .leaflet-tile {
   box-shadow: none;
 }
 #wanderlist-map .wanderlist-location-widget {
