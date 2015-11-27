@@ -337,7 +337,7 @@ h3, .posted-on,
 .tags-links, .blog .page-header .archive-type,
 .archive .page-header .archive-type, .wanderlist-country-widget li {
   color: silver;
-  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 12.8px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -642,7 +642,7 @@ a:hover, a:active {
 .main-navigation {
   content: "";
   display: table;
-  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   max-width: 1140px;
   width: 100%;
 }
@@ -785,7 +785,7 @@ a:hover, a:active {
 .post-navigation span:not(.caps) {
   color: silver;
   display: block;
-  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1567,7 +1567,7 @@ body:not(.home) .page .entry-content {
   border-radius: 50%;
   color: silver;
   float: left;
-  font-family: "proxima nova", "canada-type-gibson", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-weight: normal;
   height: 100px;
   line-height: 0.7;
