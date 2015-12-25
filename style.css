@@ -1099,6 +1099,15 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
+/* Full-width page */
+.page-template-full-width-page .page {
+  max-width: 100%;
+}
+.page-template-full-width-page .page .entry-content {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Entry headers */
 .entry-meta {
   line-height: 1.5;
@@ -1373,15 +1382,6 @@ body:not(.home) .page .entry-content {
     width: 400px;
   }
 }
-/* Main dashboard */
-.page.post-2698 {
-  max-width: 100%;
-}
-.page.post-2698 .entry-content {
-  margin-left: 0;
-  margin-right: 0;
-}
-
 /* Ensure overview page has a reasonable distance from top */
 .wanderlist-overview {
   margin-top: 4em;
