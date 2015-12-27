@@ -152,11 +152,11 @@
 
 	a {
 		border-bottom: none;
-  	@include font-size(1.1);
-  	display: block;
-  	line-height: 1.2;
+		@include font-size(1.1);
+		display: block;
+		line-height: 1.2;
 
-  	&::before {
+		&::before {
 			display: block;
 			font-family: 'triggers-sparks';
 			font-size: 24px;
@@ -177,31 +177,31 @@
 	}
 
 	span:not(.caps) {
-	  color: $silver;
-	  display: block;
-	  font-family: $font__accent;
-	  @include font-size(0.9);
-	  font-weight: 600;
-	  letter-spacing: 2px;
-	  text-transform: uppercase;
+		color: $silver;
+		display: block;
+		font-family: $font__accent;
+		@include font-size(0.9);
+		font-weight: 600;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 	}
 
-		& .nav-previous {
-			a::before {
-				content: 'l';
-				float: left;
-				margin-left: 2px;
-			}
+	& .nav-previous {
+		a::before {
+			content: 'l';
+			float: left;
+			margin-left: 2px;
 		}
+	}
 
-		& .nav-next {
-			text-align: right;
-			a::before {
-				content: 'r';
-				float: right;
-				margin-right: 2px;
-			}
+	& .nav-next {
+		text-align: right;
+		a::before {
+			content: 'r';
+			float: right;
+			margin-right: 2px;
 		}
+	}
 }
 
 /* Make sure there's some space between when they're stacked on top of one another */
@@ -232,55 +232,55 @@
 @include desktop {
 	.post-navigation {
 		.nav-previous,
-	  .nav-next {
-	    position: fixed;
-	    top: 50%;
-	    height: auto;
-	    width: 300px;
-	    padding: 10px;
-	    opacity: .45;
-	    transition: all 200ms linear;
-	    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0);
-	    border: 1px solid $white;
+		.nav-next {
+			position: fixed;
+			top: 50%;
+			height: auto;
+			width: 300px;
+			padding: 10px;
+			opacity: .45;
+			transition: all 200ms linear;
+			box-shadow: 1px 1px 3px rgba(255, 255, 255, 0);
+			border: 1px solid $white;
 
-	    &:hover {
-	    	background: transparentize($white, 0.2);
-	    	box-shadow: 1px 1px 3px #bdbdbd;
-	    	border: 1px solid #d0cdcd;
-	    	opacity: 1;
-	  	}
-	  } // .nav-previous, .nav-next
+			&:hover {
+				background: transparentize($white, 0.2);
+				box-shadow: 1px 1px 3px #bdbdbd;
+				border: 1px solid #d0cdcd;
+				opacity: 1;
+			}
+		} // .nav-previous, .nav-next
 
 		.nav-previous {
-	    left: -225px;
+			left: -225px;
 
-	    a::before {
-	    	float: right;
-	    }
+			a::before {
+				float: right;
+			}
 
-	    &:hover {
-	    	left: 0;
+			&:hover {
+				left: 0;
 
-	    	a::before {
-	    		float: left;
-	    	}
-	    }
-	  }
+				a::before {
+					float: left;
+				}
+			}
+			}
 
-	  .nav-next {
-	    right: -225px;
+			.nav-next {
+				right: -225px;
 
-	    a::before {
-	    	float: left;
-	    }
+			a::before {
+				float: left;
+			}
 
-	    &:hover {
-	    	right: 0;
+			&:hover {
+				right: 0;
 
-	    	a::before {
-	    		float: right;
-	    	}
-	    }
-	  }
+				a::before {
+					float: right;
+				}
+			}
+		}
 	} // .post-navigation
 }

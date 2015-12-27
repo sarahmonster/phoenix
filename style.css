@@ -1023,6 +1023,21 @@ a:hover, a:active {
   display: none;
 }
 
+/* Account for the admin bar */
+.admin-bar #masthead {
+  top: 46px;
+}
+@media screen and (min-width: 600px) and (max-width: 782px) {
+  .admin-bar #masthead {
+    top: 46px;
+  }
+}
+@media screen and (min-width: 782px) {
+  .admin-bar #masthead {
+    top: 32px;
+  }
+}
+
 .site-footer {
   border-top: 1px solid silver;
   clear: both;
