@@ -18,3 +18,9 @@ ehthumbs.db
 error_log
 access_log
 .sass-cache
+*.css.map
+
+#==================#
+#   Node Modules   #
+#==================#
+node_modules/*
