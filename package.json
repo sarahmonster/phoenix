@@ -1,6 +1,7 @@
 {
 	"name": "flare",
 	"version": "1.0.0",
+	"private": true,
 	"description": "Custom WordPress theme for triggersandsparks.com",
 	"main": "gulpfile.js",
 	"scripts": {
