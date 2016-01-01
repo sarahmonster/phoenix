@@ -1632,6 +1632,13 @@ body:not(.home) .page .entry-content {
 	width: 116px;
 	width: calc( 100% - 105px);
 }
+.wanderlist-widget svg,
+.wanderlist-widget .flag {
+	height: 10px;
+	margin-right: 2px;
+	vertical-align: -1px;
+	width: auto;
+}
 
 /* Country list widget */
 .wanderlist-country-widget .widget-title {

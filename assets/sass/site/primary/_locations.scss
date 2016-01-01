@@ -136,6 +136,14 @@
 			width: calc( 100% - 105px );
 		}
 	} // dl, ul
+
+	svg,
+	.flag {
+		height: 10px;
+		margin-right: 2px;
+		vertical-align: -1px;
+		width: auto;
+	}
 } // .wanderlist-widget
 
 /* Country list widget */
