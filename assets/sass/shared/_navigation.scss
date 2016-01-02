@@ -1,144 +1,35 @@
-.main-navigation {
-	@include clearfix;
-	font-family: $font__accent;
-	max-width: $size__max-width;
-	width: 100%;
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	border-bottom: 2px solid transparentize($color__link, 0.95);
+	color: $color__link;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-
-		li {
-			@include font-size(1);
-			display: inline-block;
-			font-weight: 400;
-
-			a {
-				padding: 4px 6px;
-				color: $color__text-main;
-
-				&:hover {
-					color: $yellow;
-				}
-			}
-
-			&::after {
-				content: '\00b7';
-			}
-
-			&:first-child {
-				margin-left: 0;
-			}
-
-			&:last-child::after {
-				display: none;
-			}
-		} // li
-
-		/* Sub-menus (currently unused & thus relatively unstyled) */
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
+	&:visited {
+		color: $color__link-visited;
 	}
 
-	li {
-		&:hover > a,
-		&.focus > a {
-		}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		border-bottom: 2px solid $color__link-hover;
 	}
-
-	a {
-		border-bottom: none;
-		display: inline-block;
+	&:focus {
+		outline: thin dotted;
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a {
-		color: lighten($color__text-main, 40%);
+	&:hover,
+	&:active {
+		outline: 0;
 	}
 }
 
-/* Small menu */
-@include mobile {
+/*--------------------------------------------------------------
+## Post navigation
+--------------------------------------------------------------*/
 
-	.main-navigation {
-		padding: 10px 10px 0;
-
-		ul {
-			float: right;
-			margin-top: -2px;
-		}
-	} // .main-navigation
-} // @include mobile
-
-
-/* Large menu */
-@include tablet {
-
-	.main-navigation {
-		display: inline-block;
-		vertical-align: top;
-
-		div:first-of-type {
-			float: left;
-		}
-
-		div:last-of-type {
-			float: right;
-		}
-
-		ul li {
-			a {
-				padding: 5px 10px;
-			}
-		} // ul li
-
-		.current_page_item > a,
-		.current-menu-item > a,
-		.current_page_ancestor > a {
-			color: $yellow;
-			border-bottom: 2px solid $white;
-		}
-	} // .main-navigation
-}
-
-/* Other navigation */
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
