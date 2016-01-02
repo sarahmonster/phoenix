@@ -1,5 +1,5 @@
 /*
-Theme Name: Flare
+Theme Name: Phoenix
 Theme URI: http://triggersandsparks.com
 Author: sarah semark
 Author URI: http://triggersandsparks.com
@@ -7,13 +7,13 @@ Description: A custom theme for me, featuring pretty typography and (probably) s
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: flare
+Text Domain: phoenix
 Tags:
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Flare is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Phoenix is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
@@ -1421,38 +1421,38 @@ body:not(.home) .page .entry-content {
 	display: inline-block;
 }
 
-.flare-frontpage-widget h3,
-.flare-frontpage-widget .posted-on,
-.flare-frontpage-widget
+.phoenix-frontpage-widget h3,
+.phoenix-frontpage-widget .posted-on,
+.phoenix-frontpage-widget
 .cats-links,
-.flare-frontpage-widget
+.phoenix-frontpage-widget
 .tags-links,
-.flare-frontpage-widget .blog .page-header .archive-type,
-.blog .page-header .flare-frontpage-widget .archive-type,
-.flare-frontpage-widget
+.phoenix-frontpage-widget .blog .page-header .archive-type,
+.blog .page-header .phoenix-frontpage-widget .archive-type,
+.phoenix-frontpage-widget
 .archive .page-header .archive-type,
-.archive .page-header .flare-frontpage-widget .archive-type,
-.flare-frontpage-widget .wanderlist-country-widget li,
-.wanderlist-country-widget .flare-frontpage-widget li {
+.archive .page-header .phoenix-frontpage-widget .archive-type,
+.phoenix-frontpage-widget .wanderlist-country-widget li,
+.wanderlist-country-widget .phoenix-frontpage-widget li {
 	text-align: center;
 }
 
-.flare-frontpage-widget .flare-short-post {
+.phoenix-frontpage-widget .phoenix-short-post {
 	margin: 1em 0;
 }
-.flare-frontpage-widget .flare-short-post img {
+.phoenix-frontpage-widget .phoenix-short-post img {
 	border-radius: 50%;
 	float: left;
 	height: 100px;
 	margin: 10px 10px 10px 0;
 	width: 100px;
 }
-.flare-frontpage-widget .flare-short-post .entry-title {
+.phoenix-frontpage-widget .phoenix-short-post .entry-title {
 	clear: none; 
 	font-size: 25.6px;
 	font-size: 1.6rem;
 }
-.flare-frontpage-widget .flare-short-post .entry-content {
+.phoenix-frontpage-widget .phoenix-short-post .entry-content {
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.2;
@@ -1467,7 +1467,7 @@ body:not(.home) .page .entry-content {
 		padding-right: 40px;
 		width: calc(100% - 400px);
 	}
-	.flare-frontpage-widget {
+	.phoenix-frontpage-widget {
 		float: left;
 		margin-top: 7em;
 		padding-left: 40px;
@@ -1746,31 +1746,31 @@ body:not(.home) .page .entry-content {
 }
 
 /* Individual location pages */
-.wanderlist-location .attachment-flare-postcard {
+.wanderlist-location .attachment-phoenix-postcard {
 	border: 10px solid #fff;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 1024px) {
-	.wanderlist-location .attachment-flare-postcard {
+	.wanderlist-location .attachment-phoenix-postcard {
 		float: left;
 		margin: 0 -50px 20px -100px;
 		width: 534px;
 	}
 }
 
-.wanderlist-location .attachment-flare-postcard + .entry-content {
+.wanderlist-location .attachment-phoenix-postcard + .entry-content {
 	background: #fff;
 	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 	color: #a7a7a7;
 	font-style: italic;
 	padding: 40px;
 }
-.wanderlist-location .attachment-flare-postcard + .entry-content p {
+.wanderlist-location .attachment-phoenix-postcard + .entry-content p {
 	margin: 0;
 	padding: 0;
 }
 @media (min-width: 1024px) {
-	.wanderlist-location .attachment-flare-postcard + .entry-content {
+	.wanderlist-location .attachment-phoenix-postcard + .entry-content {
 		float: left; 
 		margin: 60px -100px 20px -50px;
 		width: 534px;

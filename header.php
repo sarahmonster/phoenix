@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Flare
+ * @package Phoenix
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'flare' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'phoenix' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">

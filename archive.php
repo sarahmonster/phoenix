@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flare
+ * @package Phoenix
  */
 
 get_header(); ?>

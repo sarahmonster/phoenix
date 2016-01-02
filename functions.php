@@ -1,8 +1,8 @@
 <?php
 /**
- * Flare functions and definitions
+ * Phoenix functions and definitions
  *
- * @package Flare
+ * @package Phoenix
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'flare_setup' ) ) :
+if ( ! function_exists( 'phoenix_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,15 +20,15 @@ if ( ! function_exists( 'flare_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function flare_setup() {
+function phoenix_setup() {
 
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Flare, use a find and replace
-	 * to change 'flare' to the name of your theme in all the template files
+	 * If you're building a theme based on Phoenix, use a find and replace
+	 * to change 'phoenix' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'flare', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'phoenix', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -48,16 +48,16 @@ function flare_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 600, 300, true );
-	add_image_size( 'flare-square', 200, 200, true );
-	add_image_size( 'flare-postcard', 600, 400, true );
+	add_image_size( 'phoenix-square', 200, 200, true );
+	add_image_size( 'phoenix-postcard', 600, 400, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'flare' ),
+		'primary' => __( 'Primary Menu', 'phoenix' ),
 	) );
 
 	register_nav_menus( array(
-		'secondary' => __( 'Secondary Menu', 'flare' ),
+		'secondary' => __( 'Secondary Menu', 'phoenix' ),
 	) );
 
 	/*
@@ -77,22 +77,22 @@ function flare_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'flare_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'phoenix_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // flare_setup
-add_action( 'after_setup_theme', 'flare_setup' );
+endif; // phoenix_setup
+add_action( 'after_setup_theme', 'phoenix_setup' );
 
 /**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
-function flare_widgets_init() {
+function phoenix_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'flare' ),
+		'name'          => __( 'Sidebar', 'phoenix' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -101,46 +101,46 @@ function flare_widgets_init() {
 		'after_title'   => '</h1>',
 	) );
 }
-add_action( 'widgets_init', 'flare_widgets_init' );
+add_action( 'widgets_init', 'phoenix_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function flare_scripts() {
-	wp_enqueue_style( 'flare-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'flare-icons', get_template_directory_uri() . '/icons/styles.css', array(), '20150620', all );
-	wp_enqueue_script( 'flare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	wp_enqueue_script( 'flare-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+function phoenix_scripts() {
+	wp_enqueue_style( 'phoenix-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'phoenix-icons', get_template_directory_uri() . '/icons/styles.css', array(), '20150620', all );
+	wp_enqueue_script( 'phoenix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'phoenix-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	// Text animation/manipulation libraries
-	wp_enqueue_style( 'flare-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', screen );
-	wp_enqueue_script( 'flare-animate', get_template_directory_uri() . '/js/animate.js', array(), '20150719', true );
-	wp_enqueue_script( 'flare-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array( 'jquery' ), '20150719', true );
-	wp_enqueue_script( 'flare-lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array( 'jquery' ), '20150719', true );
-	wp_enqueue_script( 'flare-textillate', get_template_directory_uri() . '/js/jquery.textillate.js', array( 'jquery', 'flare-lettering' ), '20150719', true );
-	wp_enqueue_script( 'flare-texteffects', get_template_directory_uri() . '/js/texteffects.js', array( 'jquery', 'flare-lettering', 'flare-textillate' ), '20150719', true );
+	wp_enqueue_style( 'phoenix-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', screen );
+	wp_enqueue_script( 'phoenix-animate', get_template_directory_uri() . '/js/animate.js', array(), '20150719', true );
+	wp_enqueue_script( 'phoenix-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array( 'jquery' ), '20150719', true );
+	wp_enqueue_script( 'phoenix-lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array( 'jquery' ), '20150719', true );
+	wp_enqueue_script( 'phoenix-textillate', get_template_directory_uri() . '/js/jquery.textillate.js', array( 'jquery', 'phoenix-lettering' ), '20150719', true );
+	wp_enqueue_script( 'phoenix-texteffects', get_template_directory_uri() . '/js/texteffects.js', array( 'jquery', 'phoenix-lettering', 'phoenix-textillate' ), '20150719', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'flare_scripts' );
+add_action( 'wp_enqueue_scripts', 'phoenix_scripts' );
 
 /**
  * Add editor styles
  */
-function flare_editor_styles() {
+function phoenix_editor_styles() {
   add_editor_style( array( 'editor-style.css' ) );
 }
-add_action( 'after_setup_theme', 'flare_editor_styles' );
+add_action( 'after_setup_theme', 'phoenix_editor_styles' );
 
 /**
  * Nuke Jetpack and other plugins' styles
  */
-function flare_dequeue_plugin_styles()  {
+function phoenix_dequeue_plugin_styles()  {
 	wp_dequeue_style( 'wanderlist-style' );
 }
-add_action( 'wp_print_styles', 'flare_dequeue_plugin_styles', 100 );
+add_action( 'wp_print_styles', 'phoenix_dequeue_plugin_styles', 100 );
 add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 
 /**

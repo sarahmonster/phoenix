@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flare
+ * @package Phoenix
  */
 
 get_header(); ?>
@@ -15,8 +15,8 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Selected Portfolio', 'flare' ); ?></h1>
-				<div class="taxonomy-description"><?php esc_html_e( 'I&rsquo;ve worked on a lot of different projects. Here are a few that I like.', 'flare' ); ?></div>
+				<h1 class="page-title"><?php esc_html_e( 'Selected Portfolio', 'phoenix' ); ?></h1>
+				<div class="taxonomy-description"><?php esc_html_e( 'I&rsquo;ve worked on a lot of different projects. Here are a few that I like.', 'phoenix' ); ?></div>
 			</header><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>

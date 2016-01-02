@@ -2,7 +2,7 @@
 /**
  * The template for displaying the front page.
  *
- * @package Flare
+ * @package Phoenix
  */
 
 get_header(); ?>
@@ -20,25 +20,25 @@ get_header(); ?>
 				</article><!-- #post-## -->
 			<?php endwhile; ?>
 
-			<div class="flare-frontpage-widget">
-				<h3><?php esc_html_e( 'Newest stories', 'flare' ); ?></h3>
+			<div class="phoenix-frontpage-widget">
+				<h3><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h3>
 
 				<?php
 				// Grab the most recent posts
-					$flare_recent_posts = wp_get_recent_posts( array(
+					$phoenix_recent_posts = wp_get_recent_posts( array(
 						'numberposts' => 2,
 						'post_status' => 'publish',
 			 		), OBJECT );
 
-			 		get_posts( $flare_recent_posts );
+			 		get_posts( $phoenix_recent_posts );
 
-			 		foreach ( $flare_recent_posts as $post):
+			 		foreach ( $phoenix_recent_posts as $post):
 			 			setup_postdata( $post);
 
-			 			echo '<article class="flare-short-post">';
+			 			echo '<article class="phoenix-short-post">';
 						printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
 										esc_url( get_permalink() ),
-										esc_html( flare_subtitle() )
+										esc_html( phoenix_subtitle() )
 									);
 
 							// Title
@@ -48,9 +48,9 @@ get_header(); ?>
 							);
 
 							if ( has_post_thumbnail() ) {
-								the_post_thumbnail( 'flare-square' );
+								the_post_thumbnail( 'phoenix-square' );
 							} else {
-								echo '<img src="/wp-content/themes/flare/images/placeholder.png" alt="View post" />';
+								echo '<img src="/wp-content/themes/phoenix/images/placeholder.png" alt="View post" />';
 							}
 							echo '</a>';
 
@@ -63,7 +63,7 @@ get_header(); ?>
 						wp_reset_postdata();
 					endforeach;
 				?>
-			</div><!-- .flare-frontpage-widget -->
+			</div><!-- .phoenix-frontpage-widget -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

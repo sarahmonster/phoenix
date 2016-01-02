@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Flare
+ * @package Phoenix
  */
 
 /**
@@ -13,7 +13,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function flare_body_classes( $classes ) {
+function phoenix_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -21,14 +21,14 @@ function flare_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'flare_body_classes' );
+add_filter( 'body_class', 'phoenix_body_classes' );
 
 /**
  * Check for existence of Wanderlist plugin.
  *
  * This plugin is used in various places by the theme.
  */
-function flare_has_wanderlist() {
+function phoenix_has_wanderlist() {
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 	if ( is_plugin_active( 'wanderlist/wanderlist.php' ) ) :
 		return true;
@@ -45,7 +45,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	 * @param string $sep Optional separator.
 	 * @return string The filtered title.
 	 */
-	function flare_wp_title( $title, $sep ) {
+	function phoenix_wp_title( $title, $sep ) {
 		if ( is_feed() ) {
 			return $title;
 		}
@@ -63,12 +63,12 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 
 		// Add a page number if necessary:
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'flare' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( __( 'Page %s', 'phoenix' ), max( $paged, $page ) );
 		}
 
 		return $title;
 	}
-	add_filter( 'wp_title', 'flare_wp_title', 10, 2 );
+	add_filter( 'wp_title', 'phoenix_wp_title', 10, 2 );
 
 	/**
 	 * Title shim for sites older than WordPress 4.1.
@@ -76,10 +76,10 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	 * @link https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
 	 * @todo Remove this function when WordPress 4.3 is released.
 	 */
-	function flare_render_title() {
+	function phoenix_render_title() {
 		?>
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<?php
 	}
-	add_action( 'wp_head', 'flare_render_title' );
+	add_action( 'wp_head', 'phoenix_render_title' );
 endif;

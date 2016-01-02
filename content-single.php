@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Flare
+ * @package Phoenix
  */
 ?>
 
@@ -8,23 +8,23 @@
 
 	<header class="entry-header">
 		<div class="entry-meta">
-			<?php flare_posted_on(); ?>
+			<?php phoenix_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<span class="subtitle"><?php echo flare_subtitle(); ?></span>
+		<span class="subtitle"><?php echo phoenix_subtitle(); ?></span>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'flare' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'phoenix' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php flare_entry_footer(); ?>
+		<?php phoenix_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

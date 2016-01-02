@@ -3,24 +3,24 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package Flare
+ * @package Phoenix
  */
 
 /**
  * Add theme support for Infinite Scroll.
  * See: http://jetpack.me/support/infinite-scroll/
  */
-function flare_jetpack_setup() {
+function phoenix_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container'      => 'main',
 		'footer'         => 'page',
     'wrapper'        => true,
     'posts_per_page' => 10,
     'type'           => 'click',
-    'render'         => 'flare_infinite_scroll_render'
+    'render'         => 'phoenix_infinite_scroll_render'
 	) );
 
-  function flare_infinite_scroll_render() {
+  function phoenix_infinite_scroll_render() {
     while ( have_posts() ) : the_post();
       get_template_part( 'content', get_post_type() );
     endwhile;
@@ -37,7 +37,7 @@ function flare_jetpack_setup() {
    * See: http://jetpack.me/support/featured-content/
    */
   add_theme_support( 'featured-content', array(
-    'filter'    => 'flare_get_featured_posts',
+    'filter'    => 'phoenix_get_featured_posts',
     'max_posts' => 2,
   ) );
 
@@ -45,8 +45,8 @@ function flare_jetpack_setup() {
    * Add theme support for Jetpack site logo
    * See: http://jetpack.me/support/site-logo/
    */
-  add_image_size( 'flare-logo', 700 ); // Restrict logo to 700 pixels in width (double-sized for hi-res devices)
-  add_theme_support( 'site-logo', array( 'size' => 'flare-logo' ) );
+  add_image_size( 'phoenix-logo', 700 ); // Restrict logo to 700 pixels in width (double-sized for hi-res devices)
+  add_theme_support( 'site-logo', array( 'size' => 'phoenix-logo' ) );
 
 }
-add_action( 'after_setup_theme', 'flare_jetpack_setup' );
+add_action( 'after_setup_theme', 'phoenix_jetpack_setup' );

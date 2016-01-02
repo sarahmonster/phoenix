@@ -266,7 +266,7 @@
 
 /* Individual location pages */
 .wanderlist-location {
-	.attachment-flare-postcard {
+	.attachment-phoenix-postcard {
 		border: 10px solid $white;
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 
@@ -277,7 +277,7 @@
 		}
 	}
 
-	.attachment-flare-postcard + .entry-content {
+	.attachment-phoenix-postcard + .entry-content {
 		background: $white;
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 		color: darken( $silver, 10% );

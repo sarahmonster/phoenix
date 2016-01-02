@@ -12,37 +12,37 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package Flare
+ * @package Phoenix
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses flare_header_style()
- * @uses flare_admin_header_style()
- * @uses flare_admin_header_image()
+ * @uses phoenix_header_style()
+ * @uses phoenix_admin_header_style()
+ * @uses phoenix_admin_header_image()
  */
-function flare_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'flare_custom_header_args', array(
+function phoenix_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'phoenix_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'flare_header_style',
-		'admin-head-callback'    => 'flare_admin_header_style',
-		'admin-preview-callback' => 'flare_admin_header_image',
+		'wp-head-callback'       => 'phoenix_header_style',
+		'admin-head-callback'    => 'phoenix_admin_header_style',
+		'admin-preview-callback' => 'phoenix_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'flare_custom_header_setup' );
+add_action( 'after_setup_theme', 'phoenix_custom_header_setup' );
 
-if ( ! function_exists( 'flare_header_style' ) ) :
+if ( ! function_exists( 'phoenix_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see flare_custom_header_setup().
+ * @see phoenix_custom_header_setup().
  */
-function flare_header_style() {
+function phoenix_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -75,15 +75,15 @@ function flare_header_style() {
 	</style>
 	<?php
 }
-endif; // flare_header_style
+endif; // phoenix_header_style
 
-if ( ! function_exists( 'flare_admin_header_style' ) ) :
+if ( ! function_exists( 'phoenix_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see flare_custom_header_setup().
+ * @see phoenix_custom_header_setup().
  */
-function flare_admin_header_style() {
+function phoenix_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +103,15 @@ function flare_admin_header_style() {
 	</style>
 <?php
 }
-endif; // flare_admin_header_style
+endif; // phoenix_admin_header_style
 
-if ( ! function_exists( 'flare_admin_header_image' ) ) :
+if ( ! function_exists( 'phoenix_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see flare_custom_header_setup().
+ * @see phoenix_custom_header_setup().
  */
-function flare_admin_header_image() {
+function phoenix_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +123,4 @@ function flare_admin_header_image() {
 	</div>
 <?php
 }
-endif; // flare_admin_header_image
+endif; // phoenix_admin_header_image

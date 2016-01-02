@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Flare
+ * @package Phoenix
  */
 ?>
 
@@ -14,7 +14,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php flare_posted_on(); ?>
+			<?php phoenix_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -24,6 +24,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php flare_entry_footer(); ?>
+		<?php phoenix_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

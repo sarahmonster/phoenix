@@ -2,7 +2,7 @@
 /**
  * Template Name: Full-width Page
  *
- * @package Flare
+ * @package Phoenix
  */
 
 get_header(); ?>

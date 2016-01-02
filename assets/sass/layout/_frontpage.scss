@@ -34,13 +34,13 @@
 }
 
 // Recent posts
-.flare-frontpage-widget {
+.phoenix-frontpage-widget {
 
   h3 {
     text-align: center;
   }
 
-  .flare-short-post {
+  .phoenix-short-post {
     margin: 1em 0;
 
     img {
@@ -62,7 +62,7 @@
       margin-top: 0;
     }
   } // .libretto-short-post
-} // .flare-frontpage-widget
+} // .phoenix-frontpage-widget
 
 // Use two columns on a desktop, since we've got loads of space
 @include desktop {
@@ -74,7 +74,7 @@
     width: calc(100% - 400px);
   }
 
-  .flare-frontpage-widget {
+  .phoenix-frontpage-widget {
     float: left;
     margin-top: 7em;
     padding-left: $gutter;

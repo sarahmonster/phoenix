@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package Flare
+ * @package Phoenix
  */
 
 get_header(); ?>

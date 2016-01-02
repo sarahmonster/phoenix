@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Flare
+ * @package Phoenix
  */
 ?>
 
@@ -9,19 +9,19 @@
 		// show the featured image, if there's one set
 		printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
 						esc_url( get_permalink() ),
-						esc_html( flare_subtitle() )
+						esc_html( phoenix_subtitle() )
 					);
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail();
 		} else {
-			echo '<img src="/wp-content/themes/flare/images/placeholder.png" alt="View post" />';
+			echo '<img src="/wp-content/themes/phoenix/images/placeholder.png" alt="View post" />';
 		}
 		echo '</a>';
 		?>
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php flare_posted_on(); ?>
+				<?php phoenix_posted_on(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 

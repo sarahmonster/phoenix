@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Flare
+ * @package Phoenix
  */
 ?>
 
@@ -15,11 +15,11 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'flare' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'phoenix' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
-	<?php edit_post_link( __( 'Edit', 'flare' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+	<?php edit_post_link( __( 'Edit', 'phoenix' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

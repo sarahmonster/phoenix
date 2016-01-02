@@ -7,13 +7,13 @@
  * Portfolio CPT, but for now this is a slap-dash hack.
  * http://jetpack.me/support/custom-content-types/
  *
- * @package Flare
+ * @package Phoenix
  */
 
 /**
  * Register services as a taxonomy.
  */
-function flare_register_service_taxonomy() {
+function phoenix_register_service_taxonomy() {
 
   $labels = array(
     "name" => "services",
@@ -33,12 +33,12 @@ function flare_register_service_taxonomy() {
 }
 
 // Hook into the 'init' action
-add_action( 'init', 'flare_register_service_taxonomy', 0 );
+add_action( 'init', 'phoenix_register_service_taxonomy', 0 );
 
 /**
  * Register the 'pieces' Custom Post Type.
  */
-function flare_register_portfolio_cpt() {
+function phoenix_register_portfolio_cpt() {
   $labels = array(
     "name" => "Pieces",
     "singular_name" => "Piece",
@@ -66,4 +66,4 @@ function flare_register_portfolio_cpt() {
   register_post_type( "pieces", $args );
 }
 
-add_action( 'init', 'flare_register_portfolio_cpt', 0 );
+add_action( 'init', 'phoenix_register_portfolio_cpt', 0 );

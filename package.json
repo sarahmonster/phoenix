@@ -1,5 +1,5 @@
 {
-	"name": "flare",
+	"name": "phoenix",
 	"version": "1.0.0",
 	"private": true,
 	"description": "Custom WordPress theme for triggersandsparks.com",
@@ -9,10 +9,10 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sarahmonster/flare.git"
+		"url": "git+https://github.com/sarahmonster/phoenix.git"
 	},
 	"keywords": [
-		"flare",
+		"phoenix",
 		"triggersandsparks",
 		"theme",
 		"WordPress"
@@ -20,9 +20,9 @@
 	"author": "sarah semark",
 	"license": "GPL-2.0+",
 	"bugs": {
-		"url": "https://github.com/sarahmonster/flare/issues"
+		"url": "https://github.com/sarahmonster/phoenix/issues"
 	},
-	"homepage": "https://github.com/sarahmonster/flare#readme",
+	"homepage": "https://github.com/sarahmonster/phoenix#readme",
 	"devDependencies": {
 		"gulp": "^3.9.0",
 		"gulp-autoprefixer": "^3.0.1",
