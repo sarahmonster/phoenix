@@ -12,6 +12,7 @@ var cache = require( 'gulp-cache' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var csscomb = require( 'gulp-csscomb' );
 var livereload = require( 'gulp-livereload' );
+var svgsprite = require( 'gulp-svg-sprite' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -26,7 +27,7 @@ gulp.task( 'styles', function() {
 		} )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
-});
+} );
 
 // Scripts
 gulp.task( 'scripts', function() {
@@ -34,7 +35,7 @@ gulp.task( 'scripts', function() {
 		.pipe( jshint.reporter( 'default' ) )
 		//.pipe( concat( 'main.js' ) )
 		.pipe( gulp.dest( 'assets/js' ) );
-});
+} );
 
 // Images
 gulp.task( 'images', function() {
@@ -47,15 +48,34 @@ gulp.task( 'images', function() {
 		use: [pngquant()]
 	} ) ) )
 	.pipe( gulp.dest( 'assets/images' ) );
-});
+} );
+
+// Create a CSS sprite of all our icons
+config       = {
+    "mode": {
+        "symbol": {
+            "prefix": "icon-",
+            "sprite": "sprite.svg",
+            "inline": true,
+            "example": true
+        }
+    },
+    "variables": {}
+};
+
+gulp.task( 'sprite', function() {
+	return gulp.src( 'assets/svg/*.svg' )
+	.pipe( svgsprite( config ) )
+	.pipe( gulp.dest( 'assets/svg' ) );
+} );
 
 // Watch files for changes
 gulp.task( 'watch', function() {
 	livereload.listen();
 	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
-	gulp.watch( 'assets/images/*', ['images'] );
-});
+	gulp.watch( 'assets/images/*', ['images', 'sprite'] );
+} );
 
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'sprite', 'watch'] );

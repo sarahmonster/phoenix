@@ -172,3 +172,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Custom portfolio functionality.
  */
 require get_template_directory() . '/inc/portfolio.php';
+
+/**
+ * SVG icons functionality.
+ */
+require get_template_directory() . '/inc/svg-icons.php';

@@ -196,7 +196,7 @@ body:not(.home) .page .entry-content {
   border: 1px solid #d0cdcd;
 
   @include tablet {
-    background: $red url('images/contact-card.png') no-repeat bottom left;
+    background: $red url('assets/images/contact-card.png') no-repeat bottom left;
     background-size: cover;
     height: 179px;
     padding: 50px 20px 20px 26%;

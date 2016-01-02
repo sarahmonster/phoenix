@@ -1118,9 +1118,11 @@ a:active {
 .site-footer a:hover {
 	border-color: rgba(64, 64, 64, 0.5);
 }
-.site-footer span.icon-heart {
-	color: #a32020;
-	font-size: 0.6em;
+.site-footer .icon-heart {
+	height: 10px;
+	width: 10px; 
+
+	fill: #a32020;
 }
 .site-footer iframe {
 	max-width: 175px;
@@ -1343,7 +1345,7 @@ body:not(.home) .page .entry-content {
 }
 @media (min-width: 768px) {
 	.contact-card {
-		background: #a32020 url('images/contact-card.png') no-repeat bottom left;
+		background: #a32020 url('assets/images/contact-card.png') no-repeat bottom left;
 		background-size: cover;
 		height: 179px;
 		padding: 50px 20px 20px 26%;
