@@ -54,17 +54,16 @@ gulp.task( 'images', function() {
 config       = {
     "mode": {
         "symbol": {
+            "dest": ".",
             "prefix": "icon-",
-            "sprite": "sprite.svg",
-            "inline": true,
-            "example": true
+            "sprite": "icons.svg",
+            "inline": false,
         }
-    },
-    "variables": {}
+    }
 };
 
 gulp.task( 'sprite', function() {
-	return gulp.src( 'assets/svg/*.svg' )
+	return gulp.src( 'assets/svg/icons/*.svg' )
 	.pipe( svgsprite( config ) )
 	.pipe( gulp.dest( 'assets/svg' ) );
 } );
