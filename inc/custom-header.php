@@ -19,8 +19,6 @@
  * Set up the WordPress core custom header feature.
  *
  * @uses phoenix_header_style()
- * @uses phoenix_admin_header_style()
- * @uses phoenix_admin_header_image()
  */
 function phoenix_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'phoenix_custom_header_args', array(
@@ -30,8 +28,6 @@ function phoenix_custom_header_setup() {
 		'height'                 => 250,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'phoenix_header_style',
-		'admin-head-callback'    => 'phoenix_admin_header_style',
-		'admin-preview-callback' => 'phoenix_admin_header_image',
 	) ) );
 }
 add_action( 'after_setup_theme', 'phoenix_custom_header_setup' );
@@ -76,51 +72,3 @@ function phoenix_header_style() {
 	<?php
 }
 endif; // phoenix_header_style
-
-if ( ! function_exists( 'phoenix_admin_header_style' ) ) :
-/**
- * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * @see phoenix_custom_header_setup().
- */
-function phoenix_admin_header_style() {
-?>
-	<style type="text/css">
-		.appearance_page_custom-header #headimg {
-			border: none;
-		}
-		#headimg h1,
-		#desc {
-		}
-		#headimg h1 {
-		}
-		#headimg h1 a {
-		}
-		#desc {
-		}
-		#headimg img {
-		}
-	</style>
-<?php
-}
-endif; // phoenix_admin_header_style
-
-if ( ! function_exists( 'phoenix_admin_header_image' ) ) :
-/**
- * Custom header image markup displayed on the Appearance > Header admin panel.
- *
- * @see phoenix_custom_header_setup().
- */
-function phoenix_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-?>
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
-	</div>
-<?php
-}
-endif; // phoenix_admin_header_image
