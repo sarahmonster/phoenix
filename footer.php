@@ -17,7 +17,7 @@
 			<?php printf( 'Made with <span class="icon-heart"></span> and', 'phoenix' ); ?>
       <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'phoenix' ) ); ?>"><?php printf( __( '%s', 'phoenix' ), 'WordPress' ); ?></a>
 			<span class="sep"> &middot; </span>
-			<?php printf( __( 'Theme on %1$s', 'phoenix' ), '<a href="http://github.com/sarahsemark/phoenix/" rel="designer">Github</a>' ); ?>
+			<?php printf( __( 'Theme on %1$s', 'phoenix' ), '<a href="https://github.com/sarahmonster/phoenix/" rel="designer">Github</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
