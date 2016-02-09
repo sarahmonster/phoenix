@@ -15,10 +15,9 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
 			<?php the_post_navigation( array(
-        'prev_text'          => '<span>Previous</span> %title',
-        'next_text'          => '<span>Next</span> %title',
-    	) );
-    	?>
+										'prev_text'          => '<span>Previous</span> %title',
+										'next_text'          => '<span>Next</span> %title',
+									) ); ?>
 
 			<?php
 				/* Comments are the devil. Get your own website!
