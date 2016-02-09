@@ -51,6 +51,12 @@ function phoenix_jetpack_setup() {
 	*/
 	add_theme_support( 'jetpack-testimonial' );
 
+  /**
+   * Add theme support for Jetpack portfolios.
+   * See: http://jetpack.me/support/portfolios
+   */
+  add_theme_support( 'jetpack-portfolio' );
+
 	/**
 	 * Add theme support for Jetpack site logo
 	 * See: http://jetpack.me/support/site-logo/

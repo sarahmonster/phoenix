@@ -57,7 +57,7 @@ function phoenix_register_portfolio_cpt() {
     "capability_type" => "post",
     "map_meta_cap" => true,
     "hierarchical" => false,
-    "rewrite" => array( "slug" => "portfolio", "with_front" => false ),
+    "rewrite" => array( "slug" => "old-portfolio", "with_front" => false ),
     "query_var" => true,
     "menu_position" => 5,
     "supports" => array( "title", "editor", "excerpt", "custom-fields", "revisions", "thumbnail", "author" ),
