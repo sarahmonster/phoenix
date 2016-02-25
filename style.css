@@ -1228,6 +1228,7 @@ a:active {
 
 .taxonomy-description {
 	margin-bottom: 2em;
+	max-width: 768px;
 }
 .taxonomy-description p {
 	margin: 0.5em 0;
