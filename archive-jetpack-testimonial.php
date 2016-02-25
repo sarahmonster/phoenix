@@ -26,7 +26,7 @@ get_header(); ?>
 
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();
-			get_template_part( 'content', 'testimonial' );
+			get_template_part( 'template-parts/content', 'testimonial' );
 		endwhile;
 
 		the_posts_navigation();

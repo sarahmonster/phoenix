@@ -22,7 +22,7 @@ function phoenix_jetpack_setup() {
 
   function phoenix_infinite_scroll_render() {
     while ( have_posts() ) : the_post();
-      get_template_part( 'content', get_post_type() );
+      get_template_part( 'template-parts/content', get_post_type() );
     endwhile;
   }
 
