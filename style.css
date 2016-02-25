@@ -1778,17 +1778,27 @@ body:not(.home) .page .entry-content {
 	}
 }
 
+/* Testimonials page */
 .jetpack-testimonial img {
 	border-radius: 50%;
 	margin: 0 10%;
 	max-width: 80%;
 }
 
+.jetpack-testimonial blockquote,
+.jetpack-testimonial .subtitle,
+.jetpack-testimonial
+.taxonomy-description {
+	border-top: none;
+	padding: 0;
+}
+
 @media (min-width: 768px) {
 	.jetpack-testimonial img {
 		display: inline-block;
-		margin: 40px;
+		margin: 0 40px 0 0;
 		max-width: 300px;
+		vertical-align: top;
 	}
 	.jetpack-testimonial blockquote,
 	.jetpack-testimonial .subtitle,
@@ -1796,17 +1806,17 @@ body:not(.home) .page .entry-content {
 	.taxonomy-description {
 		display: inline-block;
 		margin: 0;
-		width: calc(100% - 390px);
+		width: calc(100% - 350px);
 	}
 }
 
 .jetpack-testimonial .attribution {
+	font-size: 18.4px;
+	font-size: 1.15rem;
 	text-align: right;
 }
 .jetpack-testimonial .attribution cite {
 	color: silver; 
-	font-size: 18.4px;
-	font-size: 1.15rem;
 	font-style: normal;
 }
 .jetpack-testimonial .attribution cite::before {
@@ -1815,6 +1825,10 @@ body:not(.home) .page .entry-content {
 }
 .jetpack-testimonial .attribution cite em::before {
 	content: ', ';
+	display: inline;
+}
+.jetpack-testimonial .attribution .edit-link::before {
+	content: '\00B7\ ';
 	display: inline;
 }
 

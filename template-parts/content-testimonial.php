@@ -17,7 +17,7 @@
 
   <footer class="attribution">
     <?php the_title( '<cite class="author">', '</cite>' ); ?>
+	 <?php edit_post_link( __( 'Edit', 'phoenix' ), '<span class="edit-link">', '</span>' ); ?>
   </footer>
 
-	<?php edit_post_link( __( 'Edit', 'phoenix' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

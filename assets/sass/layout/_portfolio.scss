@@ -1,31 +1,36 @@
+/* Testimonials page */
 .jetpack-testimonial {
 	img {
 		border-radius: 50%;
-    margin: 0 10%;
+		margin: 0 10%;
 		max-width: 80%;
 	}
 
-  @include tablet {
+		blockquote {
+		  border-top: none;
+		  padding: 0;
+		}
 
+  @include tablet {
     img {
       display: inline-block;
-      margin: $gutter;
+      margin: 0 $gutter 0 0;
       max-width: 300px;
+      vertical-align: top;
     }
 
     blockquote {
       display: inline-block;
       margin: 0;
-        width: calc(100% - 390px);
+      width: calc(100% - 350px);
     }
-
-  }
+  } // tablet
 
 	.attribution {
+    @include font-size(1.15);
 		text-align: right;
 
 		cite {
-			@include font-size(1.15);
 			font-style: normal;
 			color: $silver;
 
@@ -38,9 +43,14 @@
 				content: ', ';
 				display: inline;
 			}
-		}
-	}
-}
+		} // cite
+
+    .edit-link::before {
+      content: '\00B7\ ';
+      display: inline;
+    }
+	} // .attribution
+} // .jetpack-testimonial
 
 /* ==================================================================================================================== */
 /* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
