@@ -15,8 +15,8 @@
 		<?php the_content(); ?>
 	</blockquote>
 
-  <footer class="entry-footer">
-    <?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+  <footer class="attribution">
+    <?php the_title( '<cite class="author">', '</cite>' ); ?>
   </footer>
 
 	<?php edit_post_link( __( 'Edit', 'phoenix' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>

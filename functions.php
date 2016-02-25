@@ -48,7 +48,7 @@ function phoenix_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 600, 300, true );
-	add_image_size( 'phoenix-square', 200, 200, true );
+	add_image_size( 'phoenix-square', 400, 400, true );
 	add_image_size( 'phoenix-postcard', 600, 400, true );
 
 	// This theme uses wp_nav_menu() in two locations.

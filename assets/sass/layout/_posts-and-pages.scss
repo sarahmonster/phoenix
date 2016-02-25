@@ -148,7 +148,7 @@ body:not(.home) .page .entry-content {
     }
   }
 
-  article {
+  article:not(.jetpack-testimonial) {
 
     a {
       border-bottom: none;
