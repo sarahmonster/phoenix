@@ -1791,6 +1791,7 @@ body:not(.home) .page .entry-content {
 /* Testimonials page */
 .jetpack-testimonial {
 	margin: 20px auto;
+	text-align: center;
 }
 .jetpack-testimonial img {
 	border-radius: 50%;
@@ -1804,25 +1805,33 @@ body:not(.home) .page .entry-content {
 	border-top: none;
 	margin: 0 auto;
 	padding: 0;
-}
-.jetpack-testimonial .attribution {
-	font-size: 18.4px;
-	font-size: 1.15rem;
 	text-align: right;
 }
-.jetpack-testimonial .attribution cite {
-	color: silver; 
+.jetpack-testimonial blockquote p,
+.jetpack-testimonial .subtitle p,
+.jetpack-testimonial
+    .taxonomy-description p {
+	text-align: left;
+}
+.jetpack-testimonial .attribution {
+	color: silver;
+	font-size: 18.4px;
+	font-size: 1.15rem;
 	font-style: normal;
 }
-.jetpack-testimonial .attribution cite::before {
+.jetpack-testimonial .attribution::before {
 	content: '— ';
 	display: inline;
 }
-.jetpack-testimonial .attribution cite em::before {
+.jetpack-testimonial .attribution em::before {
 	content: ', ';
 	display: inline;
 }
-.jetpack-testimonial .attribution .edit-link::before {
+.jetpack-testimonial .edit-link {
+	font-size: 18.4px;
+	font-size: 1.15rem;
+}
+.jetpack-testimonial .edit-link::before {
 	content: '\00B7\ ';
 	display: inline;
 }

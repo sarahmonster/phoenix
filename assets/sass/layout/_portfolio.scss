@@ -1,6 +1,7 @@
 /* Testimonials page */
 .jetpack-testimonial {
 	margin: $gutter/2 auto;
+	text-align: center;
 
 	img {
 		border-radius: 50%;
@@ -12,32 +13,37 @@
 		border-top: none;
 		margin: 0 auto;
 		padding: 0;
+		text-align: right;
+
+		p {
+			text-align: left;
+		}
 	}
 
 	.attribution {
+		color: $silver;
 		@include font-size(1.15);
-		text-align: right;
+		font-style: normal;
 
-		cite {
-			font-style: normal;
-			color: $silver;
+		&::before {
+			content: '— ';
+			display: inline;
+		}
 
-			&::before {
-				content: '— ';
-				display: inline;
-			}
-
-			em::before {
-				content: ', ';
-				display: inline;
-			}
-		} // cite
-
-		.edit-link::before {
-			content: '\00B7\ ';
+		em::before {
+			content: ', ';
 			display: inline;
 		}
 	} // .attribution
+
+	.edit-link {
+		@include font-size(1.15);
+
+		&::before {
+			content: '\00B7\ ';
+			display: inline;
+		}
+	} // .edit-link
 } // .jetpack-testimonial
 
 /* On tablets, show a two-column layout when there are thumbnails */

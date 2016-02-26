@@ -13,11 +13,8 @@
 
 	<blockquote>
 		<?php the_content(); ?>
+		<?php the_title( '<cite class="attribution">', '</cite>' ); ?>
+		<?php edit_post_link( __( 'Edit', 'phoenix' ), '<span class="edit-link">', '</span>' ); ?>
 	</blockquote>
-
-  <footer class="attribution">
-    <?php the_title( '<cite class="author">', '</cite>' ); ?>
-	 <?php edit_post_link( __( 'Edit', 'phoenix' ), '<span class="edit-link">', '</span>' ); ?>
-  </footer>
 
 </article><!-- #post-## -->
