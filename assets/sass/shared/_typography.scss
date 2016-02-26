@@ -77,15 +77,16 @@ p {
 	position: relative;
 
 	&:first-letter {
+		color: $yellow;
 		float: left;
 		font-family: $font__decorative;
 		@include font-size(6);
 		line-height: 0.8;
-		margin: -4px 10px 0 -10px;
+		margin: -17px 10px 0 -10px;
 
 		@include tablet {
 			@include font-size(8);
-			margin-top: -16px;
+			margin-top: -35px;
 		}
 	}
 
