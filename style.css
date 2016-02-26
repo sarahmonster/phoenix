@@ -1,3 +1,4 @@
+@charset 'UTF-8';
 /*
 Theme Name: Phoenix
 Theme URI: http://triggersandsparks.com
@@ -1211,6 +1212,15 @@ a:active {
 	margin: 0 0 0.5em;
 	padding: 0;
 }
+.entry-title em,
+.page-title em {
+	color: silver;
+}
+.entry-title em::before,
+.page-title em::before {
+	content: ' ';
+	display: inline;
+}
 
 .subtitle,
 .taxonomy-description {
@@ -1227,6 +1237,7 @@ a:active {
 
 .taxonomy-description {
 	margin-bottom: 2em;
+	max-width: 768px;
 }
 .taxonomy-description p {
 	margin: 0.5em 0;
@@ -1286,31 +1297,31 @@ body:not(.home) .page .entry-content {
 	display: block;
 }
 
-.blog article a,
-.archive article a {
+.blog article:not(.jetpack-testimonial) a,
+.archive article:not(.jetpack-testimonial) a {
 	border-bottom: none;
 }
 
-.blog article img,
-.archive article img {
+.blog article:not(.jetpack-testimonial) img,
+.archive article:not(.jetpack-testimonial) img {
 	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-.blog article .entry-meta,
-.archive article .entry-meta {
+.blog article:not(.jetpack-testimonial) .entry-meta,
+.archive article:not(.jetpack-testimonial) .entry-meta {
 	font-size: 12.8px;
 	font-size: 0.8rem;
 }
 
-.blog article .entry-title,
-.archive article .entry-title {
+.blog article:not(.jetpack-testimonial) .entry-title,
+.archive article:not(.jetpack-testimonial) .entry-title {
 	font-size: 33.6px;
 	font-size: 2.1rem; 
 	font-style: normal;
 }
 
-.blog article .entry-content,
-.archive article .entry-content {
+.blog article:not(.jetpack-testimonial) .entry-content,
+.archive article:not(.jetpack-testimonial) .entry-content {
 	border-top: 1px solid silver;
 	font-size: 18.4px;
 	font-size: 1.15rem;
@@ -1318,13 +1329,13 @@ body:not(.home) .page .entry-content {
 }
 
 @media (min-width: 768px) {
-	.blog article,
-	.archive article {
+	.blog article:not(.jetpack-testimonial),
+	.archive article:not(.jetpack-testimonial) {
 		float: left;
 		width: 48%;
 	}
-	.blog article:nth-of-type(odd),
-	.archive article:nth-of-type(odd) {
+	.blog article:not(.jetpack-testimonial):nth-of-type(odd),
+	.archive article:not(.jetpack-testimonial):nth-of-type(odd) {
 		clear: left;
 		margin-right: 4%;
 	}
@@ -1777,8 +1788,87 @@ body:not(.home) .page .entry-content {
 	}
 }
 
+/* Testimonials page */
+.jetpack-testimonial {
+	margin: 20px auto;
+	text-align: center;
+}
+.jetpack-testimonial img {
+	border-radius: 50%;
+	margin: 0 10%;
+	max-width: 80%;
+}
+.jetpack-testimonial blockquote,
+.jetpack-testimonial .subtitle,
+.jetpack-testimonial
+  .taxonomy-description {
+	border-top: none;
+	margin: 0 auto;
+	padding: 0;
+	text-align: right;
+}
+.jetpack-testimonial blockquote p,
+.jetpack-testimonial .subtitle p,
+.jetpack-testimonial
+    .taxonomy-description p {
+	text-align: left;
+}
+.jetpack-testimonial .attribution {
+	color: silver;
+	font-size: 18.4px;
+	font-size: 1.15rem;
+	font-style: normal;
+}
+.jetpack-testimonial .attribution::before {
+	content: '— ';
+	display: inline;
+}
+.jetpack-testimonial .attribution em::before {
+	content: ', ';
+	display: inline;
+}
+.jetpack-testimonial .edit-link {
+	font-size: 18.4px;
+	font-size: 1.15rem;
+}
+.jetpack-testimonial .edit-link::before {
+	content: '\00B7\ ';
+	display: inline;
+}
+
+/* On tablets, show a two-column layout when there are thumbnails */
+@media (min-width: 768px) {
+	.jetpack-testimonial {
+		max-width: calc(100% - 350px);
+	}
+	.jetpack-testimonial.has-post-thumbnail {
+		clear: both;
+		max-width: 100%;
+	}
+	.jetpack-testimonial.has-post-thumbnail img {
+		margin: 0;
+		max-width: 300px;
+		vertical-align: top;
+	}
+	.jetpack-testimonial.has-post-thumbnail blockquote,
+	.jetpack-testimonial.has-post-thumbnail .subtitle,
+	.jetpack-testimonial.has-post-thumbnail
+	.taxonomy-description {
+		display: inline-block;
+		width: calc(100% - 350px);
+	}
+	.jetpack-testimonial.has-post-thumbnail:nth-of-type(odd) img {
+		float: left;
+		margin-right: 40px;
+	}
+	.jetpack-testimonial.has-post-thumbnail:nth-of-type(even) img {
+		float: right;
+		margin-left: 40px;
+	}
+}
+
 /* ==================================================================================================================== */
-/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com	 */
 /* ==================================================================================================================== */
 .row {
 	clear: left;

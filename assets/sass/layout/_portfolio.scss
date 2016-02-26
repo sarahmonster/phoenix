@@ -1,321 +1,402 @@
+/* Testimonials page */
+.jetpack-testimonial {
+	margin: $gutter/2 auto;
+	text-align: center;
+
+	img {
+		border-radius: 50%;
+		margin: 0 10%;
+		max-width: 80%;
+	}
+
+	blockquote {
+		border-top: none;
+		margin: 0 auto;
+		padding: 0;
+		text-align: right;
+
+		p {
+			text-align: left;
+		}
+	}
+
+	.attribution {
+		color: $silver;
+		@include font-size(1.15);
+		font-style: normal;
+
+		&::before {
+			content: '— ';
+			display: inline;
+		}
+
+		em::before {
+			content: ', ';
+			display: inline;
+		}
+	} // .attribution
+
+	.edit-link {
+		@include font-size(1.15);
+
+		&::before {
+			content: '\00B7\ ';
+			display: inline;
+		}
+	} // .edit-link
+} // .jetpack-testimonial
+
+/* On tablets, show a two-column layout when there are thumbnails */
+@include tablet {
+	.jetpack-testimonial {
+		max-width: calc(100% - 350px);
+	}
+
+	.jetpack-testimonial.has-post-thumbnail {
+		clear: both;
+		max-width: 100%;
+
+		img {
+			margin: 0;
+			max-width: 300px;
+			vertical-align: top;
+		}
+
+		blockquote {
+			display: inline-block;
+			width: calc(100% - 350px);
+		}
+
+		&:nth-of-type(odd) img {
+			float: left;
+			margin-right: $gutter;
+		}
+
+		&:nth-of-type(even) img {
+			float: right;
+			margin-left: $gutter;
+		}
+	} // .jetpack-testimonial.has-post-thumbnail
+} // tablet
+
 /* ==================================================================================================================== */
-/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com	 */
 /* ==================================================================================================================== */
 
 .row {
-  clear: left;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+	clear: left;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
 
-  &::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
+	&::after {
+		clear: both;
+		content: "";
+		display: block;
+	}
 }
 
 .onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
-  margin-right: 3.8%;
-  float: left;
-  min-height: 1px;
+	margin-right: 3.8%;
+	float: left;
+	min-height: 1px;
 }
 
 .row .onecol {
-  width: 4.85%;
+	width: 4.85%;
 }
 
 .row .twocol {
-  width: 13.45%;
+	width: 13.45%;
 }
 
 .row .threecol {
-  width: 22.05%;
+	width: 22.05%;
 }
 
 .row .fourcol {
-  width: 30.75%;
+	width: 30.75%;
 }
 
 .row .fivecol {
-  width: 39.45%;
+	width: 39.45%;
 }
 
 .row .sixcol {
-  width: 48%;
+	width: 48%;
 }
 
 .row .sevencol {
-  width: 56.75%;
+	width: 56.75%;
 }
 
 .row .eightcol {
-  width: 65.4%;
+	width: 65.4%;
 }
 
 .row .ninecol {
-  width: 74.05%;
+	width: 74.05%;
 }
 
 .row .tencol {
-  width: 82.7%;
+	width: 82.7%;
 }
 
 .row .elevencol {
-  width: 91.35%;
+	width: 91.35%;
 }
 
 .row .twelvecol {
-  width: 100%;
-  float: left;
+	width: 100%;
+	float: left;
 }
 
 .last, .row > div:last-child {
-  margin-right: 0px;
+	margin-right: 0px;
 }
 
 img, object, embed {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 img {
-  height: auto;
+	height: auto;
 }
 
 /* Mobile */
 
 @media handheld, only screen and (max-width: 767px) {
 
-  .row, body, .container {
-    width: 100%;
-    min-width: 0;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    overflow: visible;
-  }
+	.row, body, .container {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		overflow: visible;
+	}
 
-  .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
-    width: auto;
-    float: none;
-    margin-left: 0px;
-    margin-right: 0px;
-  }
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
 
 }
 
 
 .onepush {
-  margin-left: 8.65%;
+	margin-left: 8.65%;
 }
 
 .twopush {
-  margin-left: 17.3%;
+	margin-left: 17.3%;
 }
 
 .threepush {
-  margin-left: 25.95%;
+	margin-left: 25.95%;
 }
 
 .fourpush {
-  margin-left: 34.6%;
+	margin-left: 34.6%;
 }
 
 .fivepush {
-  margin-left: 43.25%;
+	margin-left: 43.25%;
 }
 
 .sixpush {
-  margin-left: 51.9%;
+	margin-left: 51.9%;
 }
 
 .sevenpush {
-  margin-left: 60.55%;
+	margin-left: 60.55%;
 }
 
 .eightpush {
-  margin-left: 69.2%;
+	margin-left: 69.2%;
 }
 
 .ninepush {
-  margin-left: 77.85%;
+	margin-left: 77.85%;
 }
 
 .tenpush {
-  margin-left: 86.5%;
+	margin-left: 86.5%;
 }
 
 .elevenpush {
-  margin-left: 95.15%;
+	margin-left: 95.15%;
 }
 
 /* Rearrange header a smidge for all portfolio pages */
 .post-type-archive-pieces,
 .single-pieces {
 
-  .entry-header,
-  .page-header {
-    padding-top: 4em;
-    text-align: center;
+	.entry-header,
+	.page-header {
+		padding-top: 4em;
+		text-align: center;
 
-    .subtitle,
-    .taxonomy-description {
-      text-align: center;
-    }
-  } // .entry-header
+		.subtitle,
+		.taxonomy-description {
+			text-align: center;
+		}
+	} // .entry-header
 }
 
 /* PORTFOLIO LISTING PAGES */
 .portfolio-excerpt {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-align: center;
-  position: relative;
-  width: 100%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	text-align: center;
+	position: relative;
+	width: 100%;
 
-  @include mobile {
-    float: left;
-    margin-right: $gutter / 2;
-    width: 45%;
-    width: calc( (100% - #{$gutter/2}) / 2);
+	@include mobile {
+		float: left;
+		margin-right: $gutter / 2;
+		width: 45%;
+		width: calc( (100% - #{$gutter/2}) / 2);
 
-    &:nth-of-type(2n) {
-      margin-right: 0;
-    }
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
 
-    &:nth-of-type(2n+1) {
-      clear: left;
-    }
-  } // mobile
+		&:nth-of-type(2n+1) {
+			clear: left;
+		}
+	} // mobile
 
-  @include tablet {
-    float: left;
-    margin-right: $gutter / 2;
-    width: 30%;
-    width: calc( (100% - #{$gutter}) / 3);
+	@include tablet {
+		float: left;
+		margin-right: $gutter / 2;
+		width: 30%;
+		width: calc( (100% - #{$gutter}) / 3);
 
-    &:nth-of-type(3n) {
-      margin-right: 0;
-    }
+		&:nth-of-type(3n) {
+			margin-right: 0;
+		}
 
-    &:nth-of-type(3n+1) {
-      clear: left;
-    }
-  } // tablet
+		&:nth-of-type(3n+1) {
+			clear: left;
+		}
+	} // tablet
 
-  img {
-    display: block;
-    max-width: 100%;
-    transition: opacity 2s;
-    -moz-transition: opacity 2s;
-    -webkit-transition: opacity 2s;
-    -ms-transition: opacity 2s;
-    -o-transition: opacity 2s;
-    box-shadow: 1px 1px 3px #bdbdbd;
-    border: 1px solid #d0cdcd;
+	img {
+		display: block;
+		max-width: 100%;
+		transition: opacity 2s;
+		-moz-transition: opacity 2s;
+		-webkit-transition: opacity 2s;
+		-ms-transition: opacity 2s;
+		-o-transition: opacity 2s;
+		box-shadow: 1px 1px 3px #bdbdbd;
+		border: 1px solid #d0cdcd;
 
-    &.hover {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
+		&.hover {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 
-  a:hover {
+	a:hover {
 
-    img {
-      opacity: 0;
-    }
+		img {
+			opacity: 0;
+		}
 
-    img.hover {
-      opacity: 1;
-    }
-  } // a:hover
+		img.hover {
+			opacity: 1;
+		}
+	} // a:hover
 } // .portfolio-excerpt
 
 .overlay {
-  position: absolute;
-  width: 80%;
-  overflow: hidden;
-  bottom: 10%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.4);
-  font-size: 0.9em;
-  color: $color__text-main;
-  line-height: 1.4em;
-  padding: 5px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,.25);
-  transition: opacity 4s;
+	position: absolute;
+	width: 80%;
+	overflow: hidden;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background: rgba(255, 255, 255, 0.4);
+	font-size: 0.9em;
+	color: $color__text-main;
+	line-height: 1.4em;
+	padding: 5px;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+	transition: opacity 4s;
 }
 .overlay div {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #D0CDCD;
-  padding: 10px 15px;
+	background: rgba(255, 255, 255, 0.8);
+	border: 1px solid #D0CDCD;
+	padding: 10px 15px;
 }
 .overlay h2 {
-  font-style: normal;
-  margin: 0 0 2px 0;
-  padding: 0 0 2px 0;
-  text-shadow: 0 0 1px #fefefb;
-  color: $red;
-  font-size: .75em;
-  letter-spacing: 1px;
-  line-height: 1;
-  font-weight: 400;
-  text-transform: uppercase;
-  z-index: 10000000;
+	font-style: normal;
+	margin: 0 0 2px 0;
+	padding: 0 0 2px 0;
+	text-shadow: 0 0 1px #fefefb;
+	color: $red;
+	font-size: .75em;
+	letter-spacing: 1px;
+	line-height: 1;
+	font-weight: 400;
+	text-transform: uppercase;
+	z-index: 10000000;
 }
 .overlay p.subtitle {
-  color: lighten($color__text-main, 25%);
-  font-size: 0.85em;
-  text-align: center;
-  margin: 10px 20px 0;
-  line-height: 1.2;
+	color: lighten($color__text-main, 25%);
+	font-size: 0.85em;
+	text-align: center;
+	margin: 10px 20px 0;
+	line-height: 1.2;
 }
 .portfolio-excerpt a:hover .overlay {
-  background: rgba(255, 255, 255, .95);
+	background: rgba(255, 255, 255, .95);
 }
 
 
 
 /* show less information on smaller screens */
-@media screen and (max-width: 1130px)  {
-  .portfolio-excerpt {
-    font-size: .9em;
-  }
-  .portfolio-excerpt .overlay .subtitle {
-    margin: 10px 10px 0;
-  }
+@media screen and (max-width: 1130px)	{
+	.portfolio-excerpt {
+		font-size: .9em;
+	}
+	.portfolio-excerpt .overlay .subtitle {
+		margin: 10px 10px 0;
+	}
 }
 
-@media screen and (max-width: 980px)  {
-  .portfolio-excerpt {
-    margin-bottom: 7px;
-  }
-  .portfolio-excerpt .overlay {
-    bottom: 20px;
-  }
-  .portfolio-excerpt .overlay h2 {
-    border-bottom: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .portfolio-excerpt .overlay .subtitle {
-    display: none;
-  }
+@media screen and (max-width: 980px)	{
+	.portfolio-excerpt {
+		margin-bottom: 7px;
+	}
+	.portfolio-excerpt .overlay {
+		bottom: 20px;
+	}
+	.portfolio-excerpt .overlay h2 {
+		border-bottom: 0;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	.portfolio-excerpt .overlay .subtitle {
+		display: none;
+	}
 }
 
-@media screen and (max-width: 767px)  {
-  .portfolio-excerpt img.hover {
-    display: none;
-  }
-  .portfolio-excerpt a:hover img {
-    opacity: 100;
-  }
+@media screen and (max-width: 767px)	{
+	.portfolio-excerpt img.hover {
+		display: none;
+	}
+	.portfolio-excerpt a:hover img {
+		opacity: 100;
+	}
 }
 
 
@@ -323,47 +404,46 @@ img {
 /* PORTFOLIO PROJECT PAGE */
 .single-pieces {
 
-  /* images */
-  #project-gallery {
-    @include font-size(1);
+	/* images */
+	#project-gallery {
+		@include font-size(1);
 
-    .cap::first-letter, .single .entry-content p:first-of-type::first-letter {
-      font-size: 6rem;
-    }
+		.cap::first-letter, .single .entry-content p:first-of-type::first-letter {
+			font-size: 6rem;
+		}
 
-    img {
-      box-shadow: 1px 1px 3px #bdbdbd;
-      border: 1px solid #d0cdcd;
-      max-width: 100%;
-      margin-top: 10px;
-      margin-bottom: 20px;
-    }
-    .borderless {
-      box-shadow: none;
-      border: none;
-    }
-  }
+		img {
+			box-shadow: 1px 1px 3px #bdbdbd;
+			border: 1px solid #d0cdcd;
+			max-width: 100%;
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		.borderless {
+			box-shadow: none;
+			border: none;
+		}
+	}
 
-  a:not(.url-link) {
-    border-bottom: none;
-  }
+	a:not(.url-link) {
+		border-bottom: none;
+	}
 
-  .url-link {
-    display: block;
-    width: 100%;
-    text-align: center;
-    float: none;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
+	.url-link {
+		display: block;
+		width: 100%;
+		text-align: center;
+		float: none;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
 
-  #project_details cite {
-    display: none;
-  }
+	#project_details cite {
+		display: none;
+	}
 
-  .iphone {
-    margin-top: 6em;
-  }
+	.iphone {
+		margin-top: 6em;
+	}
 
 }
-
