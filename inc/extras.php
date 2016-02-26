@@ -18,7 +18,6 @@ function phoenix_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'phoenix_body_classes' );

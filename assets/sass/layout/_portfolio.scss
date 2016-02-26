@@ -1,39 +1,18 @@
 /* Testimonials page */
 .jetpack-testimonial {
+	margin: $gutter/2 auto;
+
 	img {
 		border-radius: 50%;
 		margin: 0 10%;
 		max-width: 80%;
 	}
 
-		blockquote {
-			border-top: none;
-			padding: 0;
-		}
-
-	@include tablet {
-		img {
-			margin: 0;
-			max-width: 300px;
-			vertical-align: top;
-		}
-
-		blockquote {
-			display: inline-block;
-			margin: 0;
-			width: calc(100% - 350px);
-		}
-
-		&:nth-of-type(odd) img {
-			float: left;
-			margin-right: $gutter;
-		}
-
-		&:nth-of-type(even) img {
-			float: right;
-			margin-left: $gutter;
-		}
-	} // tablet
+	blockquote {
+		border-top: none;
+		margin: 0 auto;
+		padding: 0;
+	}
 
 	.attribution {
 		@include font-size(1.15);
@@ -60,6 +39,39 @@
 		}
 	} // .attribution
 } // .jetpack-testimonial
+
+/* On tablets, show a two-column layout when there are thumbnails */
+@include tablet {
+	.jetpack-testimonial {
+		max-width: calc(100% - 350px);
+	}
+
+	.jetpack-testimonial.has-post-thumbnail {
+		clear: both;
+		max-width: 100%;
+
+		img {
+			margin: 0;
+			max-width: 300px;
+			vertical-align: top;
+		}
+
+		blockquote {
+			display: inline-block;
+			width: calc(100% - 350px);
+		}
+
+		&:nth-of-type(odd) img {
+			float: left;
+			margin-right: $gutter;
+		}
+
+		&:nth-of-type(even) img {
+			float: right;
+			margin-left: $gutter;
+		}
+	} // .jetpack-testimonial.has-post-thumbnail
+} // tablet
 
 /* ==================================================================================================================== */
 /* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com	 */
