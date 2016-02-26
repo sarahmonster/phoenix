@@ -296,8 +296,8 @@ h3,
 .posted-on,
 .cats-links,
 .tags-links,
-.blog .page-header .archive-type,
-.archive .page-header .archive-type,
+.blog .page-header .nix-prefix,
+.archive .page-header .nix-prefix,
 .wanderlist-country-widget li,
 h4,
 h5,
@@ -312,8 +312,8 @@ h3 a,
 .posted-on a,
 .cats-links a,
 .tags-links a,
-.blog .page-header .archive-type a,
-.archive .page-header .archive-type a,
+.blog .page-header .nix-prefix a,
+.archive .page-header .nix-prefix a,
 .wanderlist-country-widget li a,
 h4 a,
 h5 a,
@@ -357,8 +357,8 @@ h3,
 .posted-on,
 .cats-links,
 .tags-links,
-.blog .page-header .archive-type,
-.archive .page-header .archive-type,
+.blog .page-header .nix-prefix,
+.archive .page-header .nix-prefix,
 .wanderlist-country-widget li {
 	color: silver;
 	font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
@@ -374,8 +374,8 @@ h3,
 	.posted-on,
 	.cats-links,
 	.tags-links,
-	.blog .page-header .archive-type,
-	.archive .page-header .archive-type,
+	.blog .page-header .nix-prefix,
+	.archive .page-header .nix-prefix,
 	.wanderlist-country-widget li {
 		font-size: 14.4px;
 		font-size: 0.9rem;
@@ -1292,8 +1292,8 @@ body:not(.home) .page .entry-content {
 	padding-top: 4em;
 	text-align: center;
 }
-.blog .page-header .archive-type,
-.archive .page-header .archive-type {
+.blog .page-header .nix-prefix,
+.archive .page-header .nix-prefix {
 	display: block;
 }
 
@@ -1438,11 +1438,11 @@ body:not(.home) .page .entry-content {
 .cats-links,
 .phoenix-frontpage-widget
 .tags-links,
-.phoenix-frontpage-widget .blog .page-header .archive-type,
-.blog .page-header .phoenix-frontpage-widget .archive-type,
+.phoenix-frontpage-widget .blog .page-header .nix-prefix,
+.blog .page-header .phoenix-frontpage-widget .nix-prefix,
 .phoenix-frontpage-widget
-.archive .page-header .archive-type,
-.archive .page-header .phoenix-frontpage-widget .archive-type,
+.archive .page-header .nix-prefix,
+.archive .page-header .phoenix-frontpage-widget .nix-prefix,
 .phoenix-frontpage-widget .wanderlist-country-widget li,
 .wanderlist-country-widget .phoenix-frontpage-widget li {
 	text-align: center;
@@ -1598,11 +1598,11 @@ body:not(.home) .page .entry-content {
     .cats-links,
 #wanderlist-map .wanderlist-location-widget
     .tags-links,
-#wanderlist-map .wanderlist-location-widget .blog .page-header .archive-type,
-.blog .page-header #wanderlist-map .wanderlist-location-widget .archive-type,
+#wanderlist-map .wanderlist-location-widget .blog .page-header .nix-prefix,
+.blog .page-header #wanderlist-map .wanderlist-location-widget .nix-prefix,
 #wanderlist-map .wanderlist-location-widget
-    .archive .page-header .archive-type,
-.archive .page-header #wanderlist-map .wanderlist-location-widget .archive-type,
+    .archive .page-header .nix-prefix,
+.archive .page-header #wanderlist-map .wanderlist-location-widget .nix-prefix,
 #wanderlist-map .wanderlist-location-widget .wanderlist-country-widget li,
 .wanderlist-country-widget #wanderlist-map .wanderlist-location-widget li {
 	text-align: center;
