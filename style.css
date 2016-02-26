@@ -259,13 +259,13 @@ h1, h2, h3, .posted-on,
 
 h1 {
   line-height: 1;
-  font-family: "freight-display-pro", "freight-text-pro", Georgia, serif;
-  font-size: 44.8px;
-  font-size: 2.8rem; }
+  font-family: "Lust Display Didone", "freight-text-pro", Georgia, serif;
+  font-size: 57.6px;
+  font-size: 3.6rem; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 57.6px;
-      font-size: 3.6rem; } }
+      font-size: 64px;
+      font-size: 4rem; } }
   h1 a {
     color: gray; }
 
@@ -750,76 +750,40 @@ a {
 /*--------------------------------------------------------------
 # Structure
 --------------------------------------------------------------*/
-#masthead {
-  border-bottom: 2px solid #f3ad33;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  width: 100%; }
-  @media (max-width: 767px) {
-    #masthead .site-logo-link {
-      float: left;
-      width: 60px; } }
-  @media (min-width: 768px) {
-    #masthead .site-logo-link {
-      display: inline-block;
-      left: calc(50% - 35px);
-      top: 5px;
-      position: absolute;
-      width: 70px; }
-      #masthead .site-logo-link:hover {
-        -webkit-transform: scale(1.05);
-        -ms-transform: scale(1.05);
-        transform: scale(1.05); }
-    #masthead .site-logo {
-      max-width: 100%; } }
-  #masthead .site-branding {
-    display: none;
-    width: 100px;
-    margin: -20px 45px; }
-    #masthead .site-branding .site-title,
-    #masthead .site-branding .site-description {
-      display: none; }
+.site-branding,
+.post-navigation {
+  display: none; }
 
-/* Account for the admin bar */
-.admin-bar #masthead {
-  top: 46px; }
-  @media screen and (min-width: 600px) and (max-width: 782px) {
-    .admin-bar #masthead {
-      top: 46px; } }
-  @media screen and (min-width: 782px) {
-    .admin-bar #masthead {
-      top: 32px; } }
+#masthead {
+  background: #f3ad33;
+  height: 100%;
+  padding: 20px 40px;
+  left: 0;
+  position: fixed;
+  top: 0; }
 
 /* Navigation */
 .main-navigation {
   content: "";
   display: table;
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
-  max-width: 1140px;
-  width: 100%; }
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif; }
+  .main-navigation li {
+    font-size: 22.4px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: lowercase; }
+  .main-navigation a {
+    border-bottom: 2px solid #404040;
+    color: #404040;
+    display: block;
+    padding: 20px 80px 10px 0; }
+    .main-navigation a:hover {
+      color: #404040; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0;
     /* Sub-menus (currently unused & thus relatively unstyled) */ }
-    .main-navigation ul li {
-      font-size: 16px;
-      font-size: 1rem;
-      display: inline-block;
-      font-weight: 400; }
-      .main-navigation ul li a {
-        padding: 4px 6px;
-        color: #404040; }
-        .main-navigation ul li a:hover {
-          color: #f3ad33; }
-      .main-navigation ul li::after {
-        content: '\00b7'; }
-      .main-navigation ul li:first-child {
-        margin-left: 0; }
-      .main-navigation ul li:last-child::after {
-        display: none; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -838,43 +802,85 @@ a {
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
-  .main-navigation a {
-    border-bottom: none;
-    display: inline-block; }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a {
-    color: #a6a6a6; }
+    color: #fff;
+    border-bottom: 2px solid #fff; }
 
-/* Small menu */
-@media (max-width: 767px) {
-  .main-navigation {
-    padding: 10px 10px 0; }
-    .main-navigation ul {
-      float: right;
-      margin-top: -2px; } }
-
-/* Large menu */
-@media (min-width: 768px) {
+/* Re-write vertical masthead to be horizontal on portrait-oriented screens. */
+@media (orientation: portrait) {
+  #masthead {
+    height: auto;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%; }
   .main-navigation {
     display: inline-block;
+    max-width: 1140px;
+    width: 100%;
     vertical-align: top; }
-    .main-navigation div:first-of-type {
-      float: left; }
-    .main-navigation div:last-of-type {
-      float: right; }
-    .main-navigation ul li a {
+    .main-navigation a {
+      border-bottom: none;
+      display: inline-block;
       padding: 5px 10px; }
-    .main-navigation .current_page_item > a,
-    .main-navigation .current-menu-item > a,
-    .main-navigation .current_page_ancestor > a {
-      color: #f3ad33;
-      border-bottom: 2px solid #fff; } }
+    .main-navigation li {
+      font-size: 19.2px;
+      font-size: 1.2rem;
+      display: inline-block; }
+      .main-navigation li::before {
+        content: '\00b7'; }
+      .main-navigation li:first-child {
+        margin-left: 0; }
+      .main-navigation li:first-child::before {
+        display: none; } }
+
+@media (orientation: portrait) and (max-width: 767px) {
+  .site-logo-link {
+    float: left;
+    width: 60px; } }
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .site-logo-link {
+    display: inline-block;
+    left: calc(50% - 35px);
+    top: 5px;
+    position: absolute;
+    width: 70px; }
+    .site-logo-link:hover {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
+  .site-logo {
+    max-width: 100%; } }
+
+@media (orientation: portrait) {
+  .site-branding {
+    display: none;
+    width: 100px;
+    margin: -20px 45px; }
+    .site-branding .site-title,
+    .site-branding .site-description {
+      display: none; } }
+
+/* Account for the admin bar */
+.admin-bar #masthead {
+  top: 46px; }
+  @media screen and (min-width: 600px) and (max-width: 782px) {
+    .admin-bar #masthead {
+      top: 46px; } }
+  @media screen and (min-width: 782px) {
+    .admin-bar #masthead {
+      top: 32px; } }
 
 #page {
-  margin: 0 auto;
+  margin: 0;
   max-width: 1140px;
   padding: 20px; }
+  @media (orientation: landscape) {
+    #page {
+      margin-left: 200px; } }
 
 .site-footer {
   border-top: 1px solid silver;

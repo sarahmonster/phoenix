@@ -30,3 +30,9 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
+@mixin landscape {
+  @media (orientation : landscape) {
+    @content;
+  }
+}
