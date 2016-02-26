@@ -69,6 +69,15 @@
   font-weight: 400;
   margin: 0 0 .5em;
   padding: 0;
+
+	em {
+	  color: $silver;
+
+	  &::before {
+	    content: ' ';
+	    display: inline;
+	  }
+	} // em
 }
 
 .subtitle,
