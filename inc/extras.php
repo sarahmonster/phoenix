@@ -23,6 +23,22 @@ function phoenix_body_classes( $classes ) {
 add_filter( 'body_class', 'phoenix_body_classes' );
 
 /**
+ * Adds custom classes to the array of post classes.
+ *
+ * @param array $classes Classes for the post element.
+ * @return array
+ */
+function phoenix_post_classes( $classes ) {
+	// Adds the post slug.
+	if ( is_singular() ) :
+		$slug = get_queried_object()->post_name;
+		$classes[] = 'phoenix-' . $slug;
+	endif;
+	return $classes;
+}
+add_filter( 'post_class', 'phoenix_post_classes' );
+
+/**
  * Check for existence of Wanderlist plugin.
  *
  * This plugin is used in various places by the theme.

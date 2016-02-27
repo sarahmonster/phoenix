@@ -1,0 +1,42 @@
+/* Custom styling for different posts. */
+.entry-title {
+	@include font-size(6);
+}
+
+.the,
+.of {
+	display: inline-block;
+	font-size: 0.25em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.script {
+	color: $silver;
+	display: block;
+	font-style: italic;
+}
+
+/* The Unbearable Lightness of Design */
+.phoenix-the-unbearable-lightness-of-designing {
+	.word1 {
+		@extend .the;
+		vertical-align: 65px;
+		margin-right: -85px;
+	}
+
+	.word3 {
+		@extend .script;
+		font-family: $font__decorative;
+		color: $white;
+		font-size: 13vw;
+		margin-top: -81px;
+		opacity: 0.6;
+		text-shadow: 0px 0px 1px $black;
+	}
+
+	.word4 {
+		@extend .of;
+		transform: rotate(-90deg);
+	}
+}

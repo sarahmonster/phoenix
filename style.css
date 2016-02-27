@@ -1116,6 +1116,50 @@ body:not(.home) .page .entry-content {
   margin-right: -3px;
   vertical-align: -7px; }
 
+/* Custom styling for different posts. */
+.entry-title {
+	font-size: 96px;
+	font-size: 6rem;
+}
+
+.the,
+.phoenix-the-unbearable-lightness-of-designing .word1,
+.of,
+.phoenix-the-unbearable-lightness-of-designing .word4 {
+	display: inline-block;
+	font-size: 0.25em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.script,
+.phoenix-the-unbearable-lightness-of-designing .word3 {
+	color: silver;
+	display: block;
+	font-style: italic;
+}
+
+/* The Unbearable Lightness of Design */
+.phoenix-the-unbearable-lightness-of-designing .word1 {
+	margin-right: -85px; 
+	vertical-align: 65px;
+}
+
+.phoenix-the-unbearable-lightness-of-designing .word3 {
+	color: #fff;
+	font-family: 'Lust Script Display', 'freight-text-pro', Georgia, serif;
+	font-size: 13vw;
+	margin-top: -81px;
+	opacity: 0.6;
+	text-shadow: 0 0 1px #404040;
+}
+
+.phoenix-the-unbearable-lightness-of-designing .word4 {
+	-webkit-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
+}
+
 .entry-title.hello {
   color: silver;
   font-style: italic;
