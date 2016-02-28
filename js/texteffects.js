@@ -2,10 +2,7 @@
 
 	// Let's do some fun things with our entry titles.
 	function tweakTitles() {
-		console.log( 'Doing it!' );
-		//$( '.entry-title' ).lettering( 'lines' );
-		$( '.entry-title' ).lettering( 'words' );
-		//$( '.word3' ).fitText( 1 );
+		$( '.single .entry-title' ).lettering( 'words' );
 	}
 
 	// Fit and animate text on homepage.
