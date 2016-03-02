@@ -13,10 +13,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
-<script src="//use.typekit.net/rmt3uuy.js"></script>
-<script>try{Typekit.load();}catch(e){}</script>
-
 <?php wp_head(); ?>
 </head>
 

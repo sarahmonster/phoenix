@@ -126,6 +126,21 @@ function phoenix_scripts() {
 add_action( 'wp_enqueue_scripts', 'phoenix_scripts' );
 
 /**
+ * Enqueue Typekit fonts
+ *
+ * @action wp_head
+ * @return string
+ */
+function phoenix_fonts() {
+	$kit = 'rmt3uuy';
+	?>
+	<script type="text/javascript" src="//use.typekit.net/<?php echo preg_replace( '#[^A-Z0-9]#i', '', $kit ); ?>.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<?php
+}
+add_action( 'wp_head', 'phoenix_fonts', 20 );
+
+/**
  * Add editor styles
  */
 function phoenix_editor_styles() {
