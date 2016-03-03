@@ -151,7 +151,7 @@ add_shortcode( 'svg', 'phoenix_svg_shortcode' );
 /*
  * Register a custom shortcode to allow users to insert SVG icons.
  * This is used to insert SVG icons using the phoenix_get_icon function.
- * Usage: [svg-icon name="name" id="id"]
+ * Usage: [phoenix-icon name="name" id="id"]
  */
 function phoenix_svg_icon_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
@@ -160,4 +160,4 @@ function phoenix_svg_icon_shortcode( $atts, $content = null ) {
 	), $atts );
 	return phoenix_get_icon( $atts['name'], $atts['id'] );
 }
-add_shortcode( 'svg-icon', 'phoenix_svg_icon_shortcode' );
+add_shortcode( 'phoenix-icon', 'phoenix_svg_icon_shortcode' );
