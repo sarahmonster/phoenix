@@ -23,7 +23,7 @@ gulp.task( 'styles', function() {
 		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( csscomb() )
+		//.pipe( csscomb() )
 		.on( 'error', function ( err ) {
 			console.error( 'Error!', err.message );
 		} )
