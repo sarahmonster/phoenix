@@ -110,6 +110,7 @@ function phoenix_scripts() {
 	wp_enqueue_style( 'phoenix-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'phoenix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'phoenix-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'phoenix-typekit-cache', get_template_directory_uri() . '/js/typekit-cache.js', array(), '20120302', true );
 
 	// Text animation/manipulation libraries
 	wp_enqueue_style( 'phoenix-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', screen );
@@ -134,8 +135,18 @@ add_action( 'wp_enqueue_scripts', 'phoenix_scripts' );
 function phoenix_fonts() {
 	$kit = 'rmt3uuy';
 	?>
-	<script type="text/javascript" src="//use.typekit.net/<?php echo preg_replace( '#[^A-Z0-9]#i', '', $kit ); ?>.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script>
+	    // try{!function(t,e,n,r,a,s,i,l)
+	</script>
+	<script>
+	(function(d) {
+	var config = {
+		kitId: '<?php echo $kit; ?>',
+		scriptTimeout: 3000
+	},
+	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
 	<?php
 }
 add_action( 'wp_head', 'phoenix_fonts', 20 );
