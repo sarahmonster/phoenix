@@ -128,9 +128,10 @@ if ( ! function_exists( 'phoenix_entry_footer' ) ) :
  */
 function phoenix_entry_footer() {
 	esc_html_e( 'Like this post? Hate this post? Let&rsquo;s talk about it.', 'phoenix');
-	echo sprintf( '<a class="twitter-share" href="http://twitter.com/home?status=%1s %2s">%3s</a> ',
+	echo sprintf( '<a class="twitter-share" href="http://twitter.com/home?status=%1s %2s">%3s %4s</a> ',
 		urlencode( esc_html__( 'Hey @sarahsemark, loved your blog post!', 'phoenix' ) ),
 		esc_url( get_the_permalink() ),
+		phoenix_get_icon( 'twitter' ),
 		esc_html__( 'Tweet tweet', 'phoenix' )
 	);
 }

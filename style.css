@@ -1251,14 +1251,8 @@ a:active {
 	border-bottom: 0;
 	display: block;
 }
-.entry-footer .twitter-share::before {
-	content: 't';
-	display: inline;
-	font-family: 'triggers-sparks';
-	font-size: 24px;
-	font-style: normal;
-	margin: 0 5px 0 0;
-	vertical-align: bottom;
+.entry-footer .twitter-share .phoenix-icon-twitter {
+	vertical-align: -4px;
 }
 
 /* Single posts and pages */

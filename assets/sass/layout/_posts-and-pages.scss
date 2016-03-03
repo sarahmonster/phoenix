@@ -100,20 +100,14 @@
   padding: 1em 0;
   text-align: center;
 
-  .twitter-share {
-    border-bottom: 0;
-    display: block;
+	.twitter-share {
+			border-bottom: 0;
+			display: block;
 
-      &::before {
-      content: "t";
-      display: inline;
-      font-family: 'triggers-sparks';
-      font-size: 24px;
-      font-style: normal;
-      margin: 0 5px 0 0;
-      vertical-align: bottom;
-    }
-  }
+			.phoenix-icon-twitter {
+				vertical-align: -4px;
+			}
+	}
 }
 
 /* Single posts and pages */
