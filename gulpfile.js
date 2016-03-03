@@ -12,7 +12,9 @@ var cache = require( 'gulp-cache' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var csscomb = require( 'gulp-csscomb' );
 var livereload = require( 'gulp-livereload' );
-var svgsprite = require( 'gulp-svg-sprite' );
+var svgmin = require( 'gulp-svgmin' );
+var cheerio = require( 'gulp-cheerio' );
+var svgstore = require( 'gulp-svgstore' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -50,31 +52,32 @@ gulp.task( 'images', function() {
 	.pipe( gulp.dest( 'assets/images' ) );
 } );
 
-// Create a CSS sprite of all our icons
-config       = {
-    "mode": {
-        "symbol": {
-            "dest": ".",
-            "prefix": "icon-",
-            "sprite": "icons.svg",
-            "inline": false,
-        }
-    }
-};
-
-gulp.task( 'sprite', function() {
+// Minify our icons and make them into an inline sprite
+gulp.task( 'icons', function() {
 	return gulp.src( 'assets/svg/icons/*.svg' )
-	.pipe( svgsprite( config ) )
-	.pipe( gulp.dest( 'assets/svg' ) );
-} );
+		.pipe( svgmin() )
+		.pipe( svgstore( {
+			fileName: 'icons.svg',
+			inlineSvg: true
+		} ) )
+		.pipe( cheerio( {
+		run: function( $, file ) {
+			$( 'svg' ).addClass( 'hide' );
+			$( '[fill]' ).removeAttr( 'fill' );
+		},
+		parserOptions: { xmlMode: true }
+		}))
+		.pipe( gulp.dest( 'assets/svg' ) );
+});
 
 // Watch files for changes
 gulp.task( 'watch', function() {
 	livereload.listen();
 	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
-	gulp.watch( 'assets/images/*', ['images', 'sprite'] );
+	gulp.watch( 'assets/images/*', ['images'] );
+	gulp.watch( 'assets/svg/icons/*', ['icons'] );
 } );
 
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'sprite', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'watch'] );
