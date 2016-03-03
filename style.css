@@ -1118,7 +1118,7 @@ a:active {
 .site-footer a:hover {
 	border-color: rgba(64, 64, 64, 0.5);
 }
-.site-footer .icon-heart {
+.site-footer .phoenix-icon-heart {
 	height: 15px;
 	vertical-align: -3px; 
 	width: 15px;
@@ -1408,7 +1408,7 @@ body:not(.home) .page .entry-content {
 .entry-title.hello span:not(.amp) {
 	color: #404040;
 }
-.entry-title.hello span.icon-heart {
+.entry-title.hello span.phoneix-icon-heart {
 	color: #a32020;
 	font-size: 0.6em;
 }
@@ -2350,6 +2350,55 @@ figcaption {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+# SVG icons
+--------------------------------------------------------------*/
+/* Make sure to hide your sprite! */
+.hide {
+	display: none;
+}
+
+/* Default colouration & size */
+.phoenix-icon {
+	height: 28px;
+	width: 28px; 
+
+	fill: currentColor;
+}
+
+/* Social menu */
+.menu-social-menu-container ul ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-social-menu-container ul li {
+	display: inline-block;
+}
+
+.menu-social-menu-container ul a {
+	display: inline-block;
+	line-height: 1;
+	padding: 4px;
+}
+
+.menu-social-menu-container ul svg {
+	height: 28px;
+	transition: fill 0.1s ease-in 0;
+	width: 28px; 
+
+	fill: #a32020;
+	speak: none;
+}
+
+.menu-social-menu-container ul a:hover {
+	background: none;
+}
+.menu-social-menu-container ul a:hover svg {
+	fill: #f3ad33;
 }
 
 /*# sourceMappingURL=style.css.map */
