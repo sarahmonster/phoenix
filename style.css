@@ -1104,9 +1104,18 @@ body:not(.home) .page .entry-content {
     margin: 0; }
   .entry-title.hello span:not(.amp) {
     color: #404040; }
-  .entry-title.hello span.phoneix-icon-heart {
+  .entry-title.hello .phoenix-icon-heart {
     color: #a32020;
-    font-size: 0.6em; }
+    height: 24px;
+    vertical-align: -4px;
+    width: 24px; }
+    @media (min-width: 768px) {
+      .entry-title.hello .phoenix-icon-heart {
+        height: 54px;
+        margin-right: -4px;
+        margin-left: -4px;
+        vertical-align: -8px;
+        width: 54px; } }
   .entry-title.hello .loves {
     color: #404040;
     display: inline-block;
