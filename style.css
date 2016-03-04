@@ -893,9 +893,11 @@ a {
       border-color: rgba(64, 64, 64, 0.5); }
   .site-footer .phoenix-icon-heart {
     fill: #a32020;
-    height: 15px;
-    width: 15px;
-    vertical-align: -3px; }
+    height: 18px;
+    margin-left: -2px;
+    margin-right: -2px;
+    width: 18px;
+    vertical-align: -4px; }
   .site-footer iframe {
     max-width: 175px; }
   .site-footer .site-info {
@@ -996,7 +998,10 @@ a {
     border-bottom: 0;
     display: block; }
     .entry-footer .twitter-share .phoenix-icon-twitter {
-      vertical-align: -4px; }
+      height: 32px;
+      margin-right: -6px;
+      width: 32px;
+      vertical-align: -6px; }
 
 /* Single posts and pages */
 .single article,
