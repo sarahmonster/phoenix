@@ -558,24 +558,24 @@ a {
     font-size: 1.1rem;
     display: block;
     line-height: 1.2; }
-    .comment-navigation a::before,
-    .posts-navigation a::before,
-    .post-navigation a::before {
+    .comment-navigation a .phoenix-icon,
+    .posts-navigation a .phoenix-icon,
+    .post-navigation a .phoenix-icon {
       display: block;
-      font-family: 'triggers-sparks';
-      font-size: 24px;
       background: #737373;
-      padding: 6px;
-      border-radius: 50%;
-      line-height: 1;
-      color: #fff;
       border: 2px solid #fff;
+      border-radius: 50%;
       box-shadow: 0 0 0px 2px #737373;
+      fill: #fff;
+      height: 42px;
+      line-height: 1;
       margin: 10px 12px;
-      transition: all 200ms linear; }
-    .comment-navigation a:hover::before,
-    .posts-navigation a:hover::before,
-    .post-navigation a:hover::before {
+      padding: 6px;
+      transition: all 200ms linear;
+      width: 42px; }
+    .comment-navigation a:hover .phoenix-icon,
+    .posts-navigation a:hover .phoenix-icon,
+    .post-navigation a:hover .phoenix-icon {
       background: #5a5a5a; }
   .comment-navigation span:not(.caps),
   .posts-navigation span:not(.caps),
@@ -588,22 +588,23 @@ a {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase; }
-  .comment-navigation .nav-previous a::before,
-  .posts-navigation .nav-previous a::before,
-  .post-navigation .nav-previous a::before {
-    content: 'l';
+  .comment-navigation .nav-previous .phoenix-icon,
+  .posts-navigation .nav-previous .phoenix-icon,
+  .post-navigation .nav-previous .phoenix-icon {
     float: left;
     margin-left: 2px; }
   .comment-navigation .nav-next,
   .posts-navigation .nav-next,
   .post-navigation .nav-next {
     text-align: right; }
-    .comment-navigation .nav-next a::before,
-    .posts-navigation .nav-next a::before,
-    .post-navigation .nav-next a::before {
-      content: 'r';
+    .comment-navigation .nav-next .phoenix-icon,
+    .posts-navigation .nav-next .phoenix-icon,
+    .post-navigation .nav-next .phoenix-icon {
       float: right;
-      margin-right: 2px; }
+      margin-right: 2px;
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
 
 /* Make sure there's some space between when they're stacked on top of one another */
 @media (max-width: 767px) {
@@ -632,29 +633,29 @@ a {
     padding: 10px;
     opacity: .45;
     transition: all 200ms linear;
-    box-shadow: 1px 1px 3px rgba(255, 255, 255, 0);
+    box-shadow: 1px 1px 2px rgba(255, 255, 255, 0);
     border: 1px solid #fff; }
     .post-navigation .nav-previous:hover,
     .post-navigation .nav-next:hover {
       background: rgba(255, 255, 255, 0.8);
-      box-shadow: 1px 1px 3px #bdbdbd;
-      border: 1px solid #d0cdcd;
+      box-shadow: 1px 1px 3px rgba(64, 64, 64, 0.2);
+      border: 1px solid #f3f3f3;
       opacity: 1; }
   .post-navigation .nav-previous {
     left: -225px; }
-    .post-navigation .nav-previous a::before {
+    .post-navigation .nav-previous .phoenix-icon {
       float: right; }
     .post-navigation .nav-previous:hover {
       left: 0; }
-      .post-navigation .nav-previous:hover a::before {
+      .post-navigation .nav-previous:hover .phoenix-icon {
         float: left; }
   .post-navigation .nav-next {
     right: -225px; }
-    .post-navigation .nav-next a::before {
+    .post-navigation .nav-next .phoenix-icon {
       float: left; }
     .post-navigation .nav-next:hover {
       right: 0; }
-      .post-navigation .nav-next:hover a::before {
+      .post-navigation .nav-next:hover .phoenix-icon {
         float: right; } }
 
 /*--------------------------------------------------------------
