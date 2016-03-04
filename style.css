@@ -1078,33 +1078,16 @@ body:not(.home) .page .entry-content {
   .contact-card a {
     border-bottom: none;
     color: #fff; }
-    .contact-card a::before {
-      display: inline-block;
-      font-family: 'triggers-sparks';
-      font-style: normal;
-      font-size: 16px;
-      padding-right: 5px;
-      vertical-align: -2px; }
+    .contact-card a .phoenix-icon {
+      height: 20px;
+      width: 20px;
+      vertical-align: -3px; }
   .contact-card .card-email:hover a {
     color: silver; }
-  .contact-card .card-email a::before {
-    content: 'm'; }
   .contact-card .card-twitter:hover a {
     color: #89c9e7; }
-  .contact-card .card-twitter a::before {
-    content: 't';
-    padding-right: 2px; }
   .contact-card .card-subscribe:hover a {
     color: #f4aa59; }
-  .contact-card .card-subscribe a::before {
-    content: 'f'; }
-
-.current-location::before {
-  content: 'w';
-  display: inline-block;
-  font-family: 'triggers-sparks';
-  font-size: 16px;
-  padding-right: 5px; }
 
 .entry-title.hello {
   color: silver;
