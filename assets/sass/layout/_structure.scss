@@ -2,10 +2,6 @@
 	margin: 0;
 	max-width: $size__max-width;
 	padding: 20px;
-
-	@include landscape {
-		margin-left: 200px; // To account for the sidebar nav/masthead.
-	}
 }
 
 

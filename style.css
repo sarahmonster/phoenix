@@ -756,6 +756,9 @@ a {
   display: none; }
 
 #masthead {
+  display: none; }
+
+#masthead {
   background: #f3ad33;
   height: 100%;
   padding: 20px 40px;
@@ -869,9 +872,6 @@ a {
   margin: 0;
   max-width: 1140px;
   padding: 20px; }
-  @media (orientation: landscape) {
-    #page {
-      margin-left: 200px; } }
 
 .site-footer {
   border-top: 1px solid silver;
@@ -1009,15 +1009,36 @@ a {
       width: 32px;
       vertical-align: -6px; }
 
-/* Single posts and pages */
+/* Split single posts/pages into a static "header" on the left, content to the right. */
 .single article,
 .page article {
   margin: 3em auto;
-  max-width: 768px; }
+  position: relative; }
 
 .single .entry-header,
 .page .entry-header {
-  padding-top: 2em; }
+  background: #f3ad33;
+  height: 100%;
+  padding: 20px 40px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 40%; }
+
+.single .entry-title,
+.page .entry-title {
+  color: #fff; }
+
+.single .subtitle,
+.page .subtitle {
+  border-color: #fff;
+  color: #fff; }
+
+.single .entry-content,
+.page .entry-content {
+  margin-left: 49%;
+  max-width: 768px;
+  width: 60%; }
 
 /* Adjust spacing for pages */
 body:not(.home) .page .entry-content {
@@ -1107,10 +1128,6 @@ body:not(.home) .page .entry-content {
   vertical-align: -7px; }
 
 /* Custom styling for different posts. */
-.entry-title {
-  font-size: 96px;
-  font-size: 6rem; }
-
 .the, .phoenix-the-unbearable-lightness-of-designing .word1,
 .of,
 .phoenix-the-unbearable-lightness-of-designing .word4 {

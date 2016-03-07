@@ -37,7 +37,6 @@
 	}
 }
 
-
 /* Entry headers */
 .entry-meta {
 	line-height: 1.5;
@@ -123,18 +122,41 @@
 	}
 }
 
-/* Single posts and pages */
+/* Split single posts/pages into a static "header" on the left, content to the right. */
 .single,
 .page {
+
 	article {
 		margin: 3em auto;
-		max-width: $max-content-width;
+		position: relative;
 	}
 
 	.entry-header {
-		padding-top: 2em;
+		background: $yellow;
+		height: 100%;
+		padding: $gutter/2 $gutter;
+		left: 0;
+		position: fixed;
+		//transform: skew(3deg, 0);
+		top: 0;
+		width: 40%;
 	}
-}
+
+	.entry-title {
+		color: $white;
+	}
+
+	.subtitle {
+		border-color: $white;
+		color: $white;
+	}
+
+	.entry-content {
+		margin-left: 49%;
+		max-width: $max-content-width;
+		width: 60%;
+	}
+} // .single, .page
 
 /* Adjust spacing for pages */
 body:not(.home) .page .entry-content {
