@@ -13,9 +13,19 @@
     color: $color__text-main;
   }
 
-  span.icon-heart {
+  .phoenix-icon-heart {
     color: $red;
-    font-size: 0.6em;
+    height: 24px;
+    vertical-align: -4px;
+    width: 24px;
+
+    @include tablet {
+      height: 54px;
+      margin-right: -4px;
+      margin-left: -4px;
+      vertical-align: -8px;
+      width: 54px;
+    }
   }
 
   .loves {

@@ -32,10 +32,11 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			<?php
-			if ( function_exists( 'jetpack_the_site_logo' ) ):
-				 jetpack_the_site_logo();
-			endif;
+			<?php if ( function_exists( 'jetpack_the_site_logo' ) && jetpack_the_site_logo() ) :
+				jetpack_the_site_logo();
+			else : ?>
+				<a class="site-logo-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo file_get_contents( esc_url( get_template_directory_uri() ) . '/assets/svg/triggersandsparks.svg' ); ?></a>
+			<?php endif;
 			?>
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'fallback_cb' => false ) ); ?>
 		</nav><!-- #site-navigation -->

@@ -29,18 +29,18 @@
 
 /* Full-width page */
 .page-template-full-width-page .page {
-  max-width: 100%;
+	max-width: 100%;
 
-  .entry-content {
-    margin-left: 0;
-    margin-right: 0;
-  }
+	.entry-content {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 
 /* Entry headers */
 .entry-meta {
-  line-height: 1.5;
+	line-height: 1.5;
 }
 
 .posted-on,
@@ -48,9 +48,9 @@
 .tags-links {
 	@extend h3;
 
-  .highlight {
-    color: darken($silver, 15%);
-  }
+	.highlight {
+		color: darken($silver, 15%);
+	}
 }
 
 .cats-links,
@@ -82,72 +82,68 @@
 
 .subtitle,
 .taxonomy-description {
-  @extend blockquote;
-  @include font-size(1.4);
+	@extend blockquote;
+	@include font-size(1.4);
 
-  @include tablet {
-    @include font-size(1.6);
-  }
+	@include tablet {
+		@include font-size(1.6);
+	}
 }
 
 .taxonomy-description {
-  margin-bottom: 2em;
+	margin-bottom: 2em;
 	max-width: $max-content-width;
 
-  p {
-    margin: 0.5em 0;
-  }
+	p {
+		margin: 0.5em 0;
+	}
 }
 
 .entry-footer {
-  @include font-size(1.6);
-  border-bottom: 2px solid lighten($color__text-main, 50%);
-  border-top: 1px solid lighten($color__text-main, 50%);
-  color: #bbb;
-  font-style: italic;
-  line-height: 1.4;
-  margin-top: .5em;
-  padding: 1em 0;
-  text-align: center;
+	@include font-size(1.6);
+	border-bottom: 2px solid lighten($color__text-main, 50%);
+	border-top: 1px solid lighten($color__text-main, 50%);
+	color: #bbb;
+	font-style: italic;
+	line-height: 1.4;
+	margin-top: .5em;
+	padding: 1em 0;
+	text-align: center;
 
-  .twitter-share {
-    border-bottom: 0;
-    display: block;
+	.twitter-share {
+			border-bottom: 0;
+			display: block;
 
-      &::before {
-      content: "t";
-      display: inline;
-      font-family: 'triggers-sparks';
-      font-size: 24px;
-      font-style: normal;
-      margin: 0 5px 0 0;
-      vertical-align: bottom;
-    }
-  }
+			.phoenix-icon-twitter {
+				height: 32px;
+				margin-right: -6px;
+				width: 32px;
+				vertical-align: -6px;
+			}
+	}
 }
 
 /* Single posts and pages */
 .single,
 .page {
-  article {
-    margin: 3em auto;
-    max-width: $max-content-width;
-  }
+	article {
+		margin: 3em auto;
+		max-width: $max-content-width;
+	}
 
-  .entry-header {
-    padding-top: 2em;
-  }
+	.entry-header {
+		padding-top: 2em;
+	}
 }
 
 /* Adjust spacing for pages */
 body:not(.home) .page .entry-content {
-  margin-top: -6em;
+	margin-top: -6em;
 }
 
 /* Archive pages */
 .blog,
 .archive {
-
   .page-header {
     padding-top: 4em;
     text-align: center;
@@ -197,78 +193,58 @@ body:not(.home) .page .entry-content {
 
 /* Contact page */
 .contact-card {
-  background: $red;
-  @include font-size(1.2);
-  font-style: italic;
-  padding: 20px;
-  margin: $gutter auto;
-  box-shadow: 1px 1px 3px #bdbdbd;
-  border: 1px solid #d0cdcd;
+	background: $red;
+	@include font-size(1.2);
+	font-style: italic;
+	padding: 20px;
+	margin: $gutter auto;
+	box-shadow: 1px 1px 3px #bdbdbd;
+	border: 1px solid #d0cdcd;
 
-  @include tablet {
-    background: $red url('images/contact-card.png') no-repeat bottom left;
-    background-size: cover;
-    height: 179px;
-    padding: 50px 20px 20px 26%;
-    width: 400px;
-  }
+	@include tablet {
+		background: $red url('assets/images/contact-card.png') no-repeat bottom left;
+		background-size: cover;
+		height: 179px;
+		padding: 50px 20px 20px 26%;
+		width: 400px;
+	}
 
-  li {
-    list-style-type: none;
-  }
+	li {
+		list-style-type: none;
+	}
 
-  a {
-    border-bottom: none;
-    color: $white;
+	a {
+		border-bottom: none;
+		color: $white;
 
-    &::before {
-      display: inline-block;
-      font-family: 'triggers-sparks';
-      font-style: normal;
-      font-size: 16px;
-      padding-right: 5px;
-      vertical-align: -2px;
-    }
-  }
+			.phoenix-icon {
+				height: 20px;
+				width: 20px;
+				vertical-align: -3px;
+			}
+	}
 
-  .card-email {
-    &:hover a {
-      color: $silver;
-    }
+	.card-email {
+		&:hover a {
+			color: $silver;
+		}
+	}
 
-    a::before {
-      content: 'm';
-    }
-  }
+	.card-twitter {
+		&:hover a {
+			color: #89c9e7;
+		}
+	}
 
-  .card-twitter {
-    &:hover a {
-      color: #89c9e7;
-    }
-
-    a::before {
-      content: 't';
-      padding-right: 2px;
-    }
-  }
-
-  .card-subscribe {
-    &:hover a {
-      color: #f4aa59;
-    }
-
-    a::before {
-      content: 'f';
-    }
-  }
+	.card-subscribe {
+		&:hover a {
+			color: #f4aa59;
+		}
+	}
 } // .contact-card
 
-.current-location {
-  &::before {
-    content: 'w';
-    display: inline-block;
-    font-family: 'triggers-sparks';
-    font-size: 16px;
-    padding-right: 5px;
-  }
+.current-location .phoenix-icon-globe {
+	color: $red;
+	margin-right: -3px;
+	vertical-align: -7px;
 }

@@ -12,6 +12,9 @@ var cache = require( 'gulp-cache' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var csscomb = require( 'gulp-csscomb' );
 var livereload = require( 'gulp-livereload' );
+var svgmin = require( 'gulp-svgmin' );
+var cheerio = require( 'gulp-cheerio' );
+var svgstore = require( 'gulp-svgstore' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -20,13 +23,13 @@ gulp.task( 'styles', function() {
 		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
 		.pipe( sourcemaps.write( './' ) )
-		.pipe( csscomb() )
+		//.pipe( csscomb() )
 		.on( 'error', function ( err ) {
 			console.error( 'Error!', err.message );
 		} )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
-});
+} );
 
 // Scripts
 gulp.task( 'scripts', function() {
@@ -34,7 +37,7 @@ gulp.task( 'scripts', function() {
 		.pipe( jshint.reporter( 'default' ) )
 		//.pipe( concat( 'main.js' ) )
 		.pipe( gulp.dest( 'assets/js' ) );
-});
+} );
 
 // Images
 gulp.task( 'images', function() {
@@ -47,6 +50,24 @@ gulp.task( 'images', function() {
 		use: [pngquant()]
 	} ) ) )
 	.pipe( gulp.dest( 'assets/images' ) );
+} );
+
+// Minify our icons and make them into an inline sprite
+gulp.task( 'icons', function() {
+	return gulp.src( 'assets/svg/icons/*.svg' )
+		.pipe( svgmin() )
+		.pipe( svgstore( {
+			fileName: 'icons.svg',
+			inlineSvg: true
+		} ) )
+		.pipe( cheerio( {
+		run: function( $, file ) {
+			$( 'svg' ).addClass( 'hide' );
+			$( '[fill]' ).removeAttr( 'fill' );
+		},
+		parserOptions: { xmlMode: true }
+		}))
+		.pipe( gulp.dest( 'assets/svg' ) );
 });
 
 // Watch files for changes
@@ -55,7 +76,8 @@ gulp.task( 'watch', function() {
 	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
 	gulp.watch( 'assets/images/*', ['images'] );
-});
+	gulp.watch( 'assets/svg/icons/*', ['icons'] );
+} );
 
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'watch'] );
