@@ -233,3 +233,9 @@ body:not(.home) .page .entry-content {
 		}
 	}
 } // .contact-card
+
+.current-location .phoenix-icon-globe {
+	color: $red;
+	margin-right: -3px;
+	vertical-align: -7px;
+}

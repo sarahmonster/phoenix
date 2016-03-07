@@ -1095,6 +1095,11 @@ body:not(.home) .page .entry-content {
   .contact-card .card-subscribe:hover a {
     color: #f4aa59; }
 
+.current-location .phoenix-icon-globe {
+  color: #a32020;
+  margin-right: -3px;
+  vertical-align: -7px; }
+
 .entry-title.hello {
   color: silver;
   font-style: italic;
