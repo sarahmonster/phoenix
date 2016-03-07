@@ -134,12 +134,24 @@
 	.entry-header {
 		background: $yellow;
 		height: 100%;
-		padding: $gutter/2 $gutter;
+		padding: $gutter $gutter;
 		left: 0;
 		position: fixed;
 		//transform: skew(3deg, 0);
 		top: 0;
 		width: 40%;
+	}
+
+	.phoenix-panel-background {
+		background-position: top center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		filter: brightness(0.6);
+		z-index: -1;
 	}
 
 	.entry-title {

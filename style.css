@@ -1019,11 +1019,24 @@ a {
 .page .entry-header {
   background: #f3ad33;
   height: 100%;
-  padding: 20px 40px;
+  padding: 40px 40px;
   left: 0;
   position: fixed;
   top: 0;
   width: 40%; }
+
+.single .phoenix-panel-background,
+.page .phoenix-panel-background {
+  background-position: top center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-filter: brightness(0.6);
+  filter: brightness(0.6);
+  z-index: -1; }
 
 .single .entry-title,
 .page .entry-title {
