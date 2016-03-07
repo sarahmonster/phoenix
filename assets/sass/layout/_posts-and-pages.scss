@@ -137,7 +137,6 @@
 		padding: $gutter $gutter;
 		left: 0;
 		position: fixed;
-		//transform: skew(3deg, 0);
 		top: 0;
 		width: 40%;
 	}
@@ -151,6 +150,8 @@
 		bottom: 0;
 		right: 0;
 		filter: brightness(0.6);
+		transform: skew(6deg, 0);
+
 		z-index: -1;
 	}
 

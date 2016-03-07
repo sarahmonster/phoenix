@@ -1036,6 +1036,9 @@ a {
   right: 0;
   -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
+  -webkit-transform: skew(6deg, 0);
+  -ms-transform: skew(6deg, 0);
+  transform: skew(6deg, 0);
   z-index: -1; }
 
 .single .entry-title,
