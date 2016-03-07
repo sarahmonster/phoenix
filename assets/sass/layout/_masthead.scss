@@ -99,6 +99,28 @@
 	}
 }
 
+/* Logo & branding */
+.site-logo-link {
+	border-bottom: 0;
+	display: block;
+	margin: $gutter/2 auto 0;
+	width: 60px;
+}
+
+.site-logo {
+	max-width: 100%;
+}
+
+@include landscape {
+	.site-logo-link {
+		width: 100px;
+
+		&:hover {
+			transform: scale(1.05);
+		}
+	} // .site-logo-link
+} // tablet
+
 /* Re-write vertical masthead to be horizontal on portrait-oriented screens. */
 @include portrait {
 	#masthead {
@@ -136,45 +158,9 @@
 			&:first-child::before {
 				display: none;
 			}
-		}
-	}
-
-	@include mobile {
-		.site-logo-link {
-			float: left;
-			width: 60px;
-		}
-	} // mobile
-
-	@include tablet {
-		.site-logo-link {
-			display: inline-block;
-			left: calc(50% - 35px);
-			top: 5px;
-			position: absolute;
-			width: 70px;
-
-			&:hover {
-				transform: scale(1.05);
-			}
-		} // .site-logo-link
-
-		.site-logo {
-			max-width: 100%;
-		}
-	} // tablet
-
-	.site-branding {
-		display: none;
-		width: 100px;
-		margin: -20px 45px;
-
-		.site-title,
-		.site-description {
-			display: none;
-		}
-	} // .site-branding
-}
+		} // li
+	} // .main-navigation
+} // portrait
 
 /* Account for the admin bar */
 .admin-bar {

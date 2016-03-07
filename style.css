@@ -809,6 +809,24 @@ a {
     color: #fff;
     border-bottom: 2px solid #fff; }
 
+/* Logo & branding */
+.site-logo-link {
+  border-bottom: 0;
+  display: block;
+  margin: 20px auto 0;
+  width: 60px; }
+
+.site-logo {
+  max-width: 100%; }
+
+@media (orientation: landscape) {
+  .site-logo-link {
+    width: 100px; }
+    .site-logo-link:hover {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); } }
+
 /* Re-write vertical masthead to be horizontal on portrait-oriented screens. */
 @media (orientation: portrait) {
   #masthead {
@@ -836,34 +854,6 @@ a {
         margin-left: 0; }
       .main-navigation li:first-child::before {
         display: none; } }
-
-@media (orientation: portrait) and (max-width: 767px) {
-  .site-logo-link {
-    float: left;
-    width: 60px; } }
-
-@media (orientation: portrait) and (min-width: 768px) {
-  .site-logo-link {
-    display: inline-block;
-    left: calc(50% - 35px);
-    top: 5px;
-    position: absolute;
-    width: 70px; }
-    .site-logo-link:hover {
-      -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
-      transform: scale(1.05); }
-  .site-logo {
-    max-width: 100%; } }
-
-@media (orientation: portrait) {
-  .site-branding {
-    display: none;
-    width: 100px;
-    margin: -20px 45px; }
-    .site-branding .site-title,
-    .site-branding .site-description {
-      display: none; } }
 
 /* Account for the admin bar */
 .admin-bar #masthead {

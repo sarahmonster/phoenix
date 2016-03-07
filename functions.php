@@ -51,13 +51,9 @@ function phoenix_setup() {
 	add_image_size( 'phoenix-square', 400, 400, true );
 	add_image_size( 'phoenix-postcard', 600, 400, true );
 
-	// This theme uses wp_nav_menu() in two locations.
+	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'phoenix' ),
-	) );
-
-	register_nav_menus( array(
-		'secondary' => __( 'Secondary Menu', 'phoenix' ),
 	) );
 
 	/*
