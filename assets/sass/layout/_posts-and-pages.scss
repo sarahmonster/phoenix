@@ -166,10 +166,11 @@
 		color: $white;
 	}
 
-	.entry-content {
-		margin-left: 49%;
+	.entry-content,
+	.entry-footer {
+		margin-left: 54%;
 		max-width: $max-content-width;
-		width: 60%;
+		width: 55%;
 	}
 } // .single, .page
 

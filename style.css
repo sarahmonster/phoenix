@@ -1054,10 +1054,12 @@ a {
   color: #fff; }
 
 .single .entry-content,
-.page .entry-content {
-  margin-left: 49%;
+.single .entry-footer,
+.page .entry-content,
+.page .entry-footer {
+  margin-left: 54%;
   max-width: 768px;
-  width: 60%; }
+  width: 55%; }
 
 /* Adjust spacing for pages */
 body:not(.home) .page .entry-content {
