@@ -104,6 +104,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ## Content
 --------------------------------------------------------------*/
 @import "layout/posts-and-pages";
+@import "layout/single";
+@import "layout/archives";
 @import "layout/post-styles";
 @import "layout/frontpage";
 @import "layout/locations";

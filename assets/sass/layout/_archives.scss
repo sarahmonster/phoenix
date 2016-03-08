@@ -1,0 +1,58 @@
+.taxonomy-description {
+	margin-bottom: 2em;
+	max-width: $max-content-width;
+
+	p {
+		margin: 0.5em 0;
+	}
+}
+
+/* Archive pages */
+.blog,
+.archive {
+  .page-header {
+    padding-top: 4em;
+    text-align: center;
+
+    .nix-prefix {
+      @extend h3;
+      display: block;
+    }
+  }
+
+  article:not(.jetpack-testimonial) {
+
+    a {
+      border-bottom: none;
+    }
+
+    img {
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .entry-meta {
+      @include font-size(0.8);
+    }
+
+    .entry-title {
+      font-style: normal;
+      @include font-size(2.1);
+    }
+
+    .entry-content {
+      border-top: 1px solid lighten($color__text-main, 50%);
+      @include font-size(1.15);
+      margin-top: 0;
+    }
+
+    @include tablet {
+      float: left;
+      width: 48%;
+
+      &:nth-of-type(odd) {
+        clear: left;
+        margin-right: 4%;
+      }
+    }
+  }
+}

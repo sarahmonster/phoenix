@@ -1,0 +1,111 @@
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Split single posts/pages into a static "header" on the left, content to the right. */
+.single,
+.page {
+
+	article {
+		margin: 3em auto;
+		position: relative;
+	}
+
+	.entry-header {
+		background: $yellow;
+		height: 100%;
+		padding: $gutter $gutter;
+		left: 0;
+		position: fixed;
+		top: 0;
+		width: 40%;
+	}
+
+	.phoenix-panel-background {
+		background-position: top center;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		filter: brightness(0.6);
+		transform: skew(6deg, 0);
+		z-index: -1;
+	}
+
+	.cat-links a {
+		border-bottom: none;
+		color: lighten($yellow, 15%);
+
+		&::before {
+			background-color: $yellow;
+			content: '';
+			display: inline-block;
+			height: 10px;
+			margin-right: 5px;
+			width: 10px;
+		}
+	}
+
+	.posted-on .highlight {
+		color: lighten($silver, 15%);
+	}
+
+	.entry-title {
+		color: $white;
+	}
+
+	.subtitle {
+		border-color: $white;
+		color: $white;
+	}
+
+	.entry-content,
+	.entry-footer {
+		margin-left: 54%;
+		max-width: $max-content-width;
+		width: 55%;
+	}
+} // .single, .page
+
+/* Entry footer */
+.entry-footer {
+	@include font-size(1.6);
+	border-bottom: 2px solid lighten($color__text-main, 50%);
+	border-top: 1px solid lighten($color__text-main, 50%);
+	color: #bbb;
+	font-style: italic;
+	line-height: 1.4;
+	margin-top: .5em;
+	padding: 1em 0;
+	text-align: center;
+
+	.twitter-share {
+			border-bottom: 0;
+			display: block;
+
+			.phoenix-icon-twitter {
+				height: 32px;
+				margin-right: -6px;
+				width: 32px;
+				vertical-align: -6px;
+			}
+	}
+}
+
+/* Adjust spacing for pages */
+body:not(.home) .page .entry-content {
+	margin-top: -6em;
+}
+
+/* Full-width page */
+.page-template-full-width-page .page {
+	max-width: 100%;
+
+	.entry-content {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
