@@ -14,7 +14,8 @@
 		<?php endif; ?>
 
 		<div class="entry-meta">
-			<?php phoenix_posted_on(); ?>
+			<?php phoenix_post_category(); ?>
+			<?php phoenix_post_date(); ?>
 		</div><!-- .entry-meta -->
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>

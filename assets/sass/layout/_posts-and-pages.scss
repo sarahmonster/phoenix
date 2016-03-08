@@ -43,9 +43,12 @@
 }
 
 .posted-on,
-.cats-links,
-.tags-links {
+.cat-links,
+.tags-links,
+.nix-prefix {
 	@extend h3;
+	display: block;
+	padding: $gutter/8 0;
 
 	.highlight {
 		color: darken($silver, 15%);
@@ -151,6 +154,20 @@
 		filter: brightness(0.6);
 		transform: skew(6deg, 0);
 		z-index: -1;
+	}
+
+	.cat-links a {
+		border-bottom: none;
+		color: lighten($yellow, 15%);
+
+		&::before {
+			background-color: $yellow;
+			content: '';
+			display: inline-block;
+			height: 10px;
+			margin-right: 5px;
+			width: 10px;
+		}
 	}
 
 	.posted-on .highlight {

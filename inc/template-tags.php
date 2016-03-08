@@ -11,7 +11,7 @@ if ( ! function_exists( 'phoenix_post_date' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time.
  */
-function phoenix_posted_on() {
+function phoenix_post_date() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -66,6 +66,7 @@ function phoenix_post_category() {
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items */
 		$categories_list = get_the_category_list( esc_html__( ' ', 'phoenix' ) );
+
 		if ( $categories_list && phoenix_categorized_blog() ) {
 			printf( '<span class="cat-links">%1$s</span>', $categories_list ); // WPCS: XSS OK.
 		}

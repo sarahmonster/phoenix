@@ -245,15 +245,17 @@ textarea {
 
 /* Headings */
 h1, h2, h3, .posted-on,
-.cats-links,
-.tags-links, .blog .page-header .nix-prefix,
+.cat-links,
+.tags-links,
+.nix-prefix, .blog .page-header .nix-prefix,
 .archive .page-header .nix-prefix, .wanderlist-country-widget li, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2; }
   h1 a, h2 a, h3 a, .posted-on a,
-  .cats-links a,
-  .tags-links a, .blog .page-header .nix-prefix a,
+  .cat-links a,
+  .tags-links a,
+  .nix-prefix a, .blog .page-header .nix-prefix a,
   .archive .page-header .nix-prefix a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
     border-bottom: none; }
 
@@ -283,8 +285,9 @@ h2 {
       font-size: 2.4rem; } }
 
 h3, .posted-on,
-.cats-links,
-.tags-links, .blog .page-header .nix-prefix,
+.cat-links,
+.tags-links,
+.nix-prefix, .blog .page-header .nix-prefix,
 .archive .page-header .nix-prefix, .wanderlist-country-widget li {
   color: silver;
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
@@ -296,8 +299,9 @@ h3, .posted-on,
   text-transform: uppercase; }
   @media (min-width: 768px) {
     h3, .posted-on,
-    .cats-links,
-    .tags-links, .blog .page-header .nix-prefix,
+    .cat-links,
+    .tags-links,
+    .nix-prefix, .blog .page-header .nix-prefix,
     .archive .page-header .nix-prefix, .wanderlist-country-widget li {
       font-size: 14.4px;
       font-size: 0.9rem; } }
@@ -947,10 +951,17 @@ a {
 .entry-meta {
   line-height: 1.5; }
 
-.posted-on .highlight,
-.cats-links .highlight,
-.tags-links .highlight {
-  color: #9a9a9a; }
+.posted-on,
+.cat-links,
+.tags-links,
+.nix-prefix {
+  display: block;
+  padding: 5px 0; }
+  .posted-on .highlight,
+  .cat-links .highlight,
+  .tags-links .highlight,
+  .nix-prefix .highlight {
+    color: #9a9a9a; }
 
 .cats-links::before,
 .tags-links::before {
@@ -1039,6 +1050,19 @@ a {
   -ms-transform: skew(6deg, 0);
   transform: skew(6deg, 0);
   z-index: -1; }
+
+.single .cat-links a,
+.page .cat-links a {
+  border-bottom: none;
+  color: #f7ca7b; }
+  .single .cat-links a::before,
+  .page .cat-links a::before {
+    background-color: #f3ad33;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    width: 10px; }
 
 .single .posted-on .highlight,
 .page .posted-on .highlight {
@@ -1211,8 +1235,9 @@ body:not(.home) .page .entry-content {
         display: inline-block; }
 
 .phoenix-frontpage-widget h3, .phoenix-frontpage-widget .posted-on, .phoenix-frontpage-widget
-.cats-links, .phoenix-frontpage-widget
-.tags-links, .phoenix-frontpage-widget .blog .page-header .nix-prefix, .blog .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget
+.cat-links, .phoenix-frontpage-widget
+.tags-links, .phoenix-frontpage-widget
+.nix-prefix, .phoenix-frontpage-widget .blog .page-header .nix-prefix, .blog .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget
 .archive .page-header .nix-prefix,
 .archive .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget .wanderlist-country-widget li, .wanderlist-country-widget .phoenix-frontpage-widget li {
   text-align: center; }
@@ -1338,10 +1363,9 @@ body:not(.home) .page .entry-content {
     position: absolute;
     z-index: 100; }
     #wanderlist-map .wanderlist-location-widget h3, #wanderlist-map .wanderlist-location-widget .posted-on, #wanderlist-map .wanderlist-location-widget
-    .cats-links, #wanderlist-map .wanderlist-location-widget
-    .tags-links, #wanderlist-map .wanderlist-location-widget .blog .page-header .nix-prefix, .blog .page-header #wanderlist-map .wanderlist-location-widget .nix-prefix, #wanderlist-map .wanderlist-location-widget
-    .archive .page-header .nix-prefix,
-    .archive .page-header #wanderlist-map .wanderlist-location-widget .nix-prefix, #wanderlist-map .wanderlist-location-widget .wanderlist-country-widget li, .wanderlist-country-widget #wanderlist-map .wanderlist-location-widget li {
+    .cat-links, #wanderlist-map .wanderlist-location-widget
+    .tags-links, #wanderlist-map .wanderlist-location-widget
+    .nix-prefix, #wanderlist-map .wanderlist-location-widget .wanderlist-country-widget li, .wanderlist-country-widget #wanderlist-map .wanderlist-location-widget li {
       text-align: center; }
 
 /* Widgets */
