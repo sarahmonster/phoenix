@@ -165,11 +165,6 @@ add_action( 'wp_print_styles', 'phoenix_dequeue_plugin_styles', 100 );
 add_filter( 'jetpack_implode_frontend_css', '__return_false' );
 
 /**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
