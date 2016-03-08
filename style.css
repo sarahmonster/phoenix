@@ -963,7 +963,6 @@ a {
 .entry-title,
 .page-title {
   font-weight: 400;
-  margin: 0 0 .5em;
   padding: 0; }
   .entry-title em,
   .page-title em {
@@ -1040,6 +1039,10 @@ a {
   -ms-transform: skew(6deg, 0);
   transform: skew(6deg, 0);
   z-index: -1; }
+
+.single .posted-on .highlight,
+.page .posted-on .highlight {
+  color: #e6e6e6; }
 
 .single .entry-title,
 .page .entry-title {
