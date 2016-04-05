@@ -1,8 +1,7 @@
 <?php
 /**
- * SVG icon functionality, via Easy as SVG.
+ * SVG icon functionality.
  *
- * @link https://github.com/sarahmonster/easy-as-svg
  * This makes it easier for us to get up and running with SVG icons, without
  * doing a lot of extra work or adjusting our templates.
  *
@@ -33,13 +32,35 @@ add_filter( 'wp_footer' , 'phoenix_inject_sprite' );
  * on IE8-10. For lower versions, we need an older copy of the script.
  * https://github.com/jonathantneal/svg4everybody
  */
-function phoenix_svg4everybody() {
+function phoenix_svg_scripts() {
 	global $phoenix_sprite_external;
+
+	/*
+	 * Implement svg4everybody in order to better support external sprite references
+	 * on IE8-10. For lower versions, we need an older copy of the script.
+	 * https://github.com/jonathantneal/svg4everybody
+	 */
 	if ( $phoenix_sprite_external ) :
 		wp_enqueue_script( 'phoenix-svg4everybody', get_template_directory_uri() . '/assets/js/svg4everybody.js', array(), '20160222', false );
 	endif;
+
+	/*
+	 * Enqueue a script to dynamically insert SVG references in front of Sharedaddy links.
+	 * We need to do this unless there's a good way to filter the Sharedaddy output via PHP.
+	 * @todo: Pass the SVG code, with variable placeholders, to Javascript directly.
+	 */
+	if ( function_exists( 'wpcom_is_vip' ) ) :
+ 		$svg_options = array( 'path' => esc_url( wpcom_vip_noncdn_uri( get_template_directory() ) ) );
+ 	else :
+ 		$svg_options = array( 'path' => esc_url( get_template_directory_uri() ) );
+ 	endif;
+
+	// Register, localise, and enqueue the script.
+	wp_register_script( 'phoenix-svg', get_template_directory_uri() . '/assets/js/sharedaddy-svg.js', array( 'jquery' ), '20160316', true );
+	wp_localize_script( 'phoenix-svg', 'svg_options', $svg_options );
+	wp_enqueue_script( 'phoenix-svg' );
 }
-add_action( 'wp_enqueue_scripts', 'phoenix_svg4everybody' );
+add_action( 'wp_enqueue_scripts', 'phoenix_svg_scripts' );
 
 /*
  * Inject some header code to make IE play nice.
@@ -47,15 +68,14 @@ add_action( 'wp_enqueue_scripts', 'phoenix_svg4everybody' );
  * This seems to do the trick, but may require more testing.
  * See: https://github.com/jonathantneal/svg4everybody
  */
-function phoenix_inject_svg4everybody() {
+function phoenix_svg4everybody() {
 	global $phoenix_sprite_external;
 	if ( $phoenix_sprite_external ) :
 		echo '<meta http-equiv="x-ua-compatible" content="ie=edge">';
 		echo '<script type="text/javascript">svg4everybody();</script>';
 	endif;
 }
-add_action( 'wp_head', 'phoenix_inject_svg4everybody', 20 );
-
+add_action( 'wp_head', 'phoenix_svg4everybody', 20 );
 
 /**
  * This allows us to get the SVG code and return as a variable
@@ -104,29 +124,33 @@ function phoenix_social_menu( $items ) {
 		$feed_pattern = '/\/feed\/?/i';
 		$mail_pattern = '/mailto/i';
 		$skype_pattern = '/skype/i';
+		$google_pattern = '/plus.google.com/i';
 		$domain_pattern = '/([a-z]*)(\.com|\.org|\.io|\.tv|\.co)/i';
-		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'plus.google', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'youtube' );
+		$domains = array( 'codepen', 'digg', 'dribbble', 'dropbox', 'facebook', 'flickr', 'foursquare', 'github', 'instagram', 'linkedin', 'path', 'pinterest', 'getpocket', 'polldaddy', 'reddit', 'spotify', 'stumbleupon', 'tumblr', 'twitch', 'twitter', 'vimeo', 'vine', 'youtube' );
 
 		// Match feed URLs
 		if ( preg_match( $feed_pattern, $subject, $matches ) ) :
-				$icon = phoenix_get_icon( 'feed' );
+			$icon = phoenix_get_icon( 'feed' );
 		// Match a mailto link
 		elseif ( preg_match( $mail_pattern, $subject, $matches ) ) :
-				$icon = phoenix_get_icon( 'mail' );
+			$icon = phoenix_get_icon( 'mail' );
 		// Match a Skype link
 		elseif ( preg_match( $skype_pattern, $subject, $matches ) ) :
-				$icon = phoenix_get_icon( 'skype' );
+			$icon = phoenix_get_icon( 'skype' );
+		// Match a Google+ link
+		elseif ( preg_match( $google_pattern, $subject, $matches ) ) :
+			$icon = phoenix_get_icon( 'google-plus' );
 		// Match various domains
 		elseif ( preg_match( $domain_pattern, $subject, $matches ) && in_array( $matches[1], $domains ) ) :
 			$icon = phoenix_get_icon( $matches[1] );
 		endif;
 
 		// If we've found an icon, hide the text and inject an SVG
-		if ( $icon ) {
+		if ( isset( $icon ) ) {
 			$item->title = $icon . '<span class="screen-reader-text">' . $item->title . '</span>';
 		}
-		endforeach;
-return $items;
+	endforeach;
+	return $items;
 }
 add_filter( 'wp_nav_menu_objects', 'phoenix_social_menu' );
 
@@ -146,12 +170,12 @@ function phoenix_svg_shortcode( $atts, $content = null ) {
 		return file_get_contents( esc_url( $file ) );
 	endif;
 }
-add_shortcode( 'svg', 'phoenix_svg_shortcode' );
+add_shortcode( 'phoenix-svg', 'phoenix_svg_shortcode' );
 
 /*
  * Register a custom shortcode to allow users to insert SVG icons.
  * This is used to insert SVG icons using the phoenix_get_icon function.
- * Usage: [phoenix-icon name="name" id="id"]
+ * Usage: [svg-icon name="name" id="id"]
  */
 function phoenix_svg_icon_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
