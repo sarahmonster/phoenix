@@ -21,7 +21,8 @@
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php phoenix_posted_on(); ?>
+				<?php phoenix_post_category(); ?>
+				<?php phoenix_post_date(); ?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 
