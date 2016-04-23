@@ -3,35 +3,21 @@
 	margin: 0 0 1.5em;
 }
 
-/* Split single posts/pages into a static "header" on the left, content to the right. */
-.single,
-.page {
-
-	article {
-		margin: 3em auto;
-		position: relative;
-	}
-
+/* Styles for all single posts */
+.single {
 	.entry-header {
-		background: $yellow;
-		height: 100%;
-		padding: $gutter $gutter;
-		left: 0;
-		position: fixed;
-		top: 0;
-		width: 40%;
+		position: relative;
 	}
 
 	.phoenix-panel-background {
 		background-position: top center;
 		background-size: cover;
 		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
+		left: -#{$gutter/2};
+		top: -#{$gutter/2};
+		right: -#{$gutter/2};
+		bottom: -#{$gutter/2};
 		filter: brightness(0.6);
-		transform: skew(6deg, 0);
 		z-index: -1;
 	}
 
@@ -61,14 +47,42 @@
 		border-color: $white;
 		color: $white;
 	}
+} // .single
 
-	.entry-content,
-	.entry-footer {
-		margin-left: 54%;
-		max-width: $max-content-width;
-		width: 55%;
-	}
-} // .single, .page
+/* For larger screens, plit single posts into a static "header" on the left, content to the right. */
+@include desktop {
+	.single {
+		article {
+			margin: 3em auto;
+			position: relative;
+		}
+
+		.entry-header {
+			background: $yellow;
+			height: 100%;
+			padding: $gutter $gutter;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 40%;
+		}
+
+		.phoenix-panel-background {
+			transform: skew(6deg, 0);
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+
+		.entry-content,
+		.entry-footer {
+			margin-left: 54%;
+			max-width: $max-content-width;
+			width: 55%;
+		}
+	} // .single
+} // desktop
 
 /* Entry footer */
 .entry-footer {

@@ -986,44 +986,26 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-/* Split single posts/pages into a static "header" on the left, content to the right. */
-.single article,
-.page article {
-  margin: 3em auto;
+/* Styles for all single posts */
+.single .entry-header {
   position: relative; }
 
-.single .entry-header,
-.page .entry-header {
-  background: #f3ad33;
-  height: 100%;
-  padding: 40px 40px;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 40%; }
-
-.single .phoenix-panel-background,
-.page .phoenix-panel-background {
+.single .phoenix-panel-background {
   background-position: top center;
   background-size: cover;
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  left: -20px;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
   -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
-  -webkit-transform: skew(6deg, 0);
-  -ms-transform: skew(6deg, 0);
-  transform: skew(6deg, 0);
   z-index: -1; }
 
-.single .cat-links a,
-.page .cat-links a {
+.single .cat-links a {
   border-bottom: none;
   color: #f7ca7b; }
-  .single .cat-links a::before,
-  .page .cat-links a::before {
+  .single .cat-links a::before {
     background-color: #f3ad33;
     content: '';
     display: inline-block;
@@ -1031,26 +1013,42 @@ a {
     margin-right: 5px;
     width: 10px; }
 
-.single .posted-on .highlight,
-.page .posted-on .highlight {
+.single .posted-on .highlight {
   color: #e6e6e6; }
 
-.single .entry-title,
-.page .entry-title {
+.single .entry-title {
   color: #fff; }
 
-.single .subtitle,
-.page .subtitle {
+.single .subtitle {
   border-color: #fff;
   color: #fff; }
 
-.single .entry-content,
-.single .entry-footer,
-.page .entry-content,
-.page .entry-footer {
-  margin-left: 54%;
-  max-width: 768px;
-  width: 55%; }
+/* For larger screens, plit single posts into a static "header" on the left, content to the right. */
+@media (min-width: 1024px) {
+  .single article {
+    margin: 3em auto;
+    position: relative; }
+  .single .entry-header {
+    background: #f3ad33;
+    height: 100%;
+    padding: 40px 40px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 40%; }
+  .single .phoenix-panel-background {
+    -webkit-transform: skew(6deg, 0);
+    -ms-transform: skew(6deg, 0);
+    transform: skew(6deg, 0);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+  .single .entry-content,
+  .single .entry-footer {
+    margin-left: 54%;
+    max-width: 768px;
+    width: 55%; } }
 
 /* Entry footer */
 .entry-footer {
