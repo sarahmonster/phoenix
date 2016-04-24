@@ -1105,41 +1105,82 @@ body:not(.home) .page .entry-content {
   .archive .page-header .nix-prefix {
     display: block; }
 
-.blog article:not(.jetpack-testimonial) a,
-.archive article:not(.jetpack-testimonial) a {
+.blog article:not(.jetpack-testimonial),
+.archive article:not(.jetpack-testimonial) {
+  position: relative; }
+  @media (min-width: 768px) {
+    .blog article:not(.jetpack-testimonial),
+    .archive article:not(.jetpack-testimonial) {
+      float: left;
+      width: 48%; }
+      .blog article:not(.jetpack-testimonial):nth-of-type(odd),
+      .archive article:not(.jetpack-testimonial):nth-of-type(odd) {
+        clear: left;
+        margin-right: 4%; } }
+
+.blog .cat-links,
+.archive .cat-links {
+  background: silver;
+  border-left: 2px solid #645E5B;
+  display: inline-block;
+  padding: 6px 10px;
+  top: 5px;
+  position: absolute;
+  left: -5px; }
+
+.blog a,
+.archive a {
   border-bottom: none; }
 
-.blog article:not(.jetpack-testimonial) img,
-.archive article:not(.jetpack-testimonial) img {
+.blog img,
+.archive img {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }
 
-.blog article:not(.jetpack-testimonial) .entry-meta,
-.archive article:not(.jetpack-testimonial) .entry-meta {
+.blog .cat-links,
+.blog .entry-meta,
+.archive .cat-links,
+.archive .entry-meta {
   font-size: 12.8px;
   font-size: 0.8rem; }
 
-.blog article:not(.jetpack-testimonial) .entry-title,
-.archive article:not(.jetpack-testimonial) .entry-title {
+.blog .entry-title,
+.archive .entry-title {
   font-style: normal;
   font-size: 33.6px;
-  font-size: 2.1rem; }
+  font-size: 2.1rem;
+  margin-top: 0; }
 
-.blog article:not(.jetpack-testimonial) .entry-content,
-.archive article:not(.jetpack-testimonial) .entry-content {
+.blog .entry-content,
+.archive .entry-content {
   border-top: 1px solid #c0b6b2;
   font-size: 18.4px;
   font-size: 1.15rem;
   margin-top: 0; }
 
-@media (min-width: 768px) {
-  .blog article:not(.jetpack-testimonial),
-  .archive article:not(.jetpack-testimonial) {
-    float: left;
-    width: 48%; }
-    .blog article:not(.jetpack-testimonial):nth-of-type(odd),
-    .archive article:not(.jetpack-testimonial):nth-of-type(odd) {
-      clear: left;
-      margin-right: 4%; } }
+/* Colour-code archives */
+.blog .category-work .cat-links,
+.archive .category-work .cat-links {
+  background-color: #e0f3e4;
+  border-color: #97d7a2; }
+  .blog .category-work .cat-links a,
+  .archive .category-work .cat-links a {
+    color: #97d7a2; }
+
+.blog .category-design .cat-links,
+.archive .category-design .cat-links {
+  background-color: #efd9e2;
+  border-color: #d091ab; }
+  .blog .category-design .cat-links a,
+  .archive .category-design .cat-links a {
+    color: #d091ab; }
+
+.blog .category-travel .cat-links,
+.archive .category-travel .cat-links {
+  background-color: #c8e6ec;
+  border-color: #7cc3d1; }
+  .blog .category-travel .cat-links a,
+  .archive .category-travel .cat-links a {
+    color: #7cc3d1; }
 
 /* Custom styling for different posts. */
 .the, .phoenix-the-unbearable-lightness-of-designing .word1,

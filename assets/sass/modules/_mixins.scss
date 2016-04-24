@@ -22,7 +22,7 @@
 	clear: both;
 }
 
-// Colour-code categories!
+// Colour-code posts according to category.
 @mixin color-code-posts($category, $color) {
 	.single.phoenix-category-#{$category} {
 		.cat-links a {
@@ -46,3 +46,18 @@
 		}
 	} // .single-phoenix-category-#{$category}
 } // colour-code-posts
+
+// Colour-code archive pages according to category.
+@mixin color-code-archives($category, $color) {
+	.blog .category-#{$category},
+	.archive .category-#{$category} {
+		.cat-links {
+			background-color: lighten($color, 5%);
+			border-color: darken($color, 15%);
+
+			a {
+				color: darken($color, 15%);
+			}
+		}
+	} // .category-#{$category}
+} // colour-code-archives

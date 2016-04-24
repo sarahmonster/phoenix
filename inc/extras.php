@@ -24,25 +24,14 @@ function phoenix_body_classes( $classes ) {
 			$classes[] = 'phoenix-category-' . $category->slug;
 		endforeach;
 	endif;
-	return $classes;
-}
-add_filter( 'body_class', 'phoenix_body_classes' );
-
-/**
- * Adds custom classes to the array of post classes.
- *
- * @param array $classes Classes for the post element.
- * @return array
- */
-function phoenix_post_classes( $classes ) {
-	// Adds the post slug.
+	// Adds the post slug (used for individual post styles).
 	if ( is_singular() ) :
 		$slug = get_queried_object()->post_name;
 		$classes[] = 'phoenix-' . $slug;
 	endif;
 	return $classes;
 }
-add_filter( 'post_class', 'phoenix_post_classes' );
+add_filter( 'body_class', 'phoenix_body_classes' );
 
 /**
  * Check for existence of Wanderlist plugin.
