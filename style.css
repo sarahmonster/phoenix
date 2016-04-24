@@ -2012,6 +2012,10 @@ figure {
   figure a,
   figure a:hover {
     border-bottom: none; }
+  .wp-caption p,
+  figure p {
+    display: none;
+    /* Catch empty paragraphs */ }
   @media (min-width: 1024px) {
     .wp-caption,
     figure {
