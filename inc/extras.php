@@ -15,9 +15,15 @@
  */
 function phoenix_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
-	if ( is_multi_author() ) {
+	if ( is_multi_author() ) :
 		$classes[] = 'group-blog';
-	}
+	endif;
+	// Adds the post category (used for colour-coding).
+	if ( is_single() ) :
+		foreach ( get_the_category() as $category ) :
+			$classes[] = 'phoenix-category-' . $category->slug;
+		endforeach;
+	endif;
 	return $classes;
 }
 add_filter( 'body_class', 'phoenix_body_classes' );

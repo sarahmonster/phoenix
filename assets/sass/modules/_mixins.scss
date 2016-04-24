@@ -21,3 +21,28 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+// Colour-code categories!
+@mixin color-code-posts($category, $color) {
+	.single.phoenix-category-#{$category} {
+		.cat-links a {
+			border-bottom: none;
+			color: $color;
+
+			&::before {
+				background-color: $color;
+			}
+		} // .cat-links a
+
+		.cap::first-letter,
+		.entry-content p:first-of-type::first-letter {
+			color: $color;
+		}
+
+		@include desktop {
+			.entry-header {
+				background-color: lighten($color, 5%);
+			}
+		}
+	} // .single-phoenix-category-#{$category}
+} // colour-code-posts

@@ -23,10 +23,10 @@
 
 	.cat-links a {
 		border-bottom: none;
-		color: lighten($yellow, 15%);
+		color: lighten($silver, 15%);
 
 		&::before {
-			background-color: $yellow;
+			background-color: $silver;
 			content: '';
 			display: inline-block;
 			height: 10px;
@@ -49,7 +49,7 @@
 	}
 } // .single
 
-/* For larger screens, plit single posts into a static "header" on the left, content to the right. */
+/* For larger screens, split single posts into a static "header" on the left, content to the right. */
 @include desktop {
 	.single {
 		article {
@@ -58,7 +58,7 @@
 		}
 
 		.entry-header {
-			background: $yellow;
+			background: $silver;
 			height: 100%;
 			padding: $gutter $gutter;
 			left: 0;
@@ -110,6 +110,11 @@
 			}
 	}
 }
+
+/* Colour-code posts */
+@include color-code-posts('work', $work);
+@include color-code-posts('design', $design);
+@include color-code-posts('travel', $travel);
 
 /* Adjust spacing for pages */
 body:not(.home) .page .entry-content {
