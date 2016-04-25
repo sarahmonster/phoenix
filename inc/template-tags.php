@@ -77,9 +77,13 @@ if ( ! function_exists( 'phoenix_subtitle' ) ) :
 /**
  * Prints a subtitle for the post, if one exists.
  */
-function phoenix_subtitle() {
+function phoenix_subtitle( $echo=false ) {
 	if ( function_exists( 'the_subheading' ) ) :
-		the_subheading( '', '' );
+		if ( true === $echo ) :
+			the_subheading( '<span class="subtitle">', '</span>' );
+		else :
+			return get_the_subheading( get_the_ID() );
+		endif;
 	endif;
 }
 endif;
