@@ -11,7 +11,7 @@
 			<?php phoenix_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<span class="subtitle"><?php echo phoenix_subtitle(); ?></span>
+		<?php phoenix_subtitle( true ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

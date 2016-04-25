@@ -176,3 +176,10 @@ require get_template_directory() . '/inc/portfolio.php';
  * SVG icons functionality.
  */
 require get_template_directory() . '/inc/svg-icons.php';
+
+/**
+ * Include extra wp-cli modules for post meta.
+ */
+if( defined( 'WP_CLI' ) && WP_CLI ) {
+	require get_template_directory() . '/cli-lab/modules/posts.php';
+}
