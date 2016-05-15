@@ -1,47 +1,49 @@
-.site-branding {
-	display: none; // Temporarily hide so to focus better.
+.site-branding, .site-logo-link {
+	display: none !important; // Temporarily hide so to focus better.
 }
 
 #masthead {
-	display: none;
-}
-
-#masthead {
-	background: $yellow;
-	height: 100%;
-	padding: $gutter/2 $gutter;
-	left: 0;
-	position: fixed;
-	//transform: skew(3deg, 0);
-	top: 0;
-
-	.site-branding,
-	.main-navigation {
-		//transform: skew(-3deg, 0);
-	}
+	background: $white;
+	border-bottom: 2px solid transparentize($color__link, 0.95);
+	width: 100%;
+	padding: $gutter/4 0;
+	text-align: center;
 }
 
 /* Navigation */
 .main-navigation {
 	@include clearfix;
+	display: inline-block;
 	font-family: $font__accent;
+	max-width: $size__max-width;
+	width: 100%;
+	vertical-align: top;
 
 	li {
-		@include font-size(1.4);
-		font-weight: 600;
-		text-transform: lowercase;
+		display: inline;
+		@include font-size(1);
+		font-weight: 200;
+
+		&::before {
+			content: '\00b7';
+			display: inline;
+		}
+
+		&:first-child::before {
+			display: none;
+		}
 	} // li
 
 	a {
-		border-bottom: 2px solid $black;
+		border-bottom: none;
 		color: $color__text-main;
-		display: block;
-		padding: $gutter/2 $gutter*2 $gutter/4 0;
+		display: inline-block;
+		padding: 5px 8px 5px 10px;
 
 		&:hover {
 			color: $black;
 		}
-	}
+	} // a
 
 	ul {
 		list-style: none;
@@ -124,45 +126,25 @@
 	} // .site-logo-link
 } // tablet
 
-/* Re-write vertical masthead to be horizontal on portrait-oriented screens. */
+/* On small screens, decrease space between menu items. */
+@include mobile {
+	.main-navigation a {
+		@include font-size(0.9);
+		padding: 5px 2px 5px 4px;
+	}
+}
+
+/* Adjust masthead a bit for portrait-oriented screens. */
 @include portrait {
 	#masthead {
+		border-bottom: 0;
 		height: auto;
-		padding: 0;
+		left: 0;
+		padding: $gutter/4 $gutter/2;
 		position: absolute;
-		text-align: center;
+		top: 0;
 		width: 100%;
 	}
-
-	.main-navigation {
-		display: inline-block;
-		max-width: $size__max-width;
-		width: 100%;
-		vertical-align: top;
-
-		a {
-			border-bottom: none;
-			display: inline-block;
-			padding: 5px 10px;
-		}
-
-		li {
-			@include font-size(1.2);
-			display: inline-block;
-
-			&::before {
-				content: '\00b7';
-			}
-
-			&:first-child {
-				margin-left: 0;
-			}
-
-			&:first-child::before {
-				display: none;
-			}
-		} // li
-	} // .main-navigation
 } // portrait
 
 /* Account for the admin bar */

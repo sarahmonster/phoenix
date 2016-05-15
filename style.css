@@ -719,35 +719,40 @@ a {
 /*--------------------------------------------------------------
 # Structure
 --------------------------------------------------------------*/
-.site-branding {
-  display: none; }
+.site-branding, .site-logo-link {
+  display: none !important; }
 
 #masthead {
-  display: none; }
-
-#masthead {
-  background: #f3ad33;
-  height: 100%;
-  padding: 20px 40px;
-  left: 0;
-  position: fixed;
-  top: 0; }
+  background: #fff;
+  border-bottom: 2px solid rgba(100, 94, 91, 0.05);
+  width: 100%;
+  padding: 10px 0;
+  text-align: center; }
 
 /* Navigation */
 .main-navigation {
   content: "";
   display: table;
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif; }
+  display: inline-block;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  max-width: 1140px;
+  width: 100%;
+  vertical-align: top; }
   .main-navigation li {
-    font-size: 22.4px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-transform: lowercase; }
+    display: inline;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 200; }
+    .main-navigation li::before {
+      content: '\00b7';
+      display: inline; }
+    .main-navigation li:first-child::before {
+      display: none; }
   .main-navigation a {
-    border-bottom: 2px solid #3F3734;
+    border-bottom: none;
     color: #3F3734;
-    display: block;
-    padding: 20px 80px 10px 0; }
+    display: inline-block;
+    padding: 5px 8px 5px 10px; }
     .main-navigation a:hover {
       color: #3F3734; }
   .main-navigation ul {
@@ -797,33 +802,23 @@ a {
       -ms-transform: scale(1.05);
       transform: scale(1.05); } }
 
-/* Re-write vertical masthead to be horizontal on portrait-oriented screens. */
+/* On small screens, decrease space between menu items. */
+@media (max-width: 767px) {
+  .main-navigation a {
+    font-size: 14.4px;
+    font-size: 0.9rem;
+    padding: 5px 2px 5px 4px; } }
+
+/* Adjust masthead a bit for portrait-oriented screens. */
 @media (orientation: portrait) {
   #masthead {
+    border-bottom: 0;
     height: auto;
-    padding: 0;
+    left: 0;
+    padding: 10px 20px;
     position: absolute;
-    text-align: center;
-    width: 100%; }
-  .main-navigation {
-    display: inline-block;
-    max-width: 1140px;
-    width: 100%;
-    vertical-align: top; }
-    .main-navigation a {
-      border-bottom: none;
-      display: inline-block;
-      padding: 5px 10px; }
-    .main-navigation li {
-      font-size: 19.2px;
-      font-size: 1.2rem;
-      display: inline-block; }
-      .main-navigation li::before {
-        content: '\00b7'; }
-      .main-navigation li:first-child {
-        margin-left: 0; }
-      .main-navigation li:first-child::before {
-        display: none; } }
+    top: 0;
+    width: 100%; } }
 
 /* Account for the admin bar */
 .admin-bar #masthead {
@@ -952,6 +947,9 @@ a {
 /* Styles for all single posts */
 .single .entry-header {
   position: relative; }
+  @media (max-width: 1023px) {
+    .single .entry-header {
+      margin-top: 40px; } }
 
 .single .phoenix-panel-background {
   background-position: top center;
@@ -1007,6 +1005,7 @@ a {
     left: 0;
     bottom: 0;
     right: 0; }
+  .single #masthead,
   .single .entry-content,
   .single .entry-footer,
   .single .post-navigation,

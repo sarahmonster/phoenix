@@ -7,6 +7,10 @@
 .single {
 	.entry-header {
 		position: relative;
+
+		@include desktop-max {
+			margin-top: 40px;
+		}
 	}
 
 	.phoenix-panel-background {
@@ -75,6 +79,7 @@
 			right: 0;
 		}
 
+		#masthead,
 		.entry-content,
 		.entry-footer,
 		.post-navigation,
