@@ -945,13 +945,13 @@ a {
   margin: 0 0 1.5em; }
 
 /* Styles for all single posts */
-.single .entry-header {
+.single .entry-header, .page .entry-header {
   position: relative; }
   @media (max-width: 1023px) {
-    .single .entry-header {
+    .single .entry-header, .page .entry-header {
       margin-top: 40px; } }
 
-.single .phoenix-panel-background {
+.single .phoenix-panel-background, .page .phoenix-panel-background {
   background-position: top center;
   background-size: cover;
   position: absolute;
@@ -963,10 +963,10 @@ a {
   filter: brightness(0.6);
   z-index: -1; }
 
-.single .cat-links a {
+.single .cat-links a, .page .cat-links a {
   border-bottom: none;
   color: #e6e6e6; }
-  .single .cat-links a::before {
+  .single .cat-links a::before, .page .cat-links a::before {
     background-color: silver;
     content: '';
     display: inline-block;
@@ -974,22 +974,23 @@ a {
     margin-right: 5px;
     width: 10px; }
 
-.single .posted-on .highlight {
+.single .posted-on .highlight, .page .posted-on .highlight {
   color: #e6e6e6; }
 
-.single .entry-title {
+.single .entry-title, .page .entry-title {
   color: #fff; }
 
-.single .subtitle {
+.single .subtitle, .page .subtitle {
   border-color: #fff;
   color: #fff; }
 
 /* For larger screens, split single posts into a static "header" on the left, content to the right. */
 @media (min-width: 1024px) {
-  .single article {
+  .single article, .page article {
     margin: 3em auto;
-    position: relative; }
-  .single .entry-header {
+    position: relative;
+    z-index: 1; }
+  .single .entry-header, .page .entry-header {
     background: silver;
     height: 100%;
     padding: 40px 40px;
@@ -997,7 +998,7 @@ a {
     position: fixed;
     top: 0;
     width: 40%; }
-  .single .phoenix-panel-background {
+  .single .phoenix-panel-background, .page .phoenix-panel-background {
     -webkit-transform: skew(6deg, 0);
     -ms-transform: skew(6deg, 0);
     transform: skew(6deg, 0);
@@ -1009,10 +1010,17 @@ a {
   .single .entry-content,
   .single .entry-footer,
   .single .post-navigation,
-  .single .site-footer {
+  .single .site-footer, .page #masthead,
+  .page .entry-content,
+  .page .entry-footer,
+  .page .post-navigation,
+  .page .site-footer {
     margin-left: 54%;
     max-width: 768px;
-    width: 55%; } }
+    width: 55%; }
+  .single #site-navigation, .page #site-navigation {
+    position: relative;
+    z-index: 100; } }
 
 /* Entry footer */
 .entry-footer {

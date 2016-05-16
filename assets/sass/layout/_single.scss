@@ -4,7 +4,7 @@
 }
 
 /* Styles for all single posts */
-.single {
+.single, .page {
 	.entry-header {
 		position: relative;
 
@@ -55,10 +55,11 @@
 
 /* For larger screens, split single posts into a static "header" on the left, content to the right. */
 @include desktop {
-	.single {
+	.single, .page {
 		article {
 			margin: 3em auto;
 			position: relative;
+			z-index: 1;
 		}
 
 		.entry-header {
@@ -87,6 +88,11 @@
 			margin-left: 54%;
 			max-width: $max-content-width;
 			width: 55%;
+		}
+
+		#site-navigation {
+			position: relative;
+			z-index: 100;
 		}
 	} // .single
 } // desktop
