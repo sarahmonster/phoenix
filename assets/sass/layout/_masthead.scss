@@ -23,6 +23,7 @@
 		display: inline;
 		@include font-size(1);
 		font-weight: 200;
+		margin-left: -6px; /* Compensate for hairline space. */
 
 		&::before {
 			content: '\00b7';
@@ -38,7 +39,7 @@
 		border-bottom: none;
 		color: $color__text-main;
 		display: inline-block;
-		padding: 5px 8px 5px 10px;
+		padding: 5px 10px;
 
 		&:hover {
 			color: $black;
@@ -99,8 +100,8 @@
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-		color: $white;
-		border-bottom: 2px solid $white;
+		color: $silver;
+		// border-bottom: 2px solid $silver;
 	}
 }
 
@@ -130,7 +131,7 @@
 @include mobile {
 	.main-navigation a {
 		@include font-size(0.9);
-		padding: 5px 2px 5px 4px;
+		padding: 5px 6px;
 	}
 }
 
