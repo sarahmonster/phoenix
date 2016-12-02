@@ -21,16 +21,16 @@ var notify = require( 'gulp-notify' );
 gulp.task( 'styles', function() {
 	return gulp.src( 'assets/sass/style.scss' )
 		.pipe( sourcemaps.init() )
-		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
-		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
-		.pipe( sourcemaps.write( './' ) )
-		//.pipe( csscomb() )
+		.pipe( sass( { style: 'expanded' } ) )
 		.on( 'error', notify.onError( function( err ) {
 			return "Stylesheet Error in " + err.message;
 		} ) )
+		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
+		//.pipe( csscomb() )
+		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
-} );
+});
 
 // Scripts
 gulp.task( 'scripts', function() {
