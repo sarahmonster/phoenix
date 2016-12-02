@@ -950,7 +950,7 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(0.6);
+  filter: brightness(0.6) contrast(3);
   -ms-transform: skew(0, 6deg);
   transform: skew(0, 6deg);
   z-index: -1; }

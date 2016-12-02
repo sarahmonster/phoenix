@@ -18,7 +18,7 @@
 		height: 80vh;
 		padding: $size__site-gutter;
 		position: relative;
-		transform: skew(0, -3deg);
+		transform: skew(0, -$size__skew/2);
 		margin-left: -$size__site-gutter/2;
 		width: 100%;
 		width: calc(100% + #{$size__site-gutter});
@@ -33,15 +33,15 @@
 		top: 0;
 		right: 0;
 		bottom: 0;
-		filter: brightness(0.6);
-		transform: skew(0, 6deg);
+		filter: brightness(0.6) contrast(3);
+		transform: skew(0, $size__skew);
 		z-index: -1;
 	}
 
 	// Un-skew text, because we aren't animals.
 	.entry-meta,
 	.entry-title {
-		transform: skew(0, 3deg);
+		transform: skew(0, $size__skew/2);
 	}
 
 	.cat-links a {
