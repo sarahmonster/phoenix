@@ -15,6 +15,7 @@ var livereload = require( 'gulp-livereload' );
 var svgmin = require( 'gulp-svgmin' );
 var cheerio = require( 'gulp-cheerio' );
 var svgstore = require( 'gulp-svgstore' );
+var notify = require( 'gulp-notify' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
@@ -24,9 +25,9 @@ gulp.task( 'styles', function() {
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
 		.pipe( sourcemaps.write( './' ) )
 		//.pipe( csscomb() )
-		.on( 'error', function ( err ) {
-			console.error( 'Error!', err.message );
-		} )
+		.on( 'error', notify.onError( function( err ) {
+			return "Stylesheet Error in " + err.message;
+		} ) )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
 } );

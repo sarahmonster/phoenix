@@ -608,7 +608,6 @@ a {
     .post-navigation .nav-next .phoenix-icon {
       float: right;
       margin-right: 2px;
-      -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
       transform: rotate(180deg); }
 
@@ -799,7 +798,6 @@ a {
   .site-logo-link {
     width: 100px; }
     .site-logo-link:hover {
-      -webkit-transform: scale(1.05);
       -ms-transform: scale(1.05);
       transform: scale(1.05); } }
 
@@ -960,7 +958,6 @@ a {
   top: -20px;
   right: -20px;
   bottom: -20px;
-  -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
   z-index: -1; }
 
@@ -1000,7 +997,6 @@ a {
     top: 0;
     width: 40%; }
   .single .phoenix-panel-background, .page .phoenix-panel-background {
-    -webkit-transform: skew(6deg, 0);
     -ms-transform: skew(6deg, 0);
     transform: skew(6deg, 0);
     top: 0;
@@ -1218,7 +1214,6 @@ body:not(.home) .page .entry-content {
   text-shadow: 0px 0px 1px #3F3734; }
 
 .phoenix-the-unbearable-lightness-of-designing .word4 {
-  -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg); }
 
