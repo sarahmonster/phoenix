@@ -3,10 +3,8 @@
 }
 
 #masthead {
-	background: $white;
-	border-bottom: 2px solid transparentize($color__link, 0.95);
 	width: 100%;
-	padding: $gutter/4 0;
+	padding: $size__site-gutter/4 0;
 	text-align: center;
 }
 
@@ -109,23 +107,13 @@
 .site-logo-link {
 	border-bottom: 0;
 	display: block;
-	margin: $gutter/2 auto 0;
+	margin: $size__site-gutter/2 auto 0;
 	width: 60px;
 }
 
 .site-logo {
 	max-width: 100%;
 }
-
-@include landscape {
-	.site-logo-link {
-		width: 100px;
-
-		&:hover {
-			transform: scale(1.05);
-		}
-	} // .site-logo-link
-} // tablet
 
 /* On small screens, decrease space between menu items. */
 @include mobile {
@@ -134,19 +122,6 @@
 		padding: 5px 6px;
 	}
 }
-
-/* Adjust masthead a bit for portrait-oriented screens. */
-@include portrait {
-	#masthead {
-		border-bottom: 0;
-		height: auto;
-		left: 0;
-		padding: $gutter/4 $gutter/2;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-} // portrait
 
 /* Account for the admin bar */
 .admin-bar {

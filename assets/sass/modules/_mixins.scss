@@ -39,10 +39,8 @@
 			color: $color;
 		}
 
-		@include desktop {
-			.entry-header {
-				background-color: lighten($color, 5%);
-			}
+		.entry-header {
+			background-color: lighten($color, 5%);
 		}
 	} // .single-phoenix-category-#{$category}
 } // colour-code-posts

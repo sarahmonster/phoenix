@@ -13,16 +13,35 @@
 		}
 	}
 
+	.entry-header {
+		background: $silver;
+		height: 80vh;
+		padding: $size__site-gutter;
+		position: relative;
+		transform: skew(0, -3deg);
+		margin-left: -$size__site-gutter/2;
+		width: 100%;
+		width: calc(100% + #{$size__site-gutter});
+		z-index: -2;
+	}
+
 	.phoenix-panel-background {
 		background-position: top center;
 		background-size: cover;
 		position: absolute;
-		left: -#{$gutter/2};
-		top: -#{$gutter/2};
-		right: -#{$gutter/2};
-		bottom: -#{$gutter/2};
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
 		filter: brightness(0.6);
+		transform: skew(0, 6deg);
 		z-index: -1;
+	}
+
+	// Un-skew text, because we aren't animals.
+	.entry-meta,
+	.entry-title {
+		transform: skew(0, 3deg);
 	}
 
 	.cat-links a {
@@ -52,50 +71,6 @@
 		color: $white;
 	}
 } // .single
-
-/* For larger screens, split single posts into a static "header" on the left, content to the right. */
-@include desktop {
-	.single, .page {
-		article {
-			margin: 3em auto;
-			position: relative;
-			z-index: 1;
-		}
-
-		.entry-header {
-			background: $silver;
-			height: 100%;
-			padding: $gutter $gutter;
-			left: 0;
-			position: fixed;
-			top: 0;
-			width: 40%;
-		}
-
-		.phoenix-panel-background {
-			transform: skew(6deg, 0);
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-		}
-
-		#masthead,
-		.entry-content,
-		.entry-footer,
-		.post-navigation,
-		.site-footer {
-			margin-left: 54%;
-			max-width: $max-content-width;
-			width: 55%;
-		}
-
-		#site-navigation {
-			position: relative;
-			z-index: 100;
-		}
-	} // .single
-} // desktop
 
 /* Entry footer */
 .entry-footer {

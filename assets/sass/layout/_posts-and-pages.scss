@@ -19,7 +19,8 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5em auto;
+	max-width: $size__content-width;
 }
 
 /* Entry headers */
@@ -33,7 +34,7 @@
 .nix-prefix {
 	@extend h3;
 	display: block;
-	padding: $gutter/8 0;
+	padding: $size__site-gutter/8 0;
 
 	.highlight {
 		color: darken($silver, 15%);

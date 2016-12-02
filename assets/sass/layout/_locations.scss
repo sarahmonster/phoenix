@@ -30,7 +30,7 @@
 	@include desktop {
 		.wanderlist-map-widget {
 			float: left;
-			padding-right: $gutter;
+			padding-right: $size__site-gutter;
 			width: calc(100% - 400px);
 		}
 
@@ -38,7 +38,7 @@
 		.wanderlist-trip-overview-widget,
 		.wanderlist-country-overview-widget {
 			float: left;
-			padding-left: $gutter;
+			padding-left: $size__site-gutter;
 			width: 400px;
 		}
 
@@ -46,8 +46,8 @@
 		.wanderlist-number-widget,
 		.wanderlist-country-widget {
 			float: left;
-			padding-left: $gutter;
-			padding-right: $gutter;
+			padding-left: $size__site-gutter;
+			padding-right: $size__site-gutter;
 			width: 33%;
 		}
 
@@ -273,7 +273,7 @@
 		@include desktop {
 			float: left;
 			margin: 0 -50px 20px -100px;
-			width: $max-content-width / 2 + 150px;
+			width: $size__content-width / 2 + 150px;
 		}
 	}
 
@@ -282,7 +282,7 @@
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 		color: darken( $silver, 10% );
 		font-style: italic;
-		padding: $gutter;
+		padding: $size__site-gutter;
 
 		p {
 			margin: 0;
@@ -291,7 +291,7 @@
 
 		@include desktop {
 			margin: 60px -100px 20px -50px;
-			width: ($max-content-width / 2) + 150px;
+			width: ($size__content-width / 2) + 150px;
 			float: left;
 		}
 	}

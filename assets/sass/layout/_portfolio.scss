@@ -1,6 +1,6 @@
 /* Testimonials page */
 .jetpack-testimonial {
-	margin: $gutter/2 auto;
+	margin: $size__site-gutter/2 auto;
 	text-align: center;
 
 	img {
@@ -69,12 +69,12 @@
 
 		&:nth-of-type(odd) img {
 			float: left;
-			margin-right: $gutter;
+			margin-right: $size__site-gutter;
 		}
 
 		&:nth-of-type(even) img {
 			float: right;
-			margin-left: $gutter;
+			margin-left: $size__site-gutter;
 		}
 	} // .jetpack-testimonial.has-post-thumbnail
 } // tablet
@@ -257,9 +257,9 @@ img {
 
 	@include mobile {
 		float: left;
-		margin-right: $gutter / 2;
+		margin-right: $size__site-gutter / 2;
 		width: 45%;
-		width: calc( (100% - #{$gutter/2}) / 2);
+		width: calc( (100% - #{$size__site-gutter/2}) / 2);
 
 		&:nth-of-type(2n) {
 			margin-right: 0;
@@ -272,9 +272,9 @@ img {
 
 	@include tablet {
 		float: left;
-		margin-right: $gutter / 2;
+		margin-right: $size__site-gutter / 2;
 		width: 30%;
-		width: calc( (100% - #{$gutter}) / 3);
+		width: calc( (100% - #{$size__site-gutter}) / 3);
 
 		&:nth-of-type(3n) {
 			margin-right: 0;
