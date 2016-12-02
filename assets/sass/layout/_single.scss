@@ -33,15 +33,19 @@
 		top: 0;
 		right: 0;
 		bottom: 0;
-		filter: brightness(0.6) contrast(3);
+		filter: grayscale(75%) brightness(0.6) contrast(2);
 		transform: skew(0, $size__skew);
 		z-index: -1;
 	}
 
 	// Un-skew text, because we aren't animals.
-	.entry-meta,
-	.entry-title {
+	.phoenix-header-text {
+		position: absolute;
+		bottom: $size__site-gutter*2;
+		left: $size__site-gutter;
+		max-width: $size__max-width*.75;
 		transform: skew(0, $size__skew/2);
+		z-index: 10;
 	}
 
 	.cat-links a {
@@ -64,6 +68,7 @@
 
 	.entry-title {
 		color: $white;
+		margin: 0;
 	}
 
 	.subtitle {

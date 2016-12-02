@@ -950,16 +950,19 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(0.6) contrast(3);
+  filter: grayscale(75%) brightness(0.6) contrast(2);
   -ms-transform: skew(0, 6deg);
   transform: skew(0, 6deg);
   z-index: -1; }
 
-.single .entry-meta,
-.single .entry-title, .page .entry-meta,
-.page .entry-title {
+.single .phoenix-header-text, .page .phoenix-header-text {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  max-width: 855px;
   -ms-transform: skew(0, 3deg);
-  transform: skew(0, 3deg); }
+  transform: skew(0, 3deg);
+  z-index: 10; }
 
 .single .cat-links a, .page .cat-links a {
   border-bottom: none;
@@ -976,7 +979,8 @@ a {
   color: #e6e6e6; }
 
 .single .entry-title, .page .entry-title {
-  color: #fff; }
+  color: #fff;
+  margin: 0; }
 
 .single .subtitle, .page .subtitle {
   border-color: #fff;

@@ -13,14 +13,16 @@
 		<div class="phoenix-panel-background" style="background-image:url(<?php echo esc_url( $thumbnail[0] ); ?>)"></div>
 		<?php endif; ?>
 
-		<div class="entry-meta">
-			<?php phoenix_post_category(); ?>
-			<?php phoenix_post_date(); ?>
-		</div><!-- .entry-meta -->
+		<div class="phoenix-header-text">
+			<div class="entry-meta">
+				<?php phoenix_post_category(); ?>
+				<?php phoenix_post_date(); ?>
+			</div><!-- .entry-meta -->
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php phoenix_subtitle( true ); ?>
-		
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			<?php phoenix_subtitle( true ); ?>
+		<div class="phoenix-header-text">
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
