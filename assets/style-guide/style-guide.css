@@ -137,7 +137,7 @@ body {
 .adjectives h3 {
   display: inline;
   color: #a32020;
-  font-family: "Lust Display Didone", "freight-text-pro", Georgia, serif;
+  font-family: lust-display, freight-text-pro, Georgia, serif;
   font-size: 2.1rem;
   padding-right: 0.2em; }
 

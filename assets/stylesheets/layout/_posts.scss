@@ -45,21 +45,23 @@
 	}
 }
 
+/* Page and post titles */
 .entry-title,
 .page-title {
-  font-weight: 400;
-  padding: 0;
+	font-weight: 400;
+	padding: 0;
 
 	em {
-	  color: $silver;
+		color: $silver;
 
-	  &::before {
-	    content: ' ';
-	    display: inline;
-	  }
+		&::before {
+			content: ' ';
+			display: inline;
+		}
 	} // em
 }
 
+/* Subtitles & archive descriptions */
 .subtitle,
 .taxonomy-description {
 	@extend blockquote;

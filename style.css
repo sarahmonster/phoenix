@@ -230,7 +230,7 @@ input,
 select,
 textarea {
   color: #222;
-  font-family: "freight-text-pro", Georgia, serif;
+  font-family: freight-text-pro, Georgia, serif;
   font-size: 19.2px;
   font-size: 1.2rem;
   line-height: 1.6; }
@@ -262,7 +262,7 @@ h1, h2, h3, .blog .page-header .nix-prefix,
 h1 {
   color: #626262;
   line-height: 1;
-  font-family: "Lust Display Didone", "freight-text-pro", Georgia, serif;
+  font-family: lust-display, freight-text-pro, Georgia, serif;
   font-size: 57.6px;
   font-size: 3.6rem; }
   @media (min-width: 768px) {
@@ -291,7 +291,7 @@ h3, .blog .page-header .nix-prefix,
 .tags-links,
 .nix-prefix, .wanderlist-country-widget li {
   color: silver;
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
   font-size: 12.8px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -326,7 +326,7 @@ p {
   .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
     color: #f3ad33;
     float: left;
-    font-family: "brim-narrow-combined-2", "freight-text-pro", Georgia, serif;
+    font-family: brim-narrow-combined-2, freight-text-pro, Georgia, serif;
     font-size: 144px;
     font-size: 9rem;
     line-height: 0.8;
@@ -605,7 +605,7 @@ a {
   .post-navigation span:not(.caps) {
     color: silver;
     display: block;
-    font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+    font-family: proxima-nova, Helvetica, Arial, sans-serif;
     font-size: 14.4px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -748,7 +748,7 @@ a {
   content: "";
   display: table;
   display: inline-block;
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
   max-width: 1140px;
   width: 100%;
   vertical-align: top; }
@@ -981,6 +981,7 @@ a {
 .tags-links a {
   color: #f3ad33; }
 
+/* Page and post titles */
 .entry-title,
 .page-title {
   font-weight: 400;
@@ -993,6 +994,7 @@ a {
       content: ' ';
       display: inline; }
 
+/* Subtitles & archive descriptions */
 .subtitle,
 .taxonomy-description {
   font-size: 22.4px;
@@ -1127,7 +1129,7 @@ a {
   margin-right: -85px; }
 
 .phoenix-the-unbearable-lightness-of-designing .word3 {
-  font-family: "brim-narrow-combined-2", "freight-text-pro", Georgia, serif;
+  font-family: brim-narrow-combined-2, freight-text-pro, Georgia, serif;
   color: #fff;
   font-size: 13vw;
   margin-top: -81px;
@@ -1343,7 +1345,7 @@ a {
     text-align: left; }
   .wanderlist-widget dl,
   .wanderlist-widget ul {
-    font-family: "freight-text-pro", Georgia, serif;
+    font-family: freight-text-pro, Georgia, serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.4;
@@ -1414,7 +1416,7 @@ a {
     border: 2px solid silver;
     border-radius: 50%;
     color: silver;
-    font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+    font-family: proxima-nova, Helvetica, Arial, sans-serif;
     font-weight: normal;
     height: 80px;
     line-height: 0.7;
