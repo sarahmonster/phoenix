@@ -82,7 +82,7 @@
 	}
 
 	.entry-header {
-		background: $silver;
+		background: $color__accent;
 		height: 80vh;
 		padding: $size__site-gutter;
 		position: relative;
@@ -101,7 +101,7 @@
 		top: 0;
 		right: 0;
 		bottom: 0;
-		filter: grayscale(75%) brightness(0.6) contrast(2);
+		filter: grayscale(100%) brightness(0.6) contrast(2);
 		transform: skew(0, $size__skew);
 		z-index: -1;
 	}
@@ -136,7 +136,7 @@
 
 	.entry-title {
 		color: $white;
-		margin: 0;
+		margin-top: 0;
 	}
 
 	.subtitle {
@@ -169,8 +169,3 @@
 			}
 	}
 }
-
-/* Colour-code posts */
-@include color-code-posts('work', $work);
-@include color-code-posts('design', $design);
-@include color-code-posts('travel', $travel);

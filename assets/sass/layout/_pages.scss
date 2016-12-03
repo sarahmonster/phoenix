@@ -3,9 +3,14 @@
 	margin: 0 0 1.5em;
 }
 
-.page .entry-header {
+.page .entry-header,
+.page .subtitle {
+	margin: 0 auto;
+	max-width: $size__max-width*.75;
 	text-align: center;
 }
+
+
 
 /* Full-width page */
 .page-template-full-width-page .entry-content {

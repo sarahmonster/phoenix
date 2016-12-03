@@ -69,8 +69,3 @@
 		margin-top: 0;
 	}
 }
-
-/* Colour-code archives */
-@include color-code-archives('work', $work);
-@include color-code-archives('design', $design);
-@include color-code-archives('travel', $travel);

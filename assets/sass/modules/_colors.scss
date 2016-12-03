@@ -8,27 +8,41 @@ $charcoal: #645E5B;
 $white: #fff;
 $silver: silver;
 
-$travel: $blue;
-$design: $pink;
-$work: $green;
+$color__primary: $red;
+$color__secondary: lighten($color__primary, 10%);
+$color__tertiary: darken($color__primary, 10%);
+$color__accent: $yellow;
+$color__highlight: lighten($color__accent, 20%);
+$color__black: #222;
+$color__neutral: lighten($color__black, 25%);
+$color__white: #fff;
 
-$color__background-body: $white;
-$color__background-screen: #f1f1f1;
-$color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
-$color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+// Background & body text
+$color__background-body: $color__white;
+$color__text-main: $color__black;
 
-$color__text-screen: #21759b;
+// Links
+$color__link: $color__accent;
+$color__link-visited: $color__link;
+$color__link-hover: $color__primary;
+
+// Inputs
+$color__border-input: #ccc;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: $charcoal;
-$color__link-visited: $charcoal;
-$color__link-hover: $red;
-$color__text-main: $black;
 
+// Buttons
+$color__background-button: #e6e6e6;
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
-$color__border-input: #ccc;
+
+// Misc HTML elements
+$color__background-hr: #ccc;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
 $color__border-abbr: #666;
+
+// Screenreader stuff; best to leave be.
+$color__background-screen: #f1f1f1;
+$color__text-screen: #21759b;

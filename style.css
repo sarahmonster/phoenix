@@ -229,7 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #3F3734;
+  color: #222;
   font-family: "freight-text-pro", Georgia, serif;
   font-size: 19.2px;
   font-size: 1.2rem;
@@ -260,19 +260,20 @@ h1, h2, h3, .blog .page-header .nix-prefix,
     border-bottom: none; }
 
 h1 {
+  color: #626262;
   line-height: 1;
   font-family: "Lust Display Didone", "freight-text-pro", Georgia, serif;
   font-size: 57.6px;
   font-size: 3.6rem; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 64px;
-      font-size: 4rem; } }
+      font-size: 96px;
+      font-size: 6rem; } }
   h1 a {
-    color: #85746e; }
+    color: #626262; }
 
 h2 {
-  color: #c0b6b2;
+  color: #a2a2a2;
   font-style: italic;
   font-size: 28.8px;
   font-size: 1.8rem;
@@ -312,7 +313,7 @@ p {
 
 .cap,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-  color: #85746e;
+  color: #626262;
   font-size: 1.2em;
   margin: 1em 0;
   padding-bottom: 1.5em;
@@ -350,7 +351,7 @@ dfn, cite, em, i {
 blockquote, .subtitle,
 .taxonomy-description {
   margin: 0 1.5em;
-  border-top: 1px solid #c0b6b2;
+  border-top: 1px solid #a2a2a2;
   color: silver;
   display: block;
   font-size: 19.2px;
@@ -397,7 +398,7 @@ big {
 
 strong {
   background: #f3f3f3;
-  color: #3F3734;
+  color: #222;
   padding: 0 5px; }
 
 .caps {
@@ -546,12 +547,12 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  border-bottom: 2px solid rgba(100, 94, 91, 0.05);
-  color: #645E5B;
+  border-bottom: 2px solid rgba(243, 173, 51, 0.05);
+  color: #f3ad33;
   text-decoration: none;
   transition: all 0.2s ease-out; }
   a:visited {
-    color: #645E5B; }
+    color: #f3ad33; }
   a:hover, a:focus, a:active {
     color: #a32020;
     border-bottom: 2px solid #a32020; }
@@ -765,7 +766,7 @@ a {
       display: none; }
   .main-navigation a {
     border-bottom: none;
-    color: #3F3734;
+    color: #222;
     display: inline-block;
     padding: 5px 10px; }
     .main-navigation a:hover {
@@ -836,9 +837,9 @@ a {
   max-width: 640px; }
 
 .site-footer {
-  border-top: 1px solid #c0b6b2;
+  border-top: 1px solid #a2a2a2;
   clear: both;
-  color: #85746e;
+  color: #626262;
   font-size: 16px;
   font-size: 1rem;
   font-style: italic;
@@ -847,10 +848,10 @@ a {
   text-align: center;
   width: 100%; }
   .site-footer a {
-    color: #3F3734;
+    color: #222;
     border-color: transparent; }
     .site-footer a:hover {
-      border-color: rgba(63, 55, 52, 0.5); }
+      border-color: rgba(34, 34, 34, 0.5); }
   .site-footer .phoenix-icon-heart {
     fill: #a32020;
     height: 18px;
@@ -937,35 +938,10 @@ a {
 
 .blog .entry-content,
 .archive .entry-content {
-  border-top: 1px solid #c0b6b2;
+  border-top: 1px solid #a2a2a2;
   font-size: 18.4px;
   font-size: 1.15rem;
   margin-top: 0; }
-
-/* Colour-code archives */
-.blog .category-work .cat-links,
-.archive .category-work .cat-links {
-  background-color: #e0f3e4;
-  border-color: #97d7a2; }
-  .blog .category-work .cat-links a,
-  .archive .category-work .cat-links a {
-    color: #97d7a2; }
-
-.blog .category-design .cat-links,
-.archive .category-design .cat-links {
-  background-color: #efd9e2;
-  border-color: #d091ab; }
-  .blog .category-design .cat-links a,
-  .archive .category-design .cat-links a {
-    color: #d091ab; }
-
-.blog .category-travel .cat-links,
-.archive .category-travel .cat-links {
-  background-color: #c8e6ec;
-  border-color: #7cc3d1; }
-  .blog .category-travel .cat-links a,
-  .archive .category-travel .cat-links a {
-    color: #7cc3d1; }
 
 .sticky {
   display: block; }
@@ -1035,7 +1011,7 @@ a {
       margin-top: 40px; } }
 
 .single .entry-header {
-  background: silver;
+  background: #f3ad33;
   height: 80vh;
   padding: 40px;
   position: relative;
@@ -1054,7 +1030,7 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  filter: grayscale(75%) brightness(0.6) contrast(2);
+  filter: grayscale(100%) brightness(0.6) contrast(2);
   -ms-transform: skew(0, 6deg);
   transform: skew(0, 6deg);
   z-index: -1; }
@@ -1084,7 +1060,7 @@ a {
 
 .single .entry-title {
   color: #fff;
-  margin: 0; }
+  margin-top: 0; }
 
 .single .subtitle {
   border-color: #fff;
@@ -1094,8 +1070,8 @@ a {
 .entry-footer {
   font-size: 25.6px;
   font-size: 1.6rem;
-  border-bottom: 2px solid #c0b6b2;
-  border-top: 1px solid #c0b6b2;
+  border-bottom: 2px solid #a2a2a2;
+  border-top: 1px solid #a2a2a2;
   color: #bbb;
   font-style: italic;
   line-height: 1.4;
@@ -1111,51 +1087,14 @@ a {
       width: 32px;
       vertical-align: -6px; }
 
-/* Colour-code posts */
-.single.phoenix-category-work .cat-links a {
-  border-bottom: none;
-  color: #CEECD3; }
-  .single.phoenix-category-work .cat-links a::before {
-    background-color: #CEECD3; }
-
-.single.phoenix-category-work .cap::first-letter,
-.single.phoenix-category-work .entry-content p:first-of-type::first-letter {
-  color: #CEECD3; }
-
-.single.phoenix-category-work .entry-header {
-  background-color: #e0f3e4; }
-
-.single.phoenix-category-design .cat-links a {
-  border-bottom: none;
-  color: #E7C7D4; }
-  .single.phoenix-category-design .cat-links a::before {
-    background-color: #E7C7D4; }
-
-.single.phoenix-category-design .cap::first-letter,
-.single.phoenix-category-design .entry-content p:first-of-type::first-letter {
-  color: #E7C7D4; }
-
-.single.phoenix-category-design .entry-header {
-  background-color: #efd9e2; }
-
-.single.phoenix-category-travel .cat-links a {
-  border-bottom: none;
-  color: #B5DDE5; }
-  .single.phoenix-category-travel .cat-links a::before {
-    background-color: #B5DDE5; }
-
-.single.phoenix-category-travel .cap::first-letter,
-.single.phoenix-category-travel .entry-content p:first-of-type::first-letter {
-  color: #B5DDE5; }
-
-.single.phoenix-category-travel .entry-header {
-  background-color: #c8e6ec; }
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
 
-.page .entry-header {
+.page .entry-header,
+.page .subtitle {
+  margin: 0 auto;
+  max-width: 855px;
   text-align: center; }
 
 /* Full-width page */
@@ -1239,7 +1178,7 @@ a {
     display: inline;
     margin: 0; }
   .entry-title.hello span:not(.amp) {
-    color: #3F3734; }
+    color: #222; }
   .entry-title.hello .phoenix-icon-heart {
     color: #a32020;
     height: 24px;
@@ -1253,7 +1192,7 @@ a {
         vertical-align: -8px;
         width: 54px; } }
   .entry-title.hello .loves {
-    color: #3F3734;
+    color: #222;
     display: inline-block;
     visibility: hidden; }
     .entry-title.hello .loves ul {
@@ -1796,7 +1735,7 @@ img {
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.4);
   font-size: 0.9em;
-  color: #3F3734;
+  color: #222;
   line-height: 1.4em;
   padding: 5px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -1821,7 +1760,7 @@ img {
   z-index: 10000000; }
 
 .overlay p.subtitle {
-  color: #85746e;
+  color: #626262;
   font-size: 0.85em;
   text-align: center;
   margin: 10px 20px 0;
@@ -1926,7 +1865,7 @@ img {
     font-size: 1.4rem;
     padding: 10px 20px; }
     #infinite-handle span::before, #infinite-handle span::after {
-      color: #d7d1ce;
+      color: #bbbbbb;
       display: inline;
       font-size: 1.8em;
       padding: 5px;
@@ -1938,14 +1877,14 @@ img {
     #infinite-handle span button {
       background: none;
       box-shadow: none;
-      color: #a99b96;
+      color: #888888;
       font-style: italic;
       padding: 0 10px;
       transition: all 200ms linear; }
     #infinite-handle span:hover button {
       font-size: 25.6px;
       font-size: 1.6rem;
-      color: #d7d1ce; }
+      color: #bbbbbb; }
 
 /* Loading icon */
 .infinite-loader {
@@ -1981,7 +1920,7 @@ object {
 --------------------------------------------------------------*/
 .wp-caption,
 figure {
-  background: #eeebea;
+  background: #d5d5d5;
   padding: 10px;
   margin: 0px -20px;
   max-width: calc(100% + 40px); }
@@ -2011,7 +1950,7 @@ figure {
 
 .wp-caption-text,
 figcaption {
-  color: #85746e;
+  color: #626262;
   font-size: 0.9em;
   font-style: italic;
   line-height: 1.4;
@@ -2078,7 +2017,7 @@ figcaption {
   padding: 4px; }
 
 .menu-social-menu-container ul svg {
-  fill: #645E5B;
+  fill: #f3ad33;
   height: 28px;
   speak: none;
   transition: fill .1s ease-in 0;
