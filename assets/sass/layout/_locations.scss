@@ -168,6 +168,10 @@
 		margin: 0.1rem;
 		white-space: nowrap;
 
+		a {
+			color: $red;
+		}
+
 		&:hover {
 			background: $red;
 			color: $white;
@@ -176,6 +180,10 @@
 		a:hover,
 		&:hover a {
 			color: $white;
+		}
+
+		&::before {
+			display: none;
 		}
 	}
 } // .wanderlist-country-widget

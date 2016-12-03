@@ -1450,12 +1450,16 @@ a {
   padding: 0.2rem 0.4rem;
   margin: 0.1rem;
   white-space: nowrap; }
+  .wanderlist-country-widget li a {
+    color: #a32020; }
   .wanderlist-country-widget li:hover {
     background: #a32020;
     color: #fff; }
   .wanderlist-country-widget li a:hover,
   .wanderlist-country-widget li:hover a {
     color: #fff; }
+  .wanderlist-country-widget li::before {
+    display: none; }
 
 /* Number widget */
 .wanderlist-number-widget .widget-title {
