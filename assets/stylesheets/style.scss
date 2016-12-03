@@ -103,6 +103,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 ## Content
 --------------------------------------------------------------*/
+@import "shared/meta";
 @import "layout/archives";
 @import "layout/posts";
 @import "layout/pages";

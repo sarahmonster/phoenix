@@ -16,63 +16,6 @@
 	display: inline;
 }
 
-/* Entry headers */
-.entry-meta {
-	line-height: 1.5;
-}
-
-.posted-on,
-.cat-links,
-.tags-links,
-.nix-prefix {
-	@extend h3;
-	display: block;
-	padding: $size__site-gutter/8 0;
-
-	.highlight {
-		color: $silver;
-	}
-}
-
-.cats-links,
-.tags-links {
-	&::before {
-		content: '\00b7';
-	}
-
-	a {
-		color: $color__accent;
-	}
-}
-
-/* Page and post titles */
-.entry-title,
-.page-title {
-	font-weight: 400;
-	padding: 0;
-
-	em {
-		color: $silver;
-
-		&::before {
-			content: ' ';
-			display: inline;
-		}
-	} // em
-}
-
-/* Subtitles & archive descriptions */
-.subtitle,
-.taxonomy-description {
-	@extend blockquote;
-	@include font-size(1.4);
-
-	@include tablet {
-		@include font-size(1.6);
-	}
-}
-
-
 /* Styles for all single posts */
 .single {
 	.entry-header {
@@ -115,28 +58,6 @@
 		max-width: $size__max-width*.75;
 		transform: skew(0, $size__skew/2);
 		z-index: 10;
-	}
-
-	.cat-links a {
-		border-bottom: none;
-		color: lighten($color__accent, 10%);
-
-		&::before {
-			background-color: $color__accent;
-			content: '';
-			display: inline-block;
-			height: 10px;
-			margin-right: 5px;
-			width: 10px;
-		}
-
-		&:hover {
-			color: $color__accent;
-
-			&::before {
-				background-color: $color__secondary;
-			}
-		}
 	}
 
 	.posted-on {
