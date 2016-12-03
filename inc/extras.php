@@ -37,11 +37,12 @@ add_filter( 'body_class', 'phoenix_body_classes' );
  * Filter the archive title for the main blog index, because "Archives" isn't cute.
  * This uses the page title for the blog archive (when set to a static page.)
  */
-function phoenix_archive_title() {
+function phoenix_archive_title( $content ) {
 	if ( is_home() ) :
-		$title = get_queried_object()->post_title;
+		$content = get_queried_object()->post_title;
 	endif;
-	return $title;
+
+	return $content;
 }
 add_filter( 'get_the_archive_title', 'phoenix_archive_title' );
 
@@ -49,11 +50,12 @@ add_filter( 'get_the_archive_title', 'phoenix_archive_title' );
  * Filter the archive description as well.
  * This uses the page content for the blog archive (when set to a static page.)
  */
-function phoenix_archive_description() {
+function phoenix_archive_description( $content ) {
 	if ( is_home() ) :
-		$title = get_queried_object()->post_content;
+		$content = get_queried_object()->post_content;
 	endif;
-	return $title;
+	
+	return $content;
 }
 add_filter( 'get_the_archive_description', 'phoenix_archive_description' );
 

@@ -247,16 +247,14 @@ textarea {
 h1, h2, h3, .posted-on,
 .cat-links,
 .tags-links,
-.nix-prefix, .blog .page-header .nix-prefix,
-.archive .page-header .nix-prefix, .wanderlist-country-widget li, h4, h5, h6 {
+.nix-prefix, .wanderlist-country-widget li, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2; }
   h1 a, h2 a, h3 a, .posted-on a,
   .cat-links a,
   .tags-links a,
-  .nix-prefix a, .blog .page-header .nix-prefix a,
-  .archive .page-header .nix-prefix a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
+  .nix-prefix a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
     border-bottom: none; }
 
 h1 {
@@ -288,8 +286,7 @@ h2 {
 h3, .posted-on,
 .cat-links,
 .tags-links,
-.nix-prefix, .blog .page-header .nix-prefix,
-.archive .page-header .nix-prefix, .wanderlist-country-widget li {
+.nix-prefix, .wanderlist-country-widget li {
   color: silver;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
   font-size: 12.8px;
@@ -302,8 +299,7 @@ h3, .posted-on,
     h3, .posted-on,
     .cat-links,
     .tags-links,
-    .nix-prefix, .blog .page-header .nix-prefix,
-    .archive .page-header .nix-prefix, .wanderlist-country-widget li {
+    .nix-prefix, .wanderlist-country-widget li {
       font-size: 14.4px;
       font-size: 0.9rem; } }
 
@@ -905,36 +901,6 @@ a {
     .cat-links a:hover::before {
       background-color: #ce2828; }
 
-/* Page and post titles */
-.entry-title,
-.page-title {
-  font-weight: 400;
-  padding: 0; }
-  .entry-title em,
-  .page-title em {
-    color: silver; }
-    .entry-title em::before,
-    .page-title em::before {
-      content: ' ';
-      display: inline; }
-
-/* Subtitles & archive descriptions */
-.subtitle,
-.taxonomy-description {
-  font-size: 22.4px;
-  font-size: 1.4rem; }
-  @media (min-width: 768px) {
-    .subtitle,
-    .taxonomy-description {
-      font-size: 25.6px;
-      font-size: 1.6rem; } }
-
-.taxonomy-description {
-  margin-bottom: 2em;
-  max-width: 640px; }
-  .taxonomy-description p {
-    margin: 0.5em 0; }
-
 /* Archive pages */
 .blog,
 .archive {
@@ -942,12 +908,9 @@ a {
   /* Alternate skew for every other post. */
   /* Excerpt */
   /* For larger screens */ }
-  .blog .page-header,
-  .archive .page-header {
-    text-align: center; }
-    .blog .page-header .nix-prefix,
-    .archive .page-header .nix-prefix {
-      display: block; }
+  .blog .nix-prefix,
+  .archive .nix-prefix {
+    display: none; }
   .blog a,
   .archive a {
     border-bottom: none; }
@@ -1028,8 +991,8 @@ a {
     transform: skew(0, 2deg); }
   .blog .entry-content,
   .archive .entry-content {
-    font-size: 18.4px;
-    font-size: 1.15rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     margin-top: 0;
     margin-bottom: 40px; }
   @media (min-width: 768px) {
@@ -1041,7 +1004,7 @@ a {
       display: flex;
       -ms-flex-pack: center;
       justify-content: center;
-      margin: 160px auto; }
+      margin: 240px auto; }
     .blog .entry-header,
     .archive .entry-header {
       -ms-flex-preferred-size: 550px;
@@ -1159,11 +1122,36 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-.page .entry-header,
-.page .subtitle {
-  margin: 0 auto;
-  max-width: 855px;
+/* Page titles */
+.page-title {
+  font-weight: 400;
+  padding: 0;
+  margin-bottom: 40px; }
+  .page-title em {
+    color: silver; }
+    .page-title em::before {
+      content: ' ';
+      display: inline; }
+
+.page-header {
+  padding-top: 40px;
   text-align: center; }
+
+/* Subtitles & archive descriptions */
+.subtitle,
+.taxonomy-description {
+  font-size: 22.4px;
+  font-size: 1.4rem;
+  margin-bottom: 2em;
+  max-width: 640px; }
+  .subtitle p,
+  .taxonomy-description p {
+    margin: 0.5em 0; }
+  @media (min-width: 768px) {
+    .subtitle,
+    .taxonomy-description {
+      font-size: 25.6px;
+      font-size: 1.6rem; } }
 
 /* Full-width page */
 .page-template-full-width-page .entry-content {
@@ -1271,9 +1259,7 @@ a {
 .phoenix-frontpage-widget h3, .phoenix-frontpage-widget .posted-on, .phoenix-frontpage-widget
 .cat-links, .phoenix-frontpage-widget
 .tags-links, .phoenix-frontpage-widget
-.nix-prefix, .phoenix-frontpage-widget .blog .page-header .nix-prefix, .blog .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget
-.archive .page-header .nix-prefix,
-.archive .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget .wanderlist-country-widget li, .wanderlist-country-widget .phoenix-frontpage-widget li {
+.nix-prefix, .phoenix-frontpage-widget .wanderlist-country-widget li, .wanderlist-country-widget .phoenix-frontpage-widget li {
   text-align: center; }
 
 .phoenix-frontpage-widget .phoenix-short-post {

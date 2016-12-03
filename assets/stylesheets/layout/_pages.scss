@@ -3,14 +3,43 @@
 	margin: 0 0 1.5em;
 }
 
-.page .entry-header,
-.page .subtitle {
-	margin: 0 auto;
-	max-width: $size__max-width*.75;
+/* Page titles */
+.page-title {
+	font-weight: 400;
+	padding: 0;
+	margin-bottom: $size__site-gutter;
+
+	em {
+		color: $silver;
+
+		&::before {
+			content: ' ';
+			display: inline;
+		}
+	} // em
+}
+
+.page-header {
+	padding-top: $size__site-gutter;
 	text-align: center;
 }
 
+/* Subtitles & archive descriptions */
+.subtitle,
+.taxonomy-description {
+	@extend blockquote;
+	@include font-size(1.4);
+	margin-bottom: 2em;
+	max-width: $size__content-width;
 
+	p {
+		margin: 0.5em 0;
+	}
+
+	@include tablet {
+		@include font-size(1.6);
+	}
+}
 
 /* Full-width page */
 .page-template-full-width-page .entry-content {

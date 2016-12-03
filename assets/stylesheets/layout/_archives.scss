@@ -1,14 +1,9 @@
 /* Archive pages */
 .blog,
 .archive {
-	.page-header {
-		//padding-top: 4em;
-		text-align: center;
-
-		.nix-prefix {
-			@extend h3;
-			display: block;
-		}
+	
+	.nix-prefix {
+		display: none;
 	}
 
 	a {
@@ -101,7 +96,7 @@
 
 	/* Excerpt */
 	.entry-content {
-		@include font-size(1.15);
+		@include font-size(1.25);
 		margin-top: 0;
 		margin-bottom: $size__site-gutter;
 	}
@@ -112,7 +107,7 @@
 			align-items: center;
 			display: flex;
 			justify-content: center;
-			margin: $size__site-gutter*4 auto;
+			margin: $size__site-gutter*6 auto;
 		}
 
 		.entry-header {
