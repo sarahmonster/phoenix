@@ -11,17 +11,6 @@
 	margin-right: auto;
 }
 
-// Clearfix
-@mixin clearfix() {
-	content: "";
-	display: table;
-}
-
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-	clear: both;
-}
-
 @mixin desaturate() {
 	filter: grayscale(100%) brightness(0.6) contrast(2);
 }

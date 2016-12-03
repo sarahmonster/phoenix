@@ -10,7 +10,6 @@
 
 /* Navigation */
 .main-navigation {
-	@include clearfix;
 	display: inline-block;
 	font-family: $font__accent;
 	max-width: $size__max-width;

@@ -690,32 +690,6 @@ a {
   margin-right: auto; }
 
 /*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
-  display: table; }
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-  clear: both; }
-
-/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 .widget {
@@ -741,8 +715,6 @@ a {
 
 /* Navigation */
 .main-navigation {
-  content: "";
-  display: table;
   display: inline-block;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
   max-width: 1140px;
@@ -1396,9 +1368,7 @@ a {
     font-size: 1rem;
     line-height: 1.4;
     margin: 10px 0;
-    padding-left: 0;
-    content: "";
-    display: table; }
+    padding-left: 0; }
     .wanderlist-widget dl dt,
     .wanderlist-widget ul dt {
       clear: left;
