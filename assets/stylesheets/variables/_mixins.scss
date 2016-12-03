@@ -21,3 +21,7 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin desaturate() {
+	filter: grayscale(100%) brightness(0.6) contrast(2);
+}

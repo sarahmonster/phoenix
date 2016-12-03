@@ -883,65 +883,115 @@ a {
     margin: 0.5em 0; }
 
 /* Archive pages */
-.blog .page-header,
-.archive .page-header {
-  padding-top: 4em;
-  text-align: center; }
-  .blog .page-header .nix-prefix,
-  .archive .page-header .nix-prefix {
-    display: block; }
-
-.blog article:not(.jetpack-testimonial),
-.archive article:not(.jetpack-testimonial) {
-  position: relative; }
+.blog,
+.archive {
+  /* Image and title */
+  /* Alternate skew for every other post. */
+  /* Excerpt */
+  /* For larger screens */ }
+  .blog .page-header,
+  .archive .page-header {
+    text-align: center; }
+    .blog .page-header .nix-prefix,
+    .archive .page-header .nix-prefix {
+      display: block; }
+  .blog a,
+  .archive a {
+    border-bottom: none; }
+  .blog article:not(.jetpack-testimonial),
+  .archive article:not(.jetpack-testimonial) {
+    width: 100%; }
+  .blog .entry-header,
+  .archive .entry-header {
+    background: #f3ad33;
+    min-height: 30vh;
+    padding: 20px;
+    position: relative;
+    -ms-transform: skew(0, -3deg);
+    transform: skew(0, -3deg);
+    margin-left: -20px;
+    margin-bottom: 40px;
+    width: 100%;
+    width: calc(100% + 40px); }
+  .blog .phoenix-panel-background,
+  .archive .phoenix-panel-background {
+    background-position: top center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    filter: grayscale(100%) brightness(0.6) contrast(2);
+    -ms-transform: skew(0, 6deg);
+    transform: skew(0, 6deg);
+    z-index: -1; }
+  .blog .entry-title,
+  .archive .entry-title {
+    -ms-transform: skew(0, 3deg);
+    transform: skew(0, 3deg);
+    font-family: lust-display, freight-text-pro, Georgia, serif;
+    font-style: normal;
+    font-size: 38.4px;
+    font-size: 2.4rem;
+    margin: 0; }
+    .blog .entry-title a,
+    .archive .entry-title a {
+      color: #fff; }
+  .blog article:nth-of-type(odd) .entry-header,
+  .archive article:nth-of-type(odd) .entry-header {
+    -ms-transform: skew(0, 3deg);
+    transform: skew(0, 3deg); }
+  .blog article:nth-of-type(odd) .phoenix-panel-background,
+  .archive article:nth-of-type(odd) .phoenix-panel-background {
+    -ms-transform: skew(0, -6deg);
+    transform: skew(0, -6deg); }
+  .blog article:nth-of-type(odd) .entry-title,
+  .archive article:nth-of-type(odd) .entry-title {
+    -ms-transform: skew(0, -3deg);
+    transform: skew(0, -3deg); }
+  .blog .entry-content,
+  .archive .entry-content {
+    font-size: 18.4px;
+    font-size: 1.15rem;
+    margin-top: 0; }
+  .blog .cat-links,
+  .archive .cat-links {
+    background: silver;
+    border-left: 2px solid #645E5B;
+    display: inline-block;
+    display: none;
+    padding: 6px 10px;
+    top: 5px;
+    position: absolute;
+    left: -5px; }
+  .blog .cat-links,
+  .blog .entry-meta,
+  .archive .cat-links,
+  .archive .entry-meta {
+    font-size: 12.8px;
+    font-size: 0.8rem; }
   @media (min-width: 768px) {
-    .blog article:not(.jetpack-testimonial),
-    .archive article:not(.jetpack-testimonial) {
-      float: left;
-      width: 48%; }
-      .blog article:not(.jetpack-testimonial):nth-of-type(odd),
-      .archive article:not(.jetpack-testimonial):nth-of-type(odd) {
-        clear: left;
-        margin-right: 4%; } }
-
-.blog .cat-links,
-.archive .cat-links {
-  background: silver;
-  border-left: 2px solid #645E5B;
-  display: inline-block;
-  padding: 6px 10px;
-  top: 5px;
-  position: absolute;
-  left: -5px; }
-
-.blog a,
-.archive a {
-  border-bottom: none; }
-
-.blog img,
-.archive img {
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }
-
-.blog .cat-links,
-.blog .entry-meta,
-.archive .cat-links,
-.archive .entry-meta {
-  font-size: 12.8px;
-  font-size: 0.8rem; }
-
-.blog .entry-title,
-.archive .entry-title {
-  font-style: normal;
-  font-size: 33.6px;
-  font-size: 2.1rem;
-  margin-top: 0; }
-
-.blog .entry-content,
-.archive .entry-content {
-  border-top: 1px solid #a2a2a2;
-  font-size: 18.4px;
-  font-size: 1.15rem;
-  margin-top: 0; }
+    .blog .phoenix-panel-background,
+    .archive .phoenix-panel-background {
+      background-position: top center;
+      background-size: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      filter: grayscale(100%) brightness(0.6) contrast(2);
+      -ms-transform: skew(0, 6deg);
+      transform: skew(0, 6deg);
+      z-index: -1; }
+    .blog .entry-title,
+    .archive .entry-title {
+      font-size: 57.6px;
+      font-size: 3.6rem;
+      position: absolute;
+      bottom: 20px;
+      left: 20px; } }
 
 .sticky {
   display: block; }

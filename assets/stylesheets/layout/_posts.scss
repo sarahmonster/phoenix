@@ -102,7 +102,7 @@
 		top: 0;
 		right: 0;
 		bottom: 0;
-		filter: grayscale(100%) brightness(0.6) contrast(2);
+		@include desaturate;
 		transform: skew(0, $size__skew);
 		z-index: -1;
 	}
