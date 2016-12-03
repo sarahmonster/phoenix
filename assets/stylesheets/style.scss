@@ -42,11 +42,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "modules/mixins";
-@import "modules/breakpoints";
-@import "modules/colors";
-@import "modules/typography";
-@import "modules/structure";
+@import "variables/mixins";
+@import "variables/breakpoints";
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/structure";
 
 /*--------------------------------------------------------------
 # Normalize

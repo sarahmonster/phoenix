@@ -1,0 +1,100 @@
+@import "../../stylesheets/variables/structure";
+
+$this_max-width: 1024px;
+$this_gutter: 40px;
+
+$this_black: #000;
+$this_white: #fff;
+$this_grey: #ccc;
+
+$this_sans: 'Hevetica Neue', Arial, sans-serif;
+
+body {
+	margin: 0;
+}
+
+// Page title/header.
+#title {
+	background: $this_black;
+	padding: $this_gutter/2 $this_gutter;
+
+	h1 {
+		color: $this_white;
+		font-family: $this_sans;
+		font-size: 18px;
+		font-weight: normal;
+		margin: 0 auto;
+		max-width: $this_max-width;
+
+		span {
+			font-weight: bolder;
+		}
+	}
+}
+
+// Page structure.
+#page {
+	margin: 0 auto;
+	max-width: $this_max-width;
+	padding: $this_gutter 0;
+	overflow: auto;
+}
+
+@media (min-width: 768px) {
+	.patterns {
+		display: inline-block;
+		text-align: center;
+		vertical-align: top;
+		width: 420px;
+	}
+
+	.content {
+		display: inline-block;
+		padding-left: $this_gutter;
+		width: calc(100% - 465px);
+	}
+}
+
+// Vertical (or circular/square) logo layout.
+.vertical-logo {
+	#logo img {
+		max-height: 250px;
+		padding-bottom: $this_gutter;
+	}
+}
+
+
+// Horizontal logo layout.
+.horizontal-logo {
+	#logo {
+		border-bottom: 2px solid $this_grey;
+		padding: $this_gutter/4 0;
+		margin: 0 auto;
+		max-width: $this_max-width;
+		text-align: left;
+
+		img {
+			max-width: 600px;
+		}
+	} // #logo
+
+	@media (min-width: 768px) {
+		.patterns {
+			width: 200px;
+		}
+
+		.color-swatch {
+			height: 50px;
+			margin-bottom: 0;
+			width: 100%;
+		}
+
+		button {
+			margin-top: $this_gutter/4;
+		}
+
+		.content {
+			width: calc(100% - 245px);
+		}
+	} // @media (min-width: 768px)
+} // .horizontal-logo
