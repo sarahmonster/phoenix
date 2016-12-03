@@ -1016,13 +1016,13 @@ a {
       font-size: 1.6rem; } }
 
 /* Styles for all single posts */
-.single .entry-header, .page .entry-header {
+.single .entry-header {
   position: relative; }
   @media (max-width: 1023px) {
-    .single .entry-header, .page .entry-header {
+    .single .entry-header {
       margin-top: 40px; } }
 
-.single .entry-header, .page .entry-header {
+.single .entry-header {
   background: silver;
   height: 80vh;
   padding: 40px;
@@ -1034,7 +1034,7 @@ a {
   width: calc(100% + 40px);
   z-index: -2; }
 
-.single .phoenix-panel-background, .page .phoenix-panel-background {
+.single .phoenix-panel-background {
   background-position: top center;
   background-size: cover;
   position: absolute;
@@ -1047,7 +1047,7 @@ a {
   transform: skew(0, 6deg);
   z-index: -1; }
 
-.single .phoenix-header-text, .page .phoenix-header-text {
+.single .phoenix-header-text {
   position: absolute;
   bottom: 80px;
   left: 40px;
@@ -1056,10 +1056,10 @@ a {
   transform: skew(0, 3deg);
   z-index: 10; }
 
-.single .cat-links a, .page .cat-links a {
+.single .cat-links a {
   border-bottom: none;
   color: #e6e6e6; }
-  .single .cat-links a::before, .page .cat-links a::before {
+  .single .cat-links a::before {
     background-color: silver;
     content: '';
     display: inline-block;
@@ -1067,14 +1067,14 @@ a {
     margin-right: 5px;
     width: 10px; }
 
-.single .posted-on .highlight, .page .posted-on .highlight {
+.single .posted-on .highlight {
   color: #e6e6e6; }
 
-.single .entry-title, .page .entry-title {
+.single .entry-title {
   color: #fff;
   margin: 0; }
 
-.single .subtitle, .page .subtitle {
+.single .subtitle {
   border-color: #fff;
   color: #fff; }
 
@@ -1143,16 +1143,12 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-/* Adjust spacing for pages */
-body:not(.home) .page .entry-content {
-  margin-top: -6em; }
+.page .entry-header {
+  text-align: center; }
 
 /* Full-width page */
-.page-template-full-width-page .page {
-  max-width: 100%; }
-  .page-template-full-width-page .page .entry-content {
-    margin-left: 0;
-    margin-right: 0; }
+.page-template-full-width-page .entry-content {
+  max-width: 1140px; }
 
 /* Custom styling for different posts. */
 .the, .phoenix-the-unbearable-lightness-of-designing .word1,

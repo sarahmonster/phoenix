@@ -3,17 +3,11 @@
 	margin: 0 0 1.5em;
 }
 
-/* Adjust spacing for pages */
-body:not(.home) .page .entry-content {
-	margin-top: -6em;
+.page .entry-header {
+	text-align: center;
 }
 
 /* Full-width page */
-.page-template-full-width-page .page {
-	max-width: 100%;
-
-	.entry-content {
-		margin-left: 0;
-		margin-right: 0;
-	}
+.page-template-full-width-page .entry-content {
+	max-width: $size__max-width;
 }
