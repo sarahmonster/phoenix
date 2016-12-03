@@ -140,9 +140,11 @@
 	}
 
 	.posted-on {
-		color: lighten($silver, 10%);
+		color: $silver;
 	}
-	.posted-on .highlight {
+
+	.phoenix-month,
+	.phoenix-date {
 		color: lighten($silver, 20%);
 	}
 

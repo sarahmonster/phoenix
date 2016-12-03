@@ -29,7 +29,12 @@ function phoenix_post_date() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$posted_on = phoenix_format_date( get_the_time( 'l ' ), get_the_time( 'F' ), get_the_time( 'jS' ), get_the_time( 'Y' ) );
+	$posted_on = sprintf( '<span class="phoenix-day">%1$s</span> <span class="phoenix-month">%2$s</span> <span class="phoenix-date">%3$s</span> <span class="phoenix-year">%4$s</span>',
+		get_the_time( 'l ' ),
+		get_the_time( 'F' ),
+		get_the_time( 'jS' ),
+		get_the_time( 'Y' )
+	);
 
 	$byline = sprintf(
 		_x( 'by %s', 'post author', 'phoenix' ),
@@ -39,23 +44,6 @@ function phoenix_post_date() {
 	echo '<span class="posted-on">' . $posted_on . '</span>';
 }
 endif;
-
-/**
- * Outputs a fully-formatted post date.
- * This is used to hide portions of the date on smaller screens, as well as
- * doing some extra styling to make it more dynamic-looking.
- */
-function phoenix_format_date( $dayofweek, $month, $day, $year ) {
-	$date = $dayofweek . '<span class="highlight">';
-	// generate date with a special hidey-class
-	$month_short = substr($month, 0, 3);
-	$month_remainder = substr($month, 3, 500);
-	$month = $month_short . '<span class="extra-date">' . $month_remainder . '</span>';
-	$date .= $month . " " . $day;
-	$date .= '</span>&nbsp;'.$year;
-	return $date;
-}
-
 
 if ( ! function_exists( 'phoenix_post_category' ) ) :
 /**

@@ -955,6 +955,11 @@ a {
     font-size: 18.4px;
     font-size: 1.15rem;
     margin-top: 0; }
+  .blog .phoenix-day,
+  .blog .phoenix-date,
+  .archive .phoenix-day,
+  .archive .phoenix-date {
+    display: none; }
   .blog .cat-links,
   .archive .cat-links {
     background: silver;
@@ -1111,9 +1116,10 @@ a {
       background-color: #ce2828; }
 
 .single .posted-on {
-  color: #dadada; }
+  color: silver; }
 
-.single .posted-on .highlight {
+.single .phoenix-month,
+.single .phoenix-date {
   color: #f3f3f3; }
 
 .single .entry-title {
