@@ -1,7 +1,75 @@
-.page-links {
-	clear: both;
+.sticky {
+	display: block;
+}
+
+.hentry {
 	margin: 0 0 1.5em;
 }
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+/* Entry headers */
+.entry-meta {
+	line-height: 1.5;
+}
+
+.posted-on,
+.cat-links,
+.tags-links,
+.nix-prefix {
+	@extend h3;
+	display: block;
+	padding: $size__site-gutter/8 0;
+
+	.highlight {
+		color: darken($silver, 15%);
+	}
+}
+
+.cats-links,
+.tags-links {
+	&::before {
+		content: '\00b7';
+	}
+
+	a {
+		color: darken($silver, 15%);
+	}
+}
+
+.entry-title,
+.page-title {
+  font-weight: 400;
+  padding: 0;
+
+	em {
+	  color: $silver;
+
+	  &::before {
+	    content: ' ';
+	    display: inline;
+	  }
+	} // em
+}
+
+.subtitle,
+.taxonomy-description {
+	@extend blockquote;
+	@include font-size(1.4);
+
+	@include tablet {
+		@include font-size(1.6);
+	}
+}
+
 
 /* Styles for all single posts */
 .single, .page {
@@ -106,18 +174,3 @@
 @include color-code-posts('work', $work);
 @include color-code-posts('design', $design);
 @include color-code-posts('travel', $travel);
-
-/* Adjust spacing for pages */
-body:not(.home) .page .entry-content {
-	margin-top: -6em;
-}
-
-/* Full-width page */
-.page-template-full-width-page .page {
-	max-width: 100%;
-
-	.entry-content {
-		margin-left: 0;
-		margin-right: 0;
-	}
-}

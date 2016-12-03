@@ -1,0 +1,19 @@
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Adjust spacing for pages */
+body:not(.home) .page .entry-content {
+	margin-top: -6em;
+}
+
+/* Full-width page */
+.page-template-full-width-page .page {
+	max-width: 100%;
+
+	.entry-content {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

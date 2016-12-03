@@ -244,19 +244,19 @@ textarea {
       font-size: 1.4rem; } }
 
 /* Headings */
-h1, h2, h3, .posted-on,
+h1, h2, h3, .blog .page-header .nix-prefix,
+.archive .page-header .nix-prefix, .posted-on,
 .cat-links,
 .tags-links,
-.nix-prefix, .blog .page-header .nix-prefix,
-.archive .page-header .nix-prefix, .wanderlist-country-widget li, h4, h5, h6 {
+.nix-prefix, .wanderlist-country-widget li, h4, h5, h6 {
   clear: both;
   font-weight: 500;
   line-height: 1.2; }
-  h1 a, h2 a, h3 a, .posted-on a,
+  h1 a, h2 a, h3 a, .blog .page-header .nix-prefix a,
+  .archive .page-header .nix-prefix a, .posted-on a,
   .cat-links a,
   .tags-links a,
-  .nix-prefix a, .blog .page-header .nix-prefix a,
-  .archive .page-header .nix-prefix a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
+  .nix-prefix a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
     border-bottom: none; }
 
 h1 {
@@ -284,11 +284,11 @@ h2 {
       font-size: 38.4px;
       font-size: 2.4rem; } }
 
-h3, .posted-on,
+h3, .blog .page-header .nix-prefix,
+.archive .page-header .nix-prefix, .posted-on,
 .cat-links,
 .tags-links,
-.nix-prefix, .blog .page-header .nix-prefix,
-.archive .page-header .nix-prefix, .wanderlist-country-widget li {
+.nix-prefix, .wanderlist-country-widget li {
   color: silver;
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-size: 12.8px;
@@ -298,11 +298,11 @@ h3, .posted-on,
   margin: 0;
   text-transform: uppercase; }
   @media (min-width: 768px) {
-    h3, .posted-on,
+    h3, .blog .page-header .nix-prefix,
+    .archive .page-header .nix-prefix, .posted-on,
     .cat-links,
     .tags-links,
-    .nix-prefix, .blog .page-header .nix-prefix,
-    .archive .page-header .nix-prefix, .wanderlist-country-widget li {
+    .nix-prefix, .wanderlist-country-widget li {
       font-size: 14.4px;
       font-size: 0.9rem; } }
 
@@ -817,6 +817,12 @@ a {
   margin: 0;
   padding: 20px; }
 
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5em auto;
+  max-width: 640px; }
+
 .site-footer {
   border-top: 1px solid #c0b6b2;
   clear: both;
@@ -857,6 +863,98 @@ a {
 /*--------------------------------------------------------------
 ## Content
 --------------------------------------------------------------*/
+.taxonomy-description {
+  margin-bottom: 2em;
+  max-width: 640px; }
+  .taxonomy-description p {
+    margin: 0.5em 0; }
+
+/* Archive pages */
+.blog .page-header,
+.archive .page-header {
+  padding-top: 4em;
+  text-align: center; }
+  .blog .page-header .nix-prefix,
+  .archive .page-header .nix-prefix {
+    display: block; }
+
+.blog article:not(.jetpack-testimonial),
+.archive article:not(.jetpack-testimonial) {
+  position: relative; }
+  @media (min-width: 768px) {
+    .blog article:not(.jetpack-testimonial),
+    .archive article:not(.jetpack-testimonial) {
+      float: left;
+      width: 48%; }
+      .blog article:not(.jetpack-testimonial):nth-of-type(odd),
+      .archive article:not(.jetpack-testimonial):nth-of-type(odd) {
+        clear: left;
+        margin-right: 4%; } }
+
+.blog .cat-links,
+.archive .cat-links {
+  background: silver;
+  border-left: 2px solid #645E5B;
+  display: inline-block;
+  padding: 6px 10px;
+  top: 5px;
+  position: absolute;
+  left: -5px; }
+
+.blog a,
+.archive a {
+  border-bottom: none; }
+
+.blog img,
+.archive img {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }
+
+.blog .cat-links,
+.blog .entry-meta,
+.archive .cat-links,
+.archive .entry-meta {
+  font-size: 12.8px;
+  font-size: 0.8rem; }
+
+.blog .entry-title,
+.archive .entry-title {
+  font-style: normal;
+  font-size: 33.6px;
+  font-size: 2.1rem;
+  margin-top: 0; }
+
+.blog .entry-content,
+.archive .entry-content {
+  border-top: 1px solid #c0b6b2;
+  font-size: 18.4px;
+  font-size: 1.15rem;
+  margin-top: 0; }
+
+/* Colour-code archives */
+.blog .category-work .cat-links,
+.archive .category-work .cat-links {
+  background-color: #e0f3e4;
+  border-color: #97d7a2; }
+  .blog .category-work .cat-links a,
+  .archive .category-work .cat-links a {
+    color: #97d7a2; }
+
+.blog .category-design .cat-links,
+.archive .category-design .cat-links {
+  background-color: #efd9e2;
+  border-color: #d091ab; }
+  .blog .category-design .cat-links a,
+  .archive .category-design .cat-links a {
+    color: #d091ab; }
+
+.blog .category-travel .cat-links,
+.archive .category-travel .cat-links {
+  background-color: #c8e6ec;
+  border-color: #7cc3d1; }
+  .blog .category-travel .cat-links a,
+  .archive .category-travel .cat-links a {
+    color: #7cc3d1; }
+
 .sticky {
   display: block; }
 
@@ -870,12 +968,6 @@ a {
 .single .byline,
 .group-blog .byline {
   display: inline; }
-
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em auto;
-  max-width: 640px; }
 
 /* Entry headers */
 .entry-meta {
@@ -922,10 +1014,6 @@ a {
     .taxonomy-description {
       font-size: 25.6px;
       font-size: 1.6rem; } }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
 
 /* Styles for all single posts */
 .single .entry-header, .page .entry-header {
@@ -1051,6 +1139,10 @@ a {
 .single.phoenix-category-travel .entry-header {
   background-color: #c8e6ec; }
 
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em; }
+
 /* Adjust spacing for pages */
 body:not(.home) .page .entry-content {
   margin-top: -6em; }
@@ -1061,98 +1153,6 @@ body:not(.home) .page .entry-content {
   .page-template-full-width-page .page .entry-content {
     margin-left: 0;
     margin-right: 0; }
-
-.taxonomy-description {
-  margin-bottom: 2em;
-  max-width: 640px; }
-  .taxonomy-description p {
-    margin: 0.5em 0; }
-
-/* Archive pages */
-.blog .page-header,
-.archive .page-header {
-  padding-top: 4em;
-  text-align: center; }
-  .blog .page-header .nix-prefix,
-  .archive .page-header .nix-prefix {
-    display: block; }
-
-.blog article:not(.jetpack-testimonial),
-.archive article:not(.jetpack-testimonial) {
-  position: relative; }
-  @media (min-width: 768px) {
-    .blog article:not(.jetpack-testimonial),
-    .archive article:not(.jetpack-testimonial) {
-      float: left;
-      width: 48%; }
-      .blog article:not(.jetpack-testimonial):nth-of-type(odd),
-      .archive article:not(.jetpack-testimonial):nth-of-type(odd) {
-        clear: left;
-        margin-right: 4%; } }
-
-.blog .cat-links,
-.archive .cat-links {
-  background: silver;
-  border-left: 2px solid #645E5B;
-  display: inline-block;
-  padding: 6px 10px;
-  top: 5px;
-  position: absolute;
-  left: -5px; }
-
-.blog a,
-.archive a {
-  border-bottom: none; }
-
-.blog img,
-.archive img {
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); }
-
-.blog .cat-links,
-.blog .entry-meta,
-.archive .cat-links,
-.archive .entry-meta {
-  font-size: 12.8px;
-  font-size: 0.8rem; }
-
-.blog .entry-title,
-.archive .entry-title {
-  font-style: normal;
-  font-size: 33.6px;
-  font-size: 2.1rem;
-  margin-top: 0; }
-
-.blog .entry-content,
-.archive .entry-content {
-  border-top: 1px solid #c0b6b2;
-  font-size: 18.4px;
-  font-size: 1.15rem;
-  margin-top: 0; }
-
-/* Colour-code archives */
-.blog .category-work .cat-links,
-.archive .category-work .cat-links {
-  background-color: #e0f3e4;
-  border-color: #97d7a2; }
-  .blog .category-work .cat-links a,
-  .archive .category-work .cat-links a {
-    color: #97d7a2; }
-
-.blog .category-design .cat-links,
-.archive .category-design .cat-links {
-  background-color: #efd9e2;
-  border-color: #d091ab; }
-  .blog .category-design .cat-links a,
-  .archive .category-design .cat-links a {
-    color: #d091ab; }
-
-.blog .category-travel .cat-links,
-.archive .category-travel .cat-links {
-  background-color: #c8e6ec;
-  border-color: #7cc3d1; }
-  .blog .category-travel .cat-links a,
-  .archive .category-travel .cat-links a {
-    color: #7cc3d1; }
 
 /* Custom styling for different posts. */
 .the, .phoenix-the-unbearable-lightness-of-designing .word1,
@@ -1253,12 +1253,12 @@ body:not(.home) .page .entry-content {
       .entry-title.hello .loves ul li {
         display: inline-block; }
 
-.phoenix-frontpage-widget h3, .phoenix-frontpage-widget .posted-on, .phoenix-frontpage-widget
+.phoenix-frontpage-widget h3, .phoenix-frontpage-widget .blog .page-header .nix-prefix, .blog .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget
+.archive .page-header .nix-prefix,
+.archive .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget .posted-on, .phoenix-frontpage-widget
 .cat-links, .phoenix-frontpage-widget
 .tags-links, .phoenix-frontpage-widget
-.nix-prefix, .phoenix-frontpage-widget .blog .page-header .nix-prefix, .blog .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget
-.archive .page-header .nix-prefix,
-.archive .page-header .phoenix-frontpage-widget .nix-prefix, .phoenix-frontpage-widget .wanderlist-country-widget li, .wanderlist-country-widget .phoenix-frontpage-widget li {
+.nix-prefix, .phoenix-frontpage-widget .wanderlist-country-widget li, .wanderlist-country-widget .phoenix-frontpage-widget li {
   text-align: center; }
 
 .phoenix-frontpage-widget .phoenix-short-post {

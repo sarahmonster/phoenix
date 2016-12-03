@@ -3,12 +3,18 @@
 	padding: 20px;
 }
 
-
-
 .content-area {
 
 }
 
 .site-main {
 
+}
+
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em auto;
+	max-width: $size__content-width;
 }
