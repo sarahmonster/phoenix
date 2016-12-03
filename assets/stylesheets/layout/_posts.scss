@@ -30,7 +30,7 @@
 	padding: $size__site-gutter/8 0;
 
 	.highlight {
-		color: darken($silver, 15%);
+		color: $silver;
 	}
 }
 
@@ -41,7 +41,7 @@
 	}
 
 	a {
-		color: darken($silver, 15%);
+		color: $color__accent;
 	}
 }
 
@@ -90,7 +90,6 @@
 		margin-left: -$size__site-gutter/2;
 		width: 100%;
 		width: calc(100% + #{$size__site-gutter});
-		z-index: -2;
 	}
 
 	.phoenix-panel-background {
@@ -118,20 +117,31 @@
 
 	.cat-links a {
 		border-bottom: none;
-		color: lighten($silver, 15%);
+		color: lighten($color__accent, 10%);
 
 		&::before {
-			background-color: $silver;
+			background-color: $color__accent;
 			content: '';
 			display: inline-block;
 			height: 10px;
 			margin-right: 5px;
 			width: 10px;
 		}
+
+		&:hover {
+			color: $color__accent;
+
+			&::before {
+				background-color: $color__secondary;
+			}
+		}
 	}
 
+	.posted-on {
+		color: lighten($silver, 10%);
+	}
 	.posted-on .highlight {
-		color: lighten($silver, 15%);
+		color: lighten($silver, 20%);
 	}
 
 	.entry-title {
