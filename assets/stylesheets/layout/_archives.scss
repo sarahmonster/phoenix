@@ -17,13 +17,12 @@
 
 	article:not(.jetpack-testimonial) {
 		width: 100%;
-		//display: flex;
 	}
 
 	/* Image and title */
 	.entry-header {
 		background: $color__accent;
-		min-height: 30vh;
+		min-height: 40vh;
 		padding: $size__site-gutter/2;
 		position: relative;
 		margin-left: -$size__site-gutter/2;
@@ -109,24 +108,36 @@
 
 	/* For larger screens */
 	@include tablet {
+		article:not(.jetpack-testimonial) {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+			margin: $size__site-gutter*4 auto;
+		}
+
+		.entry-header {
+			flex-basis: 550px;
+			width: auto;
+		}
+
+		article:nth-of-type(even) {
+			.entry-header {
+				order: 2;
+			}
+		}
+
 		.phoenix-panel-background {
-			background-position: top center;
-			background-size: cover;
-			position: absolute;
-			left: 0;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			@include desaturate;
-			transform: skew(0, $size__skew);
-			z-index: -1;
+			left: -$size__site-gutter/2;
+			right: -$size__site-gutter/2;
+		}
+
+		.entry-content {
+			flex-basis: 350px;
+			margin: -$size__site-gutter*2 $size__site-gutter*2 0;
 		}
 
 		.entry-title {
 			@include font-size(3.6);
-					position: absolute;
-					bottom: $size__site-gutter/2;
-					left: $size__site-gutter/2;
 		}
 	}
 
