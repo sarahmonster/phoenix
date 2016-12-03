@@ -30,15 +30,13 @@
 	@include desktop {
 		.wanderlist-map-widget {
 			float: left;
-			padding-right: $size__site-gutter;
+			padding-right: $size__site-gutter/2;
 			width: calc(100% - 400px);
 		}
 
-		.wanderlist-location-widget,
-		.wanderlist-trip-overview-widget,
-		.wanderlist-country-overview-widget {
+		.wanderlist-location-widget {
 			float: left;
-			padding-left: $size__site-gutter;
+			padding-left: $size__site-gutter/2;
 			width: 400px;
 		}
 
@@ -52,12 +50,12 @@
 		}
 
 		.wanderlist-trip-widget {
-			clear: left;
-			padding-left: 0;
+			display: none;
 		}
 
 		.wanderlist-country-widget {
 			padding-left: 0;
+			width: 760px;
 		}
 
 		.wanderlist-number-widget {
@@ -129,11 +127,14 @@
 		}
 
 		dd {
-			float: left;
 			margin: 0 0 0 4px;
-			white-space: nowrap;
-			width: 116px;
-			width: calc( 100% - 105px );
+
+
+			@include tablet {
+				white-space: nowrap;
+				width: 116px;
+				width: calc( 100% - 105px );
+			}
 		}
 	} // dl, ul
 
@@ -190,6 +191,9 @@
 
 /* Number widget */
 .wanderlist-number-widget {
+	display: flex;
+	justify-content: space-between;
+
 	.widget-title {
 		display: none;
 	}
@@ -198,15 +202,19 @@
 		border: 2px solid $silver;
 		border-radius: 50%;
 		color: $silver;
-		float: left;
 		font-family: $font__sans-serif;
 		font-weight: normal;
-		height: 100px;
+		height: 80px;
 		line-height: 0.7;
-		padding-top: 28px;
+		padding-top: 21px;
 		text-align: center;
-		width: 100px;
+		width: 80px;
 
+		@include tablet {
+			height: 100px;
+			padding-top: 28px;
+			width: 100px;
+		}
 
 		.wanderlist-number {
 			display: block;
@@ -221,10 +229,14 @@
 	} // div
 
 	.wanderlist-connector {
-		color: $silver;
-		float: left;
-		font-style: italic;
-		margin: 30px 6px;
+		display: none;
+
+		@include tablet {
+			color: $silver;
+			display: block;
+			font-style: italic;
+			margin: 30px 6px;
+		}
 	}
 
 	@mixin count-color($color) {

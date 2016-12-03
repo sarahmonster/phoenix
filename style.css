@@ -1326,19 +1326,13 @@ a {
   .tax-wanderlist-trip .wanderlist-map-widget,
   .tax-wanderlist-country .wanderlist-map-widget {
     float: left;
-    padding-right: 40px;
+    padding-right: 20px;
     width: calc(100% - 400px); }
   .wanderlist-overview .wanderlist-location-widget,
-  .wanderlist-overview .wanderlist-trip-overview-widget,
-  .wanderlist-overview .wanderlist-country-overview-widget,
   .tax-wanderlist-trip .wanderlist-location-widget,
-  .tax-wanderlist-trip .wanderlist-trip-overview-widget,
-  .tax-wanderlist-trip .wanderlist-country-overview-widget,
-  .tax-wanderlist-country .wanderlist-location-widget,
-  .tax-wanderlist-country .wanderlist-trip-overview-widget,
-  .tax-wanderlist-country .wanderlist-country-overview-widget {
+  .tax-wanderlist-country .wanderlist-location-widget {
     float: left;
-    padding-left: 40px;
+    padding-left: 20px;
     width: 400px; }
   .wanderlist-overview .wanderlist-trip-widget,
   .wanderlist-overview .wanderlist-number-widget,
@@ -1356,12 +1350,12 @@ a {
   .wanderlist-overview .wanderlist-trip-widget,
   .tax-wanderlist-trip .wanderlist-trip-widget,
   .tax-wanderlist-country .wanderlist-trip-widget {
-    clear: left;
-    padding-left: 0; }
+    display: none; }
   .wanderlist-overview .wanderlist-country-widget,
   .tax-wanderlist-trip .wanderlist-country-widget,
   .tax-wanderlist-country .wanderlist-country-widget {
-    padding-left: 0; }
+    padding-left: 0;
+    width: 760px; }
   .wanderlist-overview .wanderlist-number-widget,
   .tax-wanderlist-trip .wanderlist-number-widget,
   .tax-wanderlist-country .wanderlist-number-widget {
@@ -1422,11 +1416,13 @@ a {
       width: 100px; }
     .wanderlist-widget dl dd,
     .wanderlist-widget ul dd {
-      float: left;
-      margin: 0 0 0 4px;
-      white-space: nowrap;
-      width: 116px;
-      width: calc( 100% - 105px); }
+      margin: 0 0 0 4px; }
+      @media (min-width: 768px) {
+        .wanderlist-widget dl dd,
+        .wanderlist-widget ul dd {
+          white-space: nowrap;
+          width: 116px;
+          width: calc( 100% - 105px); } }
   .wanderlist-widget svg,
   .wanderlist-widget .flag {
     height: 10px;
@@ -1462,48 +1458,55 @@ a {
     display: none; }
 
 /* Number widget */
-.wanderlist-number-widget .widget-title {
-  display: none; }
-
-.wanderlist-number-widget div {
-  border: 2px solid silver;
-  border-radius: 50%;
-  color: silver;
-  float: left;
-  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  height: 100px;
-  line-height: 0.7;
-  padding-top: 28px;
-  text-align: center;
-  width: 100px; }
-  .wanderlist-number-widget div .wanderlist-number {
-    display: block;
-    font-size: 32px;
-    font-size: 2rem;
-    font-weight: 100; }
-  .wanderlist-number-widget div .wanderlist-item {
-    font-size: 12.8px;
-    font-size: 0.8rem;
-    text-transform: lowercase; }
-
-.wanderlist-number-widget .wanderlist-connector {
-  color: silver;
-  float: left;
-  font-style: italic;
-  margin: 30px 6px; }
-
-.wanderlist-number-widget .wanderlist-place-count {
-  border-color: #B5DDE5;
-  color: #B5DDE5; }
-
-.wanderlist-number-widget .wanderlist-country-count {
-  border-color: #CEECD3;
-  color: #CEECD3; }
-
-.wanderlist-number-widget .wanderlist-continent-count {
-  border-color: #f3ad33;
-  color: #f3ad33; }
+.wanderlist-number-widget {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .wanderlist-number-widget .widget-title {
+    display: none; }
+  .wanderlist-number-widget div {
+    border: 2px solid silver;
+    border-radius: 50%;
+    color: silver;
+    font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    height: 80px;
+    line-height: 0.7;
+    padding-top: 21px;
+    text-align: center;
+    width: 80px; }
+    @media (min-width: 768px) {
+      .wanderlist-number-widget div {
+        height: 100px;
+        padding-top: 28px;
+        width: 100px; } }
+    .wanderlist-number-widget div .wanderlist-number {
+      display: block;
+      font-size: 32px;
+      font-size: 2rem;
+      font-weight: 100; }
+    .wanderlist-number-widget div .wanderlist-item {
+      font-size: 12.8px;
+      font-size: 0.8rem;
+      text-transform: lowercase; }
+  .wanderlist-number-widget .wanderlist-connector {
+    display: none; }
+    @media (min-width: 768px) {
+      .wanderlist-number-widget .wanderlist-connector {
+        color: silver;
+        display: block;
+        font-style: italic;
+        margin: 30px 6px; } }
+  .wanderlist-number-widget .wanderlist-place-count {
+    border-color: #B5DDE5;
+    color: #B5DDE5; }
+  .wanderlist-number-widget .wanderlist-country-count {
+    border-color: #CEECD3;
+    color: #CEECD3; }
+  .wanderlist-number-widget .wanderlist-continent-count {
+    border-color: #f3ad33;
+    color: #f3ad33; }
 
 /* Text snippets */
 .wanderlist-country-count {
