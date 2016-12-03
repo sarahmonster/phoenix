@@ -1023,12 +1023,18 @@ a {
 
 .single .entry-header {
   background: #f3ad33;
-  height: 80vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-left: -20px;
+  min-height: 80vh;
   padding: 40px;
   position: relative;
   -ms-transform: skew(0, -2deg);
   transform: skew(0, -2deg);
-  margin-left: -20px;
   width: 100%;
   width: calc(100% + 40px); }
 
@@ -1046,9 +1052,6 @@ a {
   z-index: -1; }
 
 .single .phoenix-header-text {
-  position: absolute;
-  bottom: 80px;
-  left: 40px;
   max-width: 855px;
   -ms-transform: skew(0, 2deg);
   transform: skew(0, 2deg);
@@ -1063,11 +1066,15 @@ a {
 
 .single .entry-title {
   color: #fff;
-  margin-top: 0; }
+  margin: 20px 0; }
 
 .single .subtitle {
+  margin-left: 0;
   border-color: #fff;
   color: #fff; }
+
+.single .entry-content {
+  padding-top: 80px; }
 
 /* Entry footer */
 .entry-footer {

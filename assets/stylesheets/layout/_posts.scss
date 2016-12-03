@@ -28,11 +28,14 @@
 
 	.entry-header {
 		background: $color__accent;
-		height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin-left: -$size__site-gutter/2;
+		min-height: 80vh;
 		padding: $size__site-gutter;
 		position: relative;
 		transform: skew(0, -$size__skew/2);
-		margin-left: -$size__site-gutter/2;
 		width: 100%;
 		width: calc(100% + #{$size__site-gutter});
 	}
@@ -52,9 +55,6 @@
 
 	// Un-skew text, because we aren't animals.
 	.phoenix-header-text {
-		position: absolute;
-		bottom: $size__site-gutter*2;
-		left: $size__site-gutter;
 		max-width: $size__max-width*.75;
 		transform: skew(0, $size__skew/2);
 		z-index: 10;
@@ -71,12 +71,17 @@
 
 	.entry-title {
 		color: $white;
-		margin-top: 0;
+		margin: $size__site-gutter/2 0;
 	}
 
 	.subtitle {
+		margin-left: 0;
 		border-color: $white;
 		color: $white;
+	}
+
+	.entry-content {
+		padding-top: $size__site-gutter*2;
 	}
 } // .single
 
