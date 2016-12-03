@@ -314,9 +314,13 @@ p {
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
   color: #85746e;
   font-size: 1.2em;
-  margin-top: 3em;
+  margin: 1em 0;
   padding-bottom: 1.5em;
   position: relative; }
+  @media (min-width: 768px) {
+    .cap,
+    .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
+      margin: 3em -80px; } }
   .cap:first-letter,
   .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
     color: #f3ad33;
