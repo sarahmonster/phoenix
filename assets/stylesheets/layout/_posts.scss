@@ -93,19 +93,21 @@
 	color: #bbb;
 	font-style: italic;
 	line-height: 1.4;
-	margin-top: .5em;
+	margin: $size__site-gutter auto;
+	max-width: $size__content-width;
 	padding: 1em 0;
 	text-align: center;
 
 	.twitter-share {
-			border-bottom: 0;
-			display: block;
+		border-bottom: 0;
+		color: $blue;
+		display: block;
 
-			.phoenix-icon-twitter {
-				height: 32px;
-				margin-right: -6px;
-				width: 32px;
-				vertical-align: -6px;
-			}
+		.phoenix-icon-twitter {
+			height: 32px;
+			margin-right: -6px;
+			width: 32px;
+			vertical-align: -6px;
+		}
 	}
 }

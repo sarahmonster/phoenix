@@ -1130,11 +1130,13 @@ a {
   color: #bbb;
   font-style: italic;
   line-height: 1.4;
-  margin-top: .5em;
+  margin: 40px auto;
+  max-width: 640px;
   padding: 1em 0;
   text-align: center; }
   .entry-footer .twitter-share {
     border-bottom: 0;
+    color: #B5DDE5;
     display: block; }
     .entry-footer .twitter-share .phoenix-icon-twitter {
       height: 32px;
