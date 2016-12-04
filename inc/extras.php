@@ -54,11 +54,43 @@ function phoenix_archive_description( $content ) {
 	if ( is_home() ) :
 		$content = get_queried_object()->post_content;
 	endif;
-	
+
 	return $content;
 }
 add_filter( 'get_the_archive_description', 'phoenix_archive_description' );
 
+/**
+ * Numeric pagination!
+ * Pinched more or less verbatim from https://www.binarymoon.co.uk/2013/10/wordpress-numeric-pagination/
+ *
+ * @global type $wp_query
+ * @param type $pageCount
+ * @param type $query
+ * @return type
+ */
+function phoenix_numeric_pagination( $page_count = 3, $query = null ) {
+	if ( null == $query ) {
+		global $wp_query;
+		$query = $wp_query;
+	}
+	// Return early if we only have one page.
+	if ( 1 >= $query->max_num_pages ) {
+		return;
+	}
+	echo '<div class="phoenix-numeric-pagination">';
+	$big = 9999999999; // need an unlikely integer
+	echo paginate_links( array(
+		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+		'format' => '?paged=%#%',
+		'current' => max( 1, get_query_var( 'paged' ) ),
+		'total' => $query->max_num_pages,
+		'end_size' => 0,
+		'mid_size' => $page_count,
+		'next_text' => '<span>Next page</span> &raquo;',
+		'prev_text' => '&laquo; <span>Prev page</span>',
+	) );
+	echo '</div>';
+}
 
 /**
  * Check for existence of Wanderlist plugin.

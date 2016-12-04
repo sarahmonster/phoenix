@@ -29,7 +29,6 @@ a {
 /*--------------------------------------------------------------
 ## Post navigation
 --------------------------------------------------------------*/
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -117,3 +116,49 @@ a {
 		}
 	} // .post-navigation
 } // tablet
+
+/*--------------------------------------------------------------
+## Archive navigation
+--------------------------------------------------------------*/
+.phoenix-numeric-pagination {
+	font-family: $font__accent;
+	@include font-size(1.2);
+	margin-bottom: $size__site-gutter;
+	text-align: center;
+
+	.page-numbers {
+		padding: 5px 10px;
+	}
+
+	a {
+		color: $color__neutral;
+	}
+
+	a span {
+		display: none;
+	}
+
+	.page-numbers.current {
+		color: $color__accent;
+		border: 1px solid;
+		border-radius: 50%;
+	}
+
+	@include mobile {
+		display: flex;
+		justify-content: space-between;
+
+		.page-numbers {
+			display: none;
+		}
+
+		a span {
+			display: inline;
+		}
+
+		.prev,
+		.next {
+			display: inline;
+		}
+	}
+}

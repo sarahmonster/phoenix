@@ -32,7 +32,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+			<?php phoenix_numeric_pagination(); ?>
 
 		<?php else : ?>
 

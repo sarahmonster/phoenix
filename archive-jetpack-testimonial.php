@@ -29,7 +29,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'testimonial' );
 		endwhile;
 
-		the_posts_navigation();
+		phoenix_numeric_pagination();
 	endif;
 	wp_reset_postdata(); ?>
 

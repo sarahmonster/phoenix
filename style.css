@@ -641,6 +641,39 @@ a {
     width: 50%; } }
 
 /*--------------------------------------------------------------
+## Archive navigation
+--------------------------------------------------------------*/
+.phoenix-numeric-pagination {
+  font-family: proxima-nova, Helvetica, Arial, sans-serif;
+  font-size: 19.2px;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  text-align: center; }
+  .phoenix-numeric-pagination .page-numbers {
+    padding: 5px 10px; }
+  .phoenix-numeric-pagination a {
+    color: #626262; }
+  .phoenix-numeric-pagination a span {
+    display: none; }
+  .phoenix-numeric-pagination .page-numbers.current {
+    color: #f3ad33;
+    border: 1px solid;
+    border-radius: 50%; }
+  @media (max-width: 767px) {
+    .phoenix-numeric-pagination {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .phoenix-numeric-pagination .page-numbers {
+        display: none; }
+      .phoenix-numeric-pagination a span {
+        display: inline; }
+      .phoenix-numeric-pagination .prev,
+      .phoenix-numeric-pagination .next {
+        display: inline; } }
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
