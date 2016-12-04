@@ -1,7 +1,7 @@
 /* Archive pages */
 .blog,
 .archive {
-	
+
 	.nix-prefix {
 		display: none;
 	}
@@ -111,7 +111,7 @@
 		}
 
 		.entry-header {
-			flex-basis: 550px;
+			flex-basis: 500px;
 			width: auto;
 		}
 
@@ -133,6 +133,37 @@
 
 		.entry-title {
 			@include font-size(3.6);
+		}
+
+		/* Use rotates instead of skews */
+		article:nth-of-type(odd) {
+			.entry-header {
+				transform: rotate($size__skew);
+			}
+
+			.phoenix-panel-background {
+				transform: rotate(-$size__skew*1.5);
+			}
+
+			.entry-meta,
+			.entry-title {
+				transform: rotate(-$size__skew);
+			}
+		}
+
+		article:nth-of-type(even) {
+			.entry-header {
+				transform: rotate(-$size__skew);
+			}
+
+			.phoenix-panel-background {
+				transform: rotate($size__skew*1.5);
+			}
+
+			.entry-meta,
+			.entry-title {
+				transform: rotate($size__skew);
+			}
 		}
 	}
 

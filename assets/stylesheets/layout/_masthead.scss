@@ -1,10 +1,10 @@
 .site-branding, .site-logo-link {
-	display: none !important; // Temporarily hide so to focus better.
+	display: none;
 }
 
 #masthead {
 	width: 100%;
-	padding: $size__site-gutter/4 0;
+	padding: 0 0 $size__site-gutter;
 	text-align: center;
 }
 
@@ -39,7 +39,7 @@
 		padding: 5px 10px;
 
 		&:hover {
-			color: $black;
+			color: $red;
 		}
 	} // a
 
@@ -98,20 +98,8 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a {
 		color: $silver;
-		// border-bottom: 2px solid $silver;
+		border-bottom: 2px solid $silver;
 	}
-}
-
-/* Logo & branding */
-.site-logo-link {
-	border-bottom: 0;
-	display: block;
-	margin: $size__site-gutter/2 auto 0;
-	width: 60px;
-}
-
-.site-logo {
-	max-width: 100%;
 }
 
 /* On small screens, decrease space between menu items. */
@@ -119,20 +107,5 @@
 	.main-navigation a {
 		@include font-size(0.9);
 		padding: 5px 6px;
-	}
-}
-
-/* Account for the admin bar */
-.admin-bar {
-	#masthead {
-		top: 46px;
-
-		@media screen and (min-width:600px) and (max-width:782px) {
-			top: 46px;
-		}
-
-		@media screen and (min-width:782px) {
-			top: 32px;
-		}
 	}
 }
