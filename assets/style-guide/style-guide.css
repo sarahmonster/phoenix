@@ -93,11 +93,11 @@ body {
 
 /* Mixin to output classes */
 .color-text-main {
-  background: #222; }
+  background: #34353B; }
   .color-text-main .hex-code {
     color: #fff; }
     .color-text-main .hex-code::before {
-      content: "#222"; }
+      content: "#34353B"; }
 
 .color-primary {
   background: #a32020; }
@@ -107,18 +107,18 @@ body {
       content: "#a32020"; }
 
 .color-secondary {
-  background: #ce2828; }
+  background: #34353B; }
   .color-secondary .hex-code {
     color: #fff; }
     .color-secondary .hex-code::before {
-      content: "#ce2828"; }
+      content: "#34353B"; }
 
 .color-tertiary {
-  background: #781818; }
+  background: #AAABAF; }
   .color-tertiary .hex-code {
     color: #fff; }
     .color-tertiary .hex-code::before {
-      content: "#781818"; }
+      content: "#AAABAF"; }
 
 .color-accent {
   background: #f3ad33; }

@@ -229,7 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #222;
+  color: #34353B;
   font-family: freight-text-pro, Georgia, serif;
   font-size: 19.2px;
   font-size: 1.2rem;
@@ -258,7 +258,7 @@ h1, h2, h3, .posted-on,
     border-bottom: none; }
 
 h1 {
-  color: #626262;
+  color: #70727f;
   line-height: 1;
   font-family: lust-display, freight-text-pro, Georgia, serif;
   font-size: 57.6px;
@@ -268,10 +268,10 @@ h1 {
       font-size: 96px;
       font-size: 6rem; } }
   h1 a {
-    color: #626262; }
+    color: #70727f; }
 
 h2 {
-  color: #a2a2a2;
+  color: #b2b4bc;
   font-style: italic;
   font-size: 28.8px;
   font-size: 1.8rem;
@@ -287,7 +287,7 @@ h3, .posted-on,
 .cat-links,
 .tags-links,
 .nix-prefix, .wanderlist-country-widget li {
-  color: silver;
+  color: #AAABAF;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
   font-size: 12.8px;
   font-size: 0.8rem;
@@ -309,7 +309,7 @@ p {
 
 .cap,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-  color: #626262;
+  color: #70727f;
   font-size: 1.2em;
   margin: 1em 0;
   padding-bottom: 1.5em;
@@ -347,8 +347,8 @@ dfn, cite, em, i {
 blockquote, .subtitle,
 .taxonomy-description {
   margin: 0 1.5em;
-  border-top: 1px solid #a2a2a2;
-  color: silver;
+  border-top: 1px solid #b2b4bc;
+  color: #AAABAF;
   display: block;
   font-size: 19.2px;
   font-size: 1.2rem;
@@ -393,8 +393,8 @@ big {
   font-size: 125%; }
 
 strong {
-  background: #f3f3f3;
-  color: #222;
+  background: #dfdfe0;
+  color: #34353B;
   padding: 0 5px; }
 
 .caps {
@@ -415,7 +415,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #FAFAFC;
   /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, .subtitle,
@@ -543,15 +543,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  border-bottom: 2px solid rgba(243, 173, 51, 0.05);
-  color: #f3ad33;
+  border-bottom: 2px solid rgba(163, 32, 32, 0.05);
+  color: #a32020;
   text-decoration: none;
   transition: all 0.2s ease-out; }
   a:visited {
-    color: #f3ad33; }
+    color: #a32020; }
   a:hover, a:focus, a:active {
-    color: #a32020;
-    border-bottom: 2px solid #a32020; }
+    color: #34353B;
+    border-bottom: 2px solid #34353B; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -581,11 +581,11 @@ a {
     .posts-navigation a .phoenix-icon,
     .post-navigation a .phoenix-icon {
       display: block;
-      background: #776862;
-      border: 2px solid #fff;
+      background: #646671;
+      border: 2px solid #FAFAFC;
       border-radius: 50%;
-      box-shadow: 0 0 0px 2px #776862;
-      fill: #fff;
+      box-shadow: 0 0 0px 2px #646671;
+      fill: #FAFAFC;
       height: 42px;
       line-height: 1;
       margin: 2px 10px;
@@ -595,11 +595,11 @@ a {
     .comment-navigation a:hover .phoenix-icon,
     .posts-navigation a:hover .phoenix-icon,
     .post-navigation a:hover .phoenix-icon {
-      background: #5b4f4b; }
+      background: #4c4d56; }
   .comment-navigation span:not(.caps),
   .posts-navigation span:not(.caps),
   .post-navigation span:not(.caps) {
-    color: silver;
+    color: #AAABAF;
     display: block;
     font-family: proxima-nova, Helvetica, Arial, sans-serif;
     font-size: 14.4px;
@@ -627,7 +627,7 @@ a {
 /* Make sure there's some space between when they're stacked on top of one another */
 @media (max-width: 767px) {
   .nav-previous + .nav-next {
-    border-top: 1px solid silver;
+    border-top: 1px solid #AAABAF;
     margin-top: 30px;
     padding-top: 20px; } }
 
@@ -652,7 +652,7 @@ a {
   .phoenix-numeric-pagination .page-numbers {
     padding: 5px 10px; }
   .phoenix-numeric-pagination a {
-    color: #626262; }
+    color: #AAABAF; }
   .phoenix-numeric-pagination a span {
     display: none; }
   .phoenix-numeric-pagination .page-numbers.current {
@@ -767,7 +767,7 @@ a {
       display: none; }
   .main-navigation a {
     border-bottom: none;
-    color: #222;
+    color: #34353B;
     display: inline-block;
     padding: 5px 10px; }
     .main-navigation a:hover {
@@ -798,8 +798,8 @@ a {
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a {
-    color: silver;
-    border-bottom: 2px solid silver; }
+    color: #AAABAF;
+    border-bottom: 2px solid #AAABAF; }
 
 /* On small screens, decrease space between menu items. */
 @media (max-width: 767px) {
@@ -819,9 +819,9 @@ a {
   max-width: 640px; }
 
 .site-footer {
-  border-top: 1px solid #a2a2a2;
+  border-top: 1px solid #b2b4bc;
   clear: both;
-  color: #626262;
+  color: #70727f;
   font-size: 16px;
   font-size: 1rem;
   font-style: italic;
@@ -830,10 +830,10 @@ a {
   text-align: center;
   width: 100%; }
   .site-footer a {
-    color: #222;
+    color: #34353B;
     border-color: transparent; }
     .site-footer a:hover {
-      border-color: rgba(34, 34, 34, 0.5); }
+      border-color: rgba(52, 53, 59, 0.5); }
   .site-footer .phoenix-icon-heart {
     fill: #a32020;
     height: 18px;
@@ -869,7 +869,7 @@ a {
   .cat-links .highlight,
   .tags-links .highlight,
   .nix-prefix .highlight {
-    color: silver; }
+    color: #AAABAF; }
 
 /* Category links */
 .cat-links a {
@@ -885,7 +885,7 @@ a {
   .cat-links a:hover {
     color: #f3ad33; }
     .cat-links a:hover::before {
-      background-color: #ce2828; }
+      background-color: #34353B; }
 
 /* Archive pages */
 .blog,
@@ -931,7 +931,7 @@ a {
     display: inline-block; }
   .blog .posted-on,
   .archive .posted-on {
-    color: #f3f3f3; }
+    color: #dfdfe0; }
   .blog .phoenix-day,
   .blog .phoenix-date,
   .archive .phoenix-day,
@@ -946,7 +946,7 @@ a {
     margin: 0; }
     .blog .entry-title a,
     .archive .entry-title a {
-      color: #fff; }
+      color: #FAFAFC; }
   .blog article:nth-of-type(odd) .entry-header,
   .archive article:nth-of-type(odd) .entry-header {
     -ms-transform: skew(0, 2deg);
@@ -1103,20 +1103,20 @@ a {
   z-index: 10; }
 
 .single .posted-on {
-  color: silver; }
+  color: #AAABAF; }
 
 .single .phoenix-month,
 .single .phoenix-date {
-  color: #f3f3f3; }
+  color: #dfdfe0; }
 
 .single .entry-title {
-  color: #fff;
+  color: #FAFAFC;
   margin: 20px 0; }
 
 .single .subtitle {
   margin-left: 0;
-  border-color: #fff;
-  color: #fff; }
+  border-color: #FAFAFC;
+  color: #FAFAFC; }
 
 .single .entry-content {
   padding-top: 80px; }
@@ -1125,8 +1125,8 @@ a {
 .entry-footer {
   font-size: 25.6px;
   font-size: 1.6rem;
-  border-bottom: 2px solid #a2a2a2;
-  border-top: 1px solid #a2a2a2;
+  border-bottom: 2px solid #b2b4bc;
+  border-top: 1px solid #b2b4bc;
   color: #bbb;
   font-style: italic;
   line-height: 1.4;
@@ -1136,7 +1136,7 @@ a {
   text-align: center; }
   .entry-footer .twitter-share {
     border-bottom: 0;
-    color: #B5DDE5;
+    color: #1d236b;
     display: block; }
     .entry-footer .twitter-share .phoenix-icon-twitter {
       height: 32px;
@@ -1154,7 +1154,7 @@ a {
   padding: 0;
   margin-bottom: 40px; }
   .page-title em {
-    color: silver; }
+    color: #AAABAF; }
     .page-title em::before {
       content: ' ';
       display: inline; }
@@ -1193,7 +1193,7 @@ a {
   text-transform: uppercase; }
 
 .script, .phoenix-the-unbearable-lightness-of-designing .word3 {
-  color: silver;
+  color: #AAABAF;
   display: block;
   font-style: italic; }
 
@@ -1204,11 +1204,11 @@ a {
 
 .phoenix-the-unbearable-lightness-of-designing .word3 {
   font-family: brim-narrow-combined-2, freight-text-pro, Georgia, serif;
-  color: #fff;
+  color: #FAFAFC;
   font-size: 13vw;
   margin-top: -81px;
   opacity: 0.6;
-  text-shadow: 0px 0px 1px #3F3734; }
+  text-shadow: 0px 0px 1px #34353B; }
 
 .phoenix-the-unbearable-lightness-of-designing .word4 {
   -ms-transform: rotate(-90deg);
@@ -1235,13 +1235,13 @@ a {
     list-style-type: none; }
   .contact-card a {
     border-bottom: none;
-    color: #fff; }
+    color: #FAFAFC; }
     .contact-card a .phoenix-icon {
       height: 20px;
       width: 20px;
       vertical-align: -3px; }
   .contact-card .card-email:hover a {
-    color: silver; }
+    color: #AAABAF; }
   .contact-card .card-twitter:hover a {
     color: #89c9e7; }
   .contact-card .card-subscribe:hover a {
@@ -1253,14 +1253,14 @@ a {
   vertical-align: -7px; }
 
 .entry-title.hello {
-  color: silver;
+  color: #AAABAF;
   font-style: italic;
   margin-bottom: 0.125em; }
   .entry-title.hello p {
     display: inline;
     margin: 0; }
   .entry-title.hello span:not(.amp) {
-    color: #222; }
+    color: #34353B; }
   .entry-title.hello .phoenix-icon-heart {
     color: #a32020;
     height: 24px;
@@ -1274,7 +1274,7 @@ a {
         vertical-align: -8px;
         width: 54px; } }
   .entry-title.hello .loves {
-    color: #222;
+    color: #34353B;
     display: inline-block;
     visibility: hidden; }
     .entry-title.hello .loves ul {
@@ -1328,7 +1328,7 @@ a {
   border: none;
   color: #a32020; }
   .leaflet-container a:hover {
-    color: #747474; }
+    color: #5d5e63; }
 
 /* Main page and sub-pages for trips/years */
 .wanderlist-overview article,
@@ -1383,7 +1383,7 @@ a {
 
 /* Maps */
 #wanderlist-map {
-  border: 1px solid silver;
+  border: 1px solid #AAABAF;
   display: block;
   height: 200px;
   position: relative;
@@ -1426,7 +1426,7 @@ a {
     .wanderlist-widget dl dt,
     .wanderlist-widget ul dt {
       clear: left;
-      color: #a7a7a7;
+      color: #909196;
       float: left;
       font-style: italic;
       font-weight: normal;
@@ -1467,10 +1467,10 @@ a {
     color: #a32020; }
   .wanderlist-country-widget li:hover {
     background: #a32020;
-    color: #fff; }
+    color: #FAFAFC; }
   .wanderlist-country-widget li a:hover,
   .wanderlist-country-widget li:hover a {
-    color: #fff; }
+    color: #FAFAFC; }
   .wanderlist-country-widget li::before {
     display: none; }
 
@@ -1483,9 +1483,9 @@ a {
   .wanderlist-number-widget .widget-title {
     display: none; }
   .wanderlist-number-widget div {
-    border: 2px solid silver;
+    border: 2px solid #AAABAF;
     border-radius: 50%;
-    color: silver;
+    color: #AAABAF;
     font-family: proxima-nova, Helvetica, Arial, sans-serif;
     font-weight: normal;
     height: 80px;
@@ -1511,16 +1511,16 @@ a {
     display: none; }
     @media (min-width: 768px) {
       .wanderlist-number-widget .wanderlist-connector {
-        color: silver;
+        color: #AAABAF;
         display: block;
         font-style: italic;
         margin: 30px 6px; } }
   .wanderlist-number-widget .wanderlist-place-count {
-    border-color: #B5DDE5;
-    color: #B5DDE5; }
+    border-color: #1d236b;
+    color: #1d236b; }
   .wanderlist-number-widget .wanderlist-country-count {
-    border-color: #CEECD3;
-    color: #CEECD3; }
+    border-color: #0d7236;
+    color: #0d7236; }
   .wanderlist-number-widget .wanderlist-continent-count {
     border-color: #f3ad33;
     color: #f3ad33; }
@@ -1546,7 +1546,7 @@ a {
 
 /* Individual location pages */
 .wanderlist-location .attachment-phoenix-postcard {
-  border: 10px solid #fff;
+  border: 10px solid #FAFAFC;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25); }
   @media (min-width: 1024px) {
     .wanderlist-location .attachment-phoenix-postcard {
@@ -1555,9 +1555,9 @@ a {
       width: 470px; } }
 
 .wanderlist-location .attachment-phoenix-postcard + .entry-content {
-  background: #fff;
+  background: #FAFAFC;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-  color: #a7a7a7;
+  color: #909196;
   font-style: italic;
   padding: 40px; }
   .wanderlist-location .attachment-phoenix-postcard + .entry-content p {
@@ -1587,7 +1587,7 @@ a {
     .taxonomy-description p {
       text-align: left; }
   .jetpack-testimonial .attribution {
-    color: silver;
+    color: #AAABAF;
     font-size: 18.4px;
     font-size: 1.15rem;
     font-style: normal; }
@@ -1813,7 +1813,7 @@ img {
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.4);
   font-size: 0.9em;
-  color: #222;
+  color: #34353B;
   line-height: 1.4em;
   padding: 5px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -1838,7 +1838,7 @@ img {
   z-index: 10000000; }
 
 .overlay p.subtitle {
-  color: #626262;
+  color: #70727f;
   font-size: 0.85em;
   text-align: center;
   margin: 10px 20px 0;
@@ -1943,7 +1943,7 @@ img {
     font-size: 1.4rem;
     padding: 10px 20px; }
     #infinite-handle span::before, #infinite-handle span::after {
-      color: #bbbbbb;
+      color: #ceced3;
       display: inline;
       font-size: 1.8em;
       padding: 5px;
@@ -1955,14 +1955,14 @@ img {
     #infinite-handle span button {
       background: none;
       box-shadow: none;
-      color: #888888;
+      color: #9799a4;
       font-style: italic;
       padding: 0 10px;
       transition: all 200ms linear; }
     #infinite-handle span:hover button {
       font-size: 25.6px;
       font-size: 1.6rem;
-      color: #bbbbbb; }
+      color: #ceced3; }
 
 /* Loading icon */
 .infinite-loader {
@@ -1998,7 +1998,7 @@ object {
 --------------------------------------------------------------*/
 .wp-caption,
 figure {
-  background: #d5d5d5;
+  background: #e9e9eb;
   padding: 10px;
   margin: 0px -20px;
   max-width: calc(100% + 40px); }
@@ -2028,7 +2028,7 @@ figure {
 
 .wp-caption-text,
 figcaption {
-  color: #626262;
+  color: #70727f;
   font-size: 0.9em;
   font-style: italic;
   line-height: 1.4;
@@ -2095,7 +2095,7 @@ figcaption {
   padding: 4px; }
 
 .menu-social-menu-container ul svg {
-  fill: #f3ad33;
+  fill: #a32020;
   height: 28px;
   speak: none;
   transition: fill .1s ease-in 0;
@@ -2104,6 +2104,6 @@ figcaption {
 .menu-social-menu-container ul a:hover {
   background: none; }
   .menu-social-menu-container ul a:hover svg {
-    fill: #a32020; }
+    fill: #34353B; }
 
 /*# sourceMappingURL=style.css.map */

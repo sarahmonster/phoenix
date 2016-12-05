@@ -1,30 +1,28 @@
 $red: #a32020;
-$blue: #B5DDE5;
-$pink: #E7C7D4;
-$green: #CEECD3;
+$blue: #1d236b;
+$green: #0d7236;
 $yellow: #f3ad33;
-$black: #3F3734;
-$charcoal: #645E5B;
-$white: #fff;
-$silver: silver;
+$black: #34353B;
+$white: #FAFAFC;
+$silver: #AAABAF;
 
 $color__primary: $red;
-$color__secondary: lighten($color__primary, 10%);
-$color__tertiary: darken($color__primary, 10%);
+$color__secondary: $black;
+$color__tertiary: $silver;
 $color__accent: $yellow;
 $color__highlight: lighten($color__accent, 20%);
-$color__black: #222;
-$color__neutral: lighten($color__black, 25%);
-$color__white: #fff;
+$color__black: $black;
+$color__neutral: $silver;
+$color__white: $white;
 
 // Background & body text
 $color__background-body: $color__white;
 $color__text-main: $color__black;
 
 // Links
-$color__link: $color__accent;
+$color__link: $color__primary;
 $color__link-visited: $color__link;
-$color__link-hover: $color__primary;
+$color__link-hover: $color__secondary;
 
 // Inputs
 $color__border-input: #ccc;
