@@ -10,15 +10,12 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); // Loopety-loop ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-					<div class="entry-content">
-						<?php the_content(); ?>
-					</div><!-- .entry-content -->
-
-				</article><!-- #post-## -->
-			<?php endwhile; ?>
+			<div class="phoenix-intro-text">
+				<span>Hi. I&rsquo;m <a href="/about" data-hover="Sarah">Sarah</a>.</span>
+				<span>I <a href="/work" data-hover="make">make</a> things,</span>
+				<span>I <a href="/travels" data-hover="travel">travel</a> the world,</span>
+				<span>&amp; I write <a href="/stories" data-hover="stories">stories</a>.</span>
+			</div>
 
 			<div class="phoenix-frontpage-widget">
 				<h3><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h3>

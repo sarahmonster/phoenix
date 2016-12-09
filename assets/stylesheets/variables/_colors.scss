@@ -18,6 +18,7 @@ $color__white: $white;
 // Background & body text
 $color__background-body: $color__white;
 $color__text-main: $color__black;
+$color__headings: lighten($color__text-main, 20%);
 
 // Links
 $color__link: $color__primary;

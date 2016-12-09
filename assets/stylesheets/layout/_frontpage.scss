@@ -1,46 +1,40 @@
 // Intro text
-.entry-title.hello {
-  color: $silver;
-  font-style: italic;
-  margin-bottom: 0.125em;
+.phoenix-intro-text {
+	@extend h1;
+	color: $color__text-main;
+	max-width: $size__max-width;
 
-  p {
-    display: inline; // Sometimes WordPress will add empty p tags for us, cos it's a jerk
-    margin: 0;
-  }
+	span {
+		display: block;
+	}
 
-  span:not(.amp) {
-    color: $color__text-main;
-  }
+	a {
+		color: $color__headings;
+		font-style: italic;
+		position: relative;
 
-  .phoenix-icon-heart {
-    color: $red;
-    height: 24px;
-    vertical-align: -4px;
-    width: 24px;
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			padding: 17px 0 0;
+			max-width: 0;
+			border-bottom: 6px solid $color__primary;
+			color: $color__primary;
+			content: attr(data-hover);
+			transition: max-width 0.5s;
+		}
+	}
 
-    @include tablet {
-      height: 54px;
-      margin-right: -4px;
-      margin-left: -4px;
-      vertical-align: -8px;
-      width: 54px;
-    }
-  }
+	a:hover,
+	a:focus {
+		border-bottom: 0;
 
-  .loves {
-    color: $color__text-main;
-    display: inline-block;
-    visibility: hidden;
-
-    ul {
-      display: inline-block;
-
-      li {
-        display: inline-block;
-      }
-    }
-  } // .loves
+		&::before {
+			max-width: 100%;
+		}
+	}
 }
 
 // Recent posts
