@@ -543,15 +543,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  border-bottom: 2px solid rgba(163, 32, 32, 0.05);
+  border-bottom: 2px solid #a32020;
   color: #a32020;
   text-decoration: none;
-  transition: all 0.2s ease-out; }
-  a:visited {
-    color: #a32020; }
+  transition: all 0.2s ease-out;
+  padding-bottom: 1px; }
   a:hover, a:focus, a:active {
-    color: #34353B;
-    border-bottom: 2px solid #34353B; }
+    color: #f3ad33;
+    padding-bottom: 0;
+    border-bottom: 2px solid #f3ad33; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -2104,6 +2104,6 @@ figcaption {
 .menu-social-menu-container ul a:hover {
   background: none; }
   .menu-social-menu-container ul a:hover svg {
-    fill: #34353B; }
+    fill: #f3ad33; }
 
 /*# sourceMappingURL=style.css.map */
