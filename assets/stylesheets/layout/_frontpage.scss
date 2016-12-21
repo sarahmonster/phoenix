@@ -2,6 +2,7 @@
 .phoenix-intro-text {
 	@extend h1;
 	color: $color__text-main;
+	margin: 0;
 	max-width: $size__max-width;
 
 	span {
@@ -37,51 +38,52 @@
 	}
 }
 
+// Panels
+.phoenix-panel {
+	margin: $size__site-gutter*4 0;
+
+	h2 {
+		@extend h1;
+		font-style: normal;
+	}
+}
+
 // Recent posts
-.phoenix-frontpage-widget {
+.phoenix-newest-stories {
 
-  h3 {
-    text-align: center;
-  }
+	.phoenix-short-post {
+		margin: 1em 0;
 
-  .phoenix-short-post {
-    margin: 1em 0;
 
-    img {
-      border-radius: 50%;
-      float: left;
-      height: 100px;
-      margin: 10px 10px 10px 0;
-      width: 100px;
-    }
+		img {
+			display: none;
+		}
 
-    .entry-title {
-      @include font-size(1.6);
-      clear: none;
-    }
+		.entry-title {
 
-    .entry-content {
-      @include font-size(1);
-      line-height: 1.2;
-      margin-top: 0;
-    }
-  } // .libretto-short-post
+		}
+
+		.entry-content {
+			@include font-size(1);
+			line-height: 1.2;
+			margin: 0;
+		}
+	} // .phoenix-short-post
 } // .phoenix-frontpage-widget
 
-// Use two columns on a desktop, since we've got loads of space
-@include desktop {
-  .home .page {
-    float: left;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: $size__site-gutter;
-    width: calc(100% - 400px);
-  }
+// Split to three columns on larger screens
+@include tablet {
+	.phoenix-newest-stories {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 
-  .phoenix-frontpage-widget {
-    float: left;
-    margin-top: 7em;
-    padding-left: $size__site-gutter;
-    width: 400px;
-  }
+		h2 {
+			flex-basis: 100%;
+		}
+
+		.phoenix-short-post {
+			flex-basis: 30%;
+		}
+	}
 }

@@ -10,20 +10,20 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="phoenix-intro-text">
+			<div class="phoenix-intro-text phoenix-panel">
 				<span>Hi. I&rsquo;m <a href="/about" data-hover="Sarah">Sarah</a>.</span>
 				<span>I <a href="/work" data-hover="make">make</a> things,</span>
 				<span>I <a href="/travels" data-hover="travel">travel</a> the world,</span>
 				<span>&amp; I write <a href="/stories" data-hover="stories">stories</a>.</span>
 			</div>
 
-			<div class="phoenix-frontpage-widget">
-				<h3><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h3>
+			<div class="phoenix-newest-stories phoenix-panel">
+				<h2><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h2>
 
 				<?php
 				// Grab the most recent posts
 					$phoenix_recent_posts = wp_get_recent_posts( array(
-						'numberposts' => 2,
+						'numberposts' => 3,
 						'post_status' => 'publish',
 			 		), OBJECT );
 
@@ -33,16 +33,17 @@ get_header(); ?>
 			 			setup_postdata( $post);
 
 			 			echo '<article class="phoenix-short-post">';
-						printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
-										esc_url( get_permalink() ),
-										esc_html( phoenix_subtitle() )
-									);
 
 							// Title
-							printf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h2>',
+							printf( '<h3 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h3>',
 					 			esc_url( get_permalink() ),
 					 			esc_html( get_the_title() )
 							);
+
+							printf( '<a href="%1$s" rel="bookmark" title="%2$s">',
+											esc_url( get_permalink() ),
+											esc_html( phoenix_subtitle() )
+										);
 
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail( 'phoenix-square' );
