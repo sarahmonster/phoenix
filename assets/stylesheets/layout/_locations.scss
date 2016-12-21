@@ -116,17 +116,17 @@
 		line-height: 1.4;
 		margin: 10px 0;
 		padding-left: 0;
+	}
 
-		dt {
-			color: darken($silver, 10%);
-			font-style: italic;
-			font-weight: normal;
-		}
+	dt {
+		color: darken($silver, 10%);
+		font-style: italic;
+		font-weight: normal;
+	}
 
-		dd {
-			margin: 0 0 5px 0;
-		}
-	} // dl, ul
+	dd {
+		margin: 0 0 5px 0;
+	}
 
 	@include tablet {
 		dl {

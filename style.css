@@ -1421,14 +1421,12 @@ a {
     line-height: 1.4;
     margin: 10px 0;
     padding-left: 0; }
-    .wanderlist-widget dl dt,
-    .wanderlist-widget ul dt {
-      color: #909196;
-      font-style: italic;
-      font-weight: normal; }
-    .wanderlist-widget dl dd,
-    .wanderlist-widget ul dd {
-      margin: 0 0 5px 0; }
+  .wanderlist-widget dt {
+    color: #909196;
+    font-style: italic;
+    font-weight: normal; }
+  .wanderlist-widget dd {
+    margin: 0 0 5px 0; }
   @media (min-width: 768px) {
     .wanderlist-widget dl {
       display: -ms-flexbox;
