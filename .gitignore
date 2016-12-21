@@ -24,3 +24,8 @@ access_log
 #   Node Modules   #
 #==================#
 node_modules/*
+
+#==================#
+#     Dandelion    #
+#==================#
+*.yml
