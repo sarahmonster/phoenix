@@ -1,3 +1,14 @@
+// Panels
+.phoenix-panel {
+	margin: $size__site-gutter*4 0;
+	min-height: 100vh;
+
+	h2 {
+		@extend h1;
+		font-style: normal;
+	}
+}
+
 // Intro text
 .phoenix-intro-text {
 	@extend h1;
@@ -38,14 +49,16 @@
 	}
 }
 
-// Panels
-.phoenix-panel {
-	margin: $size__site-gutter*4 0;
+// Map
+.phoenix-travel-map {
 
-	h2 {
-		@extend h1;
-		font-style: normal;
+	#wanderlist-map {
+		//max-width: $size__content-width;
+		height: 100vh;
+		margin-left: -$size__site-gutter/2;
+		width: calc(100% + #{$size__site-gutter});
 	}
+
 }
 
 // Recent posts

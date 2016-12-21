@@ -86,10 +86,11 @@
 
 	.wanderlist-location-widget {
 		background: rgba(255, 255, 255, 0.85);
-		bottom: 20px;
-		left: 20px;
+		bottom: 40px;
+		left: 40px;
 		padding: 10px 20px;
 		position: absolute;
+		max-width: 300px;
 		z-index: 100;
 
 		h3 {
@@ -117,25 +118,32 @@
 		padding-left: 0;
 
 		dt {
-			clear: left;
 			color: darken($silver, 10%);
-			float: left;
 			font-style: italic;
 			font-weight: normal;
-			width: 100px;
 		}
 
 		dd {
-			margin: 0 0 0 4px;
-
-
-			@include tablet {
-				white-space: nowrap;
-				width: 116px;
-				width: calc( 100% - 105px );
-			}
+			margin: 0 0 5px 0;
 		}
 	} // dl, ul
+
+	@include tablet {
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		dt {
+			flex-basis: 100px;
+			text-align: right;
+		}
+
+		dd {
+			flex-basis: calc( 100% - 110px );
+			margin-left: 10px;
+		}
+	}
 
 	svg,
 	.flag {

@@ -17,6 +17,10 @@ get_header(); ?>
 				<span>&amp; I write <a href="/stories" data-hover="stories">stories</a>.</span>
 			</div>
 
+			<div class="phoenix-travel-map phoenix-panel">
+				<?php echo wanderlist_show_map( 'upcoming' ); ?>
+			</div>
+
 			<div class="phoenix-newest-stories phoenix-panel">
 				<h2><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h2>
 
