@@ -923,7 +923,7 @@ a {
     top: 0;
     right: 0;
     bottom: 0;
-    filter: grayscale(100%) brightness(0.6) contrast(2);
+    filter: grayscale(100%) brightness(0.3) contrast(1.25);
     z-index: -1; }
   .blog .posted-on,
   .blog .cat-links,
@@ -1093,7 +1093,7 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  filter: grayscale(100%) brightness(0.6) contrast(2);
+  filter: grayscale(100%) brightness(0.3) contrast(1.25);
   -ms-transform: skew(0, 4deg);
   transform: skew(0, 4deg);
   z-index: -1; }
