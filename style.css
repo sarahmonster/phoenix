@@ -1193,7 +1193,7 @@ body {
 
 /* Full-width page */
 .page-template-full-width-page .entry-content {
-  max-width: 1600px; }
+  max-width: 1200px; }
 
 /* Custom styling for different posts. */
 .the, .phoenix-the-unbearable-lightness-of-designing .word1,
@@ -1337,7 +1337,7 @@ body {
   border: none;
   color: #a32020; }
   .leaflet-container a:hover {
-    color: #5d5e63; }
+    color: #3F9CBC; }
 
 /* Main page and sub-pages for trips/years */
 .wanderlist-overview article,
@@ -1347,7 +1347,10 @@ body {
   .wanderlist-overview article .entry-content,
   .tax-wanderlist-trip article .entry-content,
   .tax-wanderlist-country article .entry-content {
-    border-top: 0; }
+    border-top: 0;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 1200px; }
 
 @media (min-width: 1024px) {
   .wanderlist-overview .wanderlist-map-widget,
@@ -1357,8 +1360,11 @@ body {
     padding-right: 20px;
     width: calc(100% - 400px); }
   .wanderlist-overview .wanderlist-location-widget,
+  .wanderlist-overview .wanderlist-country-overview-widget,
   .tax-wanderlist-trip .wanderlist-location-widget,
-  .tax-wanderlist-country .wanderlist-location-widget {
+  .tax-wanderlist-trip .wanderlist-country-overview-widget,
+  .tax-wanderlist-country .wanderlist-location-widget,
+  .tax-wanderlist-country .wanderlist-country-overview-widget {
     float: left;
     padding-left: 20px;
     width: 400px; }
@@ -1434,7 +1440,7 @@ body {
     margin: 10px 0;
     padding-left: 0; }
   .wanderlist-widget dt {
-    color: #909196;
+    color: #83848a;
     font-style: italic;
     font-weight: normal; }
   .wanderlist-widget dd {
@@ -1446,12 +1452,12 @@ body {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
     .wanderlist-widget dt {
-      -ms-flex-preferred-size: 100px;
-      flex-basis: 100px;
+      -ms-flex-preferred-size: 130px;
+      flex-basis: 130px;
       text-align: right; }
     .wanderlist-widget dd {
-      -ms-flex-preferred-size: calc( 100% - 110px);
-      flex-basis: calc( 100% - 110px);
+      -ms-flex-preferred-size: calc( 100% - 140px);
+      flex-basis: calc( 100% - 140px);
       margin-left: 10px; } }
   .wanderlist-widget svg,
   .wanderlist-widget .flag {
@@ -1546,16 +1552,6 @@ body {
 .wanderlist-current-location {
   color: #a32020;
   font-style: italic; }
-
-/* Country archive pages */
-.wanderlist-country-overview-widget dl dt {
-  float: none;
-  width: auto; }
-
-.wanderlist-country-overview-widget dl dd {
-  float: none;
-  margin: 0 0 4px 0;
-  width: auto; }
 
 /* Individual location pages */
 .wanderlist-location .attachment-phoenix-postcard {

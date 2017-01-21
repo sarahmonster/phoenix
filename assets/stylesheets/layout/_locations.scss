@@ -6,10 +6,10 @@
 /* Override link colour set by Mapbox */
 .leaflet-container a {
 	border: none;
-	color: $red;
+	color: $color__link;
 
 	&:hover {
-		color: darken($silver, 30%);
+		color: $color__link-hover;
 	}
 }
 
@@ -23,6 +23,8 @@
 
 		.entry-content {
 			border-top: 0;
+			flex-basis: 100%;
+			max-width: $size__max-content-width;
 		}
 	}
 
@@ -34,7 +36,8 @@
 			width: calc(100% - 400px);
 		}
 
-		.wanderlist-location-widget {
+		.wanderlist-location-widget,
+		.wanderlist-country-overview-widget {
 			float: left;
 			padding-left: $size__site-gutter/2;
 			width: 400px;
@@ -119,7 +122,7 @@
 	}
 
 	dt {
-		color: darken($silver, 10%);
+		color: $color__neutral-text;
 		font-style: italic;
 		font-weight: normal;
 	}
@@ -135,12 +138,12 @@
 		}
 
 		dt {
-			flex-basis: 100px;
+			flex-basis: 130px;
 			text-align: right;
 		}
 
 		dd {
-			flex-basis: calc( 100% - 110px );
+			flex-basis: calc( 100% - 140px );
 			margin-left: 10px;
 		}
 	}
@@ -275,20 +278,6 @@
 .wanderlist-current-location {
 	color: $red;
 	font-style: italic;
-}
-
-/* Country archive pages */
-.wanderlist-country-overview-widget {
-	dl dt {
-		float: none;
-		width: auto;
-	}
-
-	dl dd {
-		float: none;
-		margin: 0 0 4px 0;
-		width: auto;
-	}
 }
 
 /* Individual location pages */
