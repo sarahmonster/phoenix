@@ -915,6 +915,7 @@ a {
     width: calc(100% + 40px); }
   .blog .phoenix-panel-background,
   .archive .phoenix-panel-background {
+    background-color: #83848a;
     background-position: top center;
     background-size: cover;
     position: absolute;
@@ -1084,6 +1085,7 @@ a {
   width: calc(100% + 40px); }
 
 .single .phoenix-panel-background {
+  background-color: #83848a;
   background-position: top center;
   background-size: cover;
   position: absolute;

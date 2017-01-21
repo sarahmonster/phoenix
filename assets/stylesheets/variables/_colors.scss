@@ -3,8 +3,9 @@ $blue: #3F9CBC;
 $green: #37894c;
 $yellow: #f3c548;
 $black: #34353B;
-$white: #FAFAFC;
+$charcoal: lighten($black, 20%);
 $silver: #AAABAF;
+$white: #FAFAFC;
 
 $color__primary: $red;
 $color__secondary: $black;
@@ -19,7 +20,7 @@ $color__white: $white;
 // Background & body text
 $color__background-body: $color__white;
 $color__text-main: $color__black;
-$color__headings: lighten($color__text-main, 20%);
+$color__headings: $charcoal;
 
 // Links
 $color__link: $color__primary;
