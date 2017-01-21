@@ -1,6 +1,6 @@
 $red: #a32020;
-$blue: #1d236b;
-$green: #0d7236;
+$blue: #3F9CBC;
+$green: #37894c;
 $yellow: #f3c548;
 $black: #34353B;
 $white: #FAFAFC;
@@ -13,6 +13,7 @@ $color__accent: $yellow;
 $color__highlight: lighten($color__accent, 25%);
 $color__black: $black;
 $color__neutral: $silver;
+$color__neutral-text: darken($silver, 15%);
 $color__white: $white;
 
 // Background & body text
@@ -23,7 +24,7 @@ $color__headings: lighten($color__text-main, 20%);
 // Links
 $color__link: $color__primary;
 $color__link-visited: $color__link;
-$color__link-hover: $color__accent;
+$color__link-hover: $blue;
 
 // Inputs
 $color__border-input: #ccc;

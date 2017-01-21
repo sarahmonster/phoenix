@@ -549,9 +549,9 @@ a {
   transition: all 0.2s ease-out;
   padding-bottom: 1px; }
   a:hover, a:focus, a:active {
-    color: #f3c548;
+    color: #3F9CBC;
     padding-bottom: 0;
-    border-bottom: 2px solid #f3c548; }
+    border-bottom: 2px solid #3F9CBC; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -652,7 +652,7 @@ a {
   .phoenix-numeric-pagination .page-numbers {
     padding: 5px 10px; }
   .phoenix-numeric-pagination a {
-    color: #AAABAF; }
+    color: #83848a; }
   .phoenix-numeric-pagination a span {
     display: none; }
   .phoenix-numeric-pagination .page-numbers.current {
@@ -1125,9 +1125,9 @@ a {
 .entry-footer {
   font-size: 25.6px;
   font-size: 1.6rem;
-  border-bottom: 2px solid #b2b4bc;
-  border-top: 1px solid #b2b4bc;
-  color: #bbb;
+  border-bottom: 2px solid #AAABAF;
+  border-top: 1px solid #AAABAF;
+  color: #83848a;
   font-style: italic;
   line-height: 1.4;
   margin: 40px auto;
@@ -1136,13 +1136,16 @@ a {
   text-align: center; }
   .entry-footer .twitter-share {
     border-bottom: 0;
-    color: #1d236b;
+    color: #3F9CBC;
     display: block; }
     .entry-footer .twitter-share .phoenix-icon-twitter {
       height: 32px;
       margin-right: -6px;
       width: 32px;
       vertical-align: -6px; }
+    .entry-footer .twitter-share:hover {
+      color: #89c4d8;
+      padding-bottom: 1px; }
 
 .page-links {
   clear: both;
@@ -1517,11 +1520,11 @@ a {
         font-style: italic;
         margin: 30px 6px; } }
   .wanderlist-number-widget .wanderlist-place-count {
-    border-color: #1d236b;
-    color: #1d236b; }
+    border-color: #3F9CBC;
+    color: #3F9CBC; }
   .wanderlist-number-widget .wanderlist-country-count {
-    border-color: #0d7236;
-    color: #0d7236; }
+    border-color: #37894c;
+    color: #37894c; }
   .wanderlist-number-widget .wanderlist-continent-count {
     border-color: #f3c548;
     color: #f3c548; }
@@ -2105,6 +2108,6 @@ figcaption {
 .menu-social-menu-container ul a:hover {
   background: none; }
   .menu-social-menu-container ul a:hover svg {
-    fill: #f3c548; }
+    fill: #3F9CBC; }
 
 /*# sourceMappingURL=style.css.map */

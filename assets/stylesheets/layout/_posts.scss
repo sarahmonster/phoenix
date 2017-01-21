@@ -88,9 +88,9 @@
 /* Entry footer */
 .entry-footer {
 	@include font-size(1.6);
-	border-bottom: 2px solid lighten($color__text-main, 50%);
-	border-top: 1px solid lighten($color__text-main, 50%);
-	color: #bbb;
+	border-bottom: 2px solid $color__neutral;
+	border-top: 1px solid $color__neutral;
+	color: $color__neutral-text;
 	font-style: italic;
 	line-height: 1.4;
 	margin: $size__site-gutter auto;
@@ -108,6 +108,11 @@
 			margin-right: -6px;
 			width: 32px;
 			vertical-align: -6px;
+		}
+
+		&:hover {
+			color: lighten($blue, 20%);
+			padding-bottom: 1px;
 		}
 	}
 }
