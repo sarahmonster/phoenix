@@ -320,7 +320,7 @@ p {
       margin: 3em -80px; } }
   .cap:first-letter,
   .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
-    color: #f3ad33;
+    color: #f3c548;
     float: left;
     font-family: brim-narrow-combined-2, freight-text-pro, Georgia, serif;
     font-size: 144px;
@@ -393,7 +393,7 @@ big {
   font-size: 125%; }
 
 strong {
-  background: #dfdfe0;
+  background: #fbebc0;
   color: #34353B;
   padding: 0 5px; }
 
@@ -549,9 +549,9 @@ a {
   transition: all 0.2s ease-out;
   padding-bottom: 1px; }
   a:hover, a:focus, a:active {
-    color: #f3ad33;
+    color: #f3c548;
     padding-bottom: 0;
-    border-bottom: 2px solid #f3ad33; }
+    border-bottom: 2px solid #f3c548; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -656,7 +656,7 @@ a {
   .phoenix-numeric-pagination a span {
     display: none; }
   .phoenix-numeric-pagination .page-numbers.current {
-    color: #f3ad33;
+    color: #f3c548;
     border: 1px solid;
     border-radius: 50%; }
   @media (max-width: 767px) {
@@ -874,16 +874,16 @@ a {
 /* Category links */
 .cat-links a {
   border-bottom: none;
-  color: #f6c063; }
+  color: #f6d478; }
   .cat-links a::before {
-    background-color: #f3ad33;
+    background-color: #f3c548;
     content: '';
     display: inline-block;
     height: 10px;
     margin-right: 5px;
     width: 10px; }
   .cat-links a:hover {
-    color: #f3ad33; }
+    color: #f3c548; }
     .cat-links a:hover::before {
       background-color: #34353B; }
 
@@ -905,7 +905,7 @@ a {
     width: 100%; }
   .blog .entry-header,
   .archive .entry-header {
-    background: #f3ad33;
+    background: #f3c548;
     min-height: 40vh;
     padding: 20px;
     position: relative;
@@ -1067,7 +1067,7 @@ a {
       margin-top: 40px; } }
 
 .single .entry-header {
-  background: #f3ad33;
+  background: #f3c548;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1523,8 +1523,8 @@ a {
     border-color: #0d7236;
     color: #0d7236; }
   .wanderlist-number-widget .wanderlist-continent-count {
-    border-color: #f3ad33;
-    color: #f3ad33; }
+    border-color: #f3c548;
+    color: #f3c548; }
 
 /* Text snippets */
 .wanderlist-country-count {
@@ -2105,6 +2105,6 @@ figcaption {
 .menu-social-menu-container ul a:hover {
   background: none; }
   .menu-social-menu-container ul a:hover svg {
-    fill: #f3ad33; }
+    fill: #f3c548; }
 
 /*# sourceMappingURL=style.css.map */

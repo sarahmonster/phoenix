@@ -121,18 +121,18 @@ body {
       content: "#AAABAF"; }
 
 .color-accent {
-  background: #f3ad33; }
+  background: #f3c548; }
   .color-accent .hex-code {
     color: #000; }
     .color-accent .hex-code::before {
-      content: "#f3ad33"; }
+      content: "#f3c548"; }
 
 .color-highlight {
-  background: #f9d493; }
+  background: #fbebc0; }
   .color-highlight .hex-code {
     color: #000; }
     .color-highlight .hex-code::before {
-      content: "#f9d493"; }
+      content: "#fbebc0"; }
 
 .adjectives h3 {
   display: inline;
@@ -142,7 +142,7 @@ body {
   padding-right: 0.2em; }
 
 .adjectives h3:nth-of-type(odd) {
-  color: #f3ad33; }
+  color: #f3c548; }
 
 .headings {
   text-align: left; }

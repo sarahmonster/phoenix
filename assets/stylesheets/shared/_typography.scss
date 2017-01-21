@@ -162,7 +162,7 @@ big {
 }
 
 strong {
-	background: lighten( $silver, 20% );
+	background: $color__highlight;
 	color: $color__text-main;
 	padding: 0 5px;
 }
