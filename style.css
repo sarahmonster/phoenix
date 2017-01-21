@@ -647,6 +647,7 @@ a {
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
   font-size: 19.2px;
   font-size: 1.2rem;
+  line-height: 1.2;
   margin-bottom: 40px;
   text-align: center; }
   .phoenix-numeric-pagination .page-numbers {
@@ -656,9 +657,14 @@ a {
   .phoenix-numeric-pagination a span {
     display: none; }
   .phoenix-numeric-pagination .page-numbers.current {
-    color: #f3c548;
+    border-radius: 50%;
     border: 1px solid;
-    border-radius: 50%; }
+    color: #f3c548;
+    display: inline-block;
+    height: 34px;
+    padding: 4.5px 0;
+    text-align: center;
+    width: 34px; }
   @media (max-width: 767px) {
     .phoenix-numeric-pagination {
       display: -ms-flexbox;

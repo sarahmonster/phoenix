@@ -121,6 +121,7 @@ a {
 .phoenix-numeric-pagination {
 	font-family: $font__accent;
 	@include font-size(1.2);
+	line-height: 1.2;
 	margin-bottom: $size__site-gutter;
 	text-align: center;
 
@@ -137,9 +138,14 @@ a {
 	}
 
 	.page-numbers.current {
-		color: $color__accent;
-		border: 1px solid;
 		border-radius: 50%;
+		border: 1px solid;
+		color: $color__accent;
+		display: inline-block;
+		height: 34px;
+		padding: 4.5px 0;
+		text-align: center;
+		width: 34px;
 	}
 
 	@include mobile {
