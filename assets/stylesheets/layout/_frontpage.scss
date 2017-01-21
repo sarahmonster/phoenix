@@ -1,59 +1,37 @@
 // Panels
 .phoenix-panel {
-	margin: $size__site-gutter*4 0;
-	min-height: 100vh;
+	margin: 0 auto;
+	max-width: $size__max-content-width;
 
-	h2 {
-		@extend h1;
-		font-style: normal;
+	h1 {
+		color: $silver;
+		max-width: 700px;
+
+		@include tablet {
+			@include font-size(8);
+			margin: 1em 0 0;
+		}
 	}
 }
 
 // Intro text
 .phoenix-intro-text {
-	@extend h1;
-	color: $color__text-main;
-	margin: 0;
-	max-width: $size__max-width;
+	p {
+		@include font-size(1.4);
 
-	span {
-		display: block;
-	}
-
-	a {
-		color: $color__headings;
-		font-style: italic;
-		position: relative;
-
-		&::before {
-			position: absolute;
-			top: 0;
-			left: 0;
-			overflow: hidden;
-			padding: 17px 0 0;
-			max-width: 0;
-			border-bottom: 6px solid $color__primary;
-			color: $color__primary;
-			content: attr(data-hover);
-			transition: max-width 0.5s;
-		}
-	}
-
-	a:hover,
-	a:focus {
-		border-bottom: 0;
-
-		&::before {
-			max-width: 100%;
+		@include tablet {
+			@include font-size(2);
+			margin-left: auto;
+			max-width: 550px;
 		}
 	}
 }
 
 // Map
 .phoenix-travel-map {
+	max-width: none;
 
 	#wanderlist-map {
-		//max-width: $size__content-width;
 		height: 100vh;
 		margin-left: -$size__site-gutter/2;
 		width: calc(100% + #{$size__site-gutter});
@@ -66,37 +44,11 @@
 
 	.phoenix-short-post {
 		margin: 1em 0;
-
+		margin-left: auto;
+		max-width: 550px;
 
 		img {
 			display: none;
 		}
-
-		.entry-title {
-
-		}
-
-		.entry-content {
-			@include font-size(1);
-			line-height: 1.2;
-			margin: 0;
-		}
 	} // .phoenix-short-post
 } // .phoenix-frontpage-widget
-
-// Split to three columns on larger screens
-@include tablet {
-	.phoenix-newest-stories {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		h2 {
-			flex-basis: 100%;
-		}
-
-		.phoenix-short-post {
-			flex-basis: 30%;
-		}
-	}
-}

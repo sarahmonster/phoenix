@@ -10,11 +10,14 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="phoenix-intro-text phoenix-panel">
-				<span>Hi. I&rsquo;m <a href="/about" data-hover="Sarah">Sarah</a>.</span>
-				<span>I <a href="/work" data-hover="make">make</a> things,</span>
-				<span>I <a href="/travels" data-hover="travel">travel</a> the world,</span>
-				<span>&amp; I write <a href="/stories" data-hover="stories">stories</a>.</span>
+			<div class="phoenix-intro phoenix-panel">
+				<div class="phoenix-intro-text">
+					<h1>Oh, hello there.</h1>
+
+					<p><span>I&rsquo;m <a href="/about" data-hover="Sarah">Sarah</a>.</span>
+					<span>I make things for the internet and I tend to <a href="/travels" data-hover="travelling">wander</a> a lot.</span>
+					<span class="stories">Sometimes I write long rambling <a href="/stories" data-hover="stories">stories</a>.</span></p>
+				</div>
 			</div>
 
 			<div class="phoenix-travel-map phoenix-panel">
@@ -22,7 +25,7 @@ get_header(); ?>
 			</div>
 
 			<div class="phoenix-newest-stories phoenix-panel">
-				<h2><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h2>
+				<h1><?php esc_html_e( 'Newest stories', 'phoenix' ); ?></h1>
 
 				<?php
 				// Grab the most recent posts
@@ -39,7 +42,7 @@ get_header(); ?>
 			 			echo '<article class="phoenix-short-post">';
 
 							// Title
-							printf( '<h3 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h3>',
+							printf( '<h2 class="entry-title"><a href="%1$s" rel="bookmark">%2$s</a></h3>',
 					 			esc_url( get_permalink() ),
 					 			esc_html( get_the_title() )
 							);
