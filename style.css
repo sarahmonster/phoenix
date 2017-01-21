@@ -414,10 +414,6 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
-body {
-  background: #FAFAFC;
-  /* Fallback for when there is no custom background color defined. */ }
-
 blockquote, .subtitle,
 .taxonomy-description, q {
   quotes: "" ""; }
@@ -756,7 +752,7 @@ a {
 .main-navigation {
   display: inline-block;
   font-family: proxima-nova, Helvetica, Arial, sans-serif;
-  max-width: 1140px;
+  max-width: 1600px;
   width: 100%;
   vertical-align: top; }
   .main-navigation li {
@@ -814,8 +810,13 @@ a {
     font-size: 0.9rem;
     padding: 5px 6px; } }
 
+body {
+  background: #34353B; }
+
 #page {
-  margin: 0;
+  background: #FAFAFC;
+  margin: 0 auto;
+  max-width: 1600px;
   padding: 20px; }
 
 .page-content,
@@ -1105,7 +1106,7 @@ a {
   z-index: -1; }
 
 .single .phoenix-header-text {
-  max-width: 855px;
+  max-width: 1200px;
   -ms-transform: skew(0, 2deg);
   transform: skew(0, 2deg);
   z-index: 10; }
@@ -1192,7 +1193,7 @@ a {
 
 /* Full-width page */
 .page-template-full-width-page .entry-content {
-  max-width: 1140px; }
+  max-width: 1600px; }
 
 /* Custom styling for different posts. */
 .the, .phoenix-the-unbearable-lightness-of-designing .word1,
@@ -1272,7 +1273,7 @@ a {
 .phoenix-intro-text {
   color: #34353B;
   margin: 0;
-  max-width: 1140px; }
+  max-width: 1600px; }
   .phoenix-intro-text span {
     display: block; }
   .phoenix-intro-text a {

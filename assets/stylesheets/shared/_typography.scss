@@ -8,9 +8,9 @@ textarea {
 	@include font-size(1.2);
 	line-height: $font__line-height-body;
 
-  @include tablet {
-    @include font-size(1.4);
-  }
+	@include tablet {
+		@include font-size(1.4);
+	}
 }
 
 /* Headings */

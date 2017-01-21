@@ -1,5 +1,11 @@
+body {
+	background: $color__text-main;
+}
+
 #page {
-	margin: 0;
+	background: $color__background-body;
+	margin: 0 auto;
+	max-width: $size__max-width;
 	padding: 20px;
 }
 
