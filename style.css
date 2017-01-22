@@ -1379,7 +1379,7 @@ body {
   width: 100%; }
   @media (min-width: 768px) {
     #wanderlist-map {
-      height: 400px; } }
+      height: 475px; } }
   #wanderlist-map .leaflet-marker-icon,
   #wanderlist-map .leaflet-tile {
     box-shadow: none; }
@@ -1440,31 +1440,31 @@ body {
     width: auto; }
 
 /* Country list widget */
-.wanderlist-country-widget .widget-title {
-  display: none; }
-
-.wanderlist-country-widget ul {
-  margin: 0; }
-
-.wanderlist-country-widget li {
-  border: 1px solid #a32020;
-  color: #a32020;
-  display: inline-block;
-  font-size: 0.65rem;
-  list-style-type: none;
-  padding: 0.2rem 0.4rem;
-  margin: 0.1rem;
-  white-space: nowrap; }
-  .wanderlist-country-widget li a {
-    color: #a32020; }
-  .wanderlist-country-widget li:hover {
-    background: #a32020;
-    color: #FAFAFC; }
-  .wanderlist-country-widget li a:hover,
-  .wanderlist-country-widget li:hover a {
-    color: #FAFAFC; }
-  .wanderlist-country-widget li::before {
+.wanderlist-country-widget {
+  padding-bottom: 40px; }
+  .wanderlist-country-widget .widget-title {
     display: none; }
+  .wanderlist-country-widget ul {
+    margin: 0; }
+  .wanderlist-country-widget li {
+    border: 1px solid #a32020;
+    color: #a32020;
+    display: inline-block;
+    font-size: 0.65rem;
+    list-style-type: none;
+    padding: 0.2rem 0.4rem;
+    margin: 0.1rem;
+    white-space: nowrap; }
+    .wanderlist-country-widget li a {
+      color: #a32020; }
+    .wanderlist-country-widget li:hover {
+      background: #a32020;
+      color: #FAFAFC; }
+    .wanderlist-country-widget li a:hover,
+    .wanderlist-country-widget li:hover a {
+      color: #FAFAFC; }
+    .wanderlist-country-widget li::before {
+      display: none; }
 
 /* Number widget */
 .wanderlist-number-widget {

@@ -79,7 +79,7 @@
 	width: 100%;
 
 	@include tablet {
-		height: 400px;
+		height: 475px;
 	}
 
 	.leaflet-marker-icon,
@@ -159,6 +159,7 @@
 
 /* Country list widget */
 .wanderlist-country-widget {
+	padding-bottom: $size__site-gutter;
 
 	.widget-title {
 		display: none;
