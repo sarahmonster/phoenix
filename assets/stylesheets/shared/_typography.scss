@@ -74,52 +74,36 @@ p {
 
 .cap,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-	color: lighten($color__text-main, 25%);
-	font-size: 1.2em;
-	margin: 1em 0;
-	padding-bottom: 1.5em;
-	position: relative;
-
 	@include tablet {
+		color: lighten($color__text-main, 25%);
+		font-size: 1.25em;
 		margin: 3em -#{$size__site_gutter*2};
+		padding-bottom: 0;
+		position: relative;
 	}
 
-	&:first-letter {
+	&::first-letter {
 		color: $yellow;
+		display: block;
+		float: left;
+		@include font-size(7);
 		font-family: $font__decorative;
 		font-weight: 700;
-		initial-letter: 3;
-		-webkit-initial-letter: 3;
-		margin: 0 5px 0 -5px;
-
+		//initial-letter: 3; // Support too patchy right now. :(
+		line-height: 0.6;
+		margin: 14px 5px 0 -5px;
 
 		@include tablet {
-			initial-letter: 4;
-			-webkit-initial-letter: 4;
-		}
-
-		@supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
-			display: block;
-			float: left;
-			@include font-size(9);
-			line-height: 0.6;
-			margin-top: 11px;
-
-			@include tablet {
-				@include font-size(15);
-				margin-top: 12px;
-			}
+			@include font-size(15);
+			// initial-letter: 4;
+			margin-top: 16px;
 		}
 	}
 
-	&:first-line {
+	&::first-line {
 		font-variant: small-caps;
 		letter-spacing: 2px;
 	}
-}
-
-.cap {
-	margin-top: 7em;
 }
 
 dfn, cite, em, i {
