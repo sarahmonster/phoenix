@@ -15,21 +15,22 @@ var livereload = require( 'gulp-livereload' );
 var svgmin = require( 'gulp-svgmin' );
 var cheerio = require( 'gulp-cheerio' );
 var svgstore = require( 'gulp-svgstore' );
+var notify = require( 'gulp-notify' );
 
 // Styles tasks
 gulp.task( 'styles', function() {
-	return gulp.src( 'assets/sass/style.scss' )
+	return gulp.src( 'assets/stylesheets/style.scss' )
 		.pipe( sourcemaps.init() )
-		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
+		.pipe( sass( { style: 'expanded' } ) )
+		.on( 'error', notify.onError( function( err ) {
+			return "Stylesheet Error in " + err.message;
+		} ) )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
-		.pipe( sourcemaps.write( './' ) )
 		//.pipe( csscomb() )
-		.on( 'error', function ( err ) {
-			console.error( 'Error!', err.message );
-		} )
+		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
-} );
+});
 
 // Scripts
 gulp.task( 'scripts', function() {
@@ -70,14 +71,24 @@ gulp.task( 'icons', function() {
 		.pipe( gulp.dest( 'assets/svg' ) );
 });
 
+// Generate style guide assets.
+gulp.task( 'style-guide', function() {
+	return gulp.src( 'assets/style-guide/stylesheets/style-guide.scss' )
+		.pipe( sass( { style: 'expanded' } ).on( 'error', sass.logError ) )
+		.on( 'error', function ( err ) {
+			console.error( 'Error!', err.message );
+		} )
+		.pipe( gulp.dest( 'assets/style-guide' ) )
+});
+
 // Watch files for changes
 gulp.task( 'watch', function() {
 	livereload.listen();
-	gulp.watch( 'assets/sass/**/*.scss', ['styles'] );
+	gulp.watch( 'assets/**/*.scss', ['styles', 'style-guide'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
 	gulp.watch( 'assets/images/*', ['images'] );
 	gulp.watch( 'assets/svg/icons/*', ['icons'] );
 } );
 
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'style-guide', 'watch'] );

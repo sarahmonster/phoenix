@@ -8,10 +8,6 @@ html {
 	box-sizing: inherit;
 }
 
-body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
-}
-
 blockquote, q {
 	quotes: "" "";
 
@@ -29,7 +25,8 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
+	padding: 0;
 }
 
 ul {
@@ -40,10 +37,23 @@ ol {
 	list-style: decimal;
 }
 
+.entry-content ul li {
+	list-style: none;
+	position: relative;
+}
+
+.entry-content ul li::before {
+	content: '\2022';
+	font-size: 0.5em;
+	line-height: 3;
+	position: absolute;
+	right: 102%;
+}
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
 dt {

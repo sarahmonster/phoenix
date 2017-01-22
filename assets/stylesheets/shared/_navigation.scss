@@ -2,19 +2,17 @@
 ## Links
 --------------------------------------------------------------*/
 a {
-	border-bottom: 2px solid transparentize($color__link, 0.95);
+	border-bottom: 2px solid $color__link;
 	color: $color__link;
 	text-decoration: none;
 	transition: all 0.2s ease-out;
-
-	&:visited {
-		color: $color__link-visited;
-	}
+	padding-bottom: 1px;
 
 	&:hover,
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+		padding-bottom: 0;
 		border-bottom: 2px solid $color__link-hover;
 	}
 	&:focus {
@@ -29,7 +27,6 @@ a {
 /*--------------------------------------------------------------
 ## Post navigation
 --------------------------------------------------------------*/
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -55,7 +52,7 @@ a {
 			fill: $white;
 			height: 42px;
 			line-height: 1;
-			margin: 10px 12px;
+			margin: 2px 10px;
 			padding: 3px;
 			transition: all 200ms linear;
 			width: 42px;
@@ -118,59 +115,54 @@ a {
 	} // .post-navigation
 } // tablet
 
-/* Stretch out post navigation for larger screens */
-@include desktop {
-	.post-navigation {
-		.nav-previous,
-		.nav-next {
-			position: fixed;
-			top: 50%;
-			height: auto;
-			width: 300px;
-			padding: 10px;
-			opacity: .45;
-			transition: all 200ms linear;
-			box-shadow: 1px 1px 2px rgba(255, 255, 255, 0);
-			border: 1px solid $white;
+/*--------------------------------------------------------------
+## Archive navigation
+--------------------------------------------------------------*/
+.phoenix-numeric-pagination {
+	font-family: $font__accent;
+	@include font-size(1.2);
+	line-height: 1.2;
+	margin-bottom: $size__site-gutter;
+	text-align: center;
 
-			&:hover {
-				background: transparentize($white, 0.2);
-				box-shadow: 1px 1px 3px transparentize($black, 0.8);
-				border: 1px solid lighten($silver, 20%);
-				opacity: 1;
-			}
-		} // .nav-previous, .nav-next
+	.page-numbers {
+		padding: 5px 10px;
+	}
 
-		.nav-previous {
-			left: -225px;
+	a {
+		color: $color__neutral-text;
+	}
 
-			.phoenix-icon {
-				float: right;
-			}
+	a span {
+		display: none;
+	}
 
-			&:hover {
-				left: 0;
+	.page-numbers.current {
+		border-radius: 50%;
+		border: 1px solid;
+		color: $color__accent;
+		display: inline-block;
+		height: 34px;
+		padding: 4.5px 0;
+		text-align: center;
+		width: 34px;
+	}
 
-				.phoenix-icon {
-					float: left;
-				}
-			}
+	@include mobile {
+		display: flex;
+		justify-content: space-between;
+
+		.page-numbers {
+			display: none;
 		}
 
-			.nav-next {
-				right: -225px;
-
-			.phoenix-icon {
-				float: left;
-			}
-
-			&:hover {
-				right: 0;
-
-				.phoenix-icon {
-					float: right;
-				}
-			}
+		a span {
+			display: inline;
 		}
-	} // .post-navigation
+
+		.prev,
+		.next {
+			display: inline;
+		}
+	}
 }

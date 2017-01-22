@@ -8,59 +8,63 @@ textarea {
 	@include font-size(1.2);
 	line-height: $font__line-height-body;
 
-  @include tablet {
-    @include font-size(1.4);
-  }
+	@include tablet {
+		@include font-size(1.4);
+	}
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-  font-weight: 500;
-  line-height: 1.2;
+	font-weight: 500;
+	line-height: 1.2;
 
-  a {
-    border-bottom: none;
-  }
+	a {
+		border-bottom: none;
+	}
 }
 
 h1 {
-  line-height: 1;
-  font-family: $font__display;
-  @include font-size(2.8);
-    @include tablet {
-      @include font-size(3.6);
-    }
+	color: $color__headings;
+	letter-spacing: -0.03em;
+	line-height: 1;
+	font-family: $font__display;
+	@include font-size(3.6);
 
-  a {
-    color: lighten($color__text-main, 25%);
-  }
+	@include tablet {
+		@include font-size(6);
+	}
+
+	a {
+		color: $color__headings;
+	}
 }
 
 h2 {
-  color: lighten($color__text-main, 50%);
-  font-style: italic;
-  @include font-size(1.8);
-  font-weight: 100;
-  line-height: 1.2;
-  margin-top: 3em;
-  @include tablet {
-    @include font-size(2.4);
-  }
+	color: lighten($color__text-main, 50%);
+	font-style: italic;
+	@include font-size(1.8);
+	font-weight: 100;
+	line-height: 1.2;
+	margin-top: 3em;
+
+	@include tablet {
+		@include font-size(2.4);
+	}
 }
 
 h3 {
-  color: $silver;
-  font-family: $font__accent;
-  @include font-size(0.8);
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 0;
-  text-transform: uppercase;
+	color: $silver;
+	font-family: $font__accent;
+	@include font-size(0.8);
+	font-weight: 600;
+	letter-spacing: 2px;
+	margin: 0;
+	text-transform: uppercase;
 
-  @include tablet {
-    @include font-size(0.9);
-  }
+	@include tablet {
+		@include font-size(0.9);
+	}
 }
 
 /* Body copy */
@@ -72,20 +76,39 @@ p {
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
 	color: lighten($color__text-main, 25%);
 	font-size: 1.2em;
-	margin-top: 3em;
+	margin: 1em 0;
 	padding-bottom: 1.5em;
 	position: relative;
 
+	@include tablet {
+		margin: 3em -#{$size__site_gutter*2};
+	}
+
 	&:first-letter {
-		float: left;
+		color: $yellow;
 		font-family: $font__decorative;
-		@include font-size(6);
-		line-height: 0.8;
-		margin: -4px 10px 0 -10px;
+		font-weight: 700;
+		initial-letter: 3;
+		-webkit-initial-letter: 3;
+		margin: 0 5px 0 -5px;
+
 
 		@include tablet {
-			@include font-size(8);
-			margin-top: -16px;
+			initial-letter: 4;
+			-webkit-initial-letter: 4;
+		}
+
+		@supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
+			display: block;
+			float: left;
+			@include font-size(9);
+			line-height: 0.6;
+			margin-top: 11px;
+
+			@include tablet {
+				@include font-size(15);
+				margin-top: 12px;
+			}
 		}
 	}
 
@@ -154,7 +177,7 @@ big {
 }
 
 strong {
-	background: lighten( $silver, 20% );
+	background: $color__highlight;
 	color: $color__text-main;
 	padding: 0 5px;
 }

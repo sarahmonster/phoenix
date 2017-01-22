@@ -1,0 +1,96 @@
+/* Custom styling for different posts. */
+.the,
+.of {
+	display: inline-block;
+	font-size: 0.25em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.script {
+	color: $silver;
+	display: block;
+	font-style: italic;
+}
+
+/* The Unbearable Lightness of Design */
+.phoenix-the-unbearable-lightness-of-designing {
+	.word1 {
+		@extend .the;
+		vertical-align: 65px;
+		margin-right: -85px;
+	}
+
+	.word3 {
+		@extend .script;
+		font-family: $font__decorative;
+		color: $white;
+		font-size: 13vw;
+		margin-top: -81px;
+		opacity: 0.6;
+		text-shadow: 0px 0px 1px $black;
+	}
+
+	.word4 {
+		@extend .of;
+		transform: rotate(-90deg);
+	}
+}
+
+/* Contact page */
+.contact-card {
+	background: $red;
+	@include font-size(1.2);
+	font-style: italic;
+	padding: 20px;
+	margin: $size__site-gutter auto;
+	box-shadow: 1px 1px 3px #bdbdbd;
+	border: 1px solid #d0cdcd;
+
+	@include tablet {
+		background: $red url('assets/images/contact-card.png') no-repeat bottom left;
+		background-size: cover;
+		height: 179px;
+		padding: 50px 20px 20px 26%;
+		width: 400px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	a {
+		border-bottom: none;
+		color: $white;
+
+			.phoenix-icon {
+				height: 20px;
+				width: 20px;
+				vertical-align: -3px;
+			}
+	}
+
+	.card-email {
+		&:hover a {
+			color: $silver;
+		}
+	}
+
+	.card-twitter {
+		&:hover a {
+			color: #89c9e7;
+		}
+	}
+
+	.card-subscribe {
+		&:hover a {
+			color: #f4aa59;
+		}
+	}
+} // .contact-card
+
+.current-location .phoenix-icon-globe {
+	color: $red;
+	margin-right: -3px;
+	vertical-align: -7px;
+}

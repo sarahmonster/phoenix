@@ -42,11 +42,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import "modules/mixins";
-@import "modules/breakpoints";
-@import "modules/colors";
-@import "modules/typography";
-@import "modules/structure";
+@import "variables/mixins";
+@import "variables/breakpoints";
+@import "variables/colors";
+@import "variables/typography";
+@import "variables/structure";
 
 /*--------------------------------------------------------------
 # Normalize
@@ -84,11 +84,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "shared/alignments";
 
 /*--------------------------------------------------------------
-# Clearings
---------------------------------------------------------------*/
-@import "shared/clearings";
-
-/*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 @import "layout/widgets";
@@ -103,7 +98,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 ## Content
 --------------------------------------------------------------*/
-@import "layout/posts-and-pages";
+@import "shared/meta";
+@import "layout/archives";
+@import "layout/posts";
+@import "layout/pages";
+@import "layout/post-styles";
 @import "layout/frontpage";
 @import "layout/locations";
 @import "layout/portfolio";

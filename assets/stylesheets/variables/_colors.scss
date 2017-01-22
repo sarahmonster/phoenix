@@ -1,0 +1,49 @@
+$red: #a32020;
+$blue: #3F9CBC;
+$green: #37894c;
+$yellow: #f3c548;
+$black: #34353B;
+$charcoal: lighten($black, 20%);
+$silver: #AAABAF;
+$white: #FAFAFC;
+
+$color__primary: $red;
+$color__secondary: $black;
+$color__tertiary: $silver;
+$color__accent: $yellow;
+$color__highlight: lighten($color__accent, 25%);
+$color__black: $black;
+$color__neutral: $silver;
+$color__neutral-text: darken($silver, 15%);
+$color__white: $white;
+
+// Background & body text
+$color__background-body: $color__white;
+$color__text-main: $color__black;
+$color__headings: $charcoal;
+
+// Links
+$color__link: $color__primary;
+$color__link-visited: $color__link;
+$color__link-hover: $blue;
+
+// Inputs
+$color__border-input: #ccc;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+
+// Buttons
+$color__background-button: #e6e6e6;
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+
+// Misc HTML elements
+$color__background-hr: #ccc;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__border-abbr: #666;
+
+// Screenreader stuff; best to leave be.
+$color__background-screen: #f1f1f1;
+$color__text-screen: #21759b;

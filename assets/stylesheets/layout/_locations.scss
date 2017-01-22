@@ -6,10 +6,10 @@
 /* Override link colour set by Mapbox */
 .leaflet-container a {
 	border: none;
-	color: $red;
+	color: $color__link;
 
 	&:hover {
-		color: darken($silver, 30%);
+		color: $color__link-hover;
 	}
 }
 
@@ -23,6 +23,8 @@
 
 		.entry-content {
 			border-top: 0;
+			flex-basis: 100%;
+			max-width: $size__max-content-width;
 		}
 	}
 
@@ -30,15 +32,14 @@
 	@include desktop {
 		.wanderlist-map-widget {
 			float: left;
-			padding-right: $gutter;
+			padding-right: $size__site-gutter/2;
 			width: calc(100% - 400px);
 		}
 
 		.wanderlist-location-widget,
-		.wanderlist-trip-overview-widget,
 		.wanderlist-country-overview-widget {
 			float: left;
-			padding-left: $gutter;
+			padding-left: $size__site-gutter/2;
 			width: 400px;
 		}
 
@@ -46,18 +47,18 @@
 		.wanderlist-number-widget,
 		.wanderlist-country-widget {
 			float: left;
-			padding-left: $gutter;
-			padding-right: $gutter;
+			padding-left: $size__site-gutter;
+			padding-right: $size__site-gutter;
 			width: 33%;
 		}
 
 		.wanderlist-trip-widget {
-			clear: left;
-			padding-left: 0;
+			display: none;
 		}
 
 		.wanderlist-country-widget {
 			padding-left: 0;
+			width: 760px;
 		}
 
 		.wanderlist-number-widget {
@@ -78,7 +79,7 @@
 	width: 100%;
 
 	@include tablet {
-		height: 400px;
+		height: 475px;
 	}
 
 	.leaflet-marker-icon,
@@ -88,10 +89,11 @@
 
 	.wanderlist-location-widget {
 		background: rgba(255, 255, 255, 0.85);
-		bottom: 20px;
-		left: 20px;
+		bottom: 40px;
+		left: 40px;
 		padding: 10px 20px;
 		position: absolute;
+		max-width: 300px;
 		z-index: 100;
 
 		h3 {
@@ -117,25 +119,34 @@
 		line-height: 1.4;
 		margin: 10px 0;
 		padding-left: 0;
-		@include clearfix;
+	}
+
+	dt {
+		color: $color__neutral-text;
+		font-style: italic;
+		font-weight: normal;
+	}
+
+	dd {
+		margin: 0 0 5px 0;
+	}
+
+	@include tablet {
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
 		dt {
-			clear: left;
-			color: darken($silver, 10%);
-			float: left;
-			font-style: italic;
-			font-weight: normal;
-			width: 100px;
+			flex-basis: 100px;
+			text-align: right;
 		}
 
 		dd {
-			float: left;
-			margin: 0 0 0 4px;
-			white-space: nowrap;
-			width: 116px;
-			width: calc( 100% - 105px );
+			flex-basis: calc(100% - 110px);
+			margin-left: 10px;
 		}
-	} // dl, ul
+	}
 
 	svg,
 	.flag {
@@ -148,6 +159,7 @@
 
 /* Country list widget */
 .wanderlist-country-widget {
+	padding-bottom: $size__site-gutter;
 
 	.widget-title {
 		display: none;
@@ -168,6 +180,10 @@
 		margin: 0.1rem;
 		white-space: nowrap;
 
+		a {
+			color: $red;
+		}
+
 		&:hover {
 			background: $red;
 			color: $white;
@@ -177,11 +193,18 @@
 		&:hover a {
 			color: $white;
 		}
+
+		&::before {
+			display: none;
+		}
 	}
 } // .wanderlist-country-widget
 
 /* Number widget */
 .wanderlist-number-widget {
+	display: flex;
+	justify-content: space-between;
+
 	.widget-title {
 		display: none;
 	}
@@ -190,15 +213,19 @@
 		border: 2px solid $silver;
 		border-radius: 50%;
 		color: $silver;
-		float: left;
 		font-family: $font__sans-serif;
 		font-weight: normal;
-		height: 100px;
+		height: 80px;
 		line-height: 0.7;
-		padding-top: 28px;
+		padding-top: 21px;
 		text-align: center;
-		width: 100px;
+		width: 80px;
 
+		@include tablet {
+			height: 100px;
+			padding-top: 28px;
+			width: 100px;
+		}
 
 		.wanderlist-number {
 			display: block;
@@ -213,10 +240,14 @@
 	} // div
 
 	.wanderlist-connector {
-		color: $silver;
-		float: left;
-		font-style: italic;
-		margin: 30px 6px;
+		display: none;
+
+		@include tablet {
+			color: $silver;
+			display: block;
+			font-style: italic;
+			margin: 30px 6px;
+		}
 	}
 
 	@mixin count-color($color) {
@@ -250,20 +281,6 @@
 	font-style: italic;
 }
 
-/* Country archive pages */
-.wanderlist-country-overview-widget {
-	dl dt {
-		float: none;
-		width: auto;
-	}
-
-	dl dd {
-		float: none;
-		margin: 0 0 4px 0;
-		width: auto;
-	}
-}
-
 /* Individual location pages */
 .wanderlist-location {
 	.attachment-phoenix-postcard {
@@ -273,7 +290,7 @@
 		@include desktop {
 			float: left;
 			margin: 0 -50px 20px -100px;
-			width: $max-content-width / 2 + 150px;
+			width: $size__content-width / 2 + 150px;
 		}
 	}
 
@@ -282,7 +299,7 @@
 		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
 		color: darken( $silver, 10% );
 		font-style: italic;
-		padding: $gutter;
+		padding: $size__site-gutter;
 
 		p {
 			margin: 0;
@@ -291,7 +308,7 @@
 
 		@include desktop {
 			margin: 60px -100px 20px -50px;
-			width: ($max-content-width / 2) + 150px;
+			width: ($size__content-width / 2) + 150px;
 			float: left;
 		}
 	}

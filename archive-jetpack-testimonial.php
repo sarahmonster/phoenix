@@ -29,12 +29,12 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'testimonial' );
 		endwhile;
 
-		the_posts_navigation();
+		phoenix_numeric_pagination();
 	endif;
 	wp_reset_postdata(); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

@@ -7,11 +7,11 @@
  * @package Phoenix
  */
 
-if ( ! function_exists( 'phoenix_posted_on' ) ) :
+if ( ! function_exists( 'phoenix_post_date' ) ) :
 /**
- * Prints HTML with meta information for the current post-date/time and author.
+ * Prints HTML with meta information for the current post-date/time.
  */
-function phoenix_posted_on() {
+function phoenix_post_date() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -29,7 +29,12 @@ function phoenix_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	$posted_on = phoenix_format_date(get_the_time('l '), get_the_time('F'), get_the_time('jS'), get_the_time('Y') );
+	$posted_on = sprintf( '<span class="phoenix-day">%1$s</span> <span class="phoenix-month">%2$s</span> <span class="phoenix-date">%3$s</span> <span class="phoenix-year">%4$s</span>',
+		get_the_time( 'l ' ),
+		get_the_time( 'F' ),
+		get_the_time( 'jS' ),
+		get_the_time( 'Y' )
+	);
 
 	$byline = sprintf(
 		_x( 'by %s', 'post author', 'phoenix' ),
@@ -37,34 +42,38 @@ function phoenix_posted_on() {
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span>';
-	//echo edit_post_link( __( 'Edit', 'phoenix' ), '<span class="edit-link">', '</span>' );
-
 }
 endif;
 
+if ( ! function_exists( 'phoenix_post_category' ) ) :
 /**
- * Outputs a fully-formatted post date.
- * This is used to hide portions of the date on smaller screens, as well as
- * doing some extra styling to make it more dynamic-looking.
+ * Prints HTML with meta information for the categories and tags.
  */
-function phoenix_format_date($dayofweek, $month, $day, $year) {
-	$date = $dayofweek . '<span class="highlight">';
-	// generate date with a special hidey-class
-	$month_short = substr($month, 0, 3);
-	$month_remainder = substr($month, 3, 500);
-	$month = $month_short . '<span class="extra-date">' . $month_remainder . '</span>';
-	$date .= $month . " " . $day;
-	$date .= '</span>&nbsp;'.$year;
-	return $date;
+function phoenix_post_category() {
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+		/* translators: used between list items */
+		$categories_list = get_the_category_list( esc_html__( ' ', 'phoenix' ) );
+
+		if ( $categories_list && phoenix_categorized_blog() ) {
+			printf( '<span class="cat-links">%1$s</span>', $categories_list ); // WPCS: XSS OK.
+		}
+	}
 }
+endif;
 
 if ( ! function_exists( 'phoenix_subtitle' ) ) :
 /**
  * Prints a subtitle for the post, if one exists.
  */
-function phoenix_subtitle() {
-	$subtitle = get_post_meta( get_the_ID(), 'Subtitle', true );
-	return $subtitle;
+function phoenix_subtitle( $echo=false ) {
+	if ( function_exists( 'the_subheading' ) ) :
+		if ( true === $echo ) :
+			the_subheading( '<span class="subtitle">', '</span>' );
+		else :
+			return get_the_subheading( get_the_ID() );
+		endif;
+	endif;
 }
 endif;
 

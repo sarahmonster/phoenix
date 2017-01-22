@@ -51,13 +51,9 @@ function phoenix_setup() {
 	add_image_size( 'phoenix-square', 400, 400, true );
 	add_image_size( 'phoenix-postcard', 600, 400, true );
 
-	// This theme uses wp_nav_menu() in two locations.
+	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'phoenix' ),
-	) );
-
-	register_nav_menus( array(
-		'secondary' => __( 'Secondary Menu', 'phoenix' ),
 	) );
 
 	/*
@@ -86,33 +82,16 @@ endif; // phoenix_setup
 add_action( 'after_setup_theme', 'phoenix_setup' );
 
 /**
- * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
- */
-function phoenix_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'phoenix' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
-}
-add_action( 'widgets_init', 'phoenix_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
 function phoenix_scripts() {
 	wp_enqueue_style( 'phoenix-style', get_stylesheet_uri() );
 	wp_enqueue_script( 'phoenix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'phoenix-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'phoenix-typekit-cache', get_template_directory_uri() . '/js/typekit-cache.js', array(), '20120302', true );
 
 	// Text animation/manipulation libraries
-	wp_enqueue_style( 'phoenix-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', screen );
+	wp_enqueue_style( 'phoenix-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', 'screen' );
 	wp_enqueue_script( 'phoenix-animate', get_template_directory_uri() . '/js/animate.js', array(), '20150719', true );
 	wp_enqueue_script( 'phoenix-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array( 'jquery' ), '20150719', true );
 	wp_enqueue_script( 'phoenix-lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array( 'jquery' ), '20150719', true );
@@ -124,6 +103,31 @@ function phoenix_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'phoenix_scripts' );
+
+/**
+ * Enqueue Typekit fonts
+ *
+ * @action wp_head
+ * @return string
+ */
+function phoenix_fonts() {
+	$kit = 'rmt3uuy';
+	?>
+	<script>
+	    // try{!function(t,e,n,r,a,s,i,l)
+	</script>
+	<script>
+	(function(d) {
+	var config = {
+		kitId: '<?php echo $kit; ?>',
+		scriptTimeout: 3000
+	},
+	h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+</script>
+	<?php
+}
+add_action( 'wp_head', 'phoenix_fonts', 20 );
 
 /**
  * Add editor styles
@@ -141,11 +145,6 @@ function phoenix_dequeue_plugin_styles()  {
 }
 add_action( 'wp_print_styles', 'phoenix_dequeue_plugin_styles', 100 );
 add_filter( 'jetpack_implode_frontend_css', '__return_false' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -176,3 +175,10 @@ require get_template_directory() . '/inc/portfolio.php';
  * SVG icons functionality.
  */
 require get_template_directory() . '/inc/svg-icons.php';
+
+/**
+ * Include extra wp-cli modules for post meta.
+ */
+if( defined( 'WP_CLI' ) && WP_CLI ) {
+	require get_template_directory() . '/cli-lab/modules/posts.php';
+}

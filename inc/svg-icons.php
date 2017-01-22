@@ -8,7 +8,6 @@
  * Currently using the <symbol> method of insertion, YMMV.
  */
 $phoenix_sprite_external = true;
-
 /*
  * Inject our SVG sprite at the bottom of the page.
  *
@@ -83,15 +82,11 @@ add_action( 'wp_head', 'phoenix_svg4everybody', 20 );
  */
 function phoenix_get_icon( $name, $id = null ) {
 	global $phoenix_sprite_external;
-
 	$attr = 'class="phoenix-icon phoenix-icon-' . $name . '"';
-
 	if ( $id ) :
 		$attr .= 'id="' . $id . '"';
 	endif;
-
 	$return = '<svg '. $attr.'>';
-
 	if ( $phoenix_sprite_external ) :
 		if ( function_exists( 'wpcom_is_vip' ) ) :
 			$path = wpcom_vip_noncdn_uri( get_template_directory() );
@@ -105,7 +100,6 @@ function phoenix_get_icon( $name, $id = null ) {
 	$return .= '</svg>';
  return $return;
 }
-
 /*
  * This allows for easy injection of SVG references inline.
  * Usage: phoenix_icon( 'name-of-icon' );
@@ -113,7 +107,6 @@ function phoenix_get_icon( $name, $id = null ) {
 function phoenix_icon( $name, $id = null ) {
 	echo phoenix_get_icon( $name, $id );
 }
-
 /*
  * Filter our navigation menus to look for social media links.
  * When we find a match, we'll hide the text and instead show an SVG icon.
@@ -144,7 +137,6 @@ function phoenix_social_menu( $items ) {
 		elseif ( preg_match( $domain_pattern, $subject, $matches ) && in_array( $matches[1], $domains ) ) :
 			$icon = phoenix_get_icon( $matches[1] );
 		endif;
-
 		// If we've found an icon, hide the text and inject an SVG
 		if ( isset( $icon ) ) {
 			$item->title = $icon . '<span class="screen-reader-text">' . $item->title . '</span>';
@@ -163,7 +155,7 @@ function phoenix_svg_shortcode( $atts, $content = null ) {
 	$a = shortcode_atts( array(
     'file' => '',
 	), $atts );
-	$file = get_template_directory_uri() . '/assets/svg/'.$atts['file'].'.svg';
+	$file = get_template_directory_uri() . '/assets/svg/'.$a['file'].'.svg';
 	if ( function_exists( 'wpcom_is_vip' ) ) :
 		return wpcom_vip_file_get_contents( esc_url( $file ) );
 	else :
@@ -182,6 +174,6 @@ function phoenix_svg_icon_shortcode( $atts, $content = null ) {
     'name' => '',
 	 'id'   => '',
 	), $atts );
-	return phoenix_get_icon( $atts['name'], $atts['id'] );
+	return phoenix_get_icon( $a['name'], $a['id'] );
 }
 add_shortcode( 'phoenix-icon', 'phoenix_svg_icon_shortcode' );

@@ -1,0 +1,111 @@
+.site-branding, .site-logo-link {
+	display: none;
+}
+
+#masthead {
+	width: 100%;
+	padding: 0 0 $size__site-gutter;
+	text-align: center;
+}
+
+/* Navigation */
+.main-navigation {
+	display: inline-block;
+	font-family: $font__accent;
+	max-width: $size__max-width;
+	width: 100%;
+	vertical-align: top;
+
+	li {
+		display: inline;
+		@include font-size(1);
+		font-weight: 200;
+		margin-left: -6px; /* Compensate for hairline space. */
+
+		&::before {
+			content: '\00b7';
+			display: inline;
+		}
+
+		&:first-child::before {
+			display: none;
+		}
+	} // li
+
+	a {
+		border-bottom: none;
+		color: $color__text-main;
+		display: inline-block;
+		padding: 5px 10px;
+
+		&:hover {
+			color: $red;
+		}
+	} // a
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		/* Sub-menus (currently unused & thus relatively unstyled) */
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			float: left;
+			position: absolute;
+			top: 1.5em;
+			left: -999em;
+			z-index: 99999;
+
+			ul {
+				left: -999em;
+				top: 0;
+			}
+
+			li {
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+			}
+
+			a {
+				width: 200px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a {
+		color: $silver;
+		border-bottom: 2px solid $silver;
+	}
+}
+
+/* On small screens, decrease space between menu items. */
+@include mobile {
+	.main-navigation a {
+		@include font-size(0.9);
+		padding: 5px 6px;
+	}
+}
