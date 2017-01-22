@@ -308,52 +308,37 @@ h3, .posted-on,
 p {
   margin-bottom: 1.5em; }
 
-.cap,
-.single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-  color: #70727f;
-  font-size: 1.2em;
-  margin: 1em 0;
-  padding-bottom: 1.5em;
-  position: relative; }
-  @media (min-width: 768px) {
-    .cap,
-    .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-      margin: 3em -80px; } }
-  .cap:first-letter,
-  .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
-    color: #f3c548;
-    font-family: freight-big-pro, freight-text-pro, Georgia, serif;
-    font-weight: 700;
-    initial-letter: 3;
-    -webkit-initial-letter: 3;
-    margin: 0 5px 0 -5px; }
-    @media (min-width: 768px) {
-      .cap:first-letter,
-      .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
-        initial-letter: 4;
-        -webkit-initial-letter: 4; } }
-    @supports (not (initial-letter: 5)) and (not (-webkit-initial-letter: 5)) {
-      .cap:first-letter,
-      .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
-        display: block;
-        float: left;
-        font-size: 144px;
-        font-size: 9rem;
-        line-height: 0.6;
-        margin-top: 11px; }
-        @media (min-width: 768px) {
-          .cap:first-letter,
-          .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
-            font-size: 240px;
-            font-size: 15rem;
-            margin-top: 12px; } } }
-  .cap:first-line,
-  .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-line {
-    font-variant: small-caps;
-    letter-spacing: 2px; }
+@media (min-width: 768px) {
+  .cap,
+  .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
+    color: #70727f;
+    font-size: 1.25em;
+    margin: 3em -80px;
+    padding-bottom: 0;
+    position: relative; } }
 
-.cap {
-  margin-top: 7em; }
+.cap::first-letter,
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
+  color: #f3c548;
+  display: block;
+  float: left;
+  font-size: 112px;
+  font-size: 7rem;
+  font-family: freight-big-pro, freight-text-pro, Georgia, serif;
+  font-weight: 700;
+  line-height: 0.6;
+  margin: 14px 5px 0 -5px; }
+  @media (min-width: 768px) {
+    .cap::first-letter,
+    .single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
+      font-size: 240px;
+      font-size: 15rem;
+      margin-top: 16px; } }
+
+.cap::first-line,
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-line {
+  font-variant: small-caps;
+  letter-spacing: 2px; }
 
 dfn, cite, em, i {
   font-style: italic; }
