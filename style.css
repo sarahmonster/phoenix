@@ -322,18 +322,31 @@ p {
   .cap:first-letter,
   .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
     color: #f3c548;
-    float: left;
-    font-family: brim-narrow-combined-2, freight-text-pro, Georgia, serif;
-    font-size: 144px;
-    font-size: 9rem;
-    line-height: 0.8;
-    margin: -17px 10px 0 -10px; }
+    font-family: freight-big-pro, freight-text-pro, Georgia, serif;
+    font-weight: 700;
+    initial-letter: 3;
+    -webkit-initial-letter: 3;
+    margin: 0 5px 0 -5px; }
     @media (min-width: 768px) {
       .cap:first-letter,
       .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
-        font-size: 192px;
-        font-size: 12rem;
-        margin-top: -35px; } }
+        initial-letter: 4;
+        -webkit-initial-letter: 4; } }
+    @supports (not (initial-letter: 5)) and (not (-webkit-initial-letter: 5)) {
+      .cap:first-letter,
+      .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
+        display: block;
+        float: left;
+        font-size: 144px;
+        font-size: 9rem;
+        line-height: 0.6;
+        margin-top: 11px; }
+        @media (min-width: 768px) {
+          .cap:first-letter,
+          .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-letter {
+            font-size: 240px;
+            font-size: 15rem;
+            margin-top: 12px; } } }
   .cap:first-line,
   .single:not(.single-wanderlist-location) .entry-content p:first-of-type:first-line {
     font-variant: small-caps;
@@ -1216,7 +1229,7 @@ body {
   margin-right: -85px; }
 
 .phoenix-the-unbearable-lightness-of-designing .word3 {
-  font-family: brim-narrow-combined-2, freight-text-pro, Georgia, serif;
+  font-family: freight-big-pro, freight-text-pro, Georgia, serif;
   color: #FAFAFC;
   font-size: 13vw;
   margin-top: -81px;

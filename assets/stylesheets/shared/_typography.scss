@@ -86,15 +86,29 @@ p {
 
 	&:first-letter {
 		color: $yellow;
-		float: left;
 		font-family: $font__decorative;
-		@include font-size(9);
-		line-height: 0.8;
-		margin: -17px 10px 0 -10px;
+		font-weight: 700;
+		initial-letter: 3;
+		-webkit-initial-letter: 3;
+		margin: 0 5px 0 -5px;
+
 
 		@include tablet {
-			@include font-size(12);
-			margin-top: -35px;
+			initial-letter: 4;
+			-webkit-initial-letter: 4;
+		}
+
+		@supports (not(initial-letter: 5)) and (not(-webkit-initial-letter: 5)) {
+			display: block;
+			float: left;
+			@include font-size(9);
+			line-height: 0.6;
+			margin-top: 11px;
+
+			@include tablet {
+				@include font-size(15);
+				margin-top: 12px;
+			}
 		}
 	}
 
