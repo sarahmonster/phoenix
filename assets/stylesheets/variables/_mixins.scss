@@ -11,6 +11,7 @@
 	margin-right: auto;
 }
 
-@mixin desaturate() {
-	filter: grayscale(100%) brightness(0.3) contrast(1.25);
+@mixin desaturate( $dark: false) {
+	//filter: grayscale(100%) brightness(0.3) contrast(1.25);
+	filter: grayscale(100%) brightness(1.8) contrast(1.25);
 }

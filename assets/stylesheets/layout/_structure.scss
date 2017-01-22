@@ -1,11 +1,10 @@
 body {
-	background: $color__text-main;
+	background: $color__background-body;
 }
 
 #page {
-	background: $color__background-body;
 	margin: 0 auto;
-	max-width: $size__max-width;
+	max-width: $size__max-content-width;
 	padding: 20px;
 }
 
@@ -21,6 +20,6 @@ body {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em auto;
+	margin: 0 auto;
 	max-width: $size__content-width;
 }

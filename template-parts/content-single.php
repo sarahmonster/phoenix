@@ -9,11 +9,8 @@
 	<header class="entry-header">
 
 		<?php if ( has_post_thumbnail() ) :
-			$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-			<div class="phoenix-panel-background" style="background-image:url(<?php echo esc_url( $thumbnail[0] ); ?>)"></div>
-		<?php else : ?>
-			<div class="phoenix-panel-background"></div>
-		<?php endif; ?>
+			the_post_thumbnail( 'full', array( 'class' => 'phoenix-background-image' ) );
+		endif; ?>
 
 		<div class="phoenix-header-text">
 			<div class="entry-meta">

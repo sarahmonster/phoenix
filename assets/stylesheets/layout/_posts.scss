@@ -12,69 +12,44 @@
 	display: inline;
 }
 
+/* Background images */
+.phoenix-background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	filter: grayscale(100%) brightness(2) contrast(1.5);
+	z-index: -1;
+	opacity: 0.125;
+	display: none;
+}
+
 /* Styles for all single posts */
 .single {
 	.entry-header {
-		position: relative;
-
-		@include desktop-max {
-			margin-top: 40px;
+		@include tablet {
+			margin-top: $size__site-gutter*2;
 		}
 	}
 
-	.entry-header {
-		background: $color__accent;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		margin-left: -$size__site-gutter/2;
-		min-height: 80vh;
-		padding: $size__site-gutter;
-		position: relative;
-		transform: skew(0, -$size__skew/2);
-		width: 100%;
-		width: calc(100% + #{$size__site-gutter});
-	}
-
-	.phoenix-panel-background {
-		background-color: $color__neutral-text;
-		background-position: top center;
-		background-size: cover;
-		position: absolute;
-		left: 0;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		@include desaturate;
-		transform: skew(0, $size__skew);
-		z-index: -1;
-	}
-
-	// Un-skew text, because we aren't animals.
-	.phoenix-header-text {
-		max-width: $size__max-width*.75;
-		transform: skew(0, $size__skew/2);
-		z-index: 10;
-	}
-
 	.posted-on {
-		color: $silver;
+		color: $color__neutral-text;
 	}
 
 	.phoenix-month,
 	.phoenix-date {
-		color: lighten($silver, 20%);
+		color: lighten($color__neutral-text, 20%);
 	}
 
 	.entry-title {
-		color: $white;
+		color: $charcoal;
 		margin: $size__site-gutter/2 0;
 	}
 
 	.subtitle {
 		margin-left: 0;
-		border-color: $white;
-		color: $white;
+		border-color: $color__neutral;
+		color: $color__neutral-text;
 	}
 
 	.entry-content {

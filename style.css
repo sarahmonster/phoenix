@@ -825,18 +825,17 @@ a {
     padding: 5px 6px; } }
 
 body {
-  background: #34353B; }
+  background: #FAFAFC; }
 
 #page {
-  background: #FAFAFC;
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1200px;
   padding: 20px; }
 
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em auto;
+  margin: 0 auto;
   max-width: 640px; }
 
 .site-footer {
@@ -976,65 +975,37 @@ body {
 .group-blog .byline {
   display: inline; }
 
-/* Styles for all single posts */
-.single .entry-header {
-  position: relative; }
-  @media (max-width: 1023px) {
-    .single .entry-header {
-      margin-top: 40px; } }
-
-.single .entry-header {
-  background: #f3c548;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin-left: -20px;
-  min-height: 80vh;
-  padding: 40px;
-  position: relative;
-  -ms-transform: skew(0, -2deg);
-  transform: skew(0, -2deg);
-  width: 100%;
-  width: calc(100% + 40px); }
-
-.single .phoenix-panel-background {
-  background-color: #83848a;
-  background-position: top center;
-  background-size: cover;
+/* Background images */
+.phoenix-background-image {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   right: 0;
-  bottom: 0;
-  filter: grayscale(100%) brightness(0.3) contrast(1.25);
-  -ms-transform: skew(0, 4deg);
-  transform: skew(0, 4deg);
-  z-index: -1; }
+  filter: grayscale(100%) brightness(2) contrast(1.5);
+  z-index: -1;
+  opacity: 0.125;
+  display: none; }
 
-.single .phoenix-header-text {
-  max-width: 1200px;
-  -ms-transform: skew(0, 2deg);
-  transform: skew(0, 2deg);
-  z-index: 10; }
+/* Styles for all single posts */
+@media (min-width: 768px) {
+  .single .entry-header {
+    margin-top: 80px; } }
 
 .single .posted-on {
-  color: #AAABAF; }
+  color: #83848a; }
 
 .single .phoenix-month,
 .single .phoenix-date {
-  color: #dfdfe0; }
+  color: #b7b8bb; }
 
 .single .entry-title {
-  color: #FAFAFC;
+  color: #646671;
   margin: 20px 0; }
 
 .single .subtitle {
   margin-left: 0;
-  border-color: #FAFAFC;
-  color: #FAFAFC; }
+  border-color: #AAABAF;
+  color: #83848a; }
 
 .single .entry-content {
   padding-top: 80px; }
