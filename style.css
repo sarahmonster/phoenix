@@ -899,56 +899,71 @@ body {
 
 /* Archive pages */
 .blog,
-.archive {
+.archive,
+.home {
   /* Excerpt */ }
   .blog .nix-prefix,
-  .archive .nix-prefix {
+  .archive .nix-prefix,
+  .home .nix-prefix {
     display: none; }
   .blog a,
-  .archive a {
+  .archive a,
+  .home a {
     border-bottom: none; }
   .blog article,
-  .archive article {
+  .archive article,
+  .home article {
     border-top: 2px solid #AAABAF;
     margin: 160px auto;
     max-width: 640px; }
     @media (min-width: 1024px) {
       .blog article:nth-of-type(odd),
-      .archive article:nth-of-type(odd) {
+      .archive article:nth-of-type(odd),
+      .home article:nth-of-type(odd) {
         margin-right: 160px; }
       .blog article:nth-of-type(even),
-      .archive article:nth-of-type(even) {
+      .archive article:nth-of-type(even),
+      .home article:nth-of-type(even) {
         margin-left: 160px; } }
   .blog .posted-on,
   .blog .cat-links,
   .archive .posted-on,
-  .archive .cat-links {
+  .archive .cat-links,
+  .home .posted-on,
+  .home .cat-links {
     display: inline-block; }
   .blog .posted-on,
-  .archive .posted-on {
+  .archive .posted-on,
+  .home .posted-on {
     color: #646671; }
   .blog .phoenix-day,
   .blog .phoenix-date,
   .archive .phoenix-day,
-  .archive .phoenix-date {
+  .archive .phoenix-date,
+  .home .phoenix-day,
+  .home .phoenix-date {
     display: none; }
   .blog .entry-title,
-  .archive .entry-title {
+  .archive .entry-title,
+  .home .entry-title {
     font-family: lust-display, freight-text-pro, Georgia, serif;
     font-style: normal;
     font-size: 38.4px;
     font-size: 2.4rem;
     margin: 0; }
     .blog .entry-title a,
-    .archive .entry-title a {
+    .archive .entry-title a,
+    .home .entry-title a {
       color: #83848a; }
     @media (min-width: 768px) {
       .blog .entry-title,
-      .archive .entry-title {
+      .archive .entry-title,
+      .home .entry-title {
         font-size: 57.6px;
         font-size: 3.6rem; } }
   .blog .entry-content,
-  .archive .entry-content {
+  .archive .entry-content,
+  .home .entry-content {
     font-size: 20px;
     font-size: 1.25rem;
     margin-top: 0;
@@ -1134,6 +1149,9 @@ body {
   margin-right: -3px;
   vertical-align: -7px; }
 
+.home #page {
+  max-width: none; }
+
 .phoenix-panel {
   margin: 0 auto;
   max-width: 1200px; }
@@ -1153,7 +1171,7 @@ body {
     .phoenix-intro-text p {
       font-size: 32px;
       font-size: 2rem;
-      margin-left: auto;
+      margin: 40px 0 80px auto;
       max-width: 550px; } }
 
 .phoenix-travel-map {
@@ -1163,12 +1181,14 @@ body {
     margin-left: -20px;
     width: calc(100% + 40px); }
 
-.phoenix-newest-stories .phoenix-short-post {
-  margin: 1em 0;
-  margin-left: auto;
-  max-width: 550px; }
-  .phoenix-newest-stories .phoenix-short-post img {
+.phoenix-newest-stories article.phoenix-short-post {
+  margin-right: 0;
+  margin-left: auto; }
+  .phoenix-newest-stories article.phoenix-short-post img {
     display: none; }
+
+.phoenix-newest-stories .entry-title {
+  margin-top: 40px; }
 
 /* Ensure overview page has a reasonable distance from top */
 .wanderlist-overview {

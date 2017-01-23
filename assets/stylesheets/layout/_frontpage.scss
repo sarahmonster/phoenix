@@ -1,3 +1,7 @@
+.home #page {
+	max-width: none;
+}
+
 // Panels
 .phoenix-panel {
 	margin: 0 auto;
@@ -21,7 +25,7 @@
 
 		@include tablet {
 			@include font-size(2);
-			margin-left: auto;
+			margin: $size__site-gutter 0 $size__site-gutter*2 auto;
 			max-width: 550px;
 		}
 	}
@@ -42,13 +46,16 @@
 // Recent posts
 .phoenix-newest-stories {
 
-	.phoenix-short-post {
-		margin: 1em 0;
+	article.phoenix-short-post {
+		margin-right: 0;
 		margin-left: auto;
-		max-width: 550px;
 
 		img {
 			display: none;
 		}
 	} // .phoenix-short-post
+
+	.entry-title {
+		margin-top: $size__site-gutter;
+	}
 } // .phoenix-frontpage-widget
