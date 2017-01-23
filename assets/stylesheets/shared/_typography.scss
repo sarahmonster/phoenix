@@ -77,9 +77,13 @@ p {
 	@include tablet {
 		color: lighten($color__text-main, 25%);
 		font-size: 1.25em;
-		margin: 3em -#{$size__site_gutter*2};
+		margin: $size__site_gutter*2 0;
 		padding-bottom: 0;
-		position: relative;
+	}
+
+	@include desktop {
+		margin-left: -#{$size__site_gutter*2};
+		margin-right: -#{$size__site_gutter*2};
 	}
 
 	&::first-letter {
