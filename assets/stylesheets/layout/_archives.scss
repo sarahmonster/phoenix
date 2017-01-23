@@ -46,6 +46,7 @@
 		font-style: normal;
 		@include font-size(2.4);
 		margin: 0;
+		line-height: 1;
 
 		a {
 			color: $color__neutral-text;
