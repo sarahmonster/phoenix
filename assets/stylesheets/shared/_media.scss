@@ -27,8 +27,8 @@ figure {
 	max-width: calc(100% + #{$size__site-gutter});
 
 	img {
-		border-top: 5px solid $color__white;
-		border-bottom: 5px solid $color__white;
+		border-top: 5px solid #fff;
+		border-bottom: 5px solid #fff;
 		@include box-shadow;
 	}
 
@@ -57,8 +57,9 @@ figcaption {
 		margin-left: -#{$size__site-gutter};
 		margin-right: -#{$size__site-gutter};
 		max-width: calc(100% + #{$size__site-gutter*2});
+
 		img {
-			border: 10px solid $color__white;
+			border: 10px solid #fff;
 		}
 	}
 

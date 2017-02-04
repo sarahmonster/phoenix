@@ -1874,8 +1874,8 @@ figure {
   max-width: calc(100% + 40px); }
   .wp-caption img,
   figure img {
-    border-top: 5px solid #FAFAFC;
-    border-bottom: 5px solid #FAFAFC;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
     box-shadow: 1px 1px 3px rgba(170, 171, 175, 0.5); }
   .wp-caption a,
   .wp-caption a:hover,
@@ -1902,7 +1902,7 @@ figcaption {
     max-width: calc(100% + 80px); }
     .wp-caption img,
     figure img {
-      border: 10px solid #FAFAFC; }
+      border: 10px solid #fff; }
   .wp-caption-text,
   figcaption {
     padding-left: 0;
