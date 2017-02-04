@@ -1870,18 +1870,13 @@ object {
 --------------------------------------------------------------*/
 .wp-caption,
 figure {
-  background: #e9e9eb;
-  padding: 10px;
-  margin: 0px -20px;
+  margin: 80px -20px;
   max-width: calc(100% + 40px); }
-  .wp-caption img[class*="wp-image-"],
-  figure img[class*="wp-image-"] {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-  .wp-caption .wp-caption-text,
-  figure .wp-caption-text {
-    margin: 0.8075em 0; }
+  .wp-caption img,
+  figure img {
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    box-shadow: 1px 1px 3px rgba(170, 171, 175, 0.5); }
   .wp-caption a,
   .wp-caption a:hover,
   figure a,
@@ -1891,20 +1886,27 @@ figure {
   figure p {
     display: none;
     /* Catch empty paragraphs */ }
-  @media (min-width: 1024px) {
-    .wp-caption,
-    figure {
-      margin-left: -50px;
-      margin-right: -50px;
-      max-width: calc(100% + 100px); } }
 
 .wp-caption-text,
 figcaption {
-  color: #70727f;
-  font-size: 0.9em;
+  border-bottom: 2px solid #AAABAF;
+  color: #83848a;
   font-style: italic;
-  line-height: 1.4;
-  text-align: center; }
+  padding: 10px 20px 20px; }
+
+@media (min-width: 768px) {
+  .wp-caption,
+  figure {
+    margin-left: -40px;
+    margin-right: -40px;
+    max-width: calc(100% + 80px); }
+    .wp-caption img,
+    figure img {
+      border: 10px solid #fff; }
+  .wp-caption-text,
+  figcaption {
+    padding-left: 0;
+    padding-right: 0; } }
 
 /*--------------------------------------------------------------
 ## Galleries
