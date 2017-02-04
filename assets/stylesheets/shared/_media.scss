@@ -23,17 +23,13 @@ object {
 --------------------------------------------------------------*/
 .wp-caption,
 figure {
-	background: lighten($color__text-main, 70%);
-	padding: 10px;
-	margin: 0px -20px;
-	max-width: calc(100% + 40px);
+	margin: $size__site-gutter*2 -#{$size__site-gutter/2};
+	max-width: calc(100% + #{$size__site-gutter});
 
-	img[class*="wp-image-"] {
-		@include center-block;
-	}
-
-	.wp-caption-text {
-		margin: 0.8075em 0;
+	img {
+		border-top: 5px solid $color__white;
+		border-bottom: 5px solid $color__white;
+		@include box-shadow;
 	}
 
 	a,
@@ -44,21 +40,33 @@ figure {
 	p {
 		display: none; /* Catch empty paragraphs */
 	}
-
-	@include desktop {
-		margin-left: -50px;
-		margin-right: -50px;
-		max-width: calc(100% + 100px);
-	}
 }
 
 .wp-caption-text,
 figcaption {
-	color: lighten($color__text-main, 25%);
-	font-size: 0.9em;
+	border-bottom: 2px solid $color__neutral;
+	color: $color__neutral-text;
 	font-style: italic;
-	line-height: 1.4;
-	text-align: center;
+	padding: $size__site-gutter/4 $size__site-gutter/2 $size__site-gutter/2;
+}
+
+@include tablet {
+
+	.wp-caption,
+	figure {
+		margin-left: -#{$size__site-gutter};
+		margin-right: -#{$size__site-gutter};
+		max-width: calc(100% + #{$size__site-gutter*2});
+		img {
+			border: 10px solid $color__white;
+		}
+	}
+
+	.wp-caption-text,
+	figcaption {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 /*--------------------------------------------------------------
