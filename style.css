@@ -255,7 +255,7 @@ h1, h2, h3, .posted-on,
   .cat-links a,
   .tags-links a,
   .nix-prefix a, .wanderlist-country-widget li a, h4 a, h5 a, h6 a {
-    border-bottom: none; }
+    text-decoration: none; }
 
 h1 {
   color: #646671;
@@ -542,19 +542,22 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a {
-  border-bottom: 2px solid #a32020;
+.entry-content a {
   color: #a32020;
-  text-decoration: none;
   transition: all 0.2s ease-out;
-  padding-bottom: 1px; }
-  a:hover, a:focus, a:active {
+  display: inline-block;
+  text-decoration: none;
+  text-shadow: 0.05em 0 0 #FAFAFC, -0.05em 0 0 #FAFAFC, 0 0.05em 0 #FAFAFC, 0 -0.05em 0 #FAFAFC, 0.1em 0 0 #FAFAFC, -0.1em 0 0 #FAFAFC, 0 0.1em 0 #FAFAFC, 0 -0.1em 0 #FAFAFC;
+  background-image: linear-gradient(to right, #a32020 0%, #a32020 100%);
+  background-repeat: repeat-x;
+  background-position: bottom 0.25em center;
+  background-size: 100% 0.1em; }
+  .entry-content a:hover, .entry-content a:focus, .entry-content a:active {
     color: #3F9CBC;
-    padding-bottom: 0;
-    border-bottom: 2px solid #3F9CBC; }
-  a:focus {
+    background-image: linear-gradient(to right, #3F9CBC 0%, #3F9CBC 100%); }
+  .entry-content a:focus {
     outline: thin dotted; }
-  a:hover, a:active {
+  .entry-content a:hover, .entry-content a:active {
     outline: 0; }
 
 /*--------------------------------------------------------------
@@ -572,7 +575,7 @@ a {
   .comment-navigation a,
   .posts-navigation a,
   .post-navigation a {
-    border-bottom: none;
+    text-decoration: none;
     font-size: 17.6px;
     font-size: 1.1rem;
     display: block;
@@ -691,7 +694,7 @@ a {
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
     background-color: #f1f1f1;
-    border-bottom: none;
+    text-decoration: none;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
@@ -772,7 +775,7 @@ a {
     .main-navigation li:first-child::before {
       display: none; }
   .main-navigation a {
-    border-bottom: none;
+    text-decoration: none;
     color: #34353B;
     display: inline-block;
     padding: 5px 10px; }
@@ -883,7 +886,7 @@ body {
 
 /* Category links */
 .cat-links a {
-  border-bottom: none;
+  text-decoration: none;
   color: #f6d478; }
   .cat-links a::before {
     background-color: #f3c548;
@@ -909,7 +912,7 @@ body {
   .blog a,
   .archive a,
   .home a {
-    border-bottom: none; }
+    text-decoration: none; }
   .blog .post,
   .archive .post,
   .home .post {
@@ -1123,7 +1126,7 @@ body {
   .contact-card li {
     list-style-type: none; }
   .contact-card a {
-    border-bottom: none;
+    text-decoration: none;
     color: #FAFAFC; }
     .contact-card a .phoenix-icon {
       height: 20px;
@@ -1753,7 +1756,7 @@ img {
       box-shadow: none;
       border: none; }
   .single-pieces a:not(.url-link) {
-    border-bottom: none; }
+    text-decoration: none; }
   .single-pieces .url-link {
     display: block;
     width: 100%;
@@ -1944,7 +1947,7 @@ figure {
   .wp-caption a:hover,
   figure a,
   figure a:hover {
-    border-bottom: none; }
+    text-decoration: none; }
   .wp-caption p,
   figure p {
     display: none;
