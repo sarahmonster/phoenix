@@ -264,7 +264,7 @@
 	}
 
 	.wanderlist-continent-count {
-		@include count-color($yellow);
+		@include count-color($color__accent);
 	}
 } // .wanderlist-number-widget
 

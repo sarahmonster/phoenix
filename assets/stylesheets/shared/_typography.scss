@@ -87,7 +87,7 @@ p {
 	}
 
 	&::first-letter {
-		color: $yellow;
+		color: $color__accent;
 		display: block;
 		float: left;
 		@include font-size(7);

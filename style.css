@@ -324,7 +324,7 @@ p {
 
 .cap::first-letter,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
-  color: #f3c548;
+  color: #ff6fbd;
   display: block;
   float: left;
   font-size: 112px;
@@ -397,7 +397,7 @@ big {
   font-size: 125%; }
 
 strong {
-  background: #fbebc0;
+  background: #ffeff7;
   color: #34353B;
   padding: 0 5px; }
 
@@ -543,12 +543,12 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 .entry-content a {
-  color: #a32020;
+  color: #cc3788;
   transition: all 0.2s ease-out;
   display: inline-block;
   text-decoration: none;
   text-shadow: 0.05em 0 0 #FAFAFC, -0.05em 0 0 #FAFAFC, 0 0.05em 0 #FAFAFC, 0 -0.05em 0 #FAFAFC, 0.1em 0 0 #FAFAFC, -0.1em 0 0 #FAFAFC, 0 0.1em 0 #FAFAFC, 0 -0.1em 0 #FAFAFC;
-  background-image: linear-gradient(to right, #a32020 0%, #a32020 100%);
+  background-image: linear-gradient(to right, #cc3788 0%, #cc3788 100%);
   background-repeat: repeat-x;
   background-position: bottom 0.25em center;
   background-size: 100% 0.1em; }
@@ -662,7 +662,7 @@ textarea {
   .phoenix-numeric-pagination .page-numbers.current {
     border-radius: 50%;
     border: 1px solid;
-    color: #f3c548;
+    color: #ff6fbd;
     display: inline-block;
     height: 34px;
     padding: 4.5px 0;
@@ -887,16 +887,16 @@ body {
 /* Category links */
 .cat-links a {
   text-decoration: none;
-  color: #f6d478; }
+  color: #ffa2d4; }
   .cat-links a::before {
-    background-color: #f3c548;
+    background-color: #ff6fbd;
     content: '';
     display: inline-block;
     height: 10px;
     margin-right: 5px;
     width: 10px; }
   .cat-links a:hover {
-    color: #f3c548; }
+    color: #ff6fbd; }
     .cat-links a:hover::before {
       background-color: #34353B; }
 
@@ -1192,7 +1192,7 @@ body {
 /* Override link colour set by Mapbox */
 .leaflet-container a {
   border: none;
-  color: #a32020; }
+  color: #cc3788; }
   .leaflet-container a:hover {
     color: #3F9CBC; }
 
@@ -1398,8 +1398,8 @@ body {
     border-color: #37894c;
     color: #37894c; }
   .wanderlist-number-widget .wanderlist-continent-count {
-    border-color: #f3c548;
-    color: #f3c548; }
+    border-color: #ff6fbd;
+    color: #ff6fbd; }
 
 /* Text snippets */
 .wanderlist-country-count {
@@ -2035,7 +2035,7 @@ figcaption {
   padding: 4px; }
 
 .menu-social-menu-container ul svg {
-  fill: #a32020;
+  fill: #cc3788;
   height: 28px;
   speak: none;
   transition: fill .1s ease-in 0;
