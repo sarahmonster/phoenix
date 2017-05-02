@@ -27,13 +27,17 @@
 /* Styles for all single posts */
 .single {
 	.entry-header {
-		@include tablet {
-			margin-top: $size__site-gutter*2;
-		}
+		background: $color__black;
+		margin: 0 -$size__site-gutter/2;
+		width: calc(100% + #{$size__site-gutter});
+		min-height: 90vh;
+		padding: $size__site-gutter*2;
+		display: flex;
+		align-items: center;
 	}
 
 	.posted-on {
-		color: $color__neutral-text;
+		color: $color__white;
 	}
 
 	.phoenix-month,
@@ -42,7 +46,7 @@
 	}
 
 	.entry-title {
-		color: $charcoal;
+		color: $color__accent;
 		margin: $size__site-gutter/2 0;
 	}
 

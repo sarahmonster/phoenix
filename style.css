@@ -987,19 +987,26 @@ body {
   display: none; }
 
 /* Styles for all single posts */
-@media (min-width: 768px) {
-  .single .entry-header {
-    margin-top: 80px; } }
+.single .entry-header {
+  background: #34353B;
+  margin: -20px;
+  width: calc(100% + 40px);
+  min-height: 90vh;
+  padding: 80px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .single .posted-on {
-  color: #83848a; }
+  color: #FAFAFC; }
 
 .single .phoenix-month,
 .single .phoenix-date {
   color: #b7b8bb; }
 
 .single .entry-title {
-  color: #646671;
+  color: #ff6fbd;
   margin: 20px 0; }
 
 .single .subtitle {
