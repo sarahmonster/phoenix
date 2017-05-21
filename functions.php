@@ -182,3 +182,10 @@ require get_template_directory() . '/inc/svg-icons.php';
 if( defined( 'WP_CLI' ) && WP_CLI ) {
 	require get_template_directory() . '/cli-lab/modules/posts.php';
 }
+
+/**
+ * Load CPTs, custom fields, and custom taxonomies.
+ */
+require get_template_directory() . '/inc/custom-post-types/custom-post-types-register.php';
+require get_template_directory() . '/inc/custom-fields/custom-fields-register.php';
+require get_template_directory() . '/inc/custom-taxonomies/custom-taxonomies-register.php';
