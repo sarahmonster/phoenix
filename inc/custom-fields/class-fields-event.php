@@ -32,6 +32,10 @@ class Phoenix_Project_Fields extends Phoenix_Fields {
 					'name'  => 'location',
 					'label' => esc_html__( 'Location', 'phoenix' ),
 				) ),
+				'link' => new Fieldmanager_Link( array(
+					'name'  => 'link',
+					'label' => esc_html__( 'Link to information', 'phoenix' ),
+				) ),
 				'upcoming_event' => new Fieldmanager_Checkbox( array(
 					'name'            => 'upcoming_event',
 					'label'           => esc_html__( 'Upcoming event', 'phoenix' ),
