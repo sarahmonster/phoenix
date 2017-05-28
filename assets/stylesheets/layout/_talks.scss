@@ -1,11 +1,10 @@
-.tax-talks {
-	article {
-		@include card;
+.event {
+	@include card;
+	margin: 0 0 $size__site-gutter/2 0;
 
-		@include tablet {
-			display: inline-block;
-			vertical-align: top;
-			width: 48%;
-		}
+	@include tablet {
+		display: inline-block;
+		vertical-align: top;
+		width: 48%;
 	}
 }

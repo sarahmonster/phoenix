@@ -910,9 +910,9 @@ body {
   .archive a,
   .home a {
     border-bottom: none; }
-  .blog article,
-  .archive article,
-  .home article {
+  .blog .post,
+  .archive .post,
+  .home .post {
     border-top: 2px solid #AAABAF;
     margin: 160px auto;
     max-width: 640px; }
@@ -1766,13 +1766,14 @@ img {
   .single-pieces .iphone {
     margin-top: 6em; }
 
-.tax-talks article {
+.event {
   box-shadow: 1px 1px 3px rgba(170, 171, 175, 0.5);
   background: #FAFAFC;
   margin: 0 0 20px 0;
-  padding: 20px; }
+  padding: 20px;
+  margin: 0 0 20px 0; }
   @media (min-width: 768px) {
-    .tax-talks article {
+    .event {
       display: inline-block;
       vertical-align: top;
       width: 48%; } }
