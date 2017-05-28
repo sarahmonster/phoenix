@@ -25,12 +25,17 @@
 	// or fall back to a placeholder.
 	else : ?>
 		<div class="placeholder">
+			<?php the_terms( get_the_ID(), 'talks' ); ?>
 			<?php the_title(); ?>
 		</div>
 	<?php endif;
 
+	// Output the title of the talk.
+	the_terms( get_the_ID(), 'talks' );
+
 	// Output the name of the event.
 	if ( array_key_exists( 'link' , $meta ) ) :
+		echo '<br />';
 		printf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( $meta['link'] ),
 			esc_html( get_the_title() )
