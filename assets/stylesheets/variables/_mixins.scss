@@ -26,3 +26,16 @@
 	margin: 0 0 $size__site-gutter/2 0;
 	padding: $size__site-gutter/2;
 }
+
+@mixin small-caps() {
+	font-family: $font__accent;
+	@include font-size(0.8);
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin: 0;
+	text-transform: uppercase;
+
+	@include tablet {
+		@include font-size(0.9);
+	}
+}

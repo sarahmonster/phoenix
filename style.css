@@ -1771,12 +1771,30 @@ img {
   background: #FAFAFC;
   margin: 0 0 20px 0;
   padding: 20px;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  position: relative; }
   @media (min-width: 768px) {
     .event {
       display: inline-block;
       vertical-align: top;
       width: 48%; } }
+  .event .phoenix-upcoming {
+    font-family: proxima-nova, Helvetica, Arial, sans-serif;
+    font-size: 12.8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background: #f3c548; }
+    @media (min-width: 768px) {
+      .event .phoenix-upcoming {
+        font-size: 14.4px;
+        font-size: 0.9rem; } }
 
 .placeholder {
   height: 200px;
@@ -1881,6 +1899,15 @@ embed,
 iframe,
 object {
   max-width: 100%; }
+
+.jetpack-video-wrapper {
+  margin: 0 !important; }
+
+.jetpack-video-wrapper > embed,
+.jetpack-video-wrapper > iframe,
+.jetpack-video-wrapper > object,
+.jetpack-video-wrapper > .wp-video {
+  margin-bottom: 0; }
 
 /*--------------------------------------------------------------
 ## Captions

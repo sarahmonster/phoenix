@@ -10,6 +10,10 @@
 	// Get an array of all our post meta.
 	$meta = get_post_meta( get_the_ID(), 'event_details' )[0];
 
+	if ( phoenix_date_is_upcoming( $meta['date'] ) ) : ?>
+		<span class="phoenix-upcoming"><?php esc_html_e( 'Upcoming', 'phoenix' ); ?></span>
+	<?php endif;
+
 	// Display either a video clip...
 	if ( array_key_exists( 'video' , $meta ) && $meta['video'] ) :
 		phoenix_embed_video( $meta['video'] );
@@ -38,7 +42,7 @@
 	// Format and output date.
 	if ( array_key_exists( 'date' , $meta ) && $meta['date'] ) :
 		echo '<br />';
-		if ( 'yes' === $meta['upcoming_event'] ) :
+		if ( phoenix_date_is_upcoming( $meta['date'] ) ) :
 			echo date( 'l jS F Y', $meta['date'] );
 		else :
 			echo date( 'F Y', $meta['date'] );

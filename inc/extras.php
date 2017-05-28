@@ -122,3 +122,16 @@ function phoenix_embed_video( $url ) {
 		echo do_shortcode( "[vimeo $url]");
 	endif;
 }
+
+/**
+ * Check to see if a date is upcoming or not.
+ * If the date matches today, we'll
+ */
+function phoenix_date_is_upcoming( $event_date ) {
+	$today = time();
+	if ( $event_date > $today ) {
+		return true;
+	} else {
+		return false;
+	}
+}

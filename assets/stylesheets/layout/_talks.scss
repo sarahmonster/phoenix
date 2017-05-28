@@ -1,11 +1,22 @@
 .event {
 	@include card;
 	margin: 0 0 $size__site-gutter/2 0;
+	position: relative;
 
 	@include tablet {
 		display: inline-block;
 		vertical-align: top;
 		width: 48%;
+	}
+
+	.phoenix-upcoming {
+		@include small-caps;
+		padding: 2px 5px;
+		position: absolute;
+		top: 10px;
+		left: -10px;
+		background: $color__accent;
+
 	}
 }
 
