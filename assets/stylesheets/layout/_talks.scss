@@ -1,0 +1,11 @@
+.tax-talks {
+	article {
+		@include card;
+
+		@include tablet {
+			display: inline-block;
+			vertical-align: top;
+			width: 48%;
+		}
+	}
+}

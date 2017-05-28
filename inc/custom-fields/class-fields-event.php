@@ -46,9 +46,9 @@ class Phoenix_Project_Fields extends Phoenix_Fields {
 					'name'  => 'slides',
 					'label' => esc_html__( 'Link to slides', 'phoenix' ),
 				) ),
-				'video' => new Fieldmanager_Media( array(
+				'video' => new Fieldmanager_Link( array(
 					'name' => 'video',
-					'label' => esc_html__( 'Video', 'phoenix' ),
+					'label' => esc_html__( 'Link to video', 'phoenix' ),
 				) ),
 			),
 		) );

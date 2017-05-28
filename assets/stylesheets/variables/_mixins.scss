@@ -19,3 +19,10 @@
 @mixin box-shadow() {
 	box-shadow: 1px 1px 3px transparentize($color__neutral, 0.5);
 }
+
+@mixin card() {
+	@include box-shadow;
+	background: $color__white;
+	margin: 0 0 $size__site-gutter/2 0;
+	padding: $size__site-gutter/2;
+}

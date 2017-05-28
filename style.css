@@ -916,15 +916,6 @@ body {
     border-top: 2px solid #AAABAF;
     margin: 160px auto;
     max-width: 640px; }
-    @media (min-width: 1024px) {
-      .blog article:nth-of-type(odd),
-      .archive article:nth-of-type(odd),
-      .home article:nth-of-type(odd) {
-        margin-right: 160px; }
-      .blog article:nth-of-type(even),
-      .archive article:nth-of-type(even),
-      .home article:nth-of-type(even) {
-        margin-left: 160px; } }
   .blog .posted-on,
   .blog .cat-links,
   .archive .posted-on,
@@ -1774,6 +1765,17 @@ img {
     display: none; }
   .single-pieces .iphone {
     margin-top: 6em; }
+
+.tax-talks article {
+  box-shadow: 1px 1px 3px rgba(170, 171, 175, 0.5);
+  background: #FAFAFC;
+  margin: 0 0 20px 0;
+  padding: 20px; }
+  @media (min-width: 768px) {
+    .tax-talks article {
+      display: inline-block;
+      vertical-align: top;
+      width: 48%; } }
 
 /*--------------------------------------------------------------
 ## Asides

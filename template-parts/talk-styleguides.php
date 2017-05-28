@@ -17,9 +17,15 @@
 <h3>Style guide examples</h3>
 <ul>
 	<li><a href="https://woocommerce.com/style-guide/">WooCommerce</a></li>
+	<li><a href="https://lucijanblagonic.github.io/wordcamp-style-guide/styleguide/">WCEU</a></li>
+	<li><a href="http://sfdc-styleguide.herokuapp.com/">Salesforce</a></li>
+
 </ul>
 
 <h3>Tools to build a style guide</h3>
 <ul>
+	<li><a href="https://frontify.com/styleguide">Frontify styleguide</a></li>
+	<li><a href="https://github.com/adactio/Pattern-Primer">Super-simple pattern primer</a></li>
+	<li><a href="http://warpspire.com/kss/">Knyle Style Sheets</a></li>
 	<li><a href="http://styleguide.sc5.io/">SC5 Style guide generator</a></li>
 </ul>
