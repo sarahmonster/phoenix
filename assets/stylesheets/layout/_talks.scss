@@ -8,3 +8,15 @@
 		width: 48%;
 	}
 }
+
+.placeholder {
+	height: 200px;
+	width: 100%;
+	background: $color__secondary;
+	color: $color__white;
+	padding: $size__site-gutter/2;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

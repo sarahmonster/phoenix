@@ -10,6 +10,21 @@
 	// Get an array of all our post meta.
 	$meta = get_post_meta( get_the_ID(), 'event_details' )[0];
 
+	// Display either a video clip...
+	if ( array_key_exists( 'video' , $meta ) && $meta['video'] ) :
+		phoenix_embed_video( $meta['video'] );
+
+	// or a featured image...
+	elseif ( has_post_thumbnail() ) :
+		the_post_thumbnail( 'phoenix-square' );
+
+	// or fall back to a placeholder.
+	else : ?>
+		<div class="placeholder">
+			<?php the_title(); ?>
+		</div>
+	<?php endif;
+
 	// Output the name of the event.
 	if ( array_key_exists( 'link' , $meta ) ) :
 		printf( '<a href="%1$s" rel="bookmark">%2$s</a>',
