@@ -36,12 +36,6 @@ class Phoenix_Project_Fields extends Phoenix_Fields {
 					'name'  => 'link',
 					'label' => esc_html__( 'Link to information', 'phoenix' ),
 				) ),
-				'upcoming_event' => new Fieldmanager_Checkbox( array(
-					'name'            => 'upcoming_event',
-					'label'           => esc_html__( 'Upcoming event', 'phoenix' ),
-					'checked_value'   => 'yes',
-					'unchecked_value' => 'no',
-				) ),
 				'slides' => new Fieldmanager_Link( array(
 					'name'  => 'slides',
 					'label' => esc_html__( 'Link to slides', 'phoenix' ),
