@@ -14,9 +14,9 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php esc_html_e( 'Talks', 'phoenix' ); ?></h1>
-				<?php
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
+				<div class="taxonomy-description">
+					<p>Sometimes I get up on a stage and talk about things. Because it&rsquo;s good to do things that terrify you—right?</p>
+				</div>
 			</header><!-- .page-header -->
 
 		<?php if ( have_posts() ) : ?>
