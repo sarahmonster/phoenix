@@ -1813,7 +1813,7 @@ img {
 .placeholder,
 .event .jetpack-video-wrapper,
 .attachment-phoenix-card-image {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 @media (min-width: 768px) {
   .phoenix-event-list {

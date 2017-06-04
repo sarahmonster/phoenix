@@ -30,12 +30,14 @@
 		</div>
 	<?php endif;
 
-	// Output the title of the talk.
-	the_terms( get_the_ID(), 'talks' );
+	// Output the title of the talk, if we're not on the talk page itself.
+	if ( is_post_type_archive( 'event' ) ):
+		the_terms( get_the_ID(), 'talks' );
+		echo '<br />';
+	endif;
 
 	// Output the name of the event.
 	if ( array_key_exists( 'link' , $meta ) ) :
-		echo '<br />';
 		printf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( $meta['link'] ),
 			esc_html( get_the_title() )
