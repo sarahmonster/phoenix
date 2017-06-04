@@ -1,13 +1,8 @@
+// Event cards.
 .event {
 	@include card;
 	margin: 0 0 $size__site-gutter/2 0;
 	position: relative;
-
-	@include tablet {
-		display: inline-block;
-		vertical-align: top;
-		width: 48%;
-	}
 
 	.phoenix-upcoming {
 		@include small-caps;
@@ -32,4 +27,26 @@
 	align-items: center;
 	flex-wrap: wrap;
 	flex-direction: column;
+}
+
+// Split into a two-col layout on larger screens.
+@include tablet {
+	.phoenix-event-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: $size__site-gutter;
+		grid-column-gap: $size__site-gutter;
+	}
+
+	.event {
+		&:nth-of-type(odd) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+		}
+
+		&:nth-of-type(even) {
+			grid-column-start: 2;
+			grid-column-end: 3;
+		}
+	}
 }

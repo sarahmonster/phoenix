@@ -1773,11 +1773,6 @@ img {
   padding: 20px;
   margin: 0 0 20px 0;
   position: relative; }
-  @media (min-width: 768px) {
-    .event {
-      display: inline-block;
-      vertical-align: top;
-      width: 48%; } }
   .event .phoenix-upcoming {
     font-family: proxima-nova, Helvetica, Arial, sans-serif;
     font-size: 12.8px;
@@ -1813,6 +1808,23 @@ img {
   flex-wrap: wrap;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+@media (min-width: 768px) {
+  .phoenix-event-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 40px; }
+  .event:nth-of-type(odd) {
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .event:nth-of-type(even) {
+    -ms-grid-column: 2;
+    grid-column-start: 2;
+    grid-column-end: 3; } }
 
 /*--------------------------------------------------------------
 ## Asides

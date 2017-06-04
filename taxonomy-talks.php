@@ -22,19 +22,17 @@ get_header(); ?>
 
 			<div class="entry-content">
 				<?php get_template_part( 'template-parts/talk', get_query_var( 'term' )  ); ?>
-
-				<?php if ( have_posts() ) : ?>
-
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-
-						<?php get_template_part( 'template-parts/content', 'talk' ); ?>
-
-					<?php endwhile; ?>
-
-				<?php endif; ?>
-
 			</div><!-- .entry-content -->
+
+			<?php if ( have_posts() ) : ?>
+
+				<div class="phoenix-event-list">
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'template-parts/content', 'talk' ); ?>
+					<?php endwhile; ?>
+				</div><!-- .phoenix-event-list -->
+
+			<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
