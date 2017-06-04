@@ -50,6 +50,7 @@ function phoenix_setup() {
 	set_post_thumbnail_size( 600, 300, true );
 	add_image_size( 'phoenix-square', 400, 400, true );
 	add_image_size( 'phoenix-postcard', 600, 400, true );
+	add_image_size( 'phoenix-card-image', 500, 290, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

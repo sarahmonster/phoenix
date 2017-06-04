@@ -1771,6 +1771,7 @@ img {
   background: #FAFAFC;
   margin: 0 0 20px 0;
   padding: 20px;
+  line-height: 1.4;
   margin: 0 0 20px 0;
   position: relative; }
   .event .phoenix-upcoming {
@@ -1792,22 +1793,27 @@ img {
         font-size: 0.9rem; } }
 
 .placeholder {
-  height: 200px;
-  width: 100%;
-  background: #34353B;
-  color: #FAFAFC;
-  padding: 20px;
-  text-align: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-  justify-content: center;
   -ms-flex-align: center;
   align-items: center;
+  background: #34353B;
+  color: #FAFAFC;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  height: 290px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%; }
+
+.placeholder,
+.event .jetpack-video-wrapper,
+.attachment-phoenix-card-image {
+  margin-bottom: 20px; }
 
 @media (min-width: 768px) {
   .phoenix-event-list {
@@ -1915,9 +1921,6 @@ embed,
 iframe,
 object {
   max-width: 100%; }
-
-.jetpack-video-wrapper {
-  margin: 0 !important; }
 
 .jetpack-video-wrapper > embed,
 .jetpack-video-wrapper > iframe,

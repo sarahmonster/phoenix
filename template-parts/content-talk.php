@@ -20,7 +20,7 @@
 
 	// or a featured image...
 	elseif ( has_post_thumbnail() ) :
-		the_post_thumbnail( 'phoenix-square' );
+		the_post_thumbnail( 'phoenix-card-image' );
 
 	// or fall back to a placeholder.
 	else : ?>
@@ -46,7 +46,7 @@
 
 	// Format and output date.
 	if ( array_key_exists( 'date' , $meta ) && $meta['date'] ) :
-		echo '<br />';
+		echo ', ';
 		if ( phoenix_date_is_upcoming( $meta['date'] ) ) :
 			echo date( 'l jS F Y', $meta['date'] );
 		else :
@@ -61,13 +61,19 @@
 	endif;
 
 	if ( array_key_exists( 'slides' , $meta ) && $meta['slides'] OR array_key_exists( 'video' , $meta ) && $meta['video'] ) :
-		echo '<br />';
+		echo ' (';
+
 		// Format and output link to slides.
 		if ( array_key_exists( 'slides' , $meta ) && $meta['slides'] ) :
 			printf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 				esc_url( $meta['slides'] ),
 				esc_html__( 'Slides', 'phoenix' )
 			);
+		endif;
+
+		if ( array_key_exists( 'slides' , $meta ) && $meta['slides']
+			&& array_key_exists( 'video' , $meta ) && $meta['video'] ) :
+			echo '|';
 		endif;
 
 		// Format and output link to video.
@@ -77,6 +83,8 @@
 				esc_html__( 'Video', 'phoenix' )
 			);
 		endif;
+
+		echo ')';
 	endif;
 
 	?>

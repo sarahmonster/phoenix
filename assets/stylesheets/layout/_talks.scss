@@ -1,6 +1,7 @@
 // Event cards.
 .event {
 	@include card;
+	line-height: 1.4;
 	margin: 0 0 $size__site-gutter/2 0;
 	position: relative;
 
@@ -11,22 +12,27 @@
 		top: 10px;
 		left: -10px;
 		background: $color__accent;
-
 	}
 }
 
 .placeholder {
-	height: 200px;
-	width: 100%;
+	align-items: center;
 	background: $color__secondary;
 	color: $color__white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 290px;
+	justify-content: center;
 	padding: $size__site-gutter/2;
 	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	flex-direction: column;
+	width: 100%;
+}
+
+.placeholder,
+.event .jetpack-video-wrapper,
+.attachment-phoenix-card-image {
+	margin-bottom: $size__site-gutter/2;
 }
 
 // Split into a two-col layout on larger screens.
