@@ -11,20 +11,10 @@
 		border-bottom: none;
 	}
 
-	article {
+	.post {
 		border-top: 2px solid $color__neutral;
 		margin: $size__site-gutter*4 auto;
 		max-width: $size__content-width;
-
-		@include desktop {
-			&:nth-of-type(odd) {
-				margin-right: $size__site-gutter*4;
-			}
-
-			&:nth-of-type(even) {
-				margin-left: $size__site-gutter*4;
-			}
-		}
 	}
 
 	.posted-on,

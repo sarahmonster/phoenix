@@ -910,21 +910,12 @@ body {
   .archive a,
   .home a {
     border-bottom: none; }
-  .blog article,
-  .archive article,
-  .home article {
+  .blog .post,
+  .archive .post,
+  .home .post {
     border-top: 2px solid #AAABAF;
     margin: 160px auto;
     max-width: 640px; }
-    @media (min-width: 1024px) {
-      .blog article:nth-of-type(odd),
-      .archive article:nth-of-type(odd),
-      .home article:nth-of-type(odd) {
-        margin-right: 160px; }
-      .blog article:nth-of-type(even),
-      .archive article:nth-of-type(even),
-      .home article:nth-of-type(even) {
-        margin-left: 160px; } }
   .blog .posted-on,
   .blog .cat-links,
   .archive .posted-on,
@@ -1775,6 +1766,72 @@ img {
   .single-pieces .iphone {
     margin-top: 6em; }
 
+.event {
+  box-shadow: 1px 1px 3px rgba(170, 171, 175, 0.5);
+  background: #FAFAFC;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  position: relative; }
+  .event .phoenix-upcoming {
+    font-family: proxima-nova, Helvetica, Arial, sans-serif;
+    font-size: 12.8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    background: #f3c548; }
+    @media (min-width: 768px) {
+      .event .phoenix-upcoming {
+        font-size: 14.4px;
+        font-size: 0.9rem; } }
+
+.placeholder {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #34353B;
+  color: #FAFAFC;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 290px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  width: 100%; }
+
+.placeholder,
+.event .jetpack-video-wrapper,
+.attachment-phoenix-card-image {
+  margin-bottom: 10px; }
+
+@media (min-width: 768px) {
+  .phoenix-event-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 40px; }
+  .event:nth-of-type(odd) {
+    -ms-grid-column: 1;
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .event:nth-of-type(even) {
+    -ms-grid-column: 2;
+    grid-column-start: 2;
+    grid-column-end: 3; } }
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1864,6 +1921,12 @@ embed,
 iframe,
 object {
   max-width: 100%; }
+
+.jetpack-video-wrapper > embed,
+.jetpack-video-wrapper > iframe,
+.jetpack-video-wrapper > object,
+.jetpack-video-wrapper > .wp-video {
+  margin-bottom: 0; }
 
 /*--------------------------------------------------------------
 ## Captions

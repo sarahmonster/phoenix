@@ -105,3 +105,33 @@ function phoenix_has_wanderlist() {
 		return false;
 	endif;
 }
+
+/**
+ * Embed a video, using Jetpack shortcodes.
+ * https://en.support.wordpress.com/videos/
+ */
+function phoenix_embed_video( $url ) {
+	if ( strpos( $url, 'videopress' ) ) :
+		// Get the video ID.
+		$url_pieces = explode( '/', $url );
+		$video_id = array_values(array_slice($url_pieces, -1))[0];
+		echo do_shortcode( "[wpvideo $video_id]");
+	elseif ( strpos( $url, 'youtu.be' ) ) :
+		echo do_shortcode( "[youtube $url]");
+	elseif ( strpos( $url, 'vimeo' ) ) :
+		echo do_shortcode( "[vimeo $url]");
+	endif;
+}
+
+/**
+ * Check to see if a date is upcoming or not.
+ * If the date matches today, we'll
+ */
+function phoenix_date_is_upcoming( $event_date ) {
+	$today = time();
+	if ( $event_date > $today ) {
+		return true;
+	} else {
+		return false;
+	}
+}

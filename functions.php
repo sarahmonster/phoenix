@@ -50,6 +50,7 @@ function phoenix_setup() {
 	set_post_thumbnail_size( 600, 300, true );
 	add_image_size( 'phoenix-square', 400, 400, true );
 	add_image_size( 'phoenix-postcard', 600, 400, true );
+	add_image_size( 'phoenix-card-image', 500, 290, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -182,3 +183,10 @@ require get_template_directory() . '/inc/svg-icons.php';
 if( defined( 'WP_CLI' ) && WP_CLI ) {
 	require get_template_directory() . '/cli-lab/modules/posts.php';
 }
+
+/**
+ * Load CPTs, custom fields, and custom taxonomies.
+ */
+require get_template_directory() . '/inc/custom-post-types/custom-post-types-register.php';
+require get_template_directory() . '/inc/custom-fields/custom-fields-register.php';
+require get_template_directory() . '/inc/custom-taxonomies/custom-taxonomies-register.php';
