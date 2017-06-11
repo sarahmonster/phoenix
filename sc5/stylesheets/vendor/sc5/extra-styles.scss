@@ -1,0 +1,56 @@
+@import "../../variables/mixins";
+@import "../../variables/breakpoints";
+@import "../../variables/colors";
+@import "../../variables/typography";
+@import "../../variables/structure";
+
+/* Site structure */
+.sg.sg-wrapper {
+	padding: 0;
+}
+
+/* Navigation. */
+.sg.sg-wrapper .sg.sg-side-nav {
+	background: #fff;
+	text-align: center;
+}
+
+.sg.sg-nav-section {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	width: 100%;
+}
+
+.sg.sg-nav-section a {
+	border-top: 1px solid $color__white;
+	color: $color__black;
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+	    background: var(--highlight-color);
+	}
+
+	&.active {
+  		background: transparentize($color__white, 0.5);
+  		border-right: 4px solid $color__neutral;
+  		color: $color__neutral;
+  		font-weight: 500;
+  	}
+}
+
+.sg.sg-nav-section a,
+.sg.sg-wrapper .sg.sg-side-nav .sg-nav-section > li > a {
+	padding: $size__site-gutter/2 !important;
+}
+
+.sg.sg-nav-section li:last-of-type a {
+	border-bottom: 1px solid $color__neutral;
+}
+
+.sg.sg-wrapper .sg.sg-side-nav .sg-nav-subsection {
+	margin: 0;
+	padding-left: $size__site-gutter/2;
+}

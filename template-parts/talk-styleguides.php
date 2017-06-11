@@ -35,4 +35,7 @@
 	<li><a href="https://github.com/nopr/sassdown">Sassdown</a></li>
 	<li><a href="https://github.com/livingstyleguide/livingstyleguide">Living Style Guide</a></li>
 	<li><a href="http://bradfrost.github.io/style-guide-guide">Style guide guide</a></li>
+	<li><a href="https://www.sourcejs.com/">Source</a></li>
+	<li><a href="http://patternlab.io">Pattern lab</a></li>
+	<li><a href="https://github.com/davidhund/styleguide-generators">Overview of pattern library generators</a></li>
 </ul>
