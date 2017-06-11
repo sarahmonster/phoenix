@@ -1,0 +1,54 @@
+.site-footer {
+	border-top: 1px solid lighten($color__text-main, 50%);
+	clear: both;
+	color: lighten($color__text-main, 25%);
+	@include font-size(1);
+	font-style: italic;
+	margin-top: 1em;
+	padding-top: 0.5em;
+	text-align: center;
+	width: 100%;
+
+	a {
+		color: $color__text-main;
+		border-color: transparent;
+
+		&:hover {
+			border-color: transparentize($color__text-main, 0.5);
+		}
+	}
+
+	.phoenix-icon-heart {
+		fill: $red;
+		height: 18px;
+		margin-left: -2px;
+		margin-right: -2px;
+		width: 18px;
+		vertical-align: -4px;
+	}
+
+	iframe {
+		max-width: 175px;
+	}
+
+	.site-info {
+		margin-top: 2px;
+	}
+
+	@include tablet {
+		iframe {
+			float: left;
+		}
+
+		.site-info {
+			margin-top: 2px;
+			text-align: right;
+		}
+	} // @include tablet
+
+	@include desktop {
+		.site-info {
+			margin-top: -5px;
+		}
+	}
+}

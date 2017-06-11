@@ -1,0 +1,58 @@
+// Event cards.
+.event {
+	@include card;
+	line-height: 1.4;
+	margin: 0 0 $size__site-gutter/2 0;
+	position: relative;
+
+	.phoenix-upcoming {
+		@include small-caps;
+		padding: 2px 5px;
+		position: absolute;
+		top: 10px;
+		left: -10px;
+		background: $color__accent;
+	}
+}
+
+.placeholder {
+	align-items: center;
+	background: $color__secondary;
+	color: $color__white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 290px;
+	justify-content: center;
+	padding: $size__site-gutter/2;
+	text-align: center;
+	width: 100%;
+}
+
+.placeholder,
+.event .jetpack-video-wrapper,
+.attachment-phoenix-card-image {
+	margin-bottom: $size__site-gutter/4;
+}
+
+// Split into a two-col layout on larger screens.
+@include tablet {
+	.phoenix-event-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: $size__site-gutter;
+		grid-column-gap: $size__site-gutter;
+	}
+
+	.event {
+		&:nth-of-type(odd) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+		}
+
+		&:nth-of-type(even) {
+			grid-column-start: 2;
+			grid-column-end: 3;
+		}
+	}
+}

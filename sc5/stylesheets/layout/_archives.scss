@@ -1,0 +1,56 @@
+/* Archive pages */
+.blog,
+.archive,
+.home {
+
+	.nix-prefix {
+		display: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.post {
+		border-top: 2px solid $color__neutral;
+		margin: $size__site-gutter*4 auto;
+		max-width: $size__content-width;
+	}
+
+	.posted-on,
+	.cat-links {
+		display: inline-block;
+	}
+
+	.posted-on {
+		color: $charcoal;
+	}
+
+	.phoenix-day,
+	.phoenix-date {
+		display: none;
+	}
+
+	.entry-title {
+		font-family: $font__display;
+		font-style: normal;
+		@include font-size(2.4);
+		margin: 0;
+		line-height: 1;
+
+		a {
+			color: $color__neutral-text;
+		}
+
+		@include tablet {
+			@include font-size(3.6);
+		}
+	}
+
+	/* Excerpt */
+	.entry-content {
+		@include font-size(1.25);
+		margin-top: 0;
+		margin-bottom: $size__site-gutter;
+	}
+} // .blog, .archive

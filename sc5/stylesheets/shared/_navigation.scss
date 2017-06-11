@@ -1,0 +1,179 @@
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+.entry-content a {
+	//border-bottom: 2px solid $color__link;
+	color: $color__link;
+	transition: all 0.2s ease-out;
+
+    display: inline-block;
+    text-decoration: none;
+    text-shadow:
+        0.05em 0 0 $white, -0.05em 0 0 $white,
+        0 0.05em 0 $white, 0 -0.05em 0 $white,
+        0.1em 0 0 $white, -0.1em 0 0 $white,
+        0 0.1em 0 $white, 0 -0.1em 0 $white;
+    background-image: linear-gradient(to right, $color__link 0%, $color__link 100%);
+    background-repeat: repeat-x;
+    background-position: bottom 0.25em center;
+    background-size: 100% 0.1em;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+		background-image: linear-gradient(to right, $color__link-hover 0%, $color__link-hover 100%);
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+/*--------------------------------------------------------------
+## Post navigation
+--------------------------------------------------------------*/
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	clear: both;
+
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	a {
+		text-decoration: none;
+		@include font-size(1.1);
+		display: block;
+		line-height: 1.2;
+
+		.phoenix-icon {
+			display: block;
+			background: lighten($black, 20%);
+			border: 2px solid $white;
+			border-radius: 50%;
+			box-shadow: 0 0 0px 2px lighten($black, 20%);
+			fill: $white;
+			height: 42px;
+			line-height: 1;
+			margin: 2px 10px;
+			padding: 3px;
+			transition: all 200ms linear;
+			width: 42px;
+		}
+
+		&:hover .phoenix-icon {
+			background: lighten($black, 10%);
+		}
+	}
+
+	span:not(.caps) {
+		color: $silver;
+		display: block;
+		font-family: $font__accent;
+		@include font-size(0.9);
+		font-weight: 600;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+
+	& .nav-previous {
+		.phoenix-icon {
+			float: left;
+			margin-left: 2px;
+		}
+	}
+
+	& .nav-next {
+		text-align: right;
+
+		.phoenix-icon {
+			float: right;
+			margin-right: 2px;
+			transform: rotate(180deg);
+		}
+	}
+}
+
+/* Make sure there's some space between when they're stacked on top of one another */
+@include mobile {
+	.nav-previous + .nav-next {
+		border-top: 1px solid $silver;
+		margin-top: 30px;
+		padding-top: 20px;
+	}
+}
+
+/* Split into two columns on tablets */
+@include tablet {
+	.post-navigation {
+		& .nav-previous {
+			float: left;
+			width: 50%;
+		}
+
+		& .nav-next {
+			float: right;
+			width: 50%;
+		}
+	} // .post-navigation
+} // tablet
+
+/*--------------------------------------------------------------
+## Archive navigation
+--------------------------------------------------------------*/
+.phoenix-numeric-pagination {
+	font-family: $font__accent;
+	@include font-size(1.2);
+	line-height: 1.2;
+	margin-bottom: $size__site-gutter;
+	text-align: center;
+
+	.page-numbers {
+		padding: 5px 10px;
+	}
+
+	a {
+		color: $color__neutral-text;
+	}
+
+	a span {
+		display: none;
+	}
+
+	.page-numbers.current {
+		border-radius: 50%;
+		border: 1px solid;
+		color: $color__accent;
+		display: inline-block;
+		height: 34px;
+		padding: 4.5px 0;
+		text-align: center;
+		width: 34px;
+	}
+
+	@include mobile {
+		display: flex;
+		justify-content: space-between;
+
+		.page-numbers {
+			display: none;
+		}
+
+		a span {
+			display: inline;
+		}
+
+		.prev,
+		.next {
+			display: inline;
+		}
+	}
+}

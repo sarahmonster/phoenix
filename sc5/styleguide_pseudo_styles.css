@@ -1,0 +1,194 @@
+a.pseudo-class-active,
+a.pseudo-class-hover {
+  outline: 0;
+}
+
+.single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-letter {
+  color: #ff6fbd;
+  display: block;
+  float: left;
+  font-size: 112px;
+  font-size: 7rem;
+  font-family: freight-big-pro, "Freight Text Pro", freight-text-pro, Georgia, serif;
+  font-weight: 700;
+  line-height: 0.6;
+  margin: 14px 5px 0 -5px;
+}
+
+.single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-line {
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+
+button.pseudo-class-hover,
+input[type="button"].pseudo-class-hover,
+input[type="reset"].pseudo-class-hover,
+input[type="submit"].pseudo-class-hover {
+  border-color: #ccc #bbb #aaa;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button.pseudo-class-active,
+button.pseudo-class-focus,
+input[type="button"].pseudo-class-active,
+input[type="button"].pseudo-class-focus,
+input[type="reset"].pseudo-class-active,
+input[type="reset"].pseudo-class-focus,
+input[type="submit"].pseudo-class-active,
+input[type="submit"].pseudo-class-focus {
+  border-color: #aaa #bbb #bbb;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"].pseudo-class-focus,
+input[type="email"].pseudo-class-focus,
+input[type="url"].pseudo-class-focus,
+input[type="password"].pseudo-class-focus,
+input[type="search"].pseudo-class-focus,
+textarea.pseudo-class-focus {
+  color: #111;
+}
+
+.entry-content a.pseudo-class-hover,
+.entry-content a.pseudo-class-focus,
+.entry-content a.pseudo-class-active {
+  color: #3F9CBC;
+  background-image: linear-gradient(to right, #3F9CBC 0%, #3F9CBC 100%);
+}
+
+.entry-content a.pseudo-class-focus {
+  outline: thin dotted;
+}
+
+.entry-content a.pseudo-class-hover,
+.entry-content a.pseudo-class-active {
+  outline: 0;
+}
+
+.comment-navigation a.pseudo-class-hover .phoenix-icon,
+.posts-navigation a.pseudo-class-hover .phoenix-icon,
+.post-navigation a.pseudo-class-hover .phoenix-icon {
+  background: #4c4d56;
+}
+
+.screen-reader-text.pseudo-class-hover,
+.screen-reader-text.pseudo-class-active,
+.screen-reader-text.pseudo-class-focus {
+  background-color: #f1f1f1;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+.main-navigation li.pseudo-class-first-child::before {
+  display: none;
+}
+
+.main-navigation a.pseudo-class-hover {
+  color: #a32020;
+}
+
+.main-navigation ul ul li.pseudo-class-hover > ul {
+  left: 100%;
+}
+
+.main-navigation ul li.pseudo-class-hover > ul {
+  left: auto;
+}
+
+.site-footer a.pseudo-class-hover {
+  border-color: rgba(52, 53, 59, 0.5);
+}
+
+.cat-links a.pseudo-class-hover {
+  color: #ff6fbd;
+}
+
+.cat-links a.pseudo-class-hover::before {
+  background-color: #34353B;
+}
+
+.entry-footer .twitter-share.pseudo-class-hover {
+  color: #89c4d8;
+  padding-bottom: 1px;
+}
+
+.contact-card .card-email.pseudo-class-hover a {
+  color: #AAABAF;
+}
+
+.contact-card .card-twitter.pseudo-class-hover a {
+  color: #89c9e7;
+}
+
+.contact-card .card-subscribe.pseudo-class-hover a {
+  color: #f4aa59;
+}
+
+.leaflet-container a.pseudo-class-hover {
+  color: #3F9CBC;
+}
+
+.wanderlist-country-widget li.pseudo-class-hover {
+  background: #a32020;
+  color: #FAFAFC;
+}
+
+.wanderlist-country-widget li a.pseudo-class-hover,
+.wanderlist-country-widget li.pseudo-class-hover a {
+  color: #FAFAFC;
+}
+
+.row > div.pseudo-class-last-child {
+  margin-right: 0px;
+}
+
+.portfolio-excerpt a.pseudo-class-hover img {
+  opacity: 0;
+}
+
+.portfolio-excerpt a.pseudo-class-hover img.hover {
+  opacity: 1;
+}
+
+.portfolio-excerpt a.pseudo-class-hover .overlay {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.single-pieces #project-gallery .single .entry-content p.pseudo-class-first-of-type::first-letter {
+  font-size: 6rem;
+}
+
+#infinite-handle span.pseudo-class-hover button {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  color: #ceced3;
+}
+
+.wp-caption a.pseudo-class-hover,
+figure a.pseudo-class-hover {
+  text-decoration: none;
+}
+
+.menu-social-menu-container ul a.pseudo-class-hover {
+  background: none;
+}
+
+.menu-social-menu-container ul a.pseudo-class-hover svg {
+  fill: #3F9CBC;
+}

@@ -1,0 +1,61 @@
+.home #page {
+	max-width: none;
+}
+
+// Panels
+.phoenix-panel {
+	margin: 0 auto;
+	max-width: $size__max-content-width;
+
+	h1 {
+		color: $silver;
+		max-width: 700px;
+
+		@include tablet {
+			@include font-size(8);
+			margin: 1em 0 0;
+		}
+	}
+}
+
+// Intro text
+.phoenix-intro-text {
+	p {
+		@include font-size(1.4);
+
+		@include tablet {
+			@include font-size(2);
+			margin: $size__site-gutter 0 $size__site-gutter*2 auto;
+			max-width: 550px;
+		}
+	}
+}
+
+// Map
+.phoenix-travel-map {
+	max-width: none;
+
+	#wanderlist-map {
+		height: 100vh;
+		margin-left: -$size__site-gutter/2;
+		width: calc(100% + #{$size__site-gutter});
+	}
+
+}
+
+// Recent posts
+.phoenix-newest-stories {
+
+	article.phoenix-short-post {
+		margin-right: 0;
+		margin-left: auto;
+
+		img {
+			display: none;
+		}
+	} // .phoenix-short-post
+
+	.entry-title {
+		margin-top: $size__site-gutter;
+	}
+} // .phoenix-frontpage-widget

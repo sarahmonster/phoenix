@@ -1,0 +1,94 @@
+.sticky {
+	display: block;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+/* Background images */
+.phoenix-background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	filter: grayscale(100%) brightness(2) contrast(1.5);
+	z-index: -1;
+	opacity: 0.125;
+	display: none;
+}
+
+/* Styles for all single posts */
+.single {
+	.entry-header {
+		background: $color__black;
+		margin: 0 -$size__site-gutter/2;
+		width: calc(100% + #{$size__site-gutter});
+		min-height: 90vh;
+		padding: $size__site-gutter*2;
+		display: flex;
+		align-items: center;
+	}
+
+	.posted-on {
+		color: $color__white;
+	}
+
+	.phoenix-month,
+	.phoenix-date {
+		color: lighten($color__neutral-text, 20%);
+	}
+
+	.entry-title {
+		color: $color__accent;
+		margin: $size__site-gutter/2 0;
+	}
+
+	.subtitle {
+		margin-left: 0;
+		border-color: $color__neutral;
+		color: $color__neutral-text;
+	}
+
+	.entry-content {
+		padding-top: $size__site-gutter*2;
+	}
+} // .single
+
+/* Entry footer */
+.entry-footer {
+	@include font-size(1.6);
+	border-bottom: 2px solid $color__neutral;
+	border-top: 1px solid $color__neutral;
+	color: $color__neutral-text;
+	font-style: italic;
+	line-height: 1.4;
+	margin: $size__site-gutter auto;
+	max-width: $size__content-width;
+	padding: 1em 0;
+	text-align: center;
+
+	.twitter-share {
+		border-bottom: 0;
+		color: $blue;
+		display: block;
+
+		.phoenix-icon-twitter {
+			height: 32px;
+			margin-right: -6px;
+			width: 32px;
+			vertical-align: -6px;
+		}
+
+		&:hover {
+			color: lighten($blue, 20%);
+			padding-bottom: 1px;
+		}
+	}
+}

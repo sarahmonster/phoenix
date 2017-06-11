@@ -1,0 +1,24 @@
+body {
+	background: $color__background-body;
+}
+
+#page {
+	margin: 0 auto;
+	max-width: $size__max-content-width;
+	padding: 20px;
+}
+
+.content-area {
+
+}
+
+.site-main {
+
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0 auto;
+	max-width: $size__content-width;
+}

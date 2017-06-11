@@ -17,6 +17,9 @@ var cheerio = require( 'gulp-cheerio' );
 var svgstore = require( 'gulp-svgstore' );
 var notify = require( 'gulp-notify' );
 
+var styleguide = require('sc5-styleguide');
+var outputPath = 'sc5';
+
 // Styles tasks
 gulp.task( 'styles', function() {
 	return gulp.src( 'assets/stylesheets/style.scss' )
@@ -26,7 +29,6 @@ gulp.task( 'styles', function() {
 			return "Stylesheet Error in " + err.message;
 		} ) )
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
-		//.pipe( csscomb() )
 		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.pipe( gulp.dest( './' ) )
 		.pipe( livereload() );
@@ -84,11 +86,40 @@ gulp.task( 'style-guide', function() {
 // Watch files for changes
 gulp.task( 'watch', function() {
 	livereload.listen();
-	gulp.watch( 'assets/**/*.scss', ['styles', 'style-guide'] );
+	gulp.watch( 'assets/**/*.scss', ['styles', 'style-guide', 'sc5-styleguide'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
 	gulp.watch( 'assets/images/*', ['images'] );
 	gulp.watch( 'assets/svg/icons/*', ['icons'] );
 } );
 
+gulp.task('sc5-styleguide:generate', function() {
+  return gulp.src('assets/**/*.scss')
+    .pipe(styleguide.generate({
+        title: 'SC5 Styleguide',
+		extraHead: [
+			'<link rel="stylesheet" href="/angular-material/angular-material.css">',
+			'<script src="https://use.typekit.net/rmt3uuy.js"></script>',
+			'<script>try{Typekit.load({ async: true });}catch(e){}</script>'
+		],
+		sideNav: true,
+        server: true,
+        rootPath: outputPath,
+		//appRoot: '/sc5',
+        overviewPath: 'README.md'
+      }))
+    .pipe(gulp.dest(outputPath));
+});
+
+gulp.task('sc5-styleguide:applystyles', function() {
+  return gulp.src('assets/stylesheets/style.scss')
+    .pipe(sass({
+      errLogToConsole: true
+    }))
+    .pipe(styleguide.applyStyles())
+    .pipe(gulp.dest(outputPath));
+});
+
+gulp.task('sc5-styleguide', ['sc5-styleguide:generate', 'sc5-styleguide:applystyles']);
+
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'style-guide', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'style-guide', 'sc5-styleguide', 'watch'] );

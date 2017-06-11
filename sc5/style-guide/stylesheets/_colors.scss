@@ -1,0 +1,61 @@
+@import "../../stylesheets/variables/colors";
+
+.swatches {
+  margin: 0 auto;
+}
+
+.color-swatch {
+	display: inline-block;
+	height: 75px;
+	line-height: 1.2;
+	margin: 0 -5px 20px 0;
+	position: relative;
+	vertical-align: top;
+	width: 75px;
+}
+
+.color-swatch .hex-code {
+	display: block;
+	font-family: $this_sans;
+	font-size: 10pt;
+	font-weight: normal;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.color-swatch .description {
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	font-size: 10pt;
+	position: absolute;
+	text-align: center;
+}
+
+$light-text: #fff;
+$dark-text: #000;
+
+/* Mixin to output classes */
+@mixin color-swatch($variable, $class-name, $text-color) {
+	.color-#{$class-name} {
+		background: $variable;
+		.hex-code {
+			color: $text-color;
+
+			&::before {
+				content: '#{$variable}';
+			}
+		}
+	}
+}
+
+@include color-swatch($color__text-main, 'text-main', $light-text);
+@include color-swatch($color__primary, 'primary', $light-text);
+@include color-swatch($color__secondary, 'secondary', $light-text);
+@include color-swatch($color__tertiary, 'tertiary', $light-text);
+@include color-swatch($color__accent, 'accent', $dark-text);
+@include color-swatch($color__highlight, 'highlight', $dark-text);

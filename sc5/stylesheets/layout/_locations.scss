@@ -1,0 +1,315 @@
+/* Ensure overview page has a reasonable distance from top */
+.wanderlist-overview {
+	margin-top: 4em;
+}
+
+/* Override link colour set by Mapbox */
+.leaflet-container a {
+	border: none;
+	color: $color__link;
+
+	&:hover {
+		color: $color__link-hover;
+	}
+}
+
+/* Main page and sub-pages for trips/years */
+.wanderlist-overview,
+.tax-wanderlist-trip,
+.tax-wanderlist-country	{
+
+	article {
+		width: 100%;
+
+		.entry-content {
+			border-top: 0;
+			flex-basis: 100%;
+			max-width: $size__max-content-width;
+		}
+	}
+
+	// Use two columns on a desktop, since we've got loads of space
+	@include desktop {
+		.wanderlist-map-widget {
+			float: left;
+			padding-right: $size__site-gutter/2;
+			width: calc(100% - 400px);
+		}
+
+		.wanderlist-location-widget,
+		.wanderlist-country-overview-widget {
+			float: left;
+			padding-left: $size__site-gutter/2;
+			width: 400px;
+		}
+
+		.wanderlist-trip-widget,
+		.wanderlist-number-widget,
+		.wanderlist-country-widget {
+			float: left;
+			padding-left: $size__site-gutter;
+			padding-right: $size__site-gutter;
+			width: 33%;
+		}
+
+		.wanderlist-trip-widget {
+			display: none;
+		}
+
+		.wanderlist-country-widget {
+			padding-left: 0;
+			width: 760px;
+		}
+
+		.wanderlist-number-widget {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+	} // desktop
+}
+
+/* Maps */
+#wanderlist-map {
+	border: 1px solid $silver;
+	display: block;
+	height: 200px;
+	position: relative;
+	z-index: 0;
+	width: 100%;
+
+	@include tablet {
+		height: 475px;
+	}
+
+	.leaflet-marker-icon,
+	.leaflet-tile {
+		box-shadow: none;
+	}
+
+	.wanderlist-location-widget {
+		background: rgba(255, 255, 255, 0.85);
+		bottom: 40px;
+		left: 40px;
+		padding: 10px 20px;
+		position: absolute;
+		max-width: 300px;
+		z-index: 100;
+
+		h3 {
+			text-align: center;
+		}
+	}
+}
+
+/* Widgets */
+.wanderlist-widget {
+	margin-top: 1em;
+
+	.widget-title {
+		border-bottom: 2px solid;
+		padding-bottom: 0.5em;
+		text-align: left;
+	}
+
+	dl,
+	ul {
+		font-family: $font__main;
+		@include font-size(1);
+		line-height: 1.4;
+		margin: 10px 0;
+		padding-left: 0;
+	}
+
+	dt {
+		color: $color__neutral-text;
+		font-style: italic;
+		font-weight: normal;
+	}
+
+	dd {
+		margin: 0 0 5px 0;
+	}
+
+	@include tablet {
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		dt {
+			flex-basis: 100px;
+			text-align: right;
+		}
+
+		dd {
+			flex-basis: calc(100% - 110px);
+			margin-left: 10px;
+		}
+	}
+
+	svg,
+	.flag {
+		height: 10px;
+		margin-right: 2px;
+		vertical-align: -1px;
+		width: auto;
+	}
+} // .wanderlist-widget
+
+/* Country list widget */
+.wanderlist-country-widget {
+	padding-bottom: $size__site-gutter;
+
+	.widget-title {
+		display: none;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	li {
+		@extend h3;
+		border: 1px solid $red;
+		color: $red;
+		display: inline-block;
+		font-size: 0.65rem;
+		list-style-type: none;
+		padding: 0.2rem 0.4rem;
+		margin: 0.1rem;
+		white-space: nowrap;
+
+		a {
+			color: $red;
+		}
+
+		&:hover {
+			background: $red;
+			color: $white;
+		}
+
+		a:hover,
+		&:hover a {
+			color: $white;
+		}
+
+		&::before {
+			display: none;
+		}
+	}
+} // .wanderlist-country-widget
+
+/* Number widget */
+.wanderlist-number-widget {
+	display: flex;
+	justify-content: space-between;
+
+	.widget-title {
+		display: none;
+	}
+
+	div {
+		border: 2px solid $silver;
+		border-radius: 50%;
+		color: $silver;
+		font-family: $font__sans-serif;
+		font-weight: normal;
+		height: 80px;
+		line-height: 0.7;
+		padding-top: 21px;
+		text-align: center;
+		width: 80px;
+
+		@include tablet {
+			height: 100px;
+			padding-top: 28px;
+			width: 100px;
+		}
+
+		.wanderlist-number {
+			display: block;
+			@include font-size(2);
+			font-weight: 100;
+		}
+
+		.wanderlist-item {
+			@include font-size(0.8);
+			text-transform: lowercase;
+		}
+	} // div
+
+	.wanderlist-connector {
+		display: none;
+
+		@include tablet {
+			color: $silver;
+			display: block;
+			font-style: italic;
+			margin: 30px 6px;
+		}
+	}
+
+	@mixin count-color($color) {
+		border-color: $color;
+		color: $color;
+	}
+
+	.wanderlist-place-count {
+		@include count-color($blue);
+	}
+
+	.wanderlist-country-count {
+		@include count-color($green);
+	}
+
+	.wanderlist-continent-count {
+		@include count-color($color__accent);
+	}
+} // .wanderlist-number-widget
+
+/* Text snippets */
+.wanderlist-country-count {
+	color: $red;
+	font-weight: bolder;
+	//font-size: 1.5em;
+	//line-height: 1;
+}
+
+.wanderlist-current-location {
+	color: $red;
+	font-style: italic;
+}
+
+/* Individual location pages */
+.wanderlist-location {
+	.attachment-phoenix-postcard {
+		border: 10px solid $white;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+
+		@include desktop {
+			float: left;
+			margin: 0 -50px 20px -100px;
+			width: $size__content-width / 2 + 150px;
+		}
+	}
+
+	.attachment-phoenix-postcard + .entry-content {
+		background: $white;
+		box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+		color: darken( $silver, 10% );
+		font-style: italic;
+		padding: $size__site-gutter;
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+
+		@include desktop {
+			margin: 60px -100px 20px -50px;
+			width: ($size__content-width / 2) + 150px;
+			float: left;
+		}
+	}
+}
