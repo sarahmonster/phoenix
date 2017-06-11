@@ -1,15 +1,24 @@
+// Typography
+ //
+ // The sites makes use of three typefaces: Freight Text Pro for body text,
+ // Proxima Nova for interface elements, and Lust Display for page titles.
+ //
+ // $font__main - Freight Text Pro, used for body copy.
+ // $font__accent - Proxima Nova, used for interface elements.
+ // $font__display - Lust Display, used for (very big!) page headings.
+ //
+ // Styleguide 2.0
 $font__serif: "Freight Text Pro", freight-text-pro, Georgia, serif;
 $font__sans-serif: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+$font__display: "Lust Display", lust-display, $font__serif;
 
 $font__main: $font__serif;
 $font__accent: $font__sans-serif;
-$font__display: "Lust Display", lust-display, $font__serif;
-$font__display_alt: lust-script-display, $font__serif;
-$font__decorative: freight-big-pro, $font__serif;
-
 $font__headings: $font__display;
 
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
+
+
 $font__line-height-body: 1.6;
 $font__line-height-pre: 1.6;

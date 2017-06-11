@@ -23,7 +23,7 @@ textarea {
  // <h2>Heading two</h2>
  // <h3>Heading three</h3>
  //
- // Styleguide 1.1
+ // Styleguide 2.1
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
@@ -91,7 +91,7 @@ p {
  // markup:
  // <p class="cap">This is a paragraph using a drop-cap. It will look best when it's long enough that the text wraps.</p>
  //
- // Styleguide 1.2
+ // Styleguide 2.2
 .cap,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
 	@include tablet {
@@ -111,7 +111,7 @@ p {
 		display: block;
 		float: left;
 		@include font-size(7);
-		font-family: $font__decorative;
+		font-family: $font__main;
 		font-weight: 700;
 		//initial-letter: 3; // Support too patchy right now. :(
 		line-height: 0.6;
@@ -137,7 +137,7 @@ p {
  // markup:
  // <blockquote>Blockquotes look like this.</blockquote>
  //
- // Styleguide 1.3
+ // Styleguide 2.3
 
 dfn, cite, em, i {
 	font-style: italic;

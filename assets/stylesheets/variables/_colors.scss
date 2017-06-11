@@ -1,11 +1,19 @@
 // Colours.
 //
-// $color__primary    - Used for initial whatecvers.
-// .stars-given       - A highlight indicating you’ve already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
+// $color__primary - Primary colour.
+// $color__secondary - Secondary colour.
+// $color__tertiary - Tertiary colour.
+// $color__accent - Accent colour.
+// $color__highlight - Highlight colour.
+// $color__black - Colour used as black.
+// $color__neutral - Colour used as neutral, used for backgrounds and borders.
+// $color__neutral-text - Neutral used for text.
+// $color__white - Colour used as white.
 //
-// Styleguide 2.1
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.0
 
 
 $red: #a32020;
