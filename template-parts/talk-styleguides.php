@@ -20,6 +20,7 @@
 	<li><a href="https://www.smashingmagazine.com/2016/05/creating-a-living-style-guide-case-study/">Creating a living style guide</a></li>
 	<li><a href="https://24ways.org/2015/beyond-the-style-guide/">Beyond the style guide</a></li>
 	<li><a href="https://alistapart.com/article/creating-style-guides">Creating style guides</a></li>
+	<li><a href="https://github.com/sarahmonster/zombie-style-guide">Zombie style guide!</a></li>
 </ul>
 
 <h3>Style guide examples</h3>
