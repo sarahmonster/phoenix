@@ -1,20 +1,4 @@
-// Colours.
-//
-// $color__primary - Primary colour.
-// $color__secondary - Secondary colour.
-// $color__tertiary - Tertiary colour.
-// $color__accent - Accent colour.
-// $color__highlight - Highlight colour.
-// $color__black - Colour used as black.
-// $color__neutral - Colour used as neutral, used for backgrounds and borders.
-// $color__neutral-text - Neutral used for text.
-// $color__white - Colour used as white.
-//
-// markup:
-// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
-//
-// Styleguide 1.0
-
+//zsg: ignore
 
 $red: #a32020;
 $blue: #3F9CBC;
@@ -22,29 +6,60 @@ $green: #37894c;
 $pink: #ff6fbd;
 $dark-pink: #cc3788;
 $black: #34353B;
-$charcoal: lighten($black, 20%);
+$charcoal: #53545a;
 $silver: #AAABAF;
 $white: #FAFAFC;
 
 $color__primary: $charcoal;
 $color__secondary: $black;
 $color__tertiary: $silver;
-$color__accent: $pink;
+$color__accent: #999999;
 $color__highlight: lighten($color__accent, 25%);
 $color__black: $black;
 $color__neutral: $silver;
 $color__neutral-text: darken($silver, 15%);
 $color__white: $white;
 
+// zsg:  end ignore
+
+
+// Base colours
+//
+// To evoke a military-type feeling, Strikebase uses a palette of desaturated browns and sand-coloured
+// beiges as its neutral shades. Use for body text, backgrounds, separating elements, and anything that
+// doesn't need to have attention drawn to it.
+
+$color__black: $black;
+$color__neutral: $silver;
+$color__neutral-text: darken($silver, 15%);
+$color__neutral-highlight: $silver;
+$color__white: $white;
+
+// Primary colours
+//
+// In keeping with the military theme, we use a series of olive-ish greens as the primary accent colour.
+// This is used to distinguish elements (like labels) from their surrounding text, as well as for
+// background colours and the colours of less important elements.
+
+$color__primary: $charcoal;
+$color__primary-light: #ff6fbd;
+$color__primary-dark: #cc3788;
+
+// Accent colours
+//
+// Accent colours are used to highlight important information.
+// Red is generally the colours of links, and yellows are used to highlight important information that isn't a link.
+
+$color__accent: #999999;
+$color__accent-alt: #AAAB45;
+$color__highlight: lighten($color__accent, 25%);
+
+// zsg: ignore
+
 // Background & body text
 $color__background-body: $color__white;
 $color__text-main: $color__black;
-$color__headings: $charcoal;
-
-// Links
-$color__link: $dark-pink;
-$color__link-visited: $color__link;
-$color__link-hover: $blue;
+$color__headings: $color__neutral;
 
 // Inputs
 $color__border-input: #ccc;
@@ -66,3 +81,10 @@ $color__border-abbr: #666;
 // Screenreader stuff; best to leave be.
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
+
+// zsg:endignore
+
+// Links
+$color__link: $color__accent;
+$color__link-visited: $color__accent;
+$color__link-hover: $color__accent-alt;

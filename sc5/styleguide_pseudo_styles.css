@@ -4,7 +4,7 @@ a.pseudo-class-hover {
 }
 
 .single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-letter {
-  color: #ff6fbd;
+  color: #999999;
   display: block;
   float: left;
   font-size: 112px;
@@ -49,19 +49,19 @@ textarea.pseudo-class-focus {
   color: #111;
 }
 
-.entry-content a.pseudo-class-hover,
-.entry-content a.pseudo-class-focus,
-.entry-content a.pseudo-class-active {
-  color: #3F9CBC;
-  background-image: linear-gradient(to right, #3F9CBC 0%, #3F9CBC 100%);
+.site-main a.pseudo-class-hover,
+.site-main a.pseudo-class-focus,
+.site-main a.pseudo-class-active {
+  color: #AAAB45;
+  background-image: linear-gradient(to right, #AAAB45 0%, #AAAB45 100%);
 }
 
-.entry-content a.pseudo-class-focus {
+.site-main a.pseudo-class-focus {
   outline: thin dotted;
 }
 
-.entry-content a.pseudo-class-hover,
-.entry-content a.pseudo-class-active {
+.site-main a.pseudo-class-hover,
+.site-main a.pseudo-class-active {
   outline: 0;
 }
 
@@ -116,7 +116,7 @@ textarea.pseudo-class-focus {
 }
 
 .cat-links a.pseudo-class-hover {
-  color: #ff6fbd;
+  color: #999999;
 }
 
 .cat-links a.pseudo-class-hover::before {
@@ -141,7 +141,7 @@ textarea.pseudo-class-focus {
 }
 
 .leaflet-container a.pseudo-class-hover {
-  color: #3F9CBC;
+  color: #AAAB45;
 }
 
 .wanderlist-country-widget li.pseudo-class-hover {
@@ -190,5 +190,5 @@ figure a.pseudo-class-hover {
 }
 
 .menu-social-menu-container ul a.pseudo-class-hover svg {
-  fill: #3F9CBC;
+  fill: #AAAB45;
 }

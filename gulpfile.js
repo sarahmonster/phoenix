@@ -107,15 +107,15 @@ gulp.task('sc5-styleguide:generate', function() {
     .pipe(styleguide.generate({
         title: 'Style guide | Triggers & Sparks',
 		extraHead: [
-			'<link rel="stylesheet" href="/css/extra-styles.css">',
+			//'<link rel="stylesheet" href="/css/extra-styles.css">',
 			'<script src="https://use.typekit.net/rmt3uuy.js"></script>',
 			'<script>try{Typekit.load({ async: true });}catch(e){}</script>'
 		],
 		sideNav: true,
         server: true,
         rootPath: outputPath,
-		includeDefaultStyles: false,
-		customColors: 'assets/stylesheets/vendor/sc5/variables.css',
+		includeDefaultStyles: true,
+		//customColors: 'assets/stylesheets/vendor/sc5/variables.css',
 		//appRoot: '/sc5',
         overviewPath: 'README.md'
       }))
@@ -124,8 +124,8 @@ gulp.task('sc5-styleguide:generate', function() {
 
 gulp.task('sc5-styleguide:applystyles', function() {
       return gulp.src([
-        'assets/stylesheets/style.scss',
-        'assets/stylesheets/vendor/sc5/variables.scss'
+        'assets/stylesheets/style.scss'
+        //'assets/stylesheets/vendor/sc5/variables.scss'
         ])
     .pipe(sass({
       errLogToConsole: true

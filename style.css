@@ -257,7 +257,7 @@ h1, h2, h3, .posted-on,
     text-decoration: none; }
 
 h1 {
-  color: #646671;
+  color: #AAABAF;
   letter-spacing: -0.03em;
   line-height: 1;
   font-family: "Lust Display", lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
@@ -268,7 +268,7 @@ h1 {
       font-size: 96px;
       font-size: 6rem; } }
   h1 a {
-    color: #646671; }
+    color: #AAABAF; }
 
 h2 {
   color: #b2b4bc;
@@ -323,7 +323,7 @@ p {
 
 .cap::first-letter,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
-  color: #ff6fbd;
+  color: #999999;
   display: block;
   float: left;
   font-size: 112px;
@@ -396,7 +396,7 @@ big {
   font-size: 125%; }
 
 strong {
-  background: #ffeff7;
+  background: #d9d9d9;
   color: #34353B;
   padding: 0 5px; }
 
@@ -557,22 +557,22 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-.entry-content a {
-  color: #cc3788;
+.site-main a {
+  color: #999999;
   transition: all 0.2s ease-out;
   display: inline-block;
   text-decoration: none;
   text-shadow: 0.05em 0 0 #FAFAFC, -0.05em 0 0 #FAFAFC, 0 0.05em 0 #FAFAFC, 0 -0.05em 0 #FAFAFC, 0.1em 0 0 #FAFAFC, -0.1em 0 0 #FAFAFC, 0 0.1em 0 #FAFAFC, 0 -0.1em 0 #FAFAFC;
-  background-image: linear-gradient(to right, #cc3788 0%, #cc3788 100%);
+  background-image: linear-gradient(to right, #999999 0%, #999999 100%);
   background-repeat: repeat-x;
   background-position: bottom 0.25em center;
   background-size: 100% 0.1em; }
-  .entry-content a:hover, .entry-content a:focus, .entry-content a:active {
-    color: #3F9CBC;
-    background-image: linear-gradient(to right, #3F9CBC 0%, #3F9CBC 100%); }
-  .entry-content a:focus {
+  .site-main a:hover, .site-main a:focus, .site-main a:active {
+    color: #AAAB45;
+    background-image: linear-gradient(to right, #AAAB45 0%, #AAAB45 100%); }
+  .site-main a:focus {
     outline: thin dotted; }
-  .entry-content a:hover, .entry-content a:active {
+  .site-main a:hover, .site-main a:active {
     outline: 0; }
 
 /*--------------------------------------------------------------
@@ -677,7 +677,7 @@ textarea {
   .phoenix-numeric-pagination .page-numbers.current {
     border-radius: 50%;
     border: 1px solid;
-    color: #ff6fbd;
+    color: #999999;
     display: inline-block;
     height: 34px;
     padding: 4.5px 0;
@@ -902,16 +902,16 @@ body {
 /* Category links */
 .cat-links a {
   text-decoration: none;
-  color: #ffa2d4; }
+  color: #b3b3b3; }
   .cat-links a::before {
-    background-color: #ff6fbd;
+    background-color: #999999;
     content: '';
     display: inline-block;
     height: 10px;
     margin-right: 5px;
     width: 10px; }
   .cat-links a:hover {
-    color: #ff6fbd; }
+    color: #999999; }
     .cat-links a:hover::before {
       background-color: #34353B; }
 
@@ -944,7 +944,7 @@ body {
   .blog .posted-on,
   .archive .posted-on,
   .home .posted-on {
-    color: #646671; }
+    color: #53545a; }
   .blog .phoenix-day,
   .blog .phoenix-date,
   .archive .phoenix-day,
@@ -1021,7 +1021,7 @@ body {
   color: #b7b8bb; }
 
 .single .entry-title {
-  color: #ff6fbd;
+  color: #999999;
   margin: 20px 0; }
 
 .single .subtitle {
@@ -1214,9 +1214,9 @@ body {
 /* Override link colour set by Mapbox */
 .leaflet-container a {
   border: none;
-  color: #cc3788; }
+  color: #999999; }
   .leaflet-container a:hover {
-    color: #3F9CBC; }
+    color: #AAAB45; }
 
 /* Main page and sub-pages for trips/years */
 .wanderlist-overview article,
@@ -1420,8 +1420,8 @@ body {
     border-color: #37894c;
     color: #37894c; }
   .wanderlist-number-widget .wanderlist-continent-count {
-    border-color: #ff6fbd;
-    color: #ff6fbd; }
+    border-color: #999999;
+    color: #999999; }
 
 /* Text snippets */
 .wanderlist-country-count {
@@ -1811,7 +1811,7 @@ img {
     position: absolute;
     top: 10px;
     left: -10px;
-    background: #ff6fbd; }
+    background: #999999; }
     @media (min-width: 768px) {
       .event .phoenix-upcoming {
         font-size: 14.4px;
@@ -2057,7 +2057,7 @@ figcaption {
   padding: 4px; }
 
 .menu-social-menu-container ul svg {
-  fill: #cc3788;
+  fill: #999999;
   height: 28px;
   speak: none;
   transition: fill .1s ease-in 0;
@@ -2066,6 +2066,6 @@ figcaption {
 .menu-social-menu-container ul a:hover {
   background: none; }
   .menu-social-menu-container ul a:hover svg {
-    fill: #3F9CBC; }
+    fill: #AAAB45; }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,6 +15,11 @@
 	<li><a href="https://www.alleyinteractive.com/news/advanced-techniques-for-the-sc5-styleguide-generator/">Advanced techniques for SC5</a></li>
 	<li><a href="http://varya.me/en/posts/sc5-style-guide-next-level/">Living SC5 style guides, the next level</a></li>
 	<li><a href="https://sc5.io/posts/visual-regression-testing/">Visual regression testing</a></li>
+	<li><a href="https://24ways.org/2016/designing-imaginative-style-guides/">Designing imaginitive style guides</a></li>
+	<li><a href="https://www.smashingmagazine.com/2012/10/the-code-side-of-color/">The code side of colour</a></li>
+	<li><a href="https://www.smashingmagazine.com/2016/05/creating-a-living-style-guide-case-study/">Creating a living style guide</a></li>
+	<li><a href="https://24ways.org/2015/beyond-the-style-guide/">Beyond the style guide</a></li>
+	<li><a href="https://alistapart.com/article/creating-style-guides">Creating style guides</a></li>
 </ul>
 
 <h3>Style guide examples</h3>
@@ -22,7 +27,8 @@
 	<li><a href="https://woocommerce.com/style-guide/">WooCommerce</a></li>
 	<li><a href="https://lucijanblagonic.github.io/wordcamp-style-guide/styleguide/">WCEU</a> (uses KSS)</li>
 	<li><a href="http://sfdc-styleguide.herokuapp.com/">Salesforce</a></li>
-
+	<li><a href="http://ux.mailchimp.com/patterns">Mailchimp</a></li>
+	<li><a href="https://github.com/alexpate/awesome-design-systems">Awesome design systems</a></li>
 </ul>
 
 <h3>Tools to build a style guide</h3>

@@ -1,5 +1,5 @@
 /* Main color definitions */
-$primary-color: #ff6fbd !default;
+$primary-color: #53545a !default;
 $secondary-color: #cc3788 !default;
 $tertiary-color: #3f9cbc !default;
 
@@ -56,7 +56,7 @@ $content-max-width: 68em !default;
 /* Temporary declaration of variables in native CSS syntax */
 :root {
 /* Main color definitions */
---primary-color: #ff6fbd !default;
+--primary-color: #53545a !default;
 --secondary-color: #cc3788 !default;
 --tertiary-color: #3f9cbc !default;
 
@@ -68,7 +68,7 @@ $content-max-width: 68em !default;
 /* Navigation */
 --header-text-color: #FFFFFF !default;
 --navigation-arrows-visible: false;
---header-background-color: $primary-color !default;
+--header-background-color: none !default;
 --nav-background-color: $primary-color !default;
 
 --nav-button-color: $primary-color !default;
