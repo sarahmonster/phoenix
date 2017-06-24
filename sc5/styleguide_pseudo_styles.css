@@ -49,19 +49,19 @@ textarea.pseudo-class-focus {
   color: #111;
 }
 
-.site-main a.pseudo-class-hover,
-.site-main a.pseudo-class-focus,
-.site-main a.pseudo-class-active {
+.site-main p a.pseudo-class-hover,
+.site-main p a.pseudo-class-focus,
+.site-main p a.pseudo-class-active {
   color: #459AA3;
   background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%);
 }
 
-.site-main a.pseudo-class-focus {
+.site-main p a.pseudo-class-focus {
   outline: thin dotted;
 }
 
-.site-main a.pseudo-class-hover,
-.site-main a.pseudo-class-active {
+.site-main p a.pseudo-class-hover,
+.site-main p a.pseudo-class-active {
   outline: 0;
 }
 

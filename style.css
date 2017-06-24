@@ -557,7 +557,7 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-.site-main a {
+.site-main p a {
   color: #B53377;
   transition: all 0.2s ease-out;
   display: inline-block;
@@ -567,12 +567,12 @@ textarea {
   background-repeat: repeat-x;
   background-position: bottom 0.25em center;
   background-size: 100% 0.1em; }
-  .site-main a:hover, .site-main a:focus, .site-main a:active {
+  .site-main p a:hover, .site-main p a:focus, .site-main p a:active {
     color: #459AA3;
     background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%); }
-  .site-main a:focus {
+  .site-main p a:focus {
     outline: thin dotted; }
-  .site-main a:hover, .site-main a:active {
+  .site-main p a:hover, .site-main p a:active {
     outline: 0; }
 
 /*--------------------------------------------------------------
