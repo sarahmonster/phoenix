@@ -55,7 +55,7 @@ $dark-text: #000;
 
 @include color-swatch($color__text-main, 'text-main', $light-text);
 @include color-swatch($color__primary, 'primary', $light-text);
-@include color-swatch($color__secondary, 'secondary', $light-text);
-@include color-swatch($color__tertiary, 'tertiary', $light-text);
+@include color-swatch($color__accent, 'secondary', $light-text);
+@include color-swatch($color__accent-alt, 'tertiary', $light-text);
 @include color-swatch($color__accent, 'accent', $dark-text);
 @include color-swatch($color__highlight, 'highlight', $dark-text);

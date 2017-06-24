@@ -93,56 +93,56 @@ body {
 
 /* Mixin to output classes */
 .color-text-main {
-  background: #34353B; }
+  background: #312C33; }
   .color-text-main .hex-code {
     color: #fff; }
     .color-text-main .hex-code::before {
-      content: "#34353B"; }
+      content: "#312C33"; }
 
 .color-primary {
-  background: #53545a; }
+  background: #F26BAF; }
   .color-primary .hex-code {
     color: #fff; }
     .color-primary .hex-code::before {
-      content: "#53545a"; }
+      content: "#F26BAF"; }
 
 .color-secondary {
-  background: #34353B; }
+  background: #66CED3; }
   .color-secondary .hex-code {
     color: #fff; }
     .color-secondary .hex-code::before {
-      content: "#34353B"; }
+      content: "#66CED3"; }
 
 .color-tertiary {
-  background: #AAABAF; }
+  background: #459AA3; }
   .color-tertiary .hex-code {
     color: #fff; }
     .color-tertiary .hex-code::before {
-      content: "#AAABAF"; }
+      content: "#459AA3"; }
 
 .color-accent {
-  background: #999999; }
+  background: #66CED3; }
   .color-accent .hex-code {
     color: #000; }
     .color-accent .hex-code::before {
-      content: "#999999"; }
+      content: "#66CED3"; }
 
 .color-highlight {
-  background: #d9d9d9; }
+  background: rgba(252, 172, 219, 0.25); }
   .color-highlight .hex-code {
     color: #000; }
     .color-highlight .hex-code::before {
-      content: "#d9d9d9"; }
+      content: "rgba(252, 172, 219, 0.25)"; }
 
 .adjectives h3 {
   display: inline;
-  color: #53545a;
+  color: #F26BAF;
   font-family: "Lust Display", lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
   font-size: 2.1rem;
   padding-right: 0.2em; }
 
 .adjectives h3:nth-of-type(odd) {
-  color: #999999; }
+  color: #66CED3; }
 
 .headings {
   text-align: left; }

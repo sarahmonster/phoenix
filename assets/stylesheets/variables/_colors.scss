@@ -1,38 +1,34 @@
 //zsg: ignore
-
 $red: #a32020;
 $blue: #3F9CBC;
 $green: #37894c;
-$pink: #ff6fbd;
-$dark-pink: #cc3788;
-$black: #34353B;
-$charcoal: #53545a;
-$silver: #AAABAF;
-$white: #FAFAFC;
 
-$color__primary: $charcoal;
-$color__secondary: $black;
-$color__tertiary: $silver;
-$color__accent: #999999;
-$color__highlight: lighten($color__accent, 25%);
-$color__black: $black;
-$color__neutral: $silver;
-$color__neutral-text: darken($silver, 15%);
-$color__white: $white;
+$pink: #F26BAF;
+$dark-pink: #B53377;
+$light-pink: #FCACDB;
+
+$teal: #66CED3;
+$dark-teal: #459AA3;
+
+$black: #312C33;
+$charcoal: #4B454C;
+$grey: #716E72;
+$silver: #A09CA0;
+$off-white: #E0DEE0;
+$white: #FCFAFC;
 
 // zsg:  end ignore
 
 
 // Base colours
 //
-// To evoke a military-type feeling, Strikebase uses a palette of desaturated browns and sand-coloured
-// beiges as its neutral shades. Use for body text, backgrounds, separating elements, and anything that
-// doesn't need to have attention drawn to it.
+// Our base colours are made up of various shades of grey.
+// They're used pretty heavily throughout to counteract our bright accent colours.
 
 $color__black: $black;
 $color__neutral: $silver;
-$color__neutral-text: darken($silver, 15%);
-$color__neutral-highlight: $silver;
+$color__neutral-text: $grey;
+$color__neutral-highlight: $off-white;
 $color__white: $white;
 
 // Primary colours
@@ -41,25 +37,25 @@ $color__white: $white;
 // This is used to distinguish elements (like labels) from their surrounding text, as well as for
 // background colours and the colours of less important elements.
 
-$color__primary: $charcoal;
-$color__primary-light: #ff6fbd;
-$color__primary-dark: #cc3788;
+$color__primary: $pink;
+$color__primary-light: $light-pink;
+$color__primary-dark: $dark-pink;
 
 // Accent colours
 //
-// Accent colours are used to highlight important information.
-// Red is generally the colours of links, and yellows are used to highlight important information that isn't a link.
+// Accent colours are used to highlight important information and to add visual appeal.
+// These provide a contrast to our primary palette.
 
-$color__accent: #999999;
-$color__accent-alt: #AAAB45;
-$color__highlight: lighten($color__accent, 25%);
+$color__accent: $teal;
+$color__accent-alt: $dark-teal;
+$color__highlight: transparentize($light-pink, 0.75);
 
 // zsg: ignore
 
 // Background & body text
 $color__background-body: $color__white;
 $color__text-main: $color__black;
-$color__headings: $color__neutral;
+$color__headings: $color__neutral-text;
 
 // Inputs
 $color__border-input: #ccc;
@@ -85,6 +81,6 @@ $color__text-screen: #21759b;
 // zsg:endignore
 
 // Links
-$color__link: $color__accent;
-$color__link-visited: $color__accent;
+$color__link: $color__primary-dark;
+$color__link-visited: $color__link;
 $color__link-hover: $color__accent-alt;

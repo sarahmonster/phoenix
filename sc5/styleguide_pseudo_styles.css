@@ -4,7 +4,7 @@ a.pseudo-class-hover {
 }
 
 .single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-letter {
-  color: #999999;
+  color: #A09CA0;
   display: block;
   float: left;
   font-size: 112px;
@@ -52,8 +52,8 @@ textarea.pseudo-class-focus {
 .site-main a.pseudo-class-hover,
 .site-main a.pseudo-class-focus,
 .site-main a.pseudo-class-active {
-  color: #AAAB45;
-  background-image: linear-gradient(to right, #AAAB45 0%, #AAAB45 100%);
+  color: #459AA3;
+  background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%);
 }
 
 .site-main a.pseudo-class-focus {
@@ -68,7 +68,7 @@ textarea.pseudo-class-focus {
 .comment-navigation a.pseudo-class-hover .phoenix-icon,
 .posts-navigation a.pseudo-class-hover .phoenix-icon,
 .post-navigation a.pseudo-class-hover .phoenix-icon {
-  background: #4c4d56;
+  background: #4b444e;
 }
 
 .screen-reader-text.pseudo-class-hover,
@@ -112,15 +112,15 @@ textarea.pseudo-class-focus {
 }
 
 .site-footer a.pseudo-class-hover {
-  border-color: rgba(52, 53, 59, 0.5);
+  border-color: rgba(49, 44, 51, 0.5);
 }
 
 .cat-links a.pseudo-class-hover {
-  color: #999999;
+  color: #66CED3;
 }
 
 .cat-links a.pseudo-class-hover::before {
-  background-color: #34353B;
+  background-color: #66CED3;
 }
 
 .entry-footer .twitter-share.pseudo-class-hover {
@@ -129,7 +129,7 @@ textarea.pseudo-class-focus {
 }
 
 .contact-card .card-email.pseudo-class-hover a {
-  color: #AAABAF;
+  color: #A09CA0;
 }
 
 .contact-card .card-twitter.pseudo-class-hover a {
@@ -141,17 +141,17 @@ textarea.pseudo-class-focus {
 }
 
 .leaflet-container a.pseudo-class-hover {
-  color: #AAAB45;
+  color: #459AA3;
 }
 
 .wanderlist-country-widget li.pseudo-class-hover {
   background: #a32020;
-  color: #FAFAFC;
+  color: #FCFAFC;
 }
 
 .wanderlist-country-widget li a.pseudo-class-hover,
 .wanderlist-country-widget li.pseudo-class-hover a {
-  color: #FAFAFC;
+  color: #FCFAFC;
 }
 
 .row > div.pseudo-class-last-child {
@@ -177,7 +177,7 @@ textarea.pseudo-class-focus {
 #infinite-handle span.pseudo-class-hover button {
   font-size: 25.6px;
   font-size: 1.6rem;
-  color: #ceced3;
+  color: #cac4cd;
 }
 
 .wp-caption a.pseudo-class-hover,
@@ -190,5 +190,5 @@ figure a.pseudo-class-hover {
 }
 
 .menu-social-menu-container ul a.pseudo-class-hover svg {
-  fill: #AAAB45;
+  fill: #459AA3;
 }
