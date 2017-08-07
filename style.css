@@ -347,8 +347,7 @@ p {
 dfn, cite, em, i {
   font-style: italic; }
 
-blockquote, .subtitle,
-.taxonomy-description {
+blockquote {
   margin: 0 1.5em;
   border-top: 1px solid #cac5cb;
   color: #A09CA0;
@@ -360,8 +359,7 @@ blockquote, .subtitle,
   padding-top: 0.5em;
   text-align: left; }
   @media (min-width: 768px) {
-    blockquote, .subtitle,
-    .taxonomy-description {
+    blockquote {
       font-size: 22.4px;
       font-size: 1.4rem; } }
 
@@ -417,12 +415,9 @@ html {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
-blockquote, .subtitle,
-.taxonomy-description, q {
+blockquote, q {
   quotes: "" ""; }
-  blockquote:before, .subtitle:before,
-  .taxonomy-description:before, blockquote:after, .subtitle:after,
-  .taxonomy-description:after, q:before, q:after {
+  blockquote:before, blockquote:after, q:before, q:after {
     content: ""; }
 
 hr {
@@ -790,8 +785,8 @@ a {
     bottom: 0;
     -ms-transform-origin: right bottom;
     transform-origin: right bottom;
-    -ms-transform: skewY(-3deg);
-    transform: skewY(-3deg); }
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg); }
   #masthead::before {
     display: none; }
 
@@ -1028,17 +1023,10 @@ body {
 
 /* Styles for all single posts */
 .single .entry-header {
-  background: #312C33;
-  margin: 0 -20px;
-  width: calc(100% + 20px);
-  min-height: 90vh;
-  padding: 80px;
-  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-  align-items: center;
-  z-index: -2; }
+  align-items: center; }
 
 .single .posted-on {
   color: #FCFAFC; }
@@ -1093,24 +1081,64 @@ body {
 .page-title {
   font-weight: 400;
   padding: 0;
-  margin-bottom: 40px; }
+  margin-bottom: 80px; }
   .page-title em {
     color: #A09CA0; }
     .page-title em::before {
       content: ' ';
       display: inline; }
 
-.page-header {
-  padding-top: 40px;
-  text-align: center; }
+.page-header,
+.entry-header {
+  width: 100%;
+  position: relative;
+  background: #312C33;
+  margin: 0 -20px;
+  width: calc(100% + 20px);
+  min-height: 80vh;
+  position: relative;
+  padding: 80px;
+  z-index: -2; }
+  .page-header::before, .page-header::after,
+  .entry-header::before,
+  .entry-header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .page-header::after,
+  .entry-header::after {
+    bottom: 0;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); }
+  .page-header::before,
+  .entry-header::before {
+    display: none; }
+  .page-header .page-title,
+  .page-header .entry-title,
+  .entry-header .page-title,
+  .entry-header .entry-title {
+    color: #F26BAF; }
 
 /* Subtitles & archive descriptions */
 .subtitle,
 .taxonomy-description {
   font-size: 22.4px;
   font-size: 1.4rem;
-  margin-bottom: 2em;
-  max-width: 640px; }
+  border-top: 2px solid #E0DEE0;
+  color: #E0DEE0;
+  font-style: italic;
+  margin: 0;
+  max-width: 640px;
+  padding-top: 40px; }
   .subtitle p,
   .taxonomy-description p {
     margin: 0.5em 0; }
@@ -1492,14 +1520,12 @@ body {
     border-radius: 50%;
     margin: 0 10%;
     max-width: 80%; }
-  .jetpack-testimonial blockquote, .jetpack-testimonial .subtitle, .jetpack-testimonial
-  .taxonomy-description {
+  .jetpack-testimonial blockquote {
     border-top: none;
     margin: 0 auto;
     padding: 0;
     text-align: right; }
-    .jetpack-testimonial blockquote p, .jetpack-testimonial .subtitle p, .jetpack-testimonial
-    .taxonomy-description p {
+    .jetpack-testimonial blockquote p {
       text-align: left; }
   .jetpack-testimonial .attribution {
     color: #A09CA0;
@@ -1530,8 +1556,7 @@ body {
       margin: 0;
       max-width: 300px;
       vertical-align: top; }
-    .jetpack-testimonial.has-post-thumbnail blockquote, .jetpack-testimonial.has-post-thumbnail .subtitle, .jetpack-testimonial.has-post-thumbnail
-    .taxonomy-description {
+    .jetpack-testimonial.has-post-thumbnail blockquote {
       display: inline-block;
       width: calc(100% - 350px); }
     .jetpack-testimonial.has-post-thumbnail:nth-of-type(odd) img {

@@ -7,7 +7,7 @@
 .page-title {
 	font-weight: 400;
 	padding: 0;
-	margin-bottom: $size__site-gutter;
+	margin-bottom: $size__site-gutter*2;
 
 	em {
 		color: $silver;
@@ -19,18 +19,33 @@
 	} // em
 }
 
-.page-header {
-	padding-top: $size__site-gutter;
-	text-align: center;
+.page-header,
+.entry-header {
+	@include angled-edge(bottomright, 4deg);
+	background: $color__black;
+	margin: 0 -#{$size__site-gutter/2};
+	width: calc(100% + #{$size__site-gutter/2});
+	min-height: 80vh;
+	position: relative;
+	padding: $size__site-gutter*2;
+	z-index: -2;
+
+	.page-title,
+	.entry-title {
+		color: $color__primary;
+	}
 }
 
 /* Subtitles & archive descriptions */
 .subtitle,
 .taxonomy-description {
-	@extend blockquote;
 	@include font-size(1.4);
-	margin-bottom: 2em;
+	border-top: 2px solid $color__neutral-highlight;
+	color: $color__neutral-highlight;
+	font-style: italic;
+	margin: 0;
 	max-width: $size__content-width;
+	padding-top: $size__site-gutter;
 
 	p {
 		margin: 0.5em 0;

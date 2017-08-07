@@ -27,15 +27,8 @@
 /* Styles for all single posts */
 .single {
 	.entry-header {
-		background: $color__black;
-		margin: 0 -#{$size__site-gutter/2};
-		width: calc(100% + #{$size__site-gutter/2});
-		min-height: 90vh;
-		padding: $size__site-gutter*2;
-		position: relative;
 		display: flex;
 		align-items: center;
-		z-index: -2;
 	}
 
 	.posted-on {

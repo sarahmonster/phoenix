@@ -3,7 +3,7 @@
 }
 
 #masthead {
-	@include angled-edge(bottomleft, 3deg);
+	@include angled-edge(bottomleft, 2deg);
 	background: $color__primary;
 	width: 100%;
 	padding: $size__site-gutter $size__site-gutter/2 0;
