@@ -3,15 +3,17 @@
 }
 
 #masthead {
+	@include angled-edge(bottomleft, 3deg);
 	background: $color__primary;
 	width: 100%;
-	padding: $size__site-gutter/2;
+	padding: $size__site-gutter $size__site-gutter/2 0;
 	text-align: center;
 }
 
+
 /* Navigation */
 .main-navigation {
-	display: inline-block;
+	display: flex;
 	font-family: $font__accent;
 	max-width: $size__max-width;
 	width: 100%;
@@ -39,7 +41,7 @@
 		text-decoration: none;
 		color: $color__black;
 		display: inline-block;
-		padding: 5px 10px;
+		padding: 5px 20px;
 
 		&:hover {
 			color: $color__white;
@@ -100,8 +102,8 @@
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-		color: $silver;
-		border-bottom: 2px solid $silver;
+		color: $color__white;
+		//border-bottom: 2px solid $color__soft-black;
 	}
 }
 
