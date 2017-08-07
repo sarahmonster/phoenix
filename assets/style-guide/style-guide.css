@@ -128,11 +128,11 @@ body {
       content: "#66CED3"; }
 
 .color-highlight {
-  background: rgba(252, 172, 219, 0.25); }
+  background: #F9EAF7; }
   .color-highlight .hex-code {
     color: #000; }
     .color-highlight .hex-code::before {
-      content: "rgba(252, 172, 219, 0.25)"; }
+      content: "#F9EAF7"; }
 
 .adjectives h3 {
   display: inline;

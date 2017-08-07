@@ -28,7 +28,7 @@
 .single {
 	.entry-header {
 		background: $color__black;
-		margin: 0 -$size__site-gutter/2;
+		margin: 0 -#{$size__site-gutter}/2;
 		width: calc(100% + #{$size__site-gutter});
 		min-height: 90vh;
 		padding: $size__site-gutter*2;

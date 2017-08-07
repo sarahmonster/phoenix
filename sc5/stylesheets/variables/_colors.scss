@@ -6,6 +6,7 @@ $green: #37894c;
 $pink: #F26BAF;
 $dark-pink: #B53377;
 $light-pink: #FCACDB;
+$pink-highlight: #F9EAF7;
 
 $teal: #66CED3;
 $dark-teal: #459AA3;
@@ -49,7 +50,7 @@ $color__primary-dark: $dark-pink;
 
 $color__accent: $teal;
 $color__accent-alt: $dark-teal;
-$color__highlight: transparentize($light-pink, 0.75);
+$color__highlight: $pink-highlight;
 
 // zsg: ignore
 

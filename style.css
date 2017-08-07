@@ -396,7 +396,7 @@ big {
   font-size: 125%; }
 
 strong {
-  background: rgba(252, 172, 219, 0.25);
+  background: #F9EAF7;
   color: #4B454C;
   padding: 0 5px; }
 
@@ -769,8 +769,9 @@ a {
   display: none; }
 
 #masthead {
+  background: #F26BAF;
   width: 100%;
-  padding: 0 0 40px;
+  padding: 20px;
   text-align: center; }
 
 /* Navigation */
@@ -784,9 +785,11 @@ a {
     display: inline;
     font-size: 16px;
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     margin-left: -6px;
-    /* Compensate for hairline space. */ }
+    /* Compensate for hairline space. */
+    text-transform: uppercase; }
     .main-navigation li::before {
       content: '\00b7';
       display: inline; }
@@ -794,11 +797,11 @@ a {
       display: none; }
   .main-navigation a {
     text-decoration: none;
-    color: #4B454C;
+    color: #312C33;
     display: inline-block;
     padding: 5px 10px; }
     .main-navigation a:hover {
-      color: #a32020; }
+      color: #FCFAFC; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -839,9 +842,7 @@ body {
   background: #FCFAFC; }
 
 #page {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 20px; }
+  margin: 0 auto; }
 
 .page-content,
 .entry-content,
@@ -1007,7 +1008,7 @@ body {
 /* Styles for all single posts */
 .single .entry-header {
   background: #312C33;
-  margin: -20px;
+  margin: 0 -40px/2;
   width: calc(100% + 40px);
   min-height: 90vh;
   padding: 80px;
