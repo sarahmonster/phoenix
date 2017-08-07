@@ -6,6 +6,7 @@ $green: #37894c;
 $pink: #F26BAF;
 $dark-pink: #B53377;
 $light-pink: #FCACDB;
+$pink-highlight: #F9EAF7;
 
 $teal: #66CED3;
 $dark-teal: #459AA3;
@@ -26,6 +27,7 @@ $white: #FCFAFC;
 // They're used pretty heavily throughout to counteract our bright accent colours.
 
 $color__black: $black;
+$color__soft-black: $charcoal;
 $color__neutral: $silver;
 $color__neutral-text: $grey;
 $color__neutral-highlight: $off-white;
@@ -48,13 +50,13 @@ $color__primary-dark: $dark-pink;
 
 $color__accent: $teal;
 $color__accent-alt: $dark-teal;
-$color__highlight: transparentize($light-pink, 0.75);
+$color__highlight: $pink-highlight;
 
 // zsg: ignore
 
 // Background & body text
 $color__background-body: $color__white;
-$color__text-main: $color__black;
+$color__text-main: $charcoal;
 $color__headings: $color__neutral-text;
 
 // Inputs

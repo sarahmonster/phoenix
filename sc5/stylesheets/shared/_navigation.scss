@@ -1,11 +1,30 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-.site-main p a {
-	//border-bottom: 2px solid $color__link;
+a {
 	color: $color__link;
 	transition: all 0.2s ease-out;
 
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+// Use a fancy-pants underline for more accessible links (and more typographically attractive ones, too.)
+// It's a bit fragile so we're limiting it to in-text links.
+// https://impossiblycreative.com/more-accessible-links-gradients/
+.site-main p a {
     display: inline-block;
     text-decoration: none;
     text-shadow:
@@ -21,17 +40,7 @@
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
 		background-image: linear-gradient(to right, $color__link-hover 0%, $color__link-hover 100%);
-	}
-
-	&:focus {
-		outline: thin dotted;
-	}
-
-	&:hover,
-	&:active {
-		outline: 0;
 	}
 }
 

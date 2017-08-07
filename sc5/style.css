@@ -229,7 +229,7 @@ button,
 input,
 select,
 textarea {
-  color: #312C33;
+  color: #4B454C;
   font-family: "Freight Text Pro", freight-text-pro, Georgia, serif;
   font-size: 19.2px;
   font-size: 1.2rem;
@@ -350,7 +350,7 @@ dfn, cite, em, i {
 blockquote, .subtitle,
 .taxonomy-description {
   margin: 0 1.5em;
-  border-top: 1px solid #b2a9b5;
+  border-top: 1px solid #cac5cb;
   color: #A09CA0;
   display: block;
   font-size: 19.2px;
@@ -397,7 +397,7 @@ big {
 
 strong {
   background: rgba(252, 172, 219, 0.25);
-  color: #312C33;
+  color: #4B454C;
   padding: 0 5px; }
 
 .caps {
@@ -557,9 +557,17 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-.site-main p a {
+a {
   color: #B53377;
-  transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  a:hover, a:focus, a:active {
+    color: #459AA3; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+.site-main p a {
   display: inline-block;
   text-decoration: none;
   text-shadow: 0.05em 0 0 #FCFAFC, -0.05em 0 0 #FCFAFC, 0 0.05em 0 #FCFAFC, 0 -0.05em 0 #FCFAFC, 0.1em 0 0 #FCFAFC, -0.1em 0 0 #FCFAFC, 0 0.1em 0 #FCFAFC, 0 -0.1em 0 #FCFAFC;
@@ -568,12 +576,7 @@ textarea {
   background-position: bottom 0.25em center;
   background-size: 100% 0.1em; }
   .site-main p a:hover, .site-main p a:focus, .site-main p a:active {
-    color: #459AA3;
     background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%); }
-  .site-main p a:focus {
-    outline: thin dotted; }
-  .site-main p a:hover, .site-main p a:active {
-    outline: 0; }
 
 /*--------------------------------------------------------------
 ## Post navigation
@@ -788,7 +791,7 @@ textarea {
       display: none; }
   .main-navigation a {
     text-decoration: none;
-    color: #312C33;
+    color: #4B454C;
     display: inline-block;
     padding: 5px 10px; }
     .main-navigation a:hover {
@@ -844,9 +847,9 @@ body {
   max-width: 640px; }
 
 .site-footer {
-  border-top: 1px solid #b2a9b5;
+  border-top: 1px solid #cac5cb;
   clear: both;
-  color: #736777;
+  color: #8c838e;
   font-size: 16px;
   font-size: 1rem;
   font-style: italic;
@@ -855,10 +858,10 @@ body {
   text-align: center;
   width: 100%; }
   .site-footer a {
-    color: #312C33;
+    color: #4B454C;
     border-color: transparent; }
     .site-footer a:hover {
-      border-color: rgba(49, 44, 51, 0.5); }
+      border-color: rgba(75, 69, 76, 0.5); }
   .site-footer .phoenix-icon-heart {
     fill: #a32020;
     height: 18px;
@@ -1688,7 +1691,7 @@ img {
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.4);
   font-size: 0.9em;
-  color: #312C33;
+  color: #4B454C;
   line-height: 1.4em;
   padding: 5px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
@@ -1713,7 +1716,7 @@ img {
   z-index: 10000000; }
 
 .overlay p.subtitle {
-  color: #736777;
+  color: #8c838e;
   font-size: 0.85em;
   text-align: center;
   margin: 10px 20px 0;
@@ -1806,7 +1809,7 @@ img {
 
 .placeholder {
   align-items: center;
-  background: #66CED3;
+  background: #312C33;
   color: #FCFAFC;
   display: flex;
   flex-direction: column;
@@ -1875,7 +1878,7 @@ img {
     font-size: 1.4rem;
     padding: 10px 20px; }
     #infinite-handle span::before, #infinite-handle span::after {
-      color: #cac4cd;
+      color: #e3e0e3;
       display: inline;
       font-size: 1.8em;
       padding: 5px;
@@ -1887,14 +1890,14 @@ img {
     #infinite-handle span button {
       background: none;
       box-shadow: none;
-      color: #998e9d;
+      color: #b1abb2;
       font-style: italic;
       padding: 0 10px;
       transition: all 200ms linear; }
     #infinite-handle span:hover button {
       font-size: 25.6px;
       font-size: 1.6rem;
-      color: #cac4cd; }
+      color: #e3e0e3; }
 
 /* Loading icon */
 .infinite-loader {

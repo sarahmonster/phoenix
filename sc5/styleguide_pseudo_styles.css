@@ -49,20 +49,25 @@ textarea.pseudo-class-focus {
   color: #111;
 }
 
-.site-main p a.pseudo-class-hover,
-.site-main p a.pseudo-class-focus,
-.site-main p a.pseudo-class-active {
+a.pseudo-class-hover,
+a.pseudo-class-focus,
+a.pseudo-class-active {
   color: #459AA3;
-  background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%);
 }
 
-.site-main p a.pseudo-class-focus {
+a.pseudo-class-focus {
   outline: thin dotted;
 }
 
-.site-main p a.pseudo-class-hover,
-.site-main p a.pseudo-class-active {
+a.pseudo-class-hover,
+a.pseudo-class-active {
   outline: 0;
+}
+
+.site-main p a.pseudo-class-hover,
+.site-main p a.pseudo-class-focus,
+.site-main p a.pseudo-class-active {
+  background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%);
 }
 
 .comment-navigation a.pseudo-class-hover .phoenix-icon,
@@ -112,7 +117,7 @@ textarea.pseudo-class-focus {
 }
 
 .site-footer a.pseudo-class-hover {
-  border-color: rgba(49, 44, 51, 0.5);
+  border-color: rgba(75, 69, 76, 0.5);
 }
 
 .cat-links a.pseudo-class-hover {
@@ -177,7 +182,7 @@ textarea.pseudo-class-focus {
 #infinite-handle span.pseudo-class-hover button {
   font-size: 25.6px;
   font-size: 1.6rem;
-  color: #cac4cd;
+  color: #e3e0e3;
 }
 
 .wp-caption a.pseudo-class-hover,

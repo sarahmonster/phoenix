@@ -26,6 +26,7 @@ $white: #FCFAFC;
 // They're used pretty heavily throughout to counteract our bright accent colours.
 
 $color__black: $black;
+$color__soft-black: $charcoal;
 $color__neutral: $silver;
 $color__neutral-text: $grey;
 $color__neutral-highlight: $off-white;
@@ -54,7 +55,7 @@ $color__highlight: transparentize($light-pink, 0.75);
 
 // Background & body text
 $color__background-body: $color__white;
-$color__text-main: $color__black;
+$color__text-main: $charcoal;
 $color__headings: $color__neutral-text;
 
 // Inputs
