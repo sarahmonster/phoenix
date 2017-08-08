@@ -261,7 +261,7 @@ h1 {
   color: #716E72;
   letter-spacing: -0.03em;
   line-height: 1;
-  font-family: "Lust Display", lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
+  font-family: lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
   font-size: 57.6px;
   font-size: 3.6rem; }
   @media (min-width: 768px) {
@@ -598,10 +598,10 @@ a {
     .posts-navigation a .phoenix-icon,
     .post-navigation a .phoenix-icon {
       display: block;
-      background: #665b6a;
+      background: #58505a;
       border: 2px solid #FCFAFC;
       border-radius: 50%;
-      box-shadow: 0 0 0px 2px #665b6a;
+      box-shadow: 0 0 0px 2px #58505a;
       fill: #FCFAFC;
       height: 42px;
       line-height: 1;
@@ -612,7 +612,7 @@ a {
     .comment-navigation a:hover .phoenix-icon,
     .posts-navigation a:hover .phoenix-icon,
     .post-navigation a:hover .phoenix-icon {
-      background: #4b444e; }
+      background: #3d383f; }
   .comment-navigation span:not(.caps),
   .posts-navigation span:not(.caps),
   .post-navigation span:not(.caps) {
@@ -815,7 +815,7 @@ a {
       display: none; }
   .main-navigation a {
     text-decoration: none;
-    color: #312C33;
+    color: #232024;
     display: inline-block;
     padding: 5px 20px; }
     .main-navigation a:hover {
@@ -976,7 +976,7 @@ body {
   .blog .entry-title,
   .archive .entry-title,
   .home .entry-title {
-    font-family: "Lust Display", lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
+    font-family: lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
     font-style: normal;
     font-size: 38.4px;
     font-size: 2.4rem;
@@ -1026,7 +1026,7 @@ body {
 .single .entry-header {
   width: 100%;
   position: relative;
-  background: #312C33;
+  background: #232024;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1038,8 +1038,7 @@ body {
   min-height: 80vh;
   position: relative;
   padding: 40px;
-  z-index: -2;
-  padding: 80px; }
+  z-index: -2; }
   .single .entry-header::before, .single .entry-header::after {
     content: '';
     display: block;
@@ -1059,13 +1058,26 @@ body {
     transform: skewY(4deg); }
   .single .entry-header::before {
     display: none; }
+  @media (min-width: 768px) {
+    .single .entry-header {
+      padding: 80px; } }
+  .single .entry-header .page-title,
+  .single .entry-header .entry-title {
+    background: #F26BAF;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #66CED3, #F26BAF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 35px; }
 
 .single .posted-on {
   color: #FCFAFC; }
 
 .single .phoenix-month,
 .single .phoenix-date {
-  color: #a4a1a5; }
+  color: #E0DEE0; }
 
 .single .entry-title {
   color: #F26BAF;
@@ -1113,7 +1125,7 @@ body {
 .page-header {
   width: 100%;
   position: relative;
-  background: #312C33;
+  background: #232024;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1125,8 +1137,7 @@ body {
   min-height: 80vh;
   position: relative;
   padding: 40px;
-  z-index: -2;
-  padding: 80px; }
+  z-index: -2; }
   .page-header::before, .page-header::after {
     content: '';
     display: block;
@@ -1146,6 +1157,19 @@ body {
     transform: skewY(4deg); }
   .page-header::before {
     display: none; }
+  @media (min-width: 768px) {
+    .page-header {
+      padding: 80px; } }
+  .page-header .page-title,
+  .page-header .entry-title {
+    background: #F26BAF;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #66CED3, #F26BAF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 35px; }
 
 .page-title {
   color: #F26BAF;
@@ -1207,7 +1231,7 @@ body {
   font-size: 13vw;
   margin-top: -81px;
   opacity: 0.6;
-  text-shadow: 0px 0px 1px #312C33; }
+  text-shadow: 0px 0px 1px #232024; }
 
 .phoenix-the-unbearable-lightness-of-designing .word4 {
   -ms-transform: rotate(-90deg);
@@ -1902,7 +1926,7 @@ img {
 .placeholder {
   -ms-flex-align: center;
   align-items: center;
-  background: #312C33;
+  background: #232024;
   color: #FCFAFC;
   display: -ms-flexbox;
   display: flex;

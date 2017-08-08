@@ -36,7 +36,7 @@
 
 	.phoenix-month,
 	.phoenix-date {
-		color: lighten($color__neutral-text, 20%);
+		color: $color__neutral-highlight;
 	}
 
 	.entry-title {

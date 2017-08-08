@@ -10,7 +10,7 @@
  // Styleguide 2.0
 $font__serif: "Freight Text Pro", freight-text-pro, Georgia, serif;
 $font__sans-serif: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
-$font__display: "Lust Display", lust-display, $font__serif;
+$font__display: lust-display, $font__serif;
 
 $font__main: $font__serif;
 $font__accent: $font__sans-serif;
