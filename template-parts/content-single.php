@@ -12,15 +12,13 @@
 			the_post_thumbnail( 'full', array( 'class' => 'phoenix-background-image' ) );
 		endif; ?>
 
-		<div class="phoenix-header-text">
-			<div class="entry-meta">
-				<?php phoenix_post_category(); ?>
-				<?php phoenix_post_date(); ?>
-			</div><!-- .entry-meta -->
+		<div class="entry-meta">
+			<?php phoenix_post_category(); ?>
+			<?php phoenix_post_date(); ?>
+		</div><!-- .entry-meta -->
 
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<?php phoenix_subtitle( true ); ?>
-		<div class="phoenix-header-text">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php phoenix_subtitle( true ); ?>
 
 	</header><!-- .entry-header -->
 

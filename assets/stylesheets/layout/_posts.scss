@@ -27,8 +27,7 @@
 /* Styles for all single posts */
 .single {
 	.entry-header {
-		display: flex;
-		align-items: center;
+		@include page-header;
 	}
 
 	.posted-on {
@@ -42,7 +41,7 @@
 
 	.entry-title {
 		color: $color__primary;
-		margin: $size__site-gutter/2 0;
+		max-width: $size__content-width;
 	}
 
 	.subtitle {

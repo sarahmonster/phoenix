@@ -15,7 +15,7 @@
 		<div class="phoenix-panel-background" style="background-image:url(<?php echo esc_url( $thumbnail[0] ); ?>)"></div>
 		<?php endif; ?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="page-title">', '</h1>' ); ?>
 		<?php phoenix_subtitle( true ); ?>
 
 	</header><!-- .entry-header -->

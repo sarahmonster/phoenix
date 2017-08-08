@@ -3,8 +3,13 @@
 	margin: 0 0 1.5em;
 }
 
-/* Page titles */
+/* Page header */
+.page-header {
+	@include page-header;
+}
+
 .page-title {
+	color: $color__primary;
 	font-weight: 400;
 	padding: 0;
 	margin-bottom: $size__site-gutter*2;
@@ -17,23 +22,6 @@
 			display: inline;
 		}
 	} // em
-}
-
-.page-header,
-.entry-header {
-	@include angled-edge(bottomright, 4deg);
-	background: $color__black;
-	margin: 0 -#{$size__site-gutter/2};
-	width: calc(100% + #{$size__site-gutter/2});
-	min-height: 80vh;
-	position: relative;
-	padding: $size__site-gutter*2;
-	z-index: -2;
-
-	.page-title,
-	.entry-title {
-		color: $color__primary;
-	}
 }
 
 /* Subtitles & archive descriptions */

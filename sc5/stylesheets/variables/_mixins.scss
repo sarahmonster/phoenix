@@ -117,3 +117,22 @@
 		}
     }
 }
+
+// Styling for page headers, used for pages as well as single entry pages.
+@mixin page-header {
+	@include angled-edge(bottomright, 4deg);
+	background: $color__black;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 -#{$size__site-gutter/2};
+	width: calc(100% + #{$size__site-gutter/2});
+	min-height: 80vh;
+	position: relative;
+	padding: $size__site-gutter;
+	z-index: -2;
+
+	@if tablet {
+		padding: $size__site-gutter*2;
+	}
+}
