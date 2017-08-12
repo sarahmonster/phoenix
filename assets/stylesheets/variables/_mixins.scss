@@ -118,31 +118,34 @@
     }
 }
 
+// Apply a rainbowy gradient to text elements.
+@mixin text-gradient {
+	background: $color__primary;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, $color__accent, $color__primary);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, $color__accent, $color__primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 // Styling for page headers, used for pages as well as single entry pages.
 @mixin page-header {
 	@include angled-edge(bottomright, 4deg);
 	background: $color__black;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	margin: 0 -#{$size__site-gutter/2};
 	width: calc(100% + #{$size__site-gutter/2});
-	min-height: 80vh;
 	position: relative;
 	padding: $size__site-gutter;
+	padding-bottom: $size__site-gutter/4;
 	z-index: -2;
 
 	@include tablet {
 		padding: $size__site-gutter*2;
+		padding-bottom: $size__site-gutter/2;
 	}
 
 	.page-title,
 	.entry-title {
-		background: $color__primary;  /* fallback for old browsers */
-		background: -webkit-linear-gradient(to bottom, $color__accent, $color__primary);  /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(to bottom, $color__accent, $color__primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		padding-bottom: 35px; // Avoids text being cut off in FF.
+		@include text-gradient;
+		padding: 10px 0 35px; // Avoids text being cut off in FF.
 	}
 }

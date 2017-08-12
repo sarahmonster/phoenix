@@ -1027,17 +1027,11 @@ body {
   width: 100%;
   position: relative;
   background: #232024;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
   margin: 0 -20px;
   width: calc(100% + 20px);
-  min-height: 80vh;
   position: relative;
   padding: 40px;
+  padding-bottom: 10px;
   z-index: -2; }
   .single .entry-header::before, .single .entry-header::after {
     content: '';
@@ -1060,7 +1054,8 @@ body {
     display: none; }
   @media (min-width: 768px) {
     .single .entry-header {
-      padding: 80px; } }
+      padding: 80px;
+      padding-bottom: 20px; } }
   .single .entry-header .page-title,
   .single .entry-header .entry-title {
     background: #F26BAF;
@@ -1070,7 +1065,7 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 35px; }
+    padding: 10px 0 35px; }
 
 .single .posted-on {
   color: #FCFAFC; }
@@ -1126,17 +1121,11 @@ body {
   width: 100%;
   position: relative;
   background: #232024;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: center;
-  justify-content: center;
   margin: 0 -20px;
   width: calc(100% + 20px);
-  min-height: 80vh;
   position: relative;
   padding: 40px;
+  padding-bottom: 10px;
   z-index: -2; }
   .page-header::before, .page-header::after {
     content: '';
@@ -1159,7 +1148,8 @@ body {
     display: none; }
   @media (min-width: 768px) {
     .page-header {
-      padding: 80px; } }
+      padding: 80px;
+      padding-bottom: 20px; } }
   .page-header .page-title,
   .page-header .entry-title {
     background: #F26BAF;
@@ -1169,7 +1159,7 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 35px; }
+    padding: 10px 0 35px; }
 
 .page-title {
   color: #F26BAF;
