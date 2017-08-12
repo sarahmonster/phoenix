@@ -11,7 +11,7 @@ var concat = require( 'gulp-concat' );
 var cache = require( 'gulp-cache' );
 var sourcemaps = require( 'gulp-sourcemaps' );
 var csscomb = require( 'gulp-csscomb' );
-var livereload = require( 'gulp-livereload' );
+var browserSync = require('browser-sync').create();
 var svgmin = require( 'gulp-svgmin' );
 var cheerio = require( 'gulp-cheerio' );
 var svgstore = require( 'gulp-svgstore' );
@@ -31,7 +31,7 @@ gulp.task( 'styles', function() {
 		.pipe( autoprefixer( { browsers: ['last 2 versions', 'ie >= 9'], cascade: false } ) )
 		.pipe( sourcemaps.write( './', { includeContent: false, sourceRoot: 'source' } ) )
 		.pipe( gulp.dest( './' ) )
-		.pipe( livereload() );
+		.pipe( browserSync.stream() );
 });
 
 // Scripts
@@ -85,11 +85,11 @@ gulp.task( 'style-guide', function() {
 
 // Watch files for changes
 gulp.task( 'watch', function() {
-	livereload.listen();
 	gulp.watch( 'assets/**/*.scss', ['styles', 'style-guide', 'sc5-styleguide'] );
 	gulp.watch( 'assets/js/**/*.js', ['scripts'] );
 	gulp.watch( 'assets/images/*', ['images'] );
 	gulp.watch( 'assets/svg/icons/*', ['icons'] );
+	
 } );
 
 // Generate some extra CSS for sc5.
@@ -136,5 +136,13 @@ gulp.task('sc5-styleguide:applystyles', function() {
 
 gulp.task('sc5-styleguide', ['sc5-styleguide:generate', 'sc5-styleguide:applystyles', 'sc5-styleguide:styles']);
 
+// Static server
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "triggersandsparks.dev"
+    });
+});
+
+
 // Default Task
-gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'style-guide', 'sc5-styleguide', 'watch'] );
+gulp.task( 'default', ['styles', 'scripts', 'images', 'icons', 'style-guide', 'sc5-styleguide', 'browser-sync', 'watch'] );
