@@ -8,32 +8,14 @@
 	@include page-header;
 }
 
-.page-title {
-	color: $color__primary;
-	font-weight: 400;
-	padding: 0;
-	margin-bottom: $size__site-gutter*2;
-
-	em {
-		color: $silver;
-
-		&::before {
-			content: ' ';
-			display: inline;
-		}
-	} // em
-}
-
 /* Subtitles & archive descriptions */
 .subtitle,
 .taxonomy-description {
 	@include font-size(1.4);
-	border-top: 2px solid $color__neutral-highlight;
 	color: $color__neutral-highlight;
 	font-style: italic;
 	margin: 0;
 	max-width: $size__content-width;
-	padding-top: $size__site-gutter;
 
 	p {
 		margin: 0.5em 0;

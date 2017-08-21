@@ -266,8 +266,8 @@ h1 {
   font-size: 3.6rem; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 96px;
-      font-size: 6rem; } }
+      font-size: 112px;
+      font-size: 7rem; } }
   h1 a {
     color: #716E72; }
 
@@ -1145,28 +1145,15 @@ body {
     -webkit-text-fill-color: transparent;
     padding: 10px 0 35px; }
 
-.page-title {
-  color: #F26BAF;
-  font-weight: 400;
-  padding: 0;
-  margin-bottom: 80px; }
-  .page-title em {
-    color: #A09CA0; }
-    .page-title em::before {
-      content: ' ';
-      display: inline; }
-
 /* Subtitles & archive descriptions */
 .subtitle,
 .taxonomy-description {
   font-size: 22.4px;
   font-size: 1.4rem;
-  border-top: 2px solid #E0DEE0;
   color: #E0DEE0;
   font-style: italic;
   margin: 0;
-  max-width: 840px;
-  padding-top: 40px; }
+  max-width: 840px; }
   .subtitle p,
   .taxonomy-description p {
     margin: 0.5em 0; }
