@@ -845,7 +845,7 @@ body {
 .entry-content,
 .entry-summary {
   margin: 0 auto;
-  max-width: 840px; }
+  max-width: 1040px; }
 
 .site-footer {
   border-top: 1px solid #cac5cb;
@@ -934,7 +934,7 @@ body {
   .home .post {
     border-top: 2px solid #A09CA0;
     margin: 160px auto;
-    max-width: 840px; }
+    max-width: 1040px; }
   .blog .posted-on,
   .blog .cat-links,
   .archive .posted-on,
@@ -1053,17 +1053,20 @@ body {
 
 .single .entry-title {
   color: #F26BAF;
-  max-width: 840px; }
+  max-width: 1040px; }
 
 .single .subtitle {
   margin-left: 0;
   border-color: #A09CA0;
   color: #716E72; }
 
-.single .entry-content {
-  background: #FCFAFC;
-  margin-top: -40px;
-  padding: 40px; }
+@media (min-width: 768px) {
+  .entry-content {
+    background: #FCFAFC;
+    box-shadow: 0 4px 10px rgba(35, 32, 36, 0.1);
+    margin: -80px 40px 40px;
+    padding: 80px;
+    position: relative; } }
 
 /* Entry footer */
 .entry-footer {
@@ -1075,7 +1078,7 @@ body {
   font-style: italic;
   line-height: 1.4;
   margin: 40px auto;
-  max-width: 840px;
+  max-width: 1040px;
   padding: 1em 0;
   text-align: center; }
   .entry-footer .twitter-share {
@@ -1145,7 +1148,7 @@ body {
   color: #E0DEE0;
   font-style: italic;
   margin: 0;
-  max-width: 840px; }
+  max-width: 1040px; }
   .subtitle p,
   .taxonomy-description p {
     margin: 0.5em 0; }
@@ -1494,7 +1497,7 @@ body {
     .wanderlist-location .attachment-phoenix-postcard {
       float: left;
       margin: 0 -50px 20px -100px;
-      width: 570px; } }
+      width: 670px; } }
 
 .wanderlist-location .attachment-phoenix-postcard + .entry-content {
   background: #FCFAFC;
@@ -1508,7 +1511,7 @@ body {
   @media (min-width: 1024px) {
     .wanderlist-location .attachment-phoenix-postcard + .entry-content {
       margin: 60px -100px 20px -50px;
-      width: 570px;
+      width: 670px;
       float: left; } }
 
 /* Testimonials page */

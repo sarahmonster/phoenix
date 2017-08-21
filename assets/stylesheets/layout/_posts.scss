@@ -50,12 +50,19 @@
 		color: $color__neutral-text;
 	}
 
+
+} // .single
+
+// Drop-shadow at top of entry content
+@include tablet {
 	.entry-content {
 		background: $color__white;
-		margin-top: -$size__site-gutter;
-		padding: $size__site-gutter;
+		box-shadow: 0 4px 10px transparentize($color__black, 0.9);
+		margin: -$size__site-gutter*2 $size__site-gutter $size__site-gutter;
+		padding: $size__site-gutter*2;
+		position: relative;
 	}
-} // .single
+}
 
 /* Entry footer */
 .entry-footer {
