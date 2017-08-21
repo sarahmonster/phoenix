@@ -9,7 +9,7 @@ textarea {
 	line-height: $font__line-height-body;
 
 	@include tablet {
-		@include font-size(1.4);
+		@include font-size(1.6);
 	}
 }
 
@@ -81,7 +81,7 @@ h3 {
 
 /* Body copy */
 p {
-	margin-bottom: 1.5em;
+	margin: 0 0 $size__site-gutter*2;
 }
 
 // Drop caps
@@ -95,17 +95,6 @@ p {
  // Styleguide 2.2
 .cap,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-	@include tablet {
-		color: $color__neutral-text;
-		font-size: 1.25em;
-		margin: $size__site_gutter*2 0;
-		padding-bottom: 0;
-	}
-
-	@include desktop {
-		margin-left: -#{$size__site_gutter*2};
-		margin-right: -#{$size__site_gutter*2};
-	}
 
 	&::first-letter {
 		color: $color__neutral;

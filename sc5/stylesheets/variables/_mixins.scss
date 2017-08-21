@@ -135,12 +135,10 @@
 	width: calc(100% + #{$size__site-gutter/2});
 	position: relative;
 	padding: $size__site-gutter;
-	padding-bottom: $size__site-gutter/4;
 	z-index: -2;
 
 	@include tablet {
 		padding: $size__site-gutter*2;
-		padding-bottom: $size__site-gutter/2;
 	}
 
 	.page-title,

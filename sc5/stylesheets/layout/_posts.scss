@@ -51,7 +51,9 @@
 	}
 
 	.entry-content {
-		padding-top: $size__site-gutter*2;
+		background: $color__white;
+		margin-top: -$size__site-gutter;
+		padding: $size__site-gutter;
 	}
 } // .single
 

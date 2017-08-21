@@ -240,8 +240,8 @@ textarea {
     input,
     select,
     textarea {
-      font-size: 22.4px;
-      font-size: 1.4rem; } }
+      font-size: 25.6px;
+      font-size: 1.6rem; } }
 
 h1, h2, h3, .posted-on,
 .cat-links,
@@ -306,21 +306,7 @@ h3, .posted-on,
 
 /* Body copy */
 p {
-  margin-bottom: 1.5em; }
-
-@media (min-width: 768px) {
-  .cap,
-  .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-    color: #716E72;
-    font-size: 1.25em;
-    margin: 80px 0;
-    padding-bottom: 0; } }
-
-@media (min-width: 1024px) {
-  .cap,
-  .single:not(.single-wanderlist-location) .entry-content p:first-of-type {
-    margin-left: -80px;
-    margin-right: -80px; } }
+  margin: 0 0 80px; }
 
 .cap::first-letter,
 .single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
@@ -865,7 +851,7 @@ body {
 .entry-content,
 .entry-summary {
   margin: 0 auto;
-  max-width: 640px; }
+  max-width: 840px; }
 
 .site-footer {
   border-top: 1px solid #cac5cb;
@@ -954,7 +940,7 @@ body {
   .home .post {
     border-top: 2px solid #A09CA0;
     margin: 160px auto;
-    max-width: 640px; }
+    max-width: 840px; }
   .blog .posted-on,
   .blog .cat-links,
   .archive .posted-on,
@@ -1031,7 +1017,6 @@ body {
   width: calc(100% + 20px);
   position: relative;
   padding: 40px;
-  padding-bottom: 10px;
   z-index: -2; }
   .single .entry-header::before, .single .entry-header::after {
     content: '';
@@ -1054,8 +1039,7 @@ body {
     display: none; }
   @media (min-width: 768px) {
     .single .entry-header {
-      padding: 80px;
-      padding-bottom: 20px; } }
+      padding: 80px; } }
   .single .entry-header .page-title,
   .single .entry-header .entry-title {
     background: #F26BAF;
@@ -1076,7 +1060,7 @@ body {
 
 .single .entry-title {
   color: #F26BAF;
-  max-width: 640px; }
+  max-width: 840px; }
 
 .single .subtitle {
   margin-left: 0;
@@ -1084,7 +1068,9 @@ body {
   color: #716E72; }
 
 .single .entry-content {
-  padding-top: 80px; }
+  background: #FCFAFC;
+  margin-top: -40px;
+  padding: 40px; }
 
 /* Entry footer */
 .entry-footer {
@@ -1096,7 +1082,7 @@ body {
   font-style: italic;
   line-height: 1.4;
   margin: 40px auto;
-  max-width: 640px;
+  max-width: 840px;
   padding: 1em 0;
   text-align: center; }
   .entry-footer .twitter-share {
@@ -1125,7 +1111,6 @@ body {
   width: calc(100% + 20px);
   position: relative;
   padding: 40px;
-  padding-bottom: 10px;
   z-index: -2; }
   .page-header::before, .page-header::after {
     content: '';
@@ -1148,8 +1133,7 @@ body {
     display: none; }
   @media (min-width: 768px) {
     .page-header {
-      padding: 80px;
-      padding-bottom: 20px; } }
+      padding: 80px; } }
   .page-header .page-title,
   .page-header .entry-title {
     background: #F26BAF;
@@ -1181,7 +1165,7 @@ body {
   color: #E0DEE0;
   font-style: italic;
   margin: 0;
-  max-width: 640px;
+  max-width: 840px;
   padding-top: 40px; }
   .subtitle p,
   .taxonomy-description p {
@@ -1539,7 +1523,7 @@ body {
     .wanderlist-location .attachment-phoenix-postcard {
       float: left;
       margin: 0 -50px 20px -100px;
-      width: 470px; } }
+      width: 570px; } }
 
 .wanderlist-location .attachment-phoenix-postcard + .entry-content {
   background: #FCFAFC;
@@ -1553,7 +1537,7 @@ body {
   @media (min-width: 1024px) {
     .wanderlist-location .attachment-phoenix-postcard + .entry-content {
       margin: 60px -100px 20px -50px;
-      width: 470px;
+      width: 570px;
       float: left; } }
 
 /* Testimonials page */
