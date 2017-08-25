@@ -1899,14 +1899,20 @@ img {
   .phoenix-event-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 40px;
-    grid-column-gap: 40px; }
+    grid-row-gap: 20px;
+    grid-column-gap: 40px;
+    margin: 40px;
+    max-width: 1040px; }
   .event:nth-of-type(odd) {
     grid-column-start: 1;
     grid-column-end: 2; }
   .event:nth-of-type(even) {
     grid-column-start: 2;
     grid-column-end: 3; } }
+
+@media (min-width: 768px) {
+  .archive .phoenix-event-list {
+    margin-top: -40px; } }
 
 .tax-talks .nix-prefix {
   display: none; }

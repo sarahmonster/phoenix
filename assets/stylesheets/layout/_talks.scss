@@ -40,8 +40,10 @@
 	.phoenix-event-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-row-gap: $size__site-gutter;
+		grid-row-gap: $size__site-gutter/2;
 		grid-column-gap: $size__site-gutter;
+		margin: $size__site-gutter;
+		max-width: $size__content-width;
 	}
 
 	.event {
@@ -57,7 +59,14 @@
 	}
 }
 
-// Hide category (everything is a talk!)
+// Pull event listings up a bit on archive pages so they overlap properly.
+@include tablet {
+	.archive .phoenix-event-list {
+		margin-top: -$size__site-gutter;
+	}
+}
+
+// Hide category on talk pages (everything is a talk!)
 .tax-talks .nix-prefix {
 	display: none;
 }
