@@ -56,3 +56,8 @@
 		}
 	}
 }
+
+// Hide category (everything is a talk!)
+.tax-talks .nix-prefix {
+	display: none;
+}

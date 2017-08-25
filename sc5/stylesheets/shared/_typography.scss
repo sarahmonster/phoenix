@@ -94,7 +94,8 @@ p {
  //
  // Styleguide 2.2
 .cap,
-.single:not(.single-wanderlist-location) .entry-content p:first-of-type {
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type,
+.tax-talks .entry-content p:first-of-type {
 
 	&::first-letter {
 		color: $color__neutral;

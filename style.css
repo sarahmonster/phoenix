@@ -309,7 +309,8 @@ p {
   margin: 0 0 80px; }
 
 .cap::first-letter,
-.single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter,
+.tax-talks .entry-content p:first-of-type::first-letter {
   color: #A09CA0;
   display: block;
   float: left;
@@ -321,13 +322,15 @@ p {
   margin: 14px 5px 0 -5px; }
   @media (min-width: 768px) {
     .cap::first-letter,
-    .single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter {
+    .single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-letter,
+    .tax-talks .entry-content p:first-of-type::first-letter {
       font-size: 240px;
       font-size: 15rem;
       margin-top: 16px; } }
 
 .cap::first-line,
-.single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-line {
+.single:not(.single-wanderlist-location) .entry-content p:first-of-type::first-line,
+.tax-talks .entry-content p:first-of-type::first-line {
   font-variant: small-caps;
   letter-spacing: 2px; }
 
@@ -924,43 +927,43 @@ body {
 
 /* Archive pages */
 .blog,
-.archive,
+.archive:not(.tax-talks),
 .home {
   /* Excerpt */ }
   .blog .nix-prefix,
-  .archive .nix-prefix,
+  .archive:not(.tax-talks) .nix-prefix,
   .home .nix-prefix {
     display: none; }
   .blog a,
-  .archive a,
+  .archive:not(.tax-talks) a,
   .home a {
     text-decoration: none; }
   .blog .post,
-  .archive .post,
+  .archive:not(.tax-talks) .post,
   .home .post {
     border-top: 2px solid #A09CA0;
     margin: 160px auto;
     max-width: 1040px; }
   .blog .posted-on,
   .blog .cat-links,
-  .archive .posted-on,
-  .archive .cat-links,
+  .archive:not(.tax-talks) .posted-on,
+  .archive:not(.tax-talks) .cat-links,
   .home .posted-on,
   .home .cat-links {
     display: inline-block; }
   .blog .posted-on,
-  .archive .posted-on,
+  .archive:not(.tax-talks) .posted-on,
   .home .posted-on {
     color: #4B454C; }
   .blog .phoenix-day,
   .blog .phoenix-date,
-  .archive .phoenix-day,
-  .archive .phoenix-date,
+  .archive:not(.tax-talks) .phoenix-day,
+  .archive:not(.tax-talks) .phoenix-date,
   .home .phoenix-day,
   .home .phoenix-date {
     display: none; }
   .blog .entry-title,
-  .archive .entry-title,
+  .archive:not(.tax-talks) .entry-title,
   .home .entry-title {
     font-family: lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
     font-style: normal;
@@ -969,17 +972,17 @@ body {
     margin: 0;
     line-height: 1; }
     .blog .entry-title a,
-    .archive .entry-title a,
+    .archive:not(.tax-talks) .entry-title a,
     .home .entry-title a {
       color: #716E72; }
     @media (min-width: 768px) {
       .blog .entry-title,
-      .archive .entry-title,
+      .archive:not(.tax-talks) .entry-title,
       .home .entry-title {
         font-size: 57.6px;
         font-size: 3.6rem; } }
   .blog .entry-content,
-  .archive .entry-content,
+  .archive:not(.tax-talks) .entry-content,
   .home .entry-content {
     font-size: 20px;
     font-size: 1.25rem;
@@ -1049,7 +1052,10 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 10px 0 35px; }
+    padding: 35px 0; }
+
+.single .entry-title {
+  padding-top: 10px; }
 
 .single .posted-on {
   color: #FCFAFC; }
@@ -1146,7 +1152,7 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 10px 0 35px; }
+    padding: 35px 0; }
 
 /* Subtitles & archive descriptions */
 .subtitle,
@@ -1926,6 +1932,9 @@ img {
     -ms-grid-column: 2;
     grid-column-start: 2;
     grid-column-end: 3; } }
+
+.tax-talks .nix-prefix {
+  display: none; }
 
 /*--------------------------------------------------------------
 ## Asides

@@ -25,9 +25,13 @@
 }
 
 /* Styles for all single posts */
-.single {
+.single  {
 	.entry-header {
 		@include page-header;
+	}
+
+	.entry-title {
+		padding-top: 10px;
 	}
 
 	.posted-on {

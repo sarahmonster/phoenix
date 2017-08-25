@@ -3,7 +3,8 @@ a.pseudo-class-hover {
   outline: 0;
 }
 
-.single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-letter {
+.single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-letter,
+.tax-talks .entry-content p.pseudo-class-first-of-type::first-letter {
   color: #A09CA0;
   display: block;
   float: left;
@@ -15,7 +16,8 @@ a.pseudo-class-hover {
   margin: 14px 5px 0 -5px;
 }
 
-.single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-line {
+.single:not(.single-wanderlist-location) .entry-content p.pseudo-class-first-of-type::first-line,
+.tax-talks .entry-content p.pseudo-class-first-of-type::first-line {
   font-variant: small-caps;
   letter-spacing: 2px;
 }

@@ -144,6 +144,6 @@
 	.page-title,
 	.entry-title {
 		@include text-gradient;
-		padding: 10px 0 35px; // Avoids text being cut off in FF.
+		padding: 35px 0; // Avoids text being cut off in FF.
 	}
 }

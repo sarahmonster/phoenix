@@ -1,6 +1,6 @@
 /* Archive pages */
 .blog,
-.archive,
+.archive:not(.tax-talks),
 .home {
 
 	.nix-prefix {
