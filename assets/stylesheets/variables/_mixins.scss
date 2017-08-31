@@ -132,7 +132,7 @@
 	@include angled-edge(bottomright, 4deg);
 	background: $color__black;
 	position: relative;
-	padding: $size__site-gutter;
+	padding: $size__site-gutter/2;
 	z-index: 0;
 
 	@include tablet {

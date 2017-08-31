@@ -44,7 +44,8 @@
 } // .single
 
 .single .entry-content,
-.tax-talks .entry-content {
+.tax-talks .entry-content,
+.page .entry-content {
 	// Drop-shadow at top of entry content
 	@include tablet {
 		background: $color__white;

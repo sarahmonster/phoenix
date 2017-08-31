@@ -10,7 +10,11 @@
 .phoenix-intro-text {
 	span {
 		display: block;
-		margin-bottom: $size__site-gutter*2;
+		margin-bottom: $size__site-gutter;
+
+		@include tablet {
+			margin-bottom: $size__site-gutter*2;
+		}
 	}
 }
 
