@@ -130,6 +130,12 @@ a.pseudo-class-active {
   background-color: #66CED3;
 }
 
+.blog .post.pseudo-class-first-of-type,
+.archive:not(.tax-talks) .post.pseudo-class-first-of-type,
+.home .post.pseudo-class-first-of-type {
+  margin-top: 40px;
+}
+
 .entry-footer .twitter-share.pseudo-class-hover {
   color: #89c4d8;
   padding-bottom: 1px;

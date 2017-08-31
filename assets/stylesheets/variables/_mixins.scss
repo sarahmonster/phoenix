@@ -131,11 +131,9 @@
 @mixin page-header {
 	@include angled-edge(bottomright, 4deg);
 	background: $color__black;
-	margin: 0 -#{$size__site-gutter/2};
-	width: calc(100% + #{$size__site-gutter/2});
 	position: relative;
 	padding: $size__site-gutter;
-	z-index: -2;
+	z-index: 0;
 
 	@include tablet {
 		padding: $size__site-gutter*2;

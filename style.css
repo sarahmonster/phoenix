@@ -759,7 +759,9 @@ a {
   background: #F26BAF;
   width: 100%;
   padding: 40px 20px 0;
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  z-index: 100; }
   #masthead::before, #masthead::after {
     content: '';
     display: block;
@@ -845,10 +847,12 @@ a {
     padding: 5px 6px; } }
 
 body {
-  background: #FCFAFC; }
+  background: #4B454C; }
 
 #page {
-  margin: 0 auto; }
+  background: #FCFAFC;
+  margin: 0 auto;
+  max-width: 1200px; }
 
 .page-content,
 .entry-content,
@@ -929,6 +933,7 @@ body {
 .blog,
 .archive:not(.tax-talks),
 .home {
+  /* Background images */
   /* Excerpt */ }
   .blog .nix-prefix,
   .archive:not(.tax-talks) .nix-prefix,
@@ -938,12 +943,22 @@ body {
   .archive:not(.tax-talks) a,
   .home a {
     text-decoration: none; }
+  .blog .phoenix-background-image,
+  .archive:not(.tax-talks) .phoenix-background-image,
+  .home .phoenix-background-image {
+    filter: grayscale(100%) brightness(2) contrast(1.5);
+    z-index: -1;
+    opacity: 0.125;
+    display: none; }
   .blog .post,
   .archive:not(.tax-talks) .post,
   .home .post {
-    border-top: 2px solid #A09CA0;
-    margin: 160px auto;
-    max-width: 1040px; }
+    margin: 0 auto 160px;
+    max-width: 693.33333px; }
+    .blog .post:first-of-type,
+    .archive:not(.tax-talks) .post:first-of-type,
+    .home .post:first-of-type {
+      margin-top: 40px; }
   .blog .posted-on,
   .blog .cat-links,
   .archive:not(.tax-talks) .posted-on,
@@ -965,11 +980,12 @@ body {
   .blog .entry-title,
   .archive:not(.tax-talks) .entry-title,
   .home .entry-title {
+    color: #4B454C;
     font-family: lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
     font-style: normal;
-    font-size: 38.4px;
-    font-size: 2.4rem;
-    margin: 0;
+    font-size: 57.6px;
+    font-size: 3.6rem;
+    margin: 0 0 20px;
     line-height: 1; }
     .blog .entry-title a,
     .archive:not(.tax-talks) .entry-title a,
@@ -979,8 +995,8 @@ body {
       .blog .entry-title,
       .archive:not(.tax-talks) .entry-title,
       .home .entry-title {
-        font-size: 57.6px;
-        font-size: 3.6rem; } }
+        font-size: 76.8px;
+        font-size: 4.8rem; } }
   .blog .entry-content,
   .archive:not(.tax-talks) .entry-content,
   .home .entry-content {
@@ -1000,27 +1016,14 @@ body {
 .group-blog .byline {
   display: inline; }
 
-/* Background images */
-.phoenix-background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  filter: grayscale(100%) brightness(2) contrast(1.5);
-  z-index: -1;
-  opacity: 0.125;
-  display: none; }
-
 /* Styles for all single posts */
 .single .entry-header {
   width: 100%;
   position: relative;
   background: #232024;
-  margin: 0 -20px;
-  width: calc(100% + 20px);
   position: relative;
   padding: 40px;
-  z-index: -2; }
+  z-index: 0; }
   .single .entry-header::before, .single .entry-header::after {
     content: '';
     display: block;
@@ -1074,7 +1077,7 @@ body {
   color: #716E72; }
 
 @media (min-width: 768px) {
-  .entry-content {
+  .single .entry-content {
     background: #FCFAFC;
     box-shadow: 0 4px 10px rgba(35, 32, 36, 0.1);
     margin: -80px 40px 40px;
@@ -1116,11 +1119,9 @@ body {
   width: 100%;
   position: relative;
   background: #232024;
-  margin: 0 -20px;
-  width: calc(100% + 20px);
   position: relative;
   padding: 40px;
-  z-index: -2; }
+  z-index: 0; }
   .page-header::before, .page-header::after {
     content: '';
     display: block;

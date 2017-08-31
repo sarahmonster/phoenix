@@ -1,11 +1,13 @@
 body {
-	background: $color__background-body;
+	background: $color__soft-black;
 }
 
 #page {
+	background: $color__background-body;
 	margin: 0 auto;
-	//max-width: $size__max-content-width;
-	//padding: 20px;
+	max-width: $size__max-content-width;
+	//position: relative;
+	//z-index: -1;
 }
 
 .content-area {

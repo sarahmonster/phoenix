@@ -8,6 +8,10 @@
 
 	<header class="entry-header">
 
+		<?php if ( has_post_thumbnail() ) :
+			the_post_thumbnail( 'full', array( 'class' => 'phoenix-background-image' ) );
+		endif; ?>
+
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<div class="entry-meta">
 				<?php phoenix_post_category(); ?>

@@ -11,10 +11,22 @@
 		text-decoration: none;
 	}
 
+	/* Background images */
+	.phoenix-background-image {
+		filter: grayscale(100%) brightness(2) contrast(1.5);
+		z-index: -1;
+		opacity: 0.125;
+		display: none;
+	}
+
 	.post {
-		border-top: 2px solid $color__neutral;
-		margin: $size__site-gutter*4 auto;
-		max-width: $size__content-width;
+		//border-top: 2px solid $color__neutral;
+		margin: 0 auto $size__site-gutter*4;
+		max-width: $size__content-width/1.5;
+
+		&:first-of-type {
+			margin-top: 40px;
+		}
 	}
 
 	.posted-on,
@@ -32,10 +44,11 @@
 	}
 
 	.entry-title {
+		color: $color__soft-black;
 		font-family: $font__display;
 		font-style: normal;
-		@include font-size(2.4);
-		margin: 0;
+		@include font-size(3.6);
+		margin: 0 0 $size__site-gutter/2;
 		line-height: 1;
 
 		a {
@@ -43,7 +56,7 @@
 		}
 
 		@include tablet {
-			@include font-size(3.6);
+			@include font-size(4.8);
 		}
 	}
 

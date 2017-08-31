@@ -8,6 +8,8 @@
 	width: 100%;
 	padding: $size__site-gutter $size__site-gutter/2 0;
 	text-align: center;
+	position: relative;
+	z-index: 100;
 }
 
 
