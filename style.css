@@ -1076,7 +1076,8 @@ body {
   color: #716E72; }
 
 @media (min-width: 768px) {
-  .single .entry-content {
+  .single .entry-content,
+  .tax-talks .entry-content {
     background: #FCFAFC;
     box-shadow: 0 4px 10px rgba(35, 32, 36, 0.1);
     margin: -80px 40px 40px;
@@ -1945,7 +1946,7 @@ img {
     grid-column-end: 3; } }
 
 @media (min-width: 768px) {
-  .archive .phoenix-event-list {
+  .post-type-archive .phoenix-event-list {
     margin-top: -40px; } }
 
 .tax-talks .nix-prefix {

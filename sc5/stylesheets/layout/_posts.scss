@@ -41,19 +41,19 @@
 		border-color: $color__neutral;
 		color: $color__neutral-text;
 	}
-
-	// Drop-shadow at top of entry content
-	@include tablet {
-		.entry-content {
-			background: $color__white;
-			box-shadow: 0 4px 10px transparentize($color__black, 0.9);
-			margin: -$size__site-gutter*2 $size__site-gutter $size__site-gutter;
-			padding: $size__site-gutter*2;
-			position: relative;
-		}
-	}
 } // .single
 
+.single .entry-content,
+.tax-talks .entry-content {
+	// Drop-shadow at top of entry content
+	@include tablet {
+		background: $color__white;
+		box-shadow: 0 4px 10px transparentize($color__black, 0.9);
+		margin: -$size__site-gutter*2 $size__site-gutter $size__site-gutter;
+		padding: $size__site-gutter*2;
+		position: relative;
+	}
+}
 
 
 /* Entry footer */

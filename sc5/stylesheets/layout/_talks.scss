@@ -61,7 +61,7 @@
 
 // Pull event listings up a bit on archive pages so they overlap properly.
 @include tablet {
-	.archive .phoenix-event-list {
+	.post-type-archive .phoenix-event-list {
 		margin-top: -$size__site-gutter;
 	}
 }
