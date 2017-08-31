@@ -1,16 +1,15 @@
 .site-footer {
-	border-top: 1px solid lighten($color__text-main, 50%);
 	clear: both;
 	color: lighten($color__text-main, 25%);
 	@include font-size(1);
 	font-style: italic;
 	margin-top: 1em;
-	padding-top: 0.5em;
+	padding: $size__site-gutter/2 $size__site-gutter;
 	text-align: center;
 	width: 100%;
 
 	a {
-		color: $color__text-main;
+		color: $color__primary-dark;
 		border-color: transparent;
 
 		&:hover {
@@ -19,7 +18,7 @@
 	}
 
 	.phoenix-icon-heart {
-		fill: $red;
+		fill: $color__primary-dark;
 		height: 18px;
 		margin-left: -2px;
 		margin-right: -2px;

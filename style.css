@@ -861,23 +861,22 @@ body {
   max-width: 1040px; }
 
 .site-footer {
-  border-top: 1px solid #cac5cb;
   clear: both;
   color: #8c838e;
   font-size: 16px;
   font-size: 1rem;
   font-style: italic;
   margin-top: 1em;
-  padding-top: 0.5em;
+  padding: 20px 40px;
   text-align: center;
   width: 100%; }
   .site-footer a {
-    color: #4B454C;
+    color: #B53377;
     border-color: transparent; }
     .site-footer a:hover {
       border-color: rgba(75, 69, 76, 0.5); }
   .site-footer .phoenix-icon-heart {
-    fill: #a32020;
+    fill: #B53377;
     height: 18px;
     margin-left: -2px;
     margin-right: -2px;
@@ -1246,46 +1245,55 @@ body {
   margin-right: -3px;
   vertical-align: -7px; }
 
-.home #page {
-  max-width: none; }
-
 .phoenix-panel {
+  width: 100%;
+  position: relative;
+  background: #232024;
+  position: relative;
+  padding: 40px;
+  z-index: 0;
   margin: 0 auto;
-  max-width: 1200px; }
-  .phoenix-panel h1 {
-    color: #A09CA0;
-    max-width: 700px; }
-    @media (min-width: 768px) {
-      .phoenix-panel h1 {
-        font-size: 128px;
-        font-size: 8rem;
-        margin: 1em 0 0; } }
-
-.phoenix-intro-text p {
-  font-size: 22.4px;
-  font-size: 1.4rem; }
-  @media (min-width: 768px) {
-    .phoenix-intro-text p {
-      font-size: 32px;
-      font-size: 2rem;
-      margin: 40px 0 80px auto;
-      max-width: 550px; } }
-
-.phoenix-travel-map {
-  max-width: none; }
-  .phoenix-travel-map #wanderlist-map {
-    height: 100vh;
-    margin-left: -20px;
-    width: calc(100% + 40px); }
-
-.phoenix-newest-stories article.phoenix-short-post {
-  margin-right: 0;
-  margin-left: auto; }
-  .phoenix-newest-stories article.phoenix-short-post img {
+  max-width: 1200px;
+  padding-bottom: 0; }
+  .phoenix-panel::before, .phoenix-panel::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    transition: ease all .5s; }
+  .phoenix-panel::after {
+    bottom: 0;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -ms-transform: skewY(4deg);
+    transform: skewY(4deg); }
+  .phoenix-panel::before {
     display: none; }
+  @media (min-width: 768px) {
+    .phoenix-panel {
+      padding: 80px; } }
+  .phoenix-panel .page-title,
+  .phoenix-panel .entry-title {
+    background: #F26BAF;
+    /* fallback for old browsers */
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #66CED3, #F26BAF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 35px 0; }
 
-.phoenix-newest-stories .entry-title {
-  margin-top: 40px; }
+.phoenix-intro-text span {
+  display: block;
+  margin-bottom: 80px; }
+
+.home .site-footer {
+  margin-top: 90px; }
 
 /* Ensure overview page has a reasonable distance from top */
 .wanderlist-overview {
