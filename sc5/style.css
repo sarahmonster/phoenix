@@ -1294,10 +1294,6 @@ body {
 .home .site-footer {
   margin-top: 90px; }
 
-/* Ensure overview page has a reasonable distance from top */
-.wanderlist-overview {
-  margin-top: 4em; }
-
 /* Override link colour set by Mapbox */
 .leaflet-container a {
   border: none;
@@ -1305,34 +1301,20 @@ body {
   .leaflet-container a:hover {
     color: #459AA3; }
 
-/* Main page and sub-pages for trips/years */
-.wanderlist-overview article,
-.tax-wanderlist-trip article,
-.tax-wanderlist-country article {
-  width: 100%; }
-  .wanderlist-overview article .entry-content,
-  .tax-wanderlist-trip article .entry-content,
-  .tax-wanderlist-country article .entry-content {
-    border-top: 0;
-    flex-basis: 100%;
-    max-width: 1200px; }
+.wanderlist-widget {
+  margin: 0 0 40px; }
 
+/* Main page and sub-pages for trips/years */
 @media (min-width: 1024px) {
-  .wanderlist-overview .wanderlist-map-widget,
-  .tax-wanderlist-trip .wanderlist-map-widget,
-  .tax-wanderlist-country .wanderlist-map-widget {
-    float: left;
-    padding-right: 20px;
-    width: calc(100% - 400px); }
   .wanderlist-overview .wanderlist-location-widget,
-  .wanderlist-overview .wanderlist-country-overview-widget,
   .tax-wanderlist-trip .wanderlist-location-widget,
+  .tax-wanderlist-country .wanderlist-location-widget {
+    display: inline-block;
+    width: 50%; }
+  .wanderlist-overview .wanderlist-country-overview-widget,
   .tax-wanderlist-trip .wanderlist-country-overview-widget,
-  .tax-wanderlist-country .wanderlist-location-widget,
   .tax-wanderlist-country .wanderlist-country-overview-widget {
-    float: left;
-    padding-left: 20px;
-    width: 400px; }
+    width: 75%; }
   .wanderlist-overview .wanderlist-trip-widget,
   .wanderlist-overview .wanderlist-number-widget,
   .wanderlist-overview .wanderlist-country-widget,
@@ -1350,11 +1332,6 @@ body {
   .tax-wanderlist-trip .wanderlist-trip-widget,
   .tax-wanderlist-country .wanderlist-trip-widget {
     display: none; }
-  .wanderlist-overview .wanderlist-country-widget,
-  .tax-wanderlist-trip .wanderlist-country-widget,
-  .tax-wanderlist-country .wanderlist-country-widget {
-    padding-left: 0;
-    width: 760px; }
   .wanderlist-overview .wanderlist-number-widget,
   .tax-wanderlist-trip .wanderlist-number-widget,
   .tax-wanderlist-country .wanderlist-number-widget {
@@ -1390,42 +1367,45 @@ body {
       text-align: center; }
 
 /* Widgets */
-.wanderlist-widget {
-  margin-top: 1em; }
-  .wanderlist-widget .widget-title {
-    border-bottom: 2px solid;
-    padding-bottom: 0.5em;
-    text-align: left; }
-  .wanderlist-widget dl,
-  .wanderlist-widget ul {
-    font-family: "Freight Text Pro", freight-text-pro, Georgia, serif;
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.4;
-    margin: 10px 0;
-    padding-left: 0; }
+.wanderlist-widget .widget-title {
+  border-bottom: 2px solid;
+  padding-bottom: 0.5em;
+  text-align: left; }
+
+.wanderlist-widget dl,
+.wanderlist-widget ul {
+  font-family: "Freight Text Pro", freight-text-pro, Georgia, serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 10px 0;
+  padding-left: 0; }
+
+.wanderlist-widget dt {
+  color: #716E72;
+  font-style: italic;
+  font-weight: normal; }
+
+.wanderlist-widget dd {
+  margin: 0 0 5px 0; }
+
+@media (min-width: 768px) {
+  .wanderlist-widget dl {
+    display: flex;
+    flex-wrap: wrap; }
   .wanderlist-widget dt {
-    color: #716E72;
-    font-style: italic;
-    font-weight: normal; }
+    flex-basis: 100px;
+    text-align: right; }
   .wanderlist-widget dd {
-    margin: 0 0 5px 0; }
-  @media (min-width: 768px) {
-    .wanderlist-widget dl {
-      display: flex;
-      flex-wrap: wrap; }
-    .wanderlist-widget dt {
-      flex-basis: 100px;
-      text-align: right; }
-    .wanderlist-widget dd {
-      flex-basis: calc(100% - 110px);
-      margin-left: 10px; } }
-  .wanderlist-widget svg,
-  .wanderlist-widget .flag {
-    height: 10px;
-    margin-right: 2px;
-    vertical-align: -1px;
-    width: auto; }
+    flex-basis: calc(100% - 110px);
+    margin-left: 10px; } }
+
+.wanderlist-widget svg,
+.wanderlist-widget .flag {
+  height: 10px;
+  margin-right: 2px;
+  vertical-align: -1px;
+  width: auto; }
 
 /* Country list widget */
 .wanderlist-country-widget {
@@ -1474,7 +1454,7 @@ body {
     @media (min-width: 768px) {
       .wanderlist-number-widget div {
         height: 100px;
-        padding-top: 28px;
+        padding: 28px 34px;
         width: 100px; } }
     .wanderlist-number-widget div .wanderlist-number {
       display: block;
@@ -1505,7 +1485,7 @@ body {
 
 /* Text snippets */
 .wanderlist-country-count {
-  color: #a32020;
+  color: #459AA3;
   font-weight: bolder; }
 
 .wanderlist-current-location {

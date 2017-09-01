@@ -1,8 +1,3 @@
-/* Ensure overview page has a reasonable distance from top */
-.wanderlist-overview {
-	margin-top: 4em;
-}
-
 /* Override link colour set by Mapbox */
 .leaflet-container a {
 	border: none;
@@ -13,34 +8,24 @@
 	}
 }
 
+.wanderlist-widget {
+	margin: 0 0 $size__site-gutter;
+}
+
 /* Main page and sub-pages for trips/years */
 .wanderlist-overview,
 .tax-wanderlist-trip,
 .tax-wanderlist-country	{
 
-	article {
-		width: 100%;
-
-		.entry-content {
-			border-top: 0;
-			flex-basis: 100%;
-			max-width: $size__max-content-width;
-		}
-	}
-
-	// Use two columns on a desktop, since we've got loads of space
 	@include desktop {
-		.wanderlist-map-widget {
-			float: left;
-			padding-right: $size__site-gutter/2;
-			width: calc(100% - 400px);
+		// Show "upcoming" and "recent" side-by-side
+		.wanderlist-location-widget {
+			display: inline-block;
+			width: 50%;
 		}
 
-		.wanderlist-location-widget,
 		.wanderlist-country-overview-widget {
-			float: left;
-			padding-left: $size__site-gutter/2;
-			width: 400px;
+			width: 75%;
 		}
 
 		.wanderlist-trip-widget,
@@ -54,11 +39,6 @@
 
 		.wanderlist-trip-widget {
 			display: none;
-		}
-
-		.wanderlist-country-widget {
-			padding-left: 0;
-			width: 760px;
 		}
 
 		.wanderlist-number-widget {
@@ -104,7 +84,6 @@
 
 /* Widgets */
 .wanderlist-widget {
-	margin-top: 1em;
 
 	.widget-title {
 		border-bottom: 2px solid;
@@ -223,7 +202,7 @@
 
 		@include tablet {
 			height: 100px;
-			padding-top: 28px;
+			padding: 28px 34px;
 			width: 100px;
 		}
 
@@ -270,10 +249,8 @@
 
 /* Text snippets */
 .wanderlist-country-count {
-	color: $red;
+	color: $color__accent-alt;
 	font-weight: bolder;
-	//font-size: 1.5em;
-	//line-height: 1;
 }
 
 .wanderlist-current-location {
