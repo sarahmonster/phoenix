@@ -862,7 +862,8 @@ body {
 .entry-content,
 .entry-summary {
   margin: 0 auto;
-  max-width: 1040px; }
+  max-width: 1040px;
+  padding: 20px; }
 
 .site-footer {
   clear: both;
@@ -1304,51 +1305,28 @@ body {
 .home .site-footer {
   margin-top: 90px; }
 
-/* Override link colour set by Mapbox */
-.leaflet-container a {
-  border: none;
-  color: #B53377; }
-  .leaflet-container a:hover {
-    color: #459AA3; }
-
-.wanderlist-widget {
-  margin: 0 0 40px; }
-
-/* Main page and sub-pages for trips/years */
-@media (min-width: 1024px) {
-  .wanderlist-overview .wanderlist-location-widget,
-  .tax-wanderlist-trip .wanderlist-location-widget,
-  .tax-wanderlist-country .wanderlist-location-widget {
-    display: inline-block;
-    width: 50%; }
-  .wanderlist-overview .wanderlist-country-overview-widget,
-  .tax-wanderlist-trip .wanderlist-country-overview-widget,
-  .tax-wanderlist-country .wanderlist-country-overview-widget {
-    width: 75%; }
-  .wanderlist-overview .wanderlist-trip-widget,
-  .wanderlist-overview .wanderlist-number-widget,
-  .wanderlist-overview .wanderlist-country-widget,
-  .tax-wanderlist-trip .wanderlist-trip-widget,
-  .tax-wanderlist-trip .wanderlist-number-widget,
-  .tax-wanderlist-trip .wanderlist-country-widget,
-  .tax-wanderlist-country .wanderlist-trip-widget,
-  .tax-wanderlist-country .wanderlist-number-widget,
-  .tax-wanderlist-country .wanderlist-country-widget {
-    float: left;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 33%; }
-  .wanderlist-overview .wanderlist-trip-widget,
-  .tax-wanderlist-trip .wanderlist-trip-widget,
-  .tax-wanderlist-country .wanderlist-trip-widget {
-    display: none; }
-  .wanderlist-overview .wanderlist-number-widget,
-  .tax-wanderlist-trip .wanderlist-number-widget,
-  .tax-wanderlist-country .wanderlist-number-widget {
-    padding-left: 0;
-    padding-right: 0; } }
+.wanderlist-overview {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-row-gap: 40px;
+  grid-column-gap: 40px; }
+  @media (min-width: 768px) {
+    .wanderlist-overview {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr; } }
 
 /* Maps */
+.wanderlist-map-widget {
+  margin-top: -60px; }
+  @media (min-width: 768px) {
+    .wanderlist-map-widget {
+      grid-column: 1 / 3; } }
+  @media (min-width: 1024px) {
+    .wanderlist-map-widget {
+      margin-top: 0; } }
+
 #wanderlist-map {
   border: 1px solid #A09CA0;
   display: block;
@@ -1362,19 +1340,6 @@ body {
   #wanderlist-map .leaflet-marker-icon,
   #wanderlist-map .leaflet-tile {
     box-shadow: none; }
-  #wanderlist-map .wanderlist-location-widget {
-    background: rgba(255, 255, 255, 0.85);
-    bottom: 40px;
-    left: 40px;
-    padding: 10px 20px;
-    position: absolute;
-    max-width: 300px;
-    z-index: 100; }
-    #wanderlist-map .wanderlist-location-widget h3, #wanderlist-map .wanderlist-location-widget .posted-on, #wanderlist-map .wanderlist-location-widget
-    .cat-links, #wanderlist-map .wanderlist-location-widget
-    .tags-links, #wanderlist-map .wanderlist-location-widget
-    .nix-prefix, #wanderlist-map .wanderlist-location-widget .wanderlist-country-widget li, .wanderlist-country-widget #wanderlist-map .wanderlist-location-widget li {
-      text-align: center; }
 
 /* Widgets */
 .wanderlist-widget .widget-title {
@@ -1414,64 +1379,70 @@ body {
     flex-basis: calc(100% - 110px);
     margin-left: 10px; } }
 
-.wanderlist-widget svg,
-.wanderlist-widget .flag {
-  height: 10px;
-  margin-right: 2px;
-  vertical-align: -1px;
-  width: auto; }
+.wanderlist-trip-widget {
+  display: none; }
 
 /* Country list widget */
-.wanderlist-country-widget {
-  padding-bottom: 40px; }
-  .wanderlist-country-widget .widget-title {
-    display: none; }
-  .wanderlist-country-widget ul {
-    margin: 0; }
-  .wanderlist-country-widget li {
-    border: 1px solid #a32020;
-    color: #a32020;
+@media (min-width: 768px) {
+  .wanderlist-country-widget {
+    grid-column: 1 / 3; } }
+
+.wanderlist-country-widget .widget-title {
+  display: none; }
+
+.wanderlist-country-widget ul {
+  margin: 0; }
+
+.wanderlist-country-widget li {
+  background: #B53377;
+  color: #FCFAFC;
+  display: inline-block;
+  font-size: 0.85rem;
+  list-style-type: none;
+  padding: 0 10px 0 0;
+  margin: 4px;
+  white-space: nowrap; }
+  .wanderlist-country-widget li a {
     display: inline-block;
-    font-size: 0.65rem;
-    list-style-type: none;
-    padding: 0.2rem 0.4rem;
-    margin: 0.1rem;
-    white-space: nowrap; }
-    .wanderlist-country-widget li a {
-      color: #a32020; }
-    .wanderlist-country-widget li:hover {
-      background: #a32020;
-      color: #FCFAFC; }
-    .wanderlist-country-widget li a:hover,
-    .wanderlist-country-widget li:hover a {
-      color: #FCFAFC; }
-    .wanderlist-country-widget li::before {
-      display: none; }
+    color: #FCFAFC;
+    padding: 5px 5px 5px 15px; }
+  .wanderlist-country-widget li:hover {
+    background: #F26BAF;
+    color: #FCFAFC; }
+  .wanderlist-country-widget li a:hover,
+  .wanderlist-country-widget li:hover a {
+    color: #FCFAFC; }
+  .wanderlist-country-widget li::before {
+    display: none; }
 
 /* Number widget */
 .wanderlist-number-widget {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  max-width: 700px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .wanderlist-number-widget {
+      grid-column: 1 / 3;
+      -ms-grid-row: 3;
+      grid-row: 3; } }
   .wanderlist-number-widget .widget-title {
     display: none; }
   .wanderlist-number-widget div {
-    border: 2px solid #A09CA0;
+    background: #66CED3;
+    border: 2px solid #459AA3;
     border-radius: 50%;
-    color: #A09CA0;
+    color: #FCFAFC;
     font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
     font-weight: normal;
-    height: 80px;
+    height: 90px;
     line-height: 0.7;
-    padding-top: 21px;
+    padding: 25px 0;
     text-align: center;
-    width: 80px; }
-    @media (min-width: 768px) {
-      .wanderlist-number-widget div {
-        height: 100px;
-        padding: 28px 34px;
-        width: 100px; } }
+    width: 90px;
+    margin: 5px; }
     .wanderlist-number-widget div .wanderlist-number {
       display: block;
       font-size: 32px;
@@ -1481,6 +1452,17 @@ body {
       font-size: 12.8px;
       font-size: 0.8rem;
       text-transform: lowercase; }
+    @media (min-width: 768px) {
+      .wanderlist-number-widget div {
+        height: 145px;
+        padding: 45px 0;
+        width: 145px; }
+        .wanderlist-number-widget div .wanderlist-number {
+          font-size: 48px;
+          font-size: 3rem; }
+        .wanderlist-number-widget div .wanderlist-item {
+          font-size: 16px;
+          font-size: 1rem; } }
   .wanderlist-number-widget .wanderlist-connector {
     display: none; }
     @media (min-width: 768px) {
@@ -1488,16 +1470,7 @@ body {
         color: #A09CA0;
         display: block;
         font-style: italic;
-        margin: 30px 6px; } }
-  .wanderlist-number-widget .wanderlist-place-count {
-    border-color: #3F9CBC;
-    color: #3F9CBC; }
-  .wanderlist-number-widget .wanderlist-country-count {
-    border-color: #37894c;
-    color: #37894c; }
-  .wanderlist-number-widget .wanderlist-continent-count {
-    border-color: #66CED3;
-    color: #66CED3; }
+        margin: 40px 20px; } }
 
 /* Text snippets */
 .wanderlist-country-count {
@@ -1505,33 +1478,8 @@ body {
   font-weight: bolder; }
 
 .wanderlist-current-location {
-  color: #a32020;
+  color: #459AA3;
   font-style: italic; }
-
-/* Individual location pages */
-.wanderlist-location .attachment-phoenix-postcard {
-  border: 10px solid #FCFAFC;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25); }
-  @media (min-width: 1024px) {
-    .wanderlist-location .attachment-phoenix-postcard {
-      float: left;
-      margin: 0 -50px 20px -100px;
-      width: 670px; } }
-
-.wanderlist-location .attachment-phoenix-postcard + .entry-content {
-  background: #FCFAFC;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
-  color: #878287;
-  font-style: italic;
-  padding: 40px; }
-  .wanderlist-location .attachment-phoenix-postcard + .entry-content p {
-    margin: 0;
-    padding: 0; }
-  @media (min-width: 1024px) {
-    .wanderlist-location .attachment-phoenix-postcard + .entry-content {
-      margin: 60px -100px 20px -50px;
-      width: 670px;
-      float: left; } }
 
 /* Testimonials page */
 .jetpack-testimonial {

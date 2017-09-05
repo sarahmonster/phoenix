@@ -153,12 +153,8 @@ a.pseudo-class-active {
   color: #f4aa59;
 }
 
-.leaflet-container a.pseudo-class-hover {
-  color: #459AA3;
-}
-
 .wanderlist-country-widget li.pseudo-class-hover {
-  background: #a32020;
+  background: #F26BAF;
   color: #FCFAFC;
 }
 

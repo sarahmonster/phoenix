@@ -23,4 +23,5 @@ body {
 .entry-summary {
 	margin: 0 auto;
 	max-width: $size__content-width;
+	padding: $size__site-gutter/2;
 }
