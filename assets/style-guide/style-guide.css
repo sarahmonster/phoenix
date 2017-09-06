@@ -107,25 +107,25 @@ body {
       content: "#F26BAF"; }
 
 .color-secondary {
-  background: #66CED3; }
+  background: #61D2FF; }
   .color-secondary .hex-code {
     color: #fff; }
     .color-secondary .hex-code::before {
-      content: "#66CED3"; }
+      content: "#61D2FF"; }
 
 .color-tertiary {
-  background: #459AA3; }
+  background: #3C98BC; }
   .color-tertiary .hex-code {
     color: #fff; }
     .color-tertiary .hex-code::before {
-      content: "#459AA3"; }
+      content: "#3C98BC"; }
 
 .color-accent {
-  background: #66CED3; }
+  background: #61D2FF; }
   .color-accent .hex-code {
     color: #000; }
     .color-accent .hex-code::before {
-      content: "#66CED3"; }
+      content: "#61D2FF"; }
 
 .color-highlight {
   background: #F9EAF7; }
@@ -142,7 +142,7 @@ body {
   padding-right: 0.2em; }
 
 .adjectives h3:nth-of-type(odd) {
-  color: #66CED3; }
+  color: #61D2FF; }
 
 .headings {
   text-align: left; }

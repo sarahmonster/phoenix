@@ -550,7 +550,7 @@ a {
   color: #B53377;
   transition: all 0.2s ease-out; }
   a:hover, a:focus, a:active {
-    color: #459AA3; }
+    color: #3C98BC; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -565,7 +565,7 @@ a {
   background-position: bottom 0.25em center;
   background-size: 100% 0.1em; }
   .site-main p a:hover, .site-main p a:focus, .site-main p a:active {
-    background-image: linear-gradient(to right, #459AA3 0%, #459AA3 100%); }
+    background-image: linear-gradient(to right, #3C98BC 0%, #3C98BC 100%); }
 
 /*--------------------------------------------------------------
 ## Post navigation
@@ -669,7 +669,7 @@ a {
   .phoenix-numeric-pagination .page-numbers.current {
     border-radius: 50%;
     border: 1px solid;
-    color: #66CED3;
+    color: #61D2FF;
     display: inline-block;
     height: 34px;
     padding: 4.5px 0;
@@ -920,18 +920,18 @@ body {
 /* Category links */
 .cat-links a {
   text-decoration: none;
-  color: #8edbde; }
+  color: #94e1ff; }
   .cat-links a::before {
-    background-color: #66CED3;
+    background-color: #61D2FF;
     content: '';
     display: inline-block;
     height: 10px;
     margin-right: 5px;
     width: 10px; }
   .cat-links a:hover {
-    color: #66CED3; }
+    color: #61D2FF; }
     .cat-links a:hover::before {
-      background-color: #66CED3; }
+      background-color: #61D2FF; }
 
 /* Archive pages */
 .blog,
@@ -1055,7 +1055,7 @@ body {
     background: #F26BAF;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #66CED3, #F26BAF);
+    background: linear-gradient(to bottom, #61D2FF, #F26BAF);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1155,7 +1155,7 @@ body {
     background: #F26BAF;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #66CED3, #F26BAF);
+    background: linear-gradient(to bottom, #61D2FF, #F26BAF);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1289,7 +1289,7 @@ body {
     background: #F26BAF;
     /* fallback for old browsers */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #66CED3, #F26BAF);
+    background: linear-gradient(to bottom, #61D2FF, #F26BAF);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1394,26 +1394,44 @@ body {
   margin: 0; }
 
 .wanderlist-country-widget li {
-  background: #B53377;
+  background: #232024;
   color: #FCFAFC;
   display: inline-block;
   font-size: 0.85rem;
   list-style-type: none;
   padding: 0 10px 0 0;
   margin: 4px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  position: relative; }
   .wanderlist-country-widget li a {
     display: inline-block;
     color: #FCFAFC;
-    padding: 5px 5px 5px 15px; }
-  .wanderlist-country-widget li:hover {
-    background: #F26BAF;
-    color: #FCFAFC; }
-  .wanderlist-country-widget li a:hover,
-  .wanderlist-country-widget li:hover a {
-    color: #FCFAFC; }
+    padding: 5px 5px 5px 15px;
+    position: relative;
+    z-index: 2; }
+  .wanderlist-country-widget li span {
+    position: relative;
+    z-index: 2; }
   .wanderlist-country-widget li::before {
     display: none; }
+  .wanderlist-country-widget li::after {
+    content: '';
+    background: linear-gradient(to right, #F26BAF, #61D2FF);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    transition: all 200ms ease-in-out;
+    z-index: 1; }
+
+.wanderlist-country-widget li:hover a,
+.wanderlist-country-widget li:hover span {
+  color: #232024; }
+
+.wanderlist-country-widget li:hover::after {
+  width: 100%; }
 
 /* Number widget */
 .wanderlist-number-widget {
@@ -1431,10 +1449,10 @@ body {
   .wanderlist-number-widget .widget-title {
     display: none; }
   .wanderlist-number-widget div {
-    background: #66CED3;
-    border: 2px solid #459AA3;
+    background: #F26BAF;
+    border: 2px solid #232024;
     border-radius: 50%;
-    color: #FCFAFC;
+    color: #232024;
     font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
     font-weight: normal;
     height: 90px;
@@ -1447,7 +1465,7 @@ body {
       display: block;
       font-size: 32px;
       font-size: 2rem;
-      font-weight: 100; }
+      font-weight: 200; }
     .wanderlist-number-widget div .wanderlist-item {
       font-size: 12.8px;
       font-size: 0.8rem;
@@ -1463,6 +1481,14 @@ body {
         .wanderlist-number-widget div .wanderlist-item {
           font-size: 16px;
           font-size: 1rem; } }
+  .wanderlist-number-widget .wanderlist-place-count {
+    background: #61D2FF;
+    background: linear-gradient(to right, #61D2FF, #85b8eb); }
+  .wanderlist-number-widget .wanderlist-country-count {
+    background: linear-gradient(to right, #85b8eb, #ce85c3); }
+  .wanderlist-number-widget .wanderlist-continent-count {
+    background: #F26BAF;
+    background: linear-gradient(to right, #ce85c3, #F26BAF); }
   .wanderlist-number-widget .wanderlist-connector {
     display: none; }
     @media (min-width: 768px) {
@@ -1474,11 +1500,11 @@ body {
 
 /* Text snippets */
 .wanderlist-country-count {
-  color: #459AA3;
+  color: #3C98BC;
   font-weight: bolder; }
 
 .wanderlist-current-location {
-  color: #459AA3;
+  color: #3C98BC;
   font-style: italic; }
 
 /* Testimonials page */
@@ -1832,7 +1858,7 @@ img {
     position: absolute;
     top: 10px;
     left: -10px;
-    background: #66CED3; }
+    background: #61D2FF; }
     @media (min-width: 768px) {
       .event .phoenix-upcoming {
         font-size: 14.4px;
@@ -2096,6 +2122,6 @@ figcaption {
 .menu-social-menu-container ul a:hover {
   background: none; }
   .menu-social-menu-container ul a:hover svg {
-    fill: #459AA3; }
+    fill: #3C98BC; }
 
 /*# sourceMappingURL=style.css.map */
