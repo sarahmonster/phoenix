@@ -131,14 +131,6 @@ function phoenix_fonts() {
 add_action( 'wp_head', 'phoenix_fonts', 20 );
 
 /**
- * Add editor styles
- */
-function phoenix_editor_styles() {
-  add_editor_style( array( 'editor-style.css' ) );
-}
-add_action( 'after_setup_theme', 'phoenix_editor_styles' );
-
-/**
  * Nuke Jetpack and other plugins' styles
  */
 function phoenix_dequeue_plugin_styles()  {
