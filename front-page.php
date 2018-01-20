@@ -12,10 +12,14 @@ get_header(); ?>
 
 			<div class="phoenix-intro phoenix-panel">
 				<div class="phoenix-intro-text">
-					<h1 class="page-title">Oh, hello there.
-						<span>I&rsquo;m <a href="/about" data-hover="Sarah">Sarah</a>.</span>
-						<span>I make internet-things and I <a href="/travels" data-hover="travelling">wander</a> a lot.</span>
-						<span class="stories">Sometimes I write long, rambling <a href="/stories" data-hover="stories">stories</a>.</span>
+					<h1 class="page-title">
+						<span class="slabtext">Oh, hello there.</span>
+						<span class="slabtext">I am Sarah.</span>
+						<span class="slabtext">I make things</span>
+						<span class="slabtext">&amp; I wander a lot.</span>
+						<span class="slabtext">Sometimes</span>
+						<span class="slabtext"> I write long,</span>
+						<span class="slabtext">rambling stories.</span>
 					</h1>
 				</div>
 			</div>

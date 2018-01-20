@@ -6,18 +6,6 @@
 	padding-bottom: 0;
 }
 
-// Intro text
-.phoenix-intro-text {
-	span {
-		display: block;
-		margin-bottom: $size__site-gutter;
-
-		@include tablet {
-			margin-bottom: $size__site-gutter*2;
-		}
-	}
-}
-
 .home .site-footer {
 	margin-top: 90px;
 }

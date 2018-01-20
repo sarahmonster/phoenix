@@ -13,6 +13,26 @@ textarea {
 	}
 }
 
+.slabtexted .slabtext {
+    display: -moz-inline-box;
+    display: inline-block;
+    white-space: nowrap;
+    }
+.slabtextinactive .slabtext
+    {
+    display: inline;
+    white-space: normal;
+    font-size: 1em !important;
+    letter-spacing: inherit !important;
+    word-spacing: inherit !important;
+    *letter-spacing: normal !important;
+    *word-spacing: normal !important;
+    }
+.slabtextdone .slabtext
+    {
+    display: block;
+    }
+
 // Headings
  //
  // We use headings to make long pages of text (so basically every page ever) easier to scan through.
@@ -38,9 +58,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	color: $color__headings;
-	letter-spacing: -0.03em;
+	//letter-spacing: -0.03em;
 	line-height: 1;
 	font-family: $font__display;
+	//font-weight: 800;
 	@include font-size(2.6);
 
 	@include tablet {

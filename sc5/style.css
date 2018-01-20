@@ -243,6 +243,23 @@ textarea {
       font-size: 25.6px;
       font-size: 1.6rem; } }
 
+.slabtexted .slabtext {
+  display: -moz-inline-box;
+  display: inline-block;
+  white-space: nowrap; }
+
+.slabtextinactive .slabtext {
+  display: inline;
+  white-space: normal;
+  font-size: 1em !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  *letter-spacing: normal !important;
+  *word-spacing: normal !important; }
+
+.slabtextdone .slabtext {
+  display: block; }
+
 h1, h2, h3, .posted-on,
 .cat-links,
 .tags-links,
@@ -259,7 +276,6 @@ h1, h2, h3, .posted-on,
 
 h1 {
   color: #716E72;
-  letter-spacing: -0.03em;
   line-height: 1;
   font-family: lust-display, "Freight Text Pro", freight-text-pro, Georgia, serif;
   font-size: 41.6px;
@@ -1284,13 +1300,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 35px 0; }
-
-.phoenix-intro-text span {
-  display: block;
-  margin-bottom: 40px; }
-  @media (min-width: 768px) {
-    .phoenix-intro-text span {
-      margin-bottom: 80px; } }
 
 .home .site-footer {
   margin-top: 90px; }
