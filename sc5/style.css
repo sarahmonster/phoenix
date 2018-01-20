@@ -293,7 +293,7 @@ h3, .posted-on,
 .tags-links,
 .nix-prefix, .wanderlist-country-widget li {
   color: #716E72;
-  font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 12.8px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -611,7 +611,7 @@ a {
   .post-navigation span:not(.caps) {
     color: #A09CA0;
     display: block;
-    font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 14.4px;
     font-size: 0.9rem;
     font-weight: 600;
@@ -653,7 +653,7 @@ a {
 ## Archive navigation
 --------------------------------------------------------------*/
 .phoenix-numeric-pagination {
-  font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 19.2px;
   font-size: 1.2rem;
   line-height: 1.2;
@@ -784,7 +784,7 @@ a {
 /* Navigation */
 .main-navigation {
   display: flex;
-  font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   max-width: 1600px;
   width: 100%;
   vertical-align: top; }
@@ -1433,7 +1433,7 @@ body {
     border: 2px solid #232024;
     border-radius: 50%;
     color: #232024;
-    font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-weight: normal;
     height: 90px;
     line-height: 0.7;
@@ -1827,7 +1827,7 @@ img {
   margin: 0 0 20px 0;
   position: relative; }
   .event .phoenix-upcoming {
-    font-family: "Proxima Nova", proxima-nova, Helvetica, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 12.8px;
     font-size: 0.8rem;
     font-weight: 600;
