@@ -90,18 +90,6 @@ function phoenix_scripts() {
 	wp_enqueue_script( 'phoenix-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	wp_enqueue_script( 'phoenix-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 	wp_enqueue_script( 'phoenix-typekit-cache', get_template_directory_uri() . '/js/typekit-cache.js', array(), '20120302', true );
-
-	// Text animation/manipulation libraries
-	wp_enqueue_style( 'phoenix-animate', get_template_directory_uri() . '/js/animate.css', array(), '20150719', 'screen' );
-	wp_enqueue_script( 'phoenix-animate', get_template_directory_uri() . '/js/animate.js', array(), '20150719', true );
-	wp_enqueue_script( 'phoenix-fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array( 'jquery' ), '20150719', true );
-	wp_enqueue_script( 'phoenix-lettering', get_template_directory_uri() . '/js/jquery.lettering.js', array( 'jquery' ), '20150719', true );
-	wp_enqueue_script( 'phoenix-textillate', get_template_directory_uri() . '/js/jquery.textillate.js', array( 'jquery', 'phoenix-lettering' ), '20150719', true );
-	wp_enqueue_script( 'phoenix-texteffects', get_template_directory_uri() . '/js/texteffects.js', array( 'jquery', 'phoenix-lettering', 'phoenix-textillate' ), '20150719', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'phoenix_scripts' );
 
