@@ -45,4 +45,14 @@
 	<li><a href="https://www.sourcejs.com/">Source</a></li>
 	<li><a href="http://patternlab.io">Pattern lab</a></li>
 	<li><a href="https://github.com/davidhund/styleguide-generators">Overview of pattern library generators</a></li>
+	<li><a href="http://airbnb.io/react-sketchapp/">React Sketchapp</a></li>
+	<li><a href="http://www.catalog.style/">Catalog</a></li>
+	<li><a href="https://react-styleguidist.js.org">React Styleguidist</a></li>
+</ul>
+
+<h3>Other things</h3>
+<ul>
+	<li><a href="https://blog.marvelapp.com/color-ui-design-practical-framework">Colour in UI design</a></li>
+	<li><a href="http://geraldbakker.nl/psnumbers/hsb-explained.html">HSB explained</a></li>
+	<li><a href="https://www.labnol.org/internet/remove-unused-css/28635/">How to remove unused CSS from your stylesheet</a></li>
 </ul>
